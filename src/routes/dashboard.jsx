@@ -9,7 +9,7 @@ import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 // core components/views
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
-import UserProfile from "views/UserProfile/UserProfile.jsx";
+// import UserProfile from "views/UserProfile/UserProfile.jsx";
 import TableList from "views/TableList/TableList.jsx";
 import Typography from "views/Typography/Typography.jsx";
 import Icons from "views/Icons/Icons.jsx";
@@ -18,13 +18,13 @@ import NotificationsPage from "views/Notifications/Notifications.jsx";
 import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 
 const dashboardRoutes = [
-  // {
-  //   path: "/dashboard",
-  //   sidebarName: "Dashboard",
-  //   navbarName: "Material Dashboard",
-  //   icon: Dashboard,
-  //   component: DashboardPage
-  // },
+  {
+    path: "/characters",
+    sidebarName: "CHARACTERS",
+    navbarName: "CHARACTERS",
+    icon: Dashboard,
+    component: DashboardPage
+  },
   // {
   //   path: "/user",
   //   sidebarName: "User Profile",
@@ -74,7 +74,7 @@ const dashboardRoutes = [
   //   icon: Unarchive,
   //   component: UpgradeToPro
   // },
-  { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
+  { redirect: true, path: "/", to: "/characters", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;
