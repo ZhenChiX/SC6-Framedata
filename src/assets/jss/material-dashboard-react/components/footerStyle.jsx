@@ -6,7 +6,7 @@ import {
 
 const footerStyle = {
   block: {
-    color: "inherit",
+    color: "#FFFFFF",
     padding: "15px",
     textTransform: "uppercase",
     borderRadius: "3px",
@@ -14,7 +14,7 @@ const footerStyle = {
     position: "relative",
     display: "block",
     ...defaultFont,
-    fontWeight: "500",
+    fontWeight: "800",
     fontSize: "12px"
   },
   left: {
@@ -22,20 +22,22 @@ const footerStyle = {
     display: "block"
   },
   right: {
+    fontWeight: "800",
     padding: "15px 0",
     margin: "0",
     fontSize: "14px",
     float: "right!important"
   },
   footer: {
+    color: "#FFFFFF",
     bottom: "0",
-    borderTop: "1px solid #e7e7e7",
+    borderTop: "1px solid #FFFFFF",
     padding: "15px 0",
     ...defaultFont
   },
   container,
   a: {
-    color: primaryColor,
+    color: "#FFFFFF",
     textDecoration: "none",
     backgroundColor: "transparent"
   },
