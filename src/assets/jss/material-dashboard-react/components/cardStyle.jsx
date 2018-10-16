@@ -1,13 +1,13 @@
 const cardStyle = {
   card: {
     border: "0",
-    marginBottom: "30px",
-    marginTop: "30px",
+    marginBottom: "20px",
+    marginTop: "20px",
     borderRadius: "6px",
     color: "rgba(0, 0, 0, 0.87)",
     background: "#fff",
     width: "100%",
-    boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.14)",
+    boxShadow: "0 2px 4px 2px rgba(0, 0, 0, 0.14)",
     position: "relative",
     display: "flex",
     flexDirection: "column",
@@ -20,7 +20,7 @@ const cardStyle = {
     boxShadow: "none"
   },
   cardProfile: {
-    marginTop: "30px",
+    marginTop: "20px",
     textAlign: "center"
   },
   cardChart: {

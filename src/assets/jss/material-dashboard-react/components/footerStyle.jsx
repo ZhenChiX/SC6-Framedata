@@ -14,7 +14,7 @@ const footerStyle = {
     position: "relative",
     display: "block",
     ...defaultFont,
-    fontWeight: "800",
+    fontWeight: "600",
     fontSize: "12px"
   },
   left: {
@@ -22,7 +22,7 @@ const footerStyle = {
     display: "block"
   },
   right: {
-    fontWeight: "800",
+    fontWeight: "600",
     padding: "15px 0",
     margin: "0",
     fontSize: "14px",
@@ -35,6 +35,7 @@ const footerStyle = {
     padding: "15px 0",
     ...defaultFont
   },
+
   container,
   a: {
     color: "#FFFFFF",

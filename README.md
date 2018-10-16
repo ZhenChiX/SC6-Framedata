@@ -160,7 +160,7 @@ material-dashboard-react
     │   │   └── Table.jsx
     │   ├── Tasks
     │   │   └── Tasks.jsx
-    │   └── Typography
+    │   └── About
     │       ├── Danger.jsx
     │       ├── Info.jsx
     │       ├── Muted.jsx

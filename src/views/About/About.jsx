@@ -2,13 +2,13 @@ import React from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
-import Quote from "components/Typography/Quote.jsx";
-import Muted from "components/Typography/Muted.jsx";
-import Primary from "components/Typography/Primary.jsx";
-import Info from "components/Typography/Info.jsx";
-import Success from "components/Typography/Success.jsx";
-import Warning from "components/Typography/Warning.jsx";
-import Danger from "components/Typography/Danger.jsx";
+import Quote from "components/About/Quote.jsx";
+import Muted from "components/About/Muted.jsx";
+import Primary from "components/About/Primary.jsx";
+import Info from "components/About/Info.jsx";
+import Success from "components/About/Success.jsx";
+import Warning from "components/About/Warning.jsx";
+import Danger from "components/About/Danger.jsx";
 import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
@@ -49,7 +49,7 @@ const style = {
     textDecoration: "none"
   }
 };
-function TypographyPage(props) {
+function About(props) {
   const { classes } = props;
   return (
     <Card>
@@ -155,4 +155,4 @@ function TypographyPage(props) {
   );
 }
 
-export default withStyles(style)(TypographyPage);
+export default withStyles(style)(About);
