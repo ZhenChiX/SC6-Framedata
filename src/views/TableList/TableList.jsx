@@ -46,7 +46,7 @@ function TableList(props) {
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>DOGGY FLOWER </h4>
+            <h4 className={classes.cardTitleWhite}>DOGGY FLOWER 欲海肥花</h4>
             <p className={classes.cardCategoryWhite}>PEPE DOGGY FLOWER</p>
           </CardHeader>
           <CardBody>
