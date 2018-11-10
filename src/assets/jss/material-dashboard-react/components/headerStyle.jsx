@@ -11,11 +11,11 @@ import {
 
 const headerStyle = theme => ({
   appBar: {
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(0, 0, 0, 0.8);",
     boxShadow: "none",
     borderBottom: "0",
     marginBottom: "0",
-    position: "absolute",
+    position: "sticky",
     width: "100%",
     paddingTop: "10px",
     zIndex: "1029",

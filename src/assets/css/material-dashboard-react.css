@@ -14,11 +14,11 @@
 
  */
 
-/* * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+}
 
 .ct-grid {
     stroke: rgba(255, 255, 255, 0.2);
@@ -108,79 +108,106 @@ h3 {
 }
 
 .character {
-    display: inline-block;
-    background-size: cover !important;
+    background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
-    /* margin-top: 20px; */
-    /* margin-bottom: 20px; */
     min-height: 10vh;
+}
+
+.character:hover {
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 .astaroth {
     background-image: url("../img/btn_astaroth.png") !important;
 }
+
 .azwel {
     background-image: url("../img/btn_azwel.png") !important;
 }
+
 .cervantes {
     background-image: url("../img/btn_cervantes.png") !important;
 }
+
 .chai {
     background-image: url("../img/btn_chai.png") !important;
 }
+
 .geralt {
     background-image: url("../img/btn_geralt.png") !important;
 }
+
 .groh {
     background-image: url("../img/btn_groh.png") !important;
 }
+
 .inferno {
     background-image: url("../img/btn_inferno.png") !important;
 }
+
 .ivy {
     background-image: url("../img/btn_ivy.png") !important;
 }
+
 .kilik {
     background-image: url("../img/btn_kilik.png") !important;
 }
+
 .maxi {
     background-image: url("../img/btn_maxi.png") !important;
 }
+
 .mina {
     background-image: url("../img/btn_mina.png") !important;
 }
+
 .mitsurugi {
     background-image: url("../img/btn_mitsurugi.png") !important;
 }
+
 .nightmare {
     background-image: url("../img/btn_nightmare.png") !important;
 }
+
 .raphael {
     background-image: url("../img/btn_raphael.png") !important;
 }
+
 .siegfried {
     background-image: url("../img/btn_siegfried.png") !important;
 }
+
 .sophitia {
     background-image: url("../img/btn_sophitia.png") !important;
 }
+
 .taki {
     background-image: url("../img/btn_taki.png") !important;
 }
+
 .talim {
     background-image: url("../img/btn_talim.png") !important;
 }
+
 .tira {
     background-image: url("../img/btn_tira.png") !important;
 }
+
 .voldo {
     background-image: url("../img/btn_voldo.png") !important;
 }
+
 .yoshimitsu {
     background-image: url("../img/btn_yoshimitsu.png") !important;
 }
+
 .zasalamel {
     background-image: url("../img/btn_zasalamel.png") !important;
+}
+
+.type2b {
+    background-image: url("../img/btn_2b.png") !important;
 }
 
 h4 {

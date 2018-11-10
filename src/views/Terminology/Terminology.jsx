@@ -49,7 +49,7 @@ const style = {
     textDecoration: "none"
   }
 };
-function About(props) {
+function Terminology(props) {
   const { classes } = props;
   return (
     <Card>
@@ -155,4 +155,4 @@ function About(props) {
   );
 }
 
-export default withStyles(style)(About);
+export default withStyles(style)(Terminology);
