@@ -9,6 +9,7 @@ import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Hidden from "@material-ui/core/Hidden";
+import { StickyContainer, Sticky } from "react-sticky";
 
 // notation img
 import a from "../../assets/img/a.png";
@@ -79,6 +80,12 @@ const styles = {
     width: "1.4em",
     verticalAlign: "middle"
   },
+
+  imgResizeSM: {
+    height: "1em",
+    width: "1em",
+    verticalAlign: "middle"
+  },
   imgNote: {
     height: "1.4em",
     verticalAlign: "middle"
@@ -114,8 +121,8 @@ function Astaroth(props) {
                     </p>
                   </Fragment>,
                   "-4",
-                  "+874",
-                  "pepe",
+                  "+2",
+                  "+6",
                   "note"
                 ],
                 [
@@ -135,8 +142,8 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-8",
-                  "+874",
-                  "pepe"
+                  "+2",
+                  "+2"
                 ],
                 [
                   <Fragment>
@@ -154,8 +161,8 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-12",
-                  "+874",
-                  "pepe"
+                  "0",
+                  "0"
                 ],
                 [
                   <Fragment>
@@ -173,8 +180,8 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-6",
-                  "+874",
-                  "pepe"
+                  "+4",
+                  "+14"
                 ],
                 [
                   <Fragment>
@@ -192,8 +199,8 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-12",
-                  "+874",
-                  "pepe"
+                  "+0",
+                  "KND"
                 ],
                 [
                   <Fragment>
@@ -211,8 +218,8 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-14",
-                  "+874",
-                  "pepe"
+                  "-4",
+                  "-4"
                 ],
                 [
                   <Fragment>
@@ -230,8 +237,8 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-14",
-                  "+874",
-                  "pepe"
+                  "-6",
+                  "KND"
                 ],
                 [
                   <Fragment>
@@ -249,8 +256,8 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-16",
-                  "+874",
-                  "pepe"
+                  "KND",
+                  "KND"
                 ],
                 [
                   <Fragment>
@@ -270,8 +277,8 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-24",
-                  "+874",
-                  "pepe"
+                  "KND",
+                  "KND"
                 ],
                 [
                   <Fragment>
@@ -291,8 +298,9 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "+8",
-                  "+874",
-                  "pepe"
+                  "KND",
+                  "KND",
+                  <img className={classes.imgNote} src={ba} />
                 ],
                 [
                   <Fragment>
@@ -310,8 +318,8 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-12",
-                  "+874",
-                  "pepe"
+                  "0",
+                  "0"
                 ],
                 [
                   <Fragment>
@@ -331,8 +339,9 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "+4",
-                  "+874",
-                  "pepe"
+                  "+14",
+                  "+14",
+                  <img className={classes.imgNote} src={at} />
                 ],
                 [
                   <Fragment>
@@ -352,10 +361,10 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "+8",
-                  "+874",
-                  "pepe",
+                  "+14",
+                  "+14",
                   <p>
-                    wonderful <img className={classes.imgNote} src={ba} />
+                    <img className={classes.imgNote} src={ba} />
                   </p>
                 ],
                 [
@@ -375,9 +384,9 @@ function Astaroth(props) {
                     </p>
                   </Fragment>,
                   ,
-                  "-8",
-                  "+874",
-                  "pepe"
+                  "-6",
+                  "LNC",
+                  "LNC"
                 ],
                 [
                   <Fragment>
@@ -397,10 +406,144 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-14",
-                  "+874",
-                  "pepe",
+                  "KND",
+                  "KND",
                   <img className={classes.imgNote} src={at} />
-
+                ],
+                [
+                  <Fragment>
+                    <p>Poseiden Tide Rush</p>
+                    <p>
+                      <img className={classes.imgResize} src={d2} />
+                      <img className={classes.imgResize} src={d1} />
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>34F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-22",
+                  "",
+                  ""
+                ],
+                [
+                  <Fragment>
+                    <p>Poseiden Tide Rush</p>
+                    <p>
+                      <img className={classes.imgResize} src={d2} />
+                      <img className={classes.imgResize} src={d1} />
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>34F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-22",
+                  "",
+                  ""
+                ],
+                [
+                  <Fragment>
+                    <p>Poseiden Tide Rush</p>
+                    <p>
+                      <img className={classes.imgResize} src={d2} />
+                      <img className={classes.imgResize} src={d1} />
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>34F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-22",
+                  "",
+                  ""
+                ],
+                [
+                  <Fragment>
+                    <p>Poseiden Tide Rush</p>
+                    <p>
+                      <img className={classes.imgResize} src={d2} />
+                      <img className={classes.imgResize} src={d1} />
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>34F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-22",
+                  "",
+                  ""
+                ],
+                [
+                  <Fragment>
+                    <p>Poseiden Tide Rush</p>
+                    <p>
+                      <img className={classes.imgResize} src={d2} />
+                      <img className={classes.imgResize} src={d1} />
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>34F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-16",
+                  "-4",
+                  "-4"
                 ],
                 [
                   <Fragment>
@@ -419,10 +562,130 @@ function Astaroth(props) {
                   </Fragment>,
                   ,
                   "-14",
-                  "+874",
-                  "pepe"
+                  "-4",
+                  "-4"
                 ],
-            
+                [
+                  <Fragment>
+                    <p>Reverse Spiral Ax</p>
+
+                    <p>
+                      WR
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>26F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-2",
+                  "KND",
+                  "KND"
+                ],
+                [
+                  <Fragment>
+                    <p>Greater Annihilation</p>
+
+                    <p>
+                      <img className={classes.imgResize} src={d9} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>26F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-14",
+                  "KND",
+                  "KND"
+                ],
+                [
+                  <Fragment>
+                    <p>Greater Annihilation</p>
+
+                    <p>
+                      <img className={classes.imgResize} src={d8} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>26F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-14",
+                  "KND",
+                  "KND"
+                ],
+                [
+                  <Fragment>
+                    <p>Greater Annihilation</p>
+
+                    <p>
+                      <img className={classes.imgResize} src={d7} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>26F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-14",
+                  "-4",
+                  "-4"
+                ],
+                [
+                  <Fragment>
+                    <p>Reverse Ax Split</p>
+
+                    <p>
+                      BT
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p />
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "",
+                  "",
+                  ""
+                ],
+                [
+                  <Fragment>
+                    <p>Hades Break</p>
+
+                    <p>
+                      BT
+                      <img className={classes.imgResize} src={d2} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p />
+                    <p>
+                      <img className={classes.imgResize} src={l} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "",
+                  "",
+                  ""
+                ]
               ]}
             />
           </CardBody>
@@ -432,29 +695,496 @@ function Astaroth(props) {
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>Placeholder asdasd</h4>
-            <p className={classes.cardCategoryWhite}>
-              Placeholder asd asdasd asdasd asdasd
-            </p>
+            <h4 className={classes.cardTitleWhite}>Vertical Attacks</h4>
+            <p className={classes.cardCategoryWhite}>Vertical Attacks</p>
           </CardHeader>
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["Command", "Impact", "OnBlock", "OnHit"]}
+              tableHead={["MOVE", "IMPACT", "OB", "OH", "CH", "NOTE"]}
               tableData={[
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"]
+                [
+                  <Fragment>
+                    <p>Great Divide</p>
+                    <p>
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  "-8",
+                  "+2",
+                  "+8",
+                  "note"
+                ],
+                [
+                  <Fragment>
+                    <p>Great Divide</p>
+                    <p>
+                      <img className={classes.imgResize} src={b} />
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-2",
+                  "+12",
+                  "+12"
+                ],
+                [
+                  <Fragment>
+                    <p>Great Divide</p>
+                    <p>
+                      <img className={classes.imgResize} src={b} />
+                      <img className={classes.imgResize} src={b_h} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+
+                    <img className={classes.imgResize} src={m} />
+                    <img className={classes.imgResize} src={m} />
+                  </Fragment>,
+                  ,
+                  "+6",
+                  "LNC",
+                  "LNC",
+                  <img className={classes.imgNote} src={ba} />
+                ],
+                [
+                  <Fragment>
+                    <p>Command Kicks</p>
+                    <p>
+                      <img className={classes.imgResizeSM} src={b} />
+                      <img className={classes.imgResize} src={k} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-12",
+                  "-2",
+                  "-2"
+                ],
+                [
+                  <Fragment>
+                    <p>Command Kicks</p>
+                    <p>
+                      <img className={classes.imgResizeSM} src={b} />
+                      <img className={classes.imgResize} src={k} />
+                      <img className={classes.imgResize} src={k} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-2",
+                  "14",
+                  "14"
+                ],
+                [
+                  <Fragment>
+                    <p>Castigate</p>
+                    <p>
+                      <img className={classes.imgResizeSM} src={b} />
+                      <img className={classes.imgResize} src={k} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResizeSM} src={plus} />
+                      <img className={classes.imgResize} src={g} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "",
+                  "KND",
+                  "KND",
+                  <img className={classes.imgNote} src={th} />
+                ],
+                [
+                  <Fragment>
+                    <p>Bluster</p>
+                    <p>
+                      <img className={classes.imgResizeSM} src={b} />
+                      <img className={classes.imgResize} src={k} />
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResizeSM} src={plus} />
+                      <img className={classes.imgResize} src={g} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "",
+                  "KND",
+                  "KND",
+                  <img className={classes.imgNote} src={th} />
+                ],
+                [
+                  <Fragment>
+                    <p>Ax Offering</p>
+                    <p>
+                      <img className={classes.imgResizeSM} src={b} />
+                      <img className={classes.imgResize} src={d6} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>18F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-18",
+                  "-2",
+                  "+4"
+                ],
+                [
+                  <Fragment>
+                    <p>Ax Offering</p>
+                    <p>
+                      <img className={classes.imgResizeSM} src={b} />
+                      <img className={classes.imgResize} src={d6} />
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>18F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-4",
+                  "+4",
+                  "+14"
+                ],
+
+                [
+                  <Fragment>
+                    <p>Ax Side Divide</p>
+                    <p>
+                      <img className={classes.imgResize} src={b} />
+                      <img className={classes.imgResize} src={b} />
+                      <img className={classes.imgResize} src={d6} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "+2",
+                  "+10",
+                  "+10"
+                ],
+                [
+                  <Fragment>
+                    <p>Ax Side Cannon</p>
+                    <p>
+                      <img className={classes.imgResize} src={d6} />
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-8",
+                  "+2",
+                  "KND"
+                ],
+                [
+                  <Fragment>
+                    <p>Swipe</p>
+                    <p>
+                      <img className={classes.imgResize} src={d6} />
+                      <img className={classes.imgResize} src={b_h} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>40F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "+2",
+                  "KND",
+                  "KND"
+                ],
+                [
+                  <Fragment>
+                    <p>Swipe</p>
+                    <p>
+                      <img className={classes.imgResize} src={d6} />
+                      <img className={classes.imgResize} src={b_h} />
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>40F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "+8",
+                  "KND",
+                  "KND",
+                  <img className={classes.imgNote} src={ba} />
+                ],
+                [
+                  <Fragment>
+                    <p>Ax Volcano</p>
+                    <p>
+                      <img className={classes.imgResize} src={d3} />
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>24F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-12",
+                  "LNC",
+                  "LNC"
+                ],
+                [
+                  <Fragment>
+                    <p>Ax Volcano</p>
+                    <p>
+                      <img className={classes.imgResize} src={d3} />
+                      <img className={classes.imgResize} src={b_h} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>64F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "LNC",
+                  "LNC",
+                  "LNC",
+                  <img className={classes.imgNote} src={ua} />
+                ],
+                [
+                  <Fragment>
+                    <p>Hades</p>
+                    <p>
+                      <img className={classes.imgResize} src={d2} />
+
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-10",
+                  "+6",
+                  "+6"
+                ],
+                [
+                  <Fragment>
+                    <p>Ax Grave</p>
+                    <p>
+                      <img className={classes.imgResize} src={d1} />
+
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>24F</p>
+                    <p>
+                      <img className={classes.imgResize} src={l} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-18",
+                  "KND",
+                  "KND"
+                ],
+                [
+                  <Fragment>
+                    <p>Bear Fang</p>
+                    <p>
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>16F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-8",
+                  "+6",
+                  "+6"
+                ],
+                [
+                  <Fragment>
+                    <p>Bear Fang</p>
+                    <p>
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={b_h} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>42F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "+6",
+                  "KND",
+                  "KND",
+                  <img className={classes.imgNote} src={ba} />
+                ],
+                [
+                  <Fragment>
+                    <p>GoreFang</p>
+                    <p>
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={b_h} />
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>42F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "0",
+                  "0",
+                  "+6",
+
+                  <img className={classes.imgNote} src={ba} />
+                ],
+                [
+                  <Fragment>
+                    <p>GoreFang</p>
+                    <p>
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={b_h} />
+                      <img className={classes.imgResize} src={b_h} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>42F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "+10",
+                  "KND",
+                  "KND",
+                  <img className={classes.imgNote} src={ba} />
+                ],
+                [
+                  <Fragment>
+                    <p>Hades</p>
+                    <p>
+                      FC
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-10",
+                  "+6",
+                  "+6"
+                ],
+                [
+                  <Fragment>
+                    <p>Poseiden Tide Rush</p>
+                    <p>
+                      <img className={classes.imgResize} src={d2} />
+                      <img className={classes.imgResize} src={d1} />
+                      <img className={classes.imgResize} src={d4} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>34F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-22",
+                  "",
+                  ""
+                ]
               ]}
             />
           </CardBody>
@@ -463,28 +1193,32 @@ function Astaroth(props) {
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>Placeholder </h4>
-            <p className={classes.cardCategoryWhite}>Placeholder</p>
+            <h4 className={classes.cardTitleWhite}>Kick Attacks </h4>
+            <p className={classes.cardCategoryWhite}>Kick Attacks </p>
           </CardHeader>
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["Command", "Impact", "OnBlock", "OnHit"]}
+              tableHead={["MOVE", "IMPACT", "OB", "OH", "CH", "NOTE"]}
               tableData={[
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"]
+                [
+                  <Fragment>
+                    <p>Annihilation</p>
+                    <p>
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  "-4",
+                  "+2",
+                  "+6",
+                  "note"
+                ]
               ]}
             />
           </CardBody>
@@ -493,28 +1227,172 @@ function Astaroth(props) {
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>Placeholder </h4>
-            <p className={classes.cardCategoryWhite}>Placeholder</p>
+            <h4 className={classes.cardTitleWhite}>Dual Button Attacks </h4>
+            <p className={classes.cardCategoryWhite}>Dual Button Attacks</p>
           </CardHeader>
           <CardBody>
             <Table
               tableHeaderColor="primary"
-              tableHead={["Command", "Impact", "OnBlock", "OnHit"]}
+              tableHead={["MOVE", "IMPACT", "OB", "OH", "CH", "NOTE"]}
               tableData={[
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"],
-                ["66B", "11F", "+874", "+874"]
+                [
+                  <Fragment>
+                    <p>Annihilation</p>
+                    <p>
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  "-4",
+                  "+2",
+                  "+6",
+                  "note"
+                ]
+              ]}
+            />
+          </CardBody>
+        </Card>
+      </GridItem>
+
+      <GridItem xs={12} sm={12} md={12}>
+        <Card>
+          <CardHeader color="primary">
+            <h4 className={classes.cardTitleWhite}>8-Way Run Moves </h4>
+            <p className={classes.cardCategoryWhite}>8-Way Run Moves</p>
+          </CardHeader>
+          <CardBody>
+            <Table
+              tableHeaderColor="primary"
+              tableHead={["MOVE", "IMPACT", "OB", "OH", "CH", "NOTE"]}
+              tableData={[
+                [
+                  <Fragment>
+                    <p>Annihilation</p>
+                    <p>
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  "-4",
+                  "+2",
+                  "+6",
+                  "note"
+                ]
+              ]}
+            />
+          </CardBody>
+        </Card>
+      </GridItem>
+
+      <GridItem xs={12} sm={12} md={12}>
+        <Card>
+          <CardHeader color="primary">
+            <h4 className={classes.cardTitleWhite}>Throws </h4>
+            <p className={classes.cardCategoryWhite}>Throws</p>
+          </CardHeader>
+          <CardBody>
+            <Table
+              tableHeaderColor="primary"
+              tableHead={["MOVE", "IMPACT", "OB", "OH", "CH", "NOTE"]}
+              tableData={[
+                [
+                  <Fragment>
+                    <p>Annihilation</p>
+                    <p>
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  "-4",
+                  "+2",
+                  "+6",
+                  "note"
+                ]
+              ]}
+            />
+          </CardBody>
+        </Card>
+      </GridItem>
+
+       <GridItem xs={12} sm={12} md={12}>
+        <Card>
+          <CardHeader color="primary">
+            <h4 className={classes.cardTitleWhite}>Reversal Edge Attacks </h4>
+            <p className={classes.cardCategoryWhite}>Reversal Edge Attacks</p>
+          </CardHeader>
+          <CardBody>
+            <Table
+              tableHeaderColor="primary"
+              tableHead={["MOVE", "IMPACT", "OB", "OH", "CH", "NOTE"]}
+              tableData={[
+                [
+                  <Fragment>
+                    <p>Annihilation</p>
+                    <p>
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  "-4",
+                  "+2",
+                  "+6",
+                  "note"
+                ]
+              ]}
+            />
+          </CardBody>
+        </Card>
+      </GridItem>
+
+       <GridItem xs={12} sm={12} md={12}>
+        <Card>
+          <CardHeader color="primary">
+            <h4 className={classes.cardTitleWhite}>Gauge Attacks </h4>
+            <p className={classes.cardCategoryWhite}>Gauge Attacks</p>
+          </CardHeader>
+          <CardBody>
+            <Table
+              tableHeaderColor="primary"
+              tableHead={["MOVE", "IMPACT", "OB", "OH", "CH", "NOTE"]}
+              tableData={[
+                [
+                  <Fragment>
+                    <p>Annihilation</p>
+                    <p>
+                      <img className={classes.imgResize} src={a} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>20F</p>
+                    <p>
+                      <img className={classes.imgResize} src={h} />
+                    </p>
+                  </Fragment>,
+                  "-4",
+                  "+2",
+                  "+6",
+                  "note"
+                ]
               ]}
             />
           </CardBody>
