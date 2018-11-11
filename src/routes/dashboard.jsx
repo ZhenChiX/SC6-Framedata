@@ -1,8 +1,8 @@
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
+import Gamepad from "@material-ui/icons/Gamepad";
 import Person from "@material-ui/icons/Person";
 // import ContentPaste from "@material-ui/icons/ContentPaste";
-import Gamepad from "@material-ui/icons/Gamepad";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import BubbleChart from "@material-ui/icons/BubbleChart";
 import LocationOn from "@material-ui/icons/LocationOn";
@@ -14,9 +14,6 @@ import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import TableList from "views/Characters/TableList.jsx";
 import Terminology from "views/Terminology/Terminology.jsx";
 import Icons from "views/Icons/Icons.jsx";
-import Maps from "views/Maps/Maps.jsx";
-import NotificationsPage from "views/Notifications/Notifications.jsx";
-import UpgradeToPro from "views/UpgradeToPro/UpgradeToPro.jsx";
 import Astaroth from "views/Characters/Astaroth.jsx";
 
 const dashboardRoutes = [

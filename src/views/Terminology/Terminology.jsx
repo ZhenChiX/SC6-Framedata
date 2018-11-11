@@ -95,6 +95,119 @@ function Terminology(props) {
           </p>
         </div>
         <div className={classes.typo}>
+          <div className={classes.note}>H</div>
+          <Quote text="High Attack." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>M</div>
+          <Quote text="Middle Attack." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>L</div>
+          <Quote text="Low Attack." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>SM</div>
+          <Quote text="Special Middle Attack." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>SL</div>
+          <Quote text="Special Low Attack." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>TH</div>
+          <Quote text="Throw." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>AT</div>
+          <Quote text="Attack Throw." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>UA</div>
+          <Quote text="Unblockable Attack." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>BA</div>
+          <Quote text="Brave Attack." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>GI</div>
+          <Quote text="Guard Impact." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>CE</div>
+          <Quote text="Critical Edge." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>LH</div>
+          <Quote text="Lethal Hit." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>SC</div>
+          <Quote text="Soul Charge." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>SG</div>
+          <Quote text="Soul Gauge." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>RE</div>
+          <Quote text="Reversal Edge." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>SS</div>
+          <Quote text="Special Stance." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>A</div>
+          <Quote text="Press the horizontal attack button." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>[A]</div>
+          <Quote text="Hold the horizontal attack button." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>B</div>
+          <Quote text="Press the vertical attack button." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>[B]</div>
+          <Quote text="Hold the vertical attack button." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>K</div>
+          <Quote text="Press the kick button." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>[K]</div>
+          <Quote text="Hold the kick button." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>G</div>
+          <Quote text="Press the guard button." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>[G]</div>
+          <Quote text="Hold the guard button." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>Arrow</div>
+          <Quote text="Input a direction." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>[Arrow]</div>
+          <Quote text="Hold a direction." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>slide</div>
+          <Quote text="Slide from one input to the next." />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>Neutral</div>
+          <Quote text="Neutral." />
+        </div>
+
+        <div className={classes.typo}>
           <div className={classes.note}>Quote</div>
           <Quote
             text="I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
@@ -102,7 +215,14 @@ function Terminology(props) {
           />
         </div>
         <div className={classes.typo}>
-          <div className={classes.note}>Muted Text</div>
+          <div className={classes.note}>Quote</div>
+          <Quote
+            text="I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at."
+            author=" Kanye West, Musician"
+          />
+        </div>
+        <div className={classes.typo}>
+          <div className={classes.note}>A</div>
           <Muted>
             I will be the leader of a company that ends up being worth billions
             of dollars, because I got the answers...
@@ -146,7 +266,8 @@ function Terminology(props) {
         <div className={classes.typo}>
           <div className={classes.note}>Small Tag</div>
           <h2>
-            Header with small subtitle<br />
+            Header with small subtitle
+            <br />
             <small>Use "Small" tag for the headers</small>
           </h2>
         </div>
