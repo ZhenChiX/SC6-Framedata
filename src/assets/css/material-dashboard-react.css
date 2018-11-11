@@ -14,7 +14,13 @@
 
  */
 
+/* .headOne {
+    position: -webkit-sticky;
+    position: sticky !important;
+    top: 10vh;
+} */
 
+/* modify img */
 
 * {
     margin: 0;
