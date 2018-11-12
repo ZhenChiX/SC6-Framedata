@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 // @material-ui/core
@@ -39,7 +40,9 @@ import {
 } from "variables/charts.jsx";
 
 import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
-import Astaroth from "../Characters/Astaroth.jsx";
+// import Astaroth from "../Characters/Astaroth.jsx";
+// import Azwel from "../Characters/Azwel.jsx";
+
 
 class Dashboard extends React.Component {
   state = {
@@ -55,79 +58,91 @@ class Dashboard extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div>
-        <GridContainer>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card title="Astaroth" className="character astaroth" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character azwel" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character cervantes" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character chai" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character geralt" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character groh" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character inferno" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character ivy" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character kilik" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character maxi" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character mina" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character mitsurugi" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character nightmare" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character raphael" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character siegfried" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character sophitia" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character taki" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character talim" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character tira" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character voldo" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character yoshimitsu" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character zasalamel" />
-          </GridItem>
-          <GridItem xs={12} sm={6} md={4} lg={3}>
-            <Card className="character type2b" />
-          </GridItem>
-        </GridContainer>
-      </div>
+      <Router>
+        <div>
+          <GridContainer>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Link to="/astaroth">
+                <Card title="Astaroth" className="character astaroth" />
+              </Link>
+            </GridItem>
+
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Link to="/azwel">
+                <Card title="Azwel" className="character azwel" />
+              </Link>
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character cervantes" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Link to="/chai">
+                <Card className="character chai" />
+              </Link>
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character geralt" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character groh" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character inferno" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character ivy" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character kilik" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character maxi" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character mina" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character mitsurugi" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character nightmare" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character raphael" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character siegfried" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character sophitia" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character taki" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character talim" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character tira" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character voldo" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character yoshimitsu" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character zasalamel" />
+            </GridItem>
+            <GridItem xs={12} sm={6} md={4} lg={3}>
+              <Card className="character type2b" />
+            </GridItem>
+          </GridContainer>
+          {/* <Route path="/characters" component={Dashboard} />
+          <Route path="/astaroth" component={Astaroth} />
+          <Route path="/azwel" component={Azwel} /> */}
+        </div>
+      </Router>
     );
   }
 }

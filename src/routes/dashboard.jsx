@@ -15,7 +15,7 @@ import TableList from "views/Characters/TableList.jsx";
 import Terminology from "views/Terminology/Terminology.jsx";
 import Icons from "views/Icons/Icons.jsx";
 import Astaroth from "views/Characters/Astaroth.jsx";
-
+import Azwel from "views/Characters/Azwel.jsx";
 const dashboardRoutes = [
   {
     path: "/characters",
@@ -39,7 +39,7 @@ const dashboardRoutes = [
     component: TableList
   },
   {
-    path: "/Terminology",
+    path: "/terminology",
     sidebarName: "Terminology",
     navbarName: "Terminology",
     icon: Gamepad,
@@ -51,6 +51,13 @@ const dashboardRoutes = [
     navbarName: "Astaroth",
     icon: LibraryBooks,
     component: Astaroth
+  },
+  {
+    path: "/azwel",
+    sidebarName: "Azwel",
+    navbarName: "Azwel",
+    icon: LibraryBooks,
+    component: Azwel
   },
   // {
   //   path: "/icons",
