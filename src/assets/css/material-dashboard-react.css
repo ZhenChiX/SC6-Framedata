@@ -124,6 +124,7 @@ h3 {
 .character:hover {
     cursor: pointer;
     opacity: 0.9;
+    transition: 300ms ease-in-out;
 }
 
 .astaroth {

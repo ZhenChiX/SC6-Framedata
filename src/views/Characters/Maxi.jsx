@@ -92,14 +92,14 @@ const styles = {
   }
 };
 
-function Astaroth(props) {
+function Maxi(props) {
   const { classes } = props;
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
-            <h4 className={classes.cardTitleWhite}>Astaroth</h4>
+            <h4 className={classes.cardTitleWhite}>Maxi</h4>
             <p className={classes.cardCategoryWhite}>Horizontal Attacks</p>
           </CardHeader>
           <CardBody>
@@ -1402,4 +1402,4 @@ function Astaroth(props) {
   );
 }
 
-export default withStyles(styles)(Astaroth);
+export default withStyles(styles)(Maxi);
