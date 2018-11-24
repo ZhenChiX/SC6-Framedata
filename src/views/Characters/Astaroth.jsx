@@ -1160,30 +1160,80 @@ function Astaroth(props) {
                 ],
                 [
                   <Fragment>
-                    <p>Poseiden Tide Rush</p>
+                    <p>Filler</p>
                     <p>
-                      <img className={classes.imgResize} src={d2} />
-                      <img className={classes.imgResize} src={d1} />
-                      <img className={classes.imgResize} src={d4} />
-                      <img className={classes.imgResize} src={a} />
-                      <img className={classes.imgResize} src={a} />
-                      <img className={classes.imgResize} src={a} />
-                      <img className={classes.imgResize} src={a} />
+                      WR
+                      <img className={classes.imgResize} src={b} />
                     </p>
                   </Fragment>,
                   <Fragment>
-                    <p>34F</p>
+                    <p>F</p>
                     <p>
-                      <img className={classes.imgResize} src={m} />
-                      <img className={classes.imgResize} src={m} />
-                      <img className={classes.imgResize} src={m} />
                       <img className={classes.imgResize} src={m} />
                     </p>
                   </Fragment>,
                   ,
-                  "-22",
-                  "",
-                  ""
+                  "-10",
+                  "+6",
+                  "+6"
+                ],
+                [
+                  <Fragment>
+                    <p>Filler hold</p>
+                    <p>
+                      WR
+                      <img className={classes.imgResize} src={b_h} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-10",
+                  "+6",
+                  "+6",
+                  <img className={classes.imgNote} src={ba} />
+                ],
+                [
+                  <Fragment>
+                    <p>JUMP B</p>
+                    <p>
+                      <img className={classes.imgResize} src={d9} />
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-10",
+                  "+6",
+                  "+6"
+                ],
+                [
+                  <Fragment>
+                    <p>Reverse Dark Split</p>
+                    <p>
+                      BT
+                      <img className={classes.imgResize} src={b} />
+                    </p>
+                  </Fragment>,
+                  <Fragment>
+                    <p>22F</p>
+                    <p>
+                      <img className={classes.imgResize} src={m} />
+                    </p>
+                  </Fragment>,
+                  ,
+                  "-10",
+                  "+6",
+                  "+6"
                 ]
               ]}
             />
@@ -1203,20 +1253,20 @@ function Astaroth(props) {
               tableData={[
                 [
                   <Fragment>
-                    <p>Annihilation</p>
+                    <p>Moloch's Vise</p>
                     <p>
-                      <img className={classes.imgResize} src={a} />
+                      <img className={classes.imgResize} src={k} />
                     </p>
                   </Fragment>,
                   <Fragment>
-                    <p>20F</p>
+                    <p>14F</p>
                     <p>
                       <img className={classes.imgResize} src={h} />
                     </p>
                   </Fragment>,
-                  "-4",
-                  "+2",
-                  "+6",
+                  "-8",
+                  "+4",
+                  "+4",
                   "note"
                 ]
               ]}
@@ -1329,7 +1379,7 @@ function Astaroth(props) {
         </Card>
       </GridItem>
 
-       <GridItem xs={12} sm={12} md={12}>
+      <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
             <h4 className={classes.cardTitleWhite}>Reversal Edge Attacks </h4>
@@ -1364,7 +1414,7 @@ function Astaroth(props) {
         </Card>
       </GridItem>
 
-       <GridItem xs={12} sm={12} md={12}>
+      <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
             <h4 className={classes.cardTitleWhite}>Gauge Attacks </h4>

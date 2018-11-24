@@ -11,7 +11,7 @@ import Unarchive from "@material-ui/icons/Unarchive";
 // core components/views
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
 // import UserProfile from "views/UserProfile/UserProfile.jsx";
-import TableList from "views/Characters/TableList.jsx";
+// import TableList from "views/Characters/TableList.jsx";
 import Terminology from "views/Terminology/Terminology.jsx";
 import Icons from "views/Icons/Icons.jsx";
 import Astaroth from "views/Characters/Astaroth.jsx";
@@ -31,13 +31,13 @@ const dashboardRoutes = [
   //   icon: Person,
   //   component: UserProfile
   // },
-  {
-    path: "/framedata",
-    sidebarName: "Characters FrameData",
-    navbarName: "Characters FrameData",
-    icon: "content_paste",
-    component: TableList
-  },
+  // {
+  //   path: "/framedata",
+  //   sidebarName: "Characters FrameData",
+  //   navbarName: "Characters FrameData",
+  //   icon: "content_paste",
+  //   component: TableList
+  // },
   {
     path: "/terminology",
     sidebarName: "Terminology",
