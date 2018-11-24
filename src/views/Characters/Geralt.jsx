@@ -94,6 +94,105 @@ const styles = {
 
 function Geralt(props) {
   const { classes } = props;
+  //Geralt FrameData
+  const geraltFrameData = {
+    verticalAttacks: [
+      {
+        id: 1,
+
+        move: [
+          <Fragment>
+            <p>Steel Whirlwind</p>
+            <img className={classes.imgResize} src={a} />
+          </Fragment>
+        ],
+        impact: [
+          <Fragment>
+            <p>12F</p>
+            <img className={classes.imgResize} src={h} />
+          </Fragment>
+        ],
+        onBlock: -8,
+        onHit: -4,
+        counterHit: -4,
+        note: "note"
+      },
+      {
+        id: 2,
+        move: [
+          <Fragment>
+          <p>Steel Whirlwind</p>
+            <img className={classes.imgResize} src={a} />
+            <img className={classes.imgResize} src={a} />
+          </Fragment>
+        ],
+        impact: [
+          <Fragment>
+          <p>12F</p>
+            <img className={classes.imgResize} src={h} />
+            <img className={classes.imgResize} src={h} />
+          </Fragment>
+        ],
+        onBlock: -10,
+        onHit: +2,
+        counterHit: +2,
+        note: "note"
+      },
+      {
+        id: 3,
+        move: [
+          <Fragment>
+          <p>Steel Whirlwind</p>
+            <img className={classes.imgResize} src={a} />
+            <img className={classes.imgResize} src={a} />
+            <img className={classes.imgResize} src={a} />
+          </Fragment>
+        ],
+        impact: [
+          <Fragment>
+          <p>12F</p>
+            <img className={classes.imgResize} src={h} />
+            <img className={classes.imgResize} src={h} />
+            <img className={classes.imgResize} src={m} />
+          </Fragment>
+        ],
+        onBlock: -8,
+        onHit: +8,
+        counterHit: +8,
+        note: "note"
+      },
+      {
+        id: 4,
+        move: [
+          <Fragment>
+          <p>Svalblod Strike</p>
+            <img className={classes.imgResize} src={d6} />
+            <img className={classes.imgResize} src={a} />
+          </Fragment>
+        ],
+        impact: [
+          <Fragment>
+          <p>14F</p>
+            <img className={classes.imgResize} src={h} />
+          </Fragment>
+        ],
+        onBlock: -10,
+        onHit: -4,
+        counterHit: 0,
+        note: "note"
+      }
+    ]
+
+    // HorizontalAttacks: []
+
+    //  Kicks: []
+  };
+
+  // console.log(geraltFrameData);
+  // console.log(geraltFrameData["verticalAttacks"]);
+  // console.log(geraltFrameData[0].verticalAttacks);
+  // console.log(geraltFrameData[0].verticalAttacks[1].move);
+
   return (
     <GridContainer>
       <GridItem xs={12} sm={12} md={12}>
@@ -102,6 +201,22 @@ function Geralt(props) {
             <h4 className={classes.cardTitleWhite}>Geralt</h4>
             <p className={classes.cardCategoryWhite}>Horizontal Attacks</p>
           </CardHeader>
+          <CardBody>
+            <Table
+              tableHeaderColor="primary"
+              tableHead={["MOVE", "IMPACT", "OB", "OH", "CH", "NOTE"]}
+              tableData={geraltFrameData.verticalAttacks.map(data => [
+                <p>{data.move}</p>,
+                <p>{data.impact}</p>,
+                <p>{data.onBlock}</p>,
+                <p>{data.onHit}</p>,
+                <p>{data.counterHit}</p>,
+
+                <p>{data.note}</p>
+              ])}
+            />
+          </CardBody>
+
           <CardBody>
             <Table
               tableHeaderColor="primary"
@@ -1329,7 +1444,7 @@ function Geralt(props) {
         </Card>
       </GridItem>
 
-       <GridItem xs={12} sm={12} md={12}>
+      <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
             <h4 className={classes.cardTitleWhite}>Reversal Edge Attacks </h4>
@@ -1364,7 +1479,7 @@ function Geralt(props) {
         </Card>
       </GridItem>
 
-       <GridItem xs={12} sm={12} md={12}>
+      <GridItem xs={12} sm={12} md={12}>
         <Card>
           <CardHeader color="primary">
             <h4 className={classes.cardTitleWhite}>Gauge Attacks </h4>
