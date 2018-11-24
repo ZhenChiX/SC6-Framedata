@@ -29,6 +29,15 @@ import d6 from "../../assets/img/6.png";
 import d7 from "../../assets/img/7.png";
 import d8 from "../../assets/img/8.png";
 import d9 from "../../assets/img/9.png";
+import d1_h from "../../assets/img/1-hold.png";
+import d2_h from "../../assets/img/2-hold.png";
+import d3_h from "../../assets/img/3-hold.png";
+import d4_h from "../../assets/img/4-hold.png";
+import d6_h from "../../assets/img/6-hold.png";
+import d7_h from "../../assets/img/7-hold.png";
+import d8_h from "../../assets/img/8-hold.png";
+import d9_h from "../../assets/img/9-hold.png";
+
 import h from "../../assets/img/h.png";
 import m from "../../assets/img/m.png";
 import sm from "../../assets/img/sm.png";
