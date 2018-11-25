@@ -212,7 +212,7 @@ class Dashboard extends React.Component {
             </GridItem>
             <GridItem xs={12} sm={6} md={4} lg={3}>
               <Link to="/type2b">
-                <Card title="Type2B" className="character type2b" />
+                <Card title="2B" className="character type2b" />
               </Link>
             </GridItem>
           </GridContainer>
@@ -251,13 +251,7 @@ class Dashboard extends React.Component {
     );
   }
 }
-function Child({ match }) {
-  return (
-    <div>
-      <h3>ID: {match.params.id}</h3>
-    </div>
-  );
-}
+
 
 Dashboard.propTypes = {
   classes: PropTypes.object.isRequired
