@@ -47,8 +47,9 @@ const tableStyle = theme => ({
   tableCell: {
     ...defaultFont,
     lineHeight: "1.42857143",
-    // padding: "12px 8px",
-    verticalAlign: "middle"
+    padding: "4px 12px 4px 12px",
+    verticalAlign: "middle",
+    minWidth:"5vw"
   },
   tableResponsive: {
     width: "100%",
