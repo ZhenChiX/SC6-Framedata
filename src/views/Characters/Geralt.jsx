@@ -117,11 +117,11 @@ const tableHeadDetail = [
   "NOTE"
 ];
 const tableHeadSimple = ["M", "I", "OB", "OH", "CH", "NOTE"];
-
 class Geralt extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      display: false,
       checked: true,
       tableHeadData: tableHeadDetail
     };
@@ -134,7 +134,8 @@ class Geralt extends Component {
         : tableHeadDetail;
     this.setState({
       checked: !this.state.checked,
-      tableHeadData: tableHeadData
+      tableHeadData: tableHeadData,
+      display: !this.state.display
     });
   };
   // handleChange = name => event => {
@@ -145,9 +146,8 @@ class Geralt extends Component {
     const { classes } = this.props;
 
     //Geralt FrameData
+    // verticalAttacks start here
     const geraltFrameData = {
-      // verticalAttacks start here
-
       verticalAttacks: [
         {
           id: 1,
@@ -2335,6 +2335,7 @@ class Geralt extends Component {
               <span> * </span>
               <img className={classes.imgResize} src={d7_h} />
               <img className={classes.imgResize} src={k} />
+              <img className={classes.imgResize} src={k} />
               <span>~</span>
               <img className={classes.imgResize} src={d2} />
               <span> * </span>
@@ -3574,56 +3575,54 @@ class Geralt extends Component {
       ]
     };
 
-    // Blizzard Frenzy		14,16,26	2,3,4	4	KND	KND
-    // SC:(3):*:(6):*:(9)::A::A::A:	:H::H::M:	:SC: / First 2 hits NC
-
-    //toggle detail/simple display
-    // const tableHeadDetail = [
-    //   "MOVE",
-    //   "IMPACT",
-    //   "OnBlock",
-    //   "OnHit",
-    //   "CounterHit",
-    //   "NOTE"
-    // ];
-    // const tableHeadSimple = ["M", "I", "OB", "OH", "CH", "NOTE"];
-
     return (
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Horizontal Attacks</h4>
-
               <div
                 className={`${classes.toggleStyle} ${
                   classes.cardCategoryWhite
                 }`}
               >
-                <span>Numeric</span>
+                <span>Simple</span>
                 <Switch
                   checked={this.state.checked}
                   onClick={this.toggleTableData}
-                  // value= "tableHeadDetail"
                   color="primary"
                 />
                 <span>Detail</span>
               </div>
             </CardHeader>
             <CardBody>
-              <Table
-                tableHeaderColor="primary"
-                tableHead={this.state.tableHeadData}
-                // tableHead={tableHeadDetail}
-                tableData={geraltFrameData.verticalAttacks.map(data => [
-                  data.move,
-                  data.impact,
-                  data.onBlock,
-                  data.onHit,
-                  data.counterHit,
-                  data.note
-                ])}
-              />
+            {this.state.display ? (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.verticalAttacks.map(data => [
+                    data.command,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              ) : (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.verticalAttacks.map(data => [
+                    data.move,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              )}
             </CardBody>
           </Card>
         </GridItem>
@@ -3632,21 +3631,48 @@ class Geralt extends Component {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Vertical Attacks</h4>
-              <p className={classes.cardCategoryWhite}>Vertical Attacks</p>
+              <div
+                className={`${classes.toggleStyle} ${
+                  classes.cardCategoryWhite
+                }`}
+              >
+                <span>Simple</span>
+                <Switch
+                  checked={this.state.checked}
+                  onClick={this.toggleTableData}
+                  color="primary"
+                />
+                <span>Detail</span>
+              </div>
             </CardHeader>
             <CardBody>
-              <Table
-                tableHeaderColor="primary"
-                tableHead={this.state.tableHeadData}
-                tableData={geraltFrameData.horizontalAttacks.map(data => [
-                  data.move,
-                  data.impact,
-                  data.onBlock,
-                  data.onHit,
-                  data.counterHit,
-                  data.note
-                ])}
-              />
+            {this.state.display ? (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.horizontalAttacks.map(data => [
+                    data.command,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              ) : (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.horizontalAttacks.map(data => [
+                    data.move,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              )}
             </CardBody>
           </Card>
         </GridItem>
@@ -3654,21 +3680,48 @@ class Geralt extends Component {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Kick Attacks </h4>
-              <p className={classes.cardCategoryWhite}>Kick Attacks </p>
+              <div
+                className={`${classes.toggleStyle} ${
+                  classes.cardCategoryWhite
+                }`}
+              >
+                <span>Simple</span>
+                <Switch
+                  checked={this.state.checked}
+                  onClick={this.toggleTableData}
+                  color="primary"
+                />
+                <span>Detail</span>
+              </div>
             </CardHeader>
             <CardBody>
-              <Table
-                tableHeaderColor="primary"
-                tableHead={this.state.tableHeadData}            
-                tableData={geraltFrameData.kicks.map(data => [
-                  data.move,
-                  data.impact,
-                  data.onBlock,
-                  data.onHit,
-                  data.counterHit,
-                  data.note
-                ])}
-              />
+            {this.state.display ? (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.kicks.map(data => [
+                    data.command,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              ) : (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.kicks.map(data => [
+                    data.move,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              )}
             </CardBody>
           </Card>
         </GridItem>
@@ -3676,21 +3729,48 @@ class Geralt extends Component {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Dual Button Attacks </h4>
-              <p className={classes.cardCategoryWhite}>Dual Button Attacks</p>
+              <div
+                className={`${classes.toggleStyle} ${
+                  classes.cardCategoryWhite
+                }`}
+              >
+                <span>Simple</span>
+                <Switch
+                  checked={this.state.checked}
+                  onClick={this.toggleTableData}
+                  color="primary"
+                />
+                <span>Detail</span>
+              </div>
             </CardHeader>
             <CardBody>
-              <Table
-                tableHeaderColor="primary"
-                tableHead={this.state.tableHeadData}              
-                tableData={geraltFrameData.dualButtonAttacks.map(data => [
-                  data.move,
-                  data.impact,
-                  data.onBlock,
-                  data.onHit,
-                  data.counterHit,
-                  data.note
-                ])}
-              />
+            {this.state.display ? (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.dualButtonAttacks.map(data => [
+                    data.command,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              ) : (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.dualButtonAttacks.map(data => [
+                    data.move,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              )}
             </CardBody>
           </Card>
         </GridItem>
@@ -3699,21 +3779,48 @@ class Geralt extends Component {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>8-Way Run Moves </h4>
-              <p className={classes.cardCategoryWhite}>8-Way Run Moves</p>
+              <div
+                className={`${classes.toggleStyle} ${
+                  classes.cardCategoryWhite
+                }`}
+              >
+                <span>Simple</span>
+                <Switch
+                  checked={this.state.checked}
+                  onClick={this.toggleTableData}
+                  color="primary"
+                />
+                <span>Detail</span>
+              </div>
             </CardHeader>
             <CardBody>
-              <Table
-                tableHeaderColor="primary"
-                tableHead={this.state.tableHeadData}              
-                tableData={geraltFrameData.eightwayrunAttack.map(data => [
-                  data.move,
-                  data.impact,
-                  data.onBlock,
-                  data.onHit,
-                  data.counterHit,
-                  data.note
-                ])}
-              />
+              {this.state.display ? (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.eightwayrunAttack.map(data => [
+                    data.command,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              ) : (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.eightwayrunAttack.map(data => [
+                    data.move,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              )}
             </CardBody>
           </Card>
         </GridItem>
@@ -3722,21 +3829,48 @@ class Geralt extends Component {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Throws </h4>
-              <p className={classes.cardCategoryWhite}>Throws</p>
+              <div
+                className={`${classes.toggleStyle} ${
+                  classes.cardCategoryWhite
+                }`}
+              >
+                <span>Simple</span>
+                <Switch
+                  checked={this.state.checked}
+                  onClick={this.toggleTableData}
+                  color="primary"
+                />
+                <span>Detail</span>
+              </div>
             </CardHeader>
             <CardBody>
-              <Table
-                tableHeaderColor="primary"
-                tableHead={this.state.tableHeadData}        
-                tableData={geraltFrameData.throws.map(data => [
-                  data.move,
-                  data.impact,
-                  data.onBlock,
-                  data.onHit,
-                  data.counterHit,
-                  data.note
-                ])}
-              />
+            {this.state.display ? (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.throws.map(data => [
+                    data.command,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              ) : (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.throws.map(data => [
+                    data.move,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              )}
             </CardBody>
           </Card>
         </GridItem>
@@ -3745,21 +3879,48 @@ class Geralt extends Component {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Reversal Edge Attacks </h4>
-              <p className={classes.cardCategoryWhite}>Reversal Edge Attacks</p>
+              <div
+                className={`${classes.toggleStyle} ${
+                  classes.cardCategoryWhite
+                }`}
+              >
+                <span>Simple</span>
+                <Switch
+                  checked={this.state.checked}
+                  onClick={this.toggleTableData}
+                  color="primary"
+                />
+                <span>Detail</span>
+              </div>
             </CardHeader>
             <CardBody>
-              <Table
-                tableHeaderColor="primary"
-                tableHead={tableHeadDetail}
-                tableData={geraltFrameData.reversalEdge.map(data => [
-                  data.move,
-                  data.impact,
-                  data.onBlock,
-                  data.onHit,
-                  data.counterHit,
-                  data.note
-                ])}
-              />
+            {this.state.display ? (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.reversalEdge.map(data => [
+                    data.command,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              ) : (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.reversalEdge.map(data => [
+                    data.move,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              )}
             </CardBody>
           </Card>
         </GridItem>
@@ -3768,21 +3929,48 @@ class Geralt extends Component {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>Gauge Attacks </h4>
-              <p className={classes.cardCategoryWhite}>Gauge Attacks</p>
+              <div
+                className={`${classes.toggleStyle} ${
+                  classes.cardCategoryWhite
+                }`}
+              >
+                <span>Simple</span>
+                <Switch
+                  checked={this.state.checked}
+                  onClick={this.toggleTableData}
+                  color="primary"
+                />
+                <span>Detail</span>
+              </div>
             </CardHeader>
             <CardBody>
-              <Table
-                tableHeaderColor="primary"
-                tableHead={this.state.tableHeadData}              
-                tableData={geraltFrameData.gaugeAttacks.map(data => [
-                  data.move,
-                  data.impact,
-                  data.onBlock,
-                  data.onHit,
-                  data.counterHit,
-                  data.note
-                ])}
-              />
+            {this.state.display ? (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.gaugeAttacks.map(data => [
+                    data.command,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              ) : (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={geraltFrameData.gaugeAttacks.map(data => [
+                    data.move,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              )}
             </CardBody>
           </Card>
         </GridItem>
