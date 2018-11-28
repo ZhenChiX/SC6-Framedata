@@ -482,7 +482,7 @@ class Geralt extends Component {
           onBlock: "-16",
           onHit: "N/A",
           counterHit: "+10",
-          note: "Just Frame"
+          note: "Just"
         },
         {
           id: 16,
@@ -2757,7 +2757,7 @@ class Geralt extends Component {
           note: [
             <Fragment>
               <img className={classes.imgNote} src={re} />
-              <img className={classes.imgNote} src={ba} />
+              <img className={classes.imgNote} src={ua} />
             </Fragment>
           ]
         },
