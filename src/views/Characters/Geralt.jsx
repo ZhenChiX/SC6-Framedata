@@ -138,9 +138,6 @@ class Geralt extends Component {
       display: !this.state.display
     });
   };
-  // handleChange = name => event => {
-  //   this.setState({ [name]: event.target.checked });
-  // };
 
   render() {
     const { classes } = this.props;
@@ -485,7 +482,7 @@ class Geralt extends Component {
           onBlock: "-16",
           onHit: "N/A",
           counterHit: "+10",
-          note: ""
+          note: "Just Frame"
         },
         {
           id: 16,
@@ -3596,7 +3593,7 @@ class Geralt extends Component {
               </div>
             </CardHeader>
             <CardBody>
-            {this.state.display ? (
+              {this.state.display ? (
                 <Table
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
@@ -3646,7 +3643,7 @@ class Geralt extends Component {
               </div>
             </CardHeader>
             <CardBody>
-            {this.state.display ? (
+              {this.state.display ? (
                 <Table
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
@@ -3695,7 +3692,7 @@ class Geralt extends Component {
               </div>
             </CardHeader>
             <CardBody>
-            {this.state.display ? (
+              {this.state.display ? (
                 <Table
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
@@ -3744,7 +3741,7 @@ class Geralt extends Component {
               </div>
             </CardHeader>
             <CardBody>
-            {this.state.display ? (
+              {this.state.display ? (
                 <Table
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
@@ -3844,7 +3841,7 @@ class Geralt extends Component {
               </div>
             </CardHeader>
             <CardBody>
-            {this.state.display ? (
+              {this.state.display ? (
                 <Table
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
@@ -3894,7 +3891,7 @@ class Geralt extends Component {
               </div>
             </CardHeader>
             <CardBody>
-            {this.state.display ? (
+              {this.state.display ? (
                 <Table
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
@@ -3944,7 +3941,7 @@ class Geralt extends Component {
               </div>
             </CardHeader>
             <CardBody>
-            {this.state.display ? (
+              {this.state.display ? (
                 <Table
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
