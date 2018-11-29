@@ -3089,7 +3089,7 @@ class Mina extends Component {
           note: [
             <Fragment>
               <img className={classes.imgNote} src={re} />
-              <img className={classes.imgNote} src={ua} />
+              <img className={classes.imgNote} src={ba} />
             </Fragment>
           ]
         },
