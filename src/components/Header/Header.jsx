@@ -20,7 +20,9 @@ function Header({ ...props }) {
     var name;
     props.routes.map((prop, key) => {
       if (prop.path === props.location.pathname) {
+        // name = "MAKE IT WORK";
         name = prop.navbarName;
+
       }
       return null;
     });
@@ -35,7 +37,9 @@ function Header({ ...props }) {
       <Toolbar className={classes.container}>
         <div className={classes.flex}>
           {/* Here we create navbar brand, based on route name */}
-          <Button color="transparent" href="#" className={classes.title}>
+          <Button 
+        
+          color="transparent" href="#" className={classes.title}>
             {makeBrand()}
           </Button>
         </div>

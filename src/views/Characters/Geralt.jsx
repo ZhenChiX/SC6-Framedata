@@ -3016,7 +3016,7 @@ class Geralt extends Component {
           note: [
             <Fragment>
               <img className={classes.imgNote} src={sg} />
-              <img className={classes.imgNote} src={at} />
+              <img className={classes.imgNote} src={ce} />
             </Fragment>
           ]
         },

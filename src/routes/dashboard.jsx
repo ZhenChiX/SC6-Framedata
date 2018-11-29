@@ -9,7 +9,7 @@ import LocationOn from "@material-ui/icons/LocationOn";
 import Notifications from "@material-ui/icons/Notifications";
 import Unarchive from "@material-ui/icons/Unarchive";
 // core components/views
-import DashboardPage from "views/Dashboard/Dashboard.jsx";
+import Characters from "views/Dashboard/Characters.jsx";
 // import UserProfile from "views/UserProfile/UserProfile.jsx";
 // import TableList from "views/Characters/TableList.jsx";
 import Terminology from "views/Terminology/Terminology.jsx";
@@ -22,7 +22,7 @@ const dashboardRoutes = [
     sidebarName: "Characters",
     navbarName: "Characters",
     icon: Dashboard,
-    component: DashboardPage
+    component: Characters
   },
   // {
   //   path: "/user",
@@ -45,20 +45,20 @@ const dashboardRoutes = [
     icon: Gamepad,
     component: Terminology
   },
-  {
-    path: "/astaroth",
-    sidebarName: "Astaroth",
-    navbarName: "Astaroth",
-    icon: LibraryBooks,
-    component: Astaroth
-  },
-  {
-    path: "/azwel",
-    sidebarName: "Azwel",
-    navbarName: "Azwel",
-    icon: LibraryBooks,
-    component: Azwel
-  },
+  // {
+  //   path: "/astaroth",
+  //   sidebarName: "Astaroth",
+  //   navbarName: "Astaroth",
+  //   icon: LibraryBooks,
+  //   component: Astaroth
+  // },
+  // {
+  //   path: "/azwel",
+  //   sidebarName: "Azwel",
+  //   navbarName: "Azwel",
+  //   icon: LibraryBooks,
+  //   component: Azwel
+  // },
   // {
   //   path: "/icons",
   //   sidebarName: "Icons",
