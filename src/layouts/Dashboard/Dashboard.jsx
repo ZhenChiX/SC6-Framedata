@@ -78,7 +78,7 @@ class App extends React.Component {
           open={this.state.mobileOpen}
           color="blue"
           {...rest}
-        />
+          />
         <div className={classes.mainPanel} ref="mainPanel">
           <Header
             routes={dashboardRoutes}

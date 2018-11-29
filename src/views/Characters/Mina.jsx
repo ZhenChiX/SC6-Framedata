@@ -142,7 +142,6 @@ class Mina extends Component {
   render() {
     const { classes } = this.props;
 
-
     //Mina FrameData
     // verticalAttacks start here
 
@@ -3420,7 +3419,7 @@ class Mina extends Component {
           note: [
             <Fragment>
               <img className={classes.imgNote} src={sg} />
-              <img className={classes.imgNote} src={at} />
+              <img className={classes.imgNote} src={ce} />
             </Fragment>
           ]
         },
@@ -3861,17 +3860,96 @@ class Mina extends Component {
           ],
           impact: [
             <Fragment>
-              <p>38F</p>
+              <p>F</p>
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "+8",
+          onBlock: "UA",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={sc} />
               <img className={classes.imgNote} src={ua} />
+            </Fragment>
+          ]
+        }
+      ],
+      // special stance start here
+      specialAttacks: [
+        {
+          id: 148,
+          command: "LS A",
+          move: [
+            <Fragment>
+              <p>Violet Squall</p>
+              <span>LS</span>
+              <img className={classes.imgResize} src={a} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              <img className={classes.imgResize} src={h} />
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 149,
+          command: "LS B",
+          move: [
+            <Fragment>
+              <p>Lightning Fang</p>
+              <span>LS</span>
+              <img className={classes.imgResize} src={b} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              <img className={classes.imgResize} src={l} />
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "-8",
+          counterHit: "-8",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 150,
+          command: "LS K",
+          move: [
+            <Fragment>
+              <p>Spinning Storm Kick</p>
+              <span>LS</span>
+              <img className={classes.imgResize} src={k} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>36F</p>
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "+6",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+              <img className={classes.imgNote} src={ba} />
             </Fragment>
           ]
         }
@@ -4065,6 +4143,58 @@ class Mina extends Component {
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
                   tableData={minaFrameData.dualButtonAttacks.map(data => [
+                    data.move,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              )}
+            </CardBody>
+          </Card>
+        </GridItem>
+
+        <GridItem xs={12} sm={12} md={12}>
+          <Card>
+            <CardHeader color="primary">
+              <h4 className={classes.cardTitleWhite}>
+                Special Stance(Lingering Step)
+              </h4>
+              <div
+                className={`${classes.toggleStyle} ${
+                  classes.cardCategoryWhite
+                }`}
+              >
+                <span>Simple</span>
+                <Switch
+                  checked={this.state.checked}
+                  onClick={this.toggleTableData}
+                  color="primary"
+                />
+                <span>Detail</span>
+              </div>
+            </CardHeader>
+            <CardBody>
+              {this.state.display ? (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={minaFrameData.specialAttacks.map(data => [
+                    data.command,
+                    data.impact,
+                    data.onBlock,
+                    data.onHit,
+                    data.counterHit,
+                    data.note
+                  ])}
+                />
+              ) : (
+                <Table
+                  tableHeaderColor="primary"
+                  tableHead={this.state.tableHeadData}
+                  tableData={minaFrameData.specialAttacks.map(data => [
                     data.move,
                     data.impact,
                     data.onBlock,
