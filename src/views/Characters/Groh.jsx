@@ -3003,7 +3003,6 @@ class Groh extends Component {
           ],
           impact: [
             <Fragment>
-              <p>""</p>
               <img className={classes.imgResize} src={h} />
               <img className={classes.imgResize} src={h} />
             </Fragment>
