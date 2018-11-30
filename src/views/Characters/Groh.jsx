@@ -142,8 +142,6 @@ class Groh extends Component {
   render() {
     const { classes } = this.props;
 
-
-
     //Groh FrameData
     // verticalAttacks start here
 
@@ -714,7 +712,7 @@ class Groh extends Component {
             </Fragment>
           ],
           onBlock: "-16",
-          onHit: "LNC",
+          onHit: "",
           counterHit: "LNC",
           note: ""
         },
@@ -2175,11 +2173,11 @@ class Groh extends Component {
       //throws start here
       throws: [
         {
-          id: 110,
+          id: 83,
           command: "A+G",
           move: [
             <Fragment>
-              <p>Crushing Soul</p>
+              <p>Camlann's Lament</p>
               <img className={classes.imgResize} src={a} />
               <img className={classes.imgResize} src={plus} />
               <img className={classes.imgResize} src={g} />
@@ -2192,8 +2190,8 @@ class Groh extends Component {
             </Fragment>
           ],
           onBlock: "N/A",
-          onHit: "N/A",
-          counterHit: "N/A",
+          onHit: "KND",
+          counterHit: "KND",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={th} />
@@ -2201,11 +2199,11 @@ class Groh extends Component {
           ]
         },
         {
-          id: 111,
+          id: 84,
           command: "4A+G",
           move: [
             <Fragment>
-              <p>Dropping Embrace</p>
+              <p>Lohengrin's Courage</p>
               <img className={classes.imgResize} src={d4} />
               <img className={classes.imgResize} src={a} />
               <img className={classes.imgResize} src={plus} />
@@ -2219,8 +2217,8 @@ class Groh extends Component {
             </Fragment>
           ],
           onBlock: "N/A",
-          onHit: "N/A",
-          counterHit: "N/A",
+          onHit: "KND",
+          counterHit: "KND",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={th} />
@@ -2228,98 +2226,11 @@ class Groh extends Component {
           ]
         },
         {
-          id: 112,
-          command: "46A+G",
-          move: [
-            <Fragment>
-              <p>Furious Swing</p>
-              <img className={classes.imgResize} src={d4} />
-              <img className={classes.imgResize} src={d6} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={plus} />
-              <img className={classes.imgResize} src={g} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              <img className={classes.imgResize} src={h} />
-            </Fragment>
-          ],
-          onBlock: "N/A",
-          onHit: "N/A",
-          counterHit: "N/A",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={th} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 113,
-          command: "46A+G~B",
-          move: [
-            <Fragment>
-              <p>Furious Swing ~ Stone Shock</p>
-              <img className={classes.imgResize} src={d4} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={plus} />
-              <img className={classes.imgResize} src={g} />
-              <img className={classes.imgResize} src={b} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              <img className={classes.imgResize} src={h} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={th} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 114,
-          command: "46A+G~[B]",
-          move: [
-            <Fragment>
-              <p>Furious Swing ~ Stone Shock</p>
-              <img className={classes.imgResize} src={d4} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={plus} />
-              <img className={classes.imgResize} src={g} />
-              <img className={classes.imgResize} src={b_h} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              <img className={classes.imgResize} src={h} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "+8",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={th} />
-              <img className={classes.imgNote} src={ba} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 115,
+          id: 85,
           command: "Right Throw",
           move: [
             <Fragment>
-              <p>Mi-Na Frankensteiner</p>
+              <p>Sire Balin's Swords</p>
               <p>Right Side Throw</p>
             </Fragment>
           ],
@@ -2330,8 +2241,8 @@ class Groh extends Component {
             </Fragment>
           ],
           onBlock: "N/A",
-          onHit: "N/A",
-          counterHit: "N/A",
+          onHit: "KND",
+          counterHit: "KND",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={th} />
@@ -2339,11 +2250,11 @@ class Groh extends Component {
           ]
         },
         {
-          id: 116,
+          id: 86,
           command: "Left Throw",
           move: [
             <Fragment>
-              <p>Riding Mustang</p>
+              <p>Nimue's Embrace</p>
               <p>Left Side Throw</p>
             </Fragment>
           ],
@@ -2354,8 +2265,8 @@ class Groh extends Component {
             </Fragment>
           ],
           onBlock: "N/A",
-          onHit: "N/A",
-          counterHit: "N/A",
+          onHit: "KND",
+          counterHit: "KND",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={th} />
@@ -2363,11 +2274,11 @@ class Groh extends Component {
           ]
         },
         {
-          id: 117,
+          id: 87,
           command: "Back Throw",
           move: [
             <Fragment>
-              <p>Stalk Cutter</p>
+              <p>Astolat's Echo</p>
               <p>Back Throw</p>
             </Fragment>
           ],
@@ -2378,8 +2289,8 @@ class Groh extends Component {
             </Fragment>
           ],
           onBlock: "N/A",
-          onHit: "N/A",
-          counterHit: "N/A",
+          onHit: "KND",
+          counterHit: "KND",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={th} />
@@ -2390,11 +2301,11 @@ class Groh extends Component {
       // reversal edge start here
       reversalEdge: [
         {
-          id: 118,
+          id: 88,
           command: "B+G",
           move: [
             <Fragment>
-              <p>Jade Break</p>
+              <p>Glory's End</p>
               <img className={classes.imgResize} src={b} />
               <img className={classes.imgResize} src={plus} />
               <img className={classes.imgResize} src={g} />
@@ -2406,7 +2317,7 @@ class Groh extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-10",
+          onBlock: "N/A",
           onHit: "N/A",
           counterHit: "N/A",
           note: [
@@ -2416,11 +2327,11 @@ class Groh extends Component {
           ]
         },
         {
-          id: 119,
-          command: "(B+G)",
+          id: 89,
+          command: "[B+G]",
           move: [
             <Fragment>
-              <p>Jade Break</p>
+              <p>Glory's End</p>
               <img className={classes.imgResize} src={b_h} />
               <img className={classes.imgResize} src={plus} />
               <img className={classes.imgResize} src={g_h} />
@@ -2428,26 +2339,26 @@ class Groh extends Component {
           ],
           impact: [
             <Fragment>
-              <p>F</p>
+              <p>66F</p>
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-4",
+          onBlock: "N/A",
           onHit: "N/A",
           counterHit: "N/A",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={re} />
-              <img className={classes.imgNote} src={ua} />
+              <img className={classes.imgNote} src={ba} />
             </Fragment>
           ]
         },
         {
-          id: 120,
+          id: 90,
           command: "RE A",
           move: [
             <Fragment>
-              <p>??????</p>
+              <p>Destruction of Logres</p>
               <img className={classes.imgNote} src={re} />
               <img className={classes.imgResize} src={a} />
             </Fragment>
@@ -2458,140 +2369,68 @@ class Groh extends Component {
               <img className={classes.imgResize} src={h} />
             </Fragment>
           ],
-          onBlock: "-4",
+          onBlock: "N/A",
+          onHit: "STN",
+          counterHit: "STN",
+          note: ""
+        },
+
+        {
+          id: 91,
+          command: "RE A(Lethal Hit)",
+          move: [
+            <Fragment>
+              <p>Destruction of Logres(Lethal Hit)</p>
+              <img className={classes.imgNote} src={re} />
+              <img className={classes.imgResize} src={a} />
+              <img className={classes.imgResize} src={a} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>N/A</p>
+              <img className={classes.imgResize} src={h} />
+            </Fragment>
+          ],
+          onBlock: "N/A",
+          onHit: "STN",
+          counterHit: "STN",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={lh} />
+              <p>Lethal Hit on RE 2nd stage</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 92,
+          command: "RE B",
+          move: [
+            <Fragment>
+              <p>Path to Avalon</p>
+              <img className={classes.imgNote} src={re} />
+              <img className={classes.imgResize} src={b} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>N/A</p>
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "N/A",
           onHit: "STN",
           counterHit: "STN",
           note: ""
         },
         {
-          id: 121,
-          command: "RE AA",
-          move: [
-            <Fragment>
-              <p>??????</p>
-              <img className={classes.imgNote} src={re} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={a} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>N/A</p>
-              <img className={classes.imgResize} src={h} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 122,
-          command: "RE AA(Lethal Hit)",
-          move: [
-            <Fragment>
-              <p>??????(Lethal Hit)</p>
-              <img className={classes.imgNote} src={re} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={a} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>N/A</p>
-              <img className={classes.imgResize} src={h} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={lh} />
-              <p>Lethal Hit on RE 2nd stage</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 123,
-          command: "RE AB",
-          move: [
-            <Fragment>
-              <p>??????</p>
-              <img className={classes.imgNote} src={re} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={b} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>N/A</p>
-              <img className={classes.imgResize} src={h} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 124,
-          command: "RE AB(Lethal Hit)",
-          move: [
-            <Fragment>
-              <p>??????</p>
-              <img className={classes.imgNote} src={re} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={b} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>N/A</p>
-              <img className={classes.imgResize} src={h} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={lh} />
-              <p>Lethal Hit on RE 2nd stage</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 125,
-          command: "RE B",
-          move: [
-            <Fragment>
-              <p>??????</p>
-              <img className={classes.imgNote} src={re} />
-              <img className={classes.imgResize} src={b} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>N/A</p>
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "+15",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: ""
-        },
-        {
-          id: 126,
+          id: 93,
           command: "RE B(Lethal Hit)",
           move: [
             <Fragment>
-              <p>??????(Lethal Hit)</p>
+              <p>Path to Avalon(Lethal Hit)</p>
               <img className={classes.imgNote} src={re} />
               <img className={classes.imgResize} src={b} />
             </Fragment>
@@ -2602,9 +2441,9 @@ class Groh extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "+15",
-          onHit: "LNC",
-          counterHit: "LNC",
+          onBlock: "N/A",
+          onHit: "STN",
+          counterHit: "STN",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={lh} />
@@ -2613,11 +2452,67 @@ class Groh extends Component {
           ]
         },
         {
-          id: 127,
+          id: 94,
+          command: "RE B6 ~ AVN",
+          move: [
+            <Fragment>
+              <p>Path to Avalon ~ Avenger</p>
+              <img className={classes.imgNote} src={re} />
+              <img className={classes.imgResize} src={b} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>N/A</p>
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "N/A",
+          onHit: "STN",
+          counterHit: "STN",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+              <p>To Avenger Stance</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 95,
+          command: "RE B ~ AVN(Lethal Hit)",
+          move: [
+            <Fragment>
+              <p>Path to Avalon ~ Avenger(Lethal Hit)</p>
+              <img className={classes.imgNote} src={re} />
+              <img className={classes.imgResize} src={b} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>N/A</p>
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "N/A",
+          onHit: "STN",
+          counterHit: "STN",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={lh} />
+              <p>Lethal Hit on RE 2nd stage</p>
+              <img className={classes.imgNote} src={ss} />
+              <p>To Avenger Stance</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 96,
           command: "RE K",
           move: [
             <Fragment>
-              <p>??????</p>
+              <p>Guinevere's Indiscretion</p>
               <img className={classes.imgNote} src={re} />
               <img className={classes.imgResize} src={k} />
             </Fragment>
@@ -2628,17 +2523,17 @@ class Groh extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "+12",
-          onHit: "LNC",
-          counterHit: "LNC",
+          onBlock: "N/A",
+          onHit: "STN",
+          counterHit: "STN",
           note: ""
         },
         {
-          id: 128,
+          id: 97,
           command: "RE K(Lethal Hit)",
           move: [
             <Fragment>
-              <p>??????(Lethal Hit)</p>
+              <p>Guinevere's Indiscretion(Lethal Hit)</p>
               <img className={classes.imgNote} src={re} />
               <img className={classes.imgResize} src={k} />
             </Fragment>
@@ -2649,9 +2544,9 @@ class Groh extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "+12",
-          onHit: "LNC",
-          counterHit: "LNC",
+          onBlock: "N/A",
+          onHit: "STN",
+          counterHit: "STN",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={lh} />
@@ -2660,7 +2555,7 @@ class Groh extends Component {
           ]
         },
         {
-          id: 129,
+          id: 98,
           command: "RE 6",
           move: [
             <Fragment>
@@ -2686,7 +2581,7 @@ class Groh extends Component {
           ]
         },
         {
-          id: 130,
+          id: 99,
           command: "RE 2*8",
           move: [
             <Fragment>
@@ -2714,7 +2609,7 @@ class Groh extends Component {
           ]
         },
         {
-          id: 131,
+          id: 100,
           command: "RE 4",
           move: [
             <Fragment>
@@ -2744,11 +2639,11 @@ class Groh extends Component {
       // gauge attacks start here
       gaugeAttacks: [
         {
-          id: 132,
+          id: 101,
           command: "A+B+K",
           move: [
             <Fragment>
-              <p>New Seong Style: Scarlet Meteor</p>
+              <p>Chevalier Mal Fet</p>
               <img className={classes.imgResize} src={a} />
               <img className={classes.imgResize} src={plus} />
               <img className={classes.imgResize} src={b} />
@@ -2758,11 +2653,11 @@ class Groh extends Component {
           ],
           impact: [
             <Fragment>
-              <p>18F</p>
+              <p>16F</p>
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "",
+          onBlock: "-16",
           onHit: "KND",
           counterHit: "KND",
           note: [
@@ -2773,307 +2668,7 @@ class Groh extends Component {
           ]
         },
         {
-          id: 133,
-          command: "SC 6A",
-          move: [
-            <Fragment>
-              <p>Shattering Violet Squall</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d6} />
-              <img className={classes.imgResize} src={a} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              <img className={classes.imgResize} src={h} />
-            </Fragment>
-          ],
-          onBlock: "+2",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgNote} src={ba} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 134,
-          command: "SC BBB",
-          move: [
-            <Fragment>
-              <p>Shattering Meteor Shower</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={b} />
-              <img className={classes.imgResize} src={b} />
-              <img className={classes.imgResize} src={b} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "+4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgNote} src={ba} />
-              <p>BA on 3rd hit</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 135,
-          command: "SC 1B",
-          move: [
-            <Fragment>
-              <p>Shattering Lightning Fang</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d1} />
-              <img className={classes.imgResize} src={b} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              <img className={classes.imgResize} src={l} />
-            </Fragment>
-          ],
-          onBlock: "+2",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgNote} src={ba} />
-              <p>TC[5-56]</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 136,
-          command: "SC FC 1KK",
-          move: [
-            <Fragment>
-              <p>Liquid Rising</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d1} />
-              <img className={classes.imgResize} src={k} />
-              <img className={classes.imgResize} src={k} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              <img className={classes.imgResize} src={l} />
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-29",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgNote} src={ss} />
-              <p>To Lingering Stance</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 137,
-          command: "SC FC 1KKB",
-          move: [
-            <Fragment>
-              <p>Seong Cloud Burst</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d1} />
-              <img className={classes.imgResize} src={k} />
-              <img className={classes.imgResize} src={k} />
-              <img className={classes.imgResize} src={b} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              <img className={classes.imgResize} src={l} />
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 138,
-          command: "SC 66A",
-          move: [
-            <Fragment>
-              <p>Seong Snapping Jaw</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d6_h} />
-              <img className={classes.imgResize} src={a} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 139,
-          command: "SC 66AA",
-          move: [
-            <Fragment>
-              <p>Seong Snapping Jaw</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d6_h} />
-              <img className={classes.imgResize} src={a} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={h} />
-              <img className={classes.imgResize} src={h} />
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 140,
-          command: "SC 22*88AAA",
-          move: [
-            <Fragment>
-              <p>Whirling Willow Frenzy</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d2_h} />
-              <span> * </span>
-              <img className={classes.imgResize} src={d8_h} />
-              <span> * </span>
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={a} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "+5",
-          counterHit: "+5",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 141,
-          command: "SC 22*88AAAA",
-          move: [
-            <Fragment>
-              <p>Whirling Willow Frenzy</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d2_h} />
-              <span> * </span>
-              <img className={classes.imgResize} src={d8_h} />
-              <span> * </span>
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={a} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 142,
-          command: "11*77B",
-          move: [
-            <Fragment>
-              <p>Shattering Lightning Fang</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d1_h} />
-              <span> * </span>
-              <img className={classes.imgResize} src={d7_h} />
-              <img className={classes.imgResize} src={b} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              <img className={classes.imgResize} src={l} />
-            </Fragment>
-          ],
-          onBlock: "+2",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgNote} src={ba} />
-              <p>TC[5-56]</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 143,
+          id: 102,
           command: "4A+B+K",
           move: [
             <Fragment>
@@ -3099,47 +2694,166 @@ class Groh extends Component {
             <Fragment>
               <img className={classes.imgNote} src={sg} />
               <img className={classes.imgNote} src={ba} />
-              <p>Invincible[4~?F]</p>
             </Fragment>
           ]
         },
         {
-          id: 144,
-          command: "SC 66A+B",
+          id: 103,
+          command: "SC 6AA6 ~ SoN",
           move: [
             <Fragment>
-              <p>Shattering Spinning Divide</p>
+              <p>Questing Fang ~ Steed of the Night</p>
               <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d6_h} />
+              <img className={classes.imgResize} src={d6} />
               <img className={classes.imgResize} src={a} />
-              <img className={classes.imgResize} src={plus} />
-              <img className={classes.imgResize} src={b} />
+              <img className={classes.imgResize} src={a} />
+              <img className={classes.imgResize} src={d6} />
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>28F</p>
+              <p>16F</p>
+              <img className={classes.imgResize} src={h} />
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "+2",
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 104,
+          command: "SC 1AK",
+          move: [
+            <Fragment>
+              <p>Guilt Seeker</p>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgResize} src={d1} />
+              <img className={classes.imgResize} src={a} />
+              <img className={classes.imgResize} src={k} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={sm} />
+            </Fragment>
+          ],
+          onBlock: "-22",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgNote} src={ba} />
+              <img className={classes.imgNote} src={at} />
+              <p>TC</p>
             </Fragment>
           ]
         },
         {
-          id: 145,
-          command: "SC 44A+B",
+          id: 105,
+          command: "SC 3BB",
           move: [
             <Fragment>
-              <p>Shattering Seong's Diamond Crusher</p>
+              <p>Calamitous Judgment</p>
               <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d4_h} />
+              <img className={classes.imgResize} src={d3} />
+              <img className={classes.imgResize} src={b} />
+              <img className={classes.imgResize} src={b} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 106,
+          command: "SC 1BB6 ~ SoN",
+          move: [
+            <Fragment>
+              <p>Curse of Morgan ~ Steed of the Night</p>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgResize} src={d1} />
+              <img className={classes.imgResize} src={b} />
+              <img className={classes.imgResize} src={b} />
+              <img className={classes.imgResize} src={d6} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "",
+          counterHit: "",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 107,
+          command: "SC 4B6 ~ SoN",
+          move: [
+            <Fragment>
+              <p>Benovlence Step ~ Steed of the Night</p>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgResize} src={d4} />
+              <img className={classes.imgResize} src={b} />
+              <img className={classes.imgResize} src={d6} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "STN",
+          counterHit: "STN",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgNote} src={lh} />
+              <p>Lethal Hit against BT opponent</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 108,
+          command: "SC 2A+B",
+          move: [
+            <Fragment>
+              <p>Wasteland</p>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgResize} src={d6} />
               <img className={classes.imgResize} src={a} />
               <img className={classes.imgResize} src={plus} />
               <img className={classes.imgResize} src={b} />
@@ -3147,32 +2861,239 @@ class Groh extends Component {
           ],
           impact: [
             <Fragment>
-              <p>40F</p>
-              <img className={classes.imgResize} src={h} />
-              <img className={classes.imgResize} src={m} />
-              <img className={classes.imgResize} src={m} />
+              <p>38F</p>
+              <img className={classes.imgResize} src={l} />
             </Fragment>
           ],
-          onBlock: "+6",
-          onHit: "LNC",
-          counterHit: "LNC",
+          onBlock: "+4",
+          onHit: "KND",
+          counterHit: "KND",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgNote} src={ba} />
-              <img className={classes.imgNote} src={lh} />
-              <p>Lethal Hit against guard crush opponent</p>
             </Fragment>
           ]
         },
         {
-          id: 146,
-          command: "SC 44B+K",
+          id: 109,
+          command: "SC 4A+B6",
           move: [
             <Fragment>
-              <p>Shattering Talon Rush</p>
+              <p>War of Benwick</p>
               <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d4_h} />
+              <img className={classes.imgResize} src={d4} />
+              <img className={classes.imgResize} src={a} />
+              <img className={classes.imgResize} src={plus} />
+              <img className={classes.imgResize} src={b} />
+              <img className={classes.imgResize} src={d6} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>34F</p>
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "",
+          counterHit: "",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 110,
+          command: "SC 4B+K6 ~ SoN",
+          move: [
+            <Fragment>
+              <p>Morgan's Deception ~ Steed of the Night</p>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgResize} src={d4} />
+              <img className={classes.imgResize} src={b} />
+              <img className={classes.imgResize} src={plus} />
+              <img className={classes.imgResize} src={k} />
+              <img className={classes.imgResize} src={d6} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>26F</p>
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "",
+          counterHit: "",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 111,
+          command: "SC AVN 6",
+          move: [
+            <Fragment>
+              <p>Steed of the Night</p>
+              <img className={classes.imgNote} src={sc} />
+              <span>Avenger Stance</span>
+              <img className={classes.imgResize} src={d6} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p />
+            </Fragment>
+          ],
+          onBlock: "N/A",
+          onHit: "N/A",
+          counterHit: "N/A",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 112,
+          command: "SC AVN 4",
+          move: [
+            <Fragment>
+              <p>Cover of Darkness</p>
+              <img className={classes.imgNote} src={sc} />
+              <span>Avenger Stance</span>
+              <img className={classes.imgResize} src={d4} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p />
+            </Fragment>
+          ],
+          onBlock: "N/A",
+          onHit: "N/A",
+          counterHit: "N/A",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgNote} src={ss} />
+              <p>Teleport behind</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 113,
+          command: "SC AVN 4*6A",
+          move: [
+            <Fragment>
+              <p>Demon King Slayer</p>
+              <img className={classes.imgNote} src={sc} />
+              <span>Avenger Stance</span>
+              <img className={classes.imgResize} src={d4} />
+              <span> * </span>
+              <img className={classes.imgResize} src={d6} />
+              <img className={classes.imgResize} src={a} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>""</p>
+              <img className={classes.imgResize} src={h} />
+              <img className={classes.imgResize} src={h} />
+            </Fragment>
+          ],
+          onBlock: "+4",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgNote} src={ss} />
+
+              <img className={classes.imgNote} src={ba} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 114,
+          command: "SC AVN 4*6B",
+          move: [
+            <Fragment>
+              <p>Calamity's Collapse</p>
+              <img className={classes.imgNote} src={sc} />
+              <span>Avenger Stance</span>
+              <img className={classes.imgResize} src={d4} />
+              <span> * </span>
+              <img className={classes.imgResize} src={d6} />
+              <img className={classes.imgResize} src={b} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>38F</p>
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgNote} src={ss} />
+
+              <p>Force Crouch on block</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 115,
+          command: "SC AVN 4*6K",
+          move: [
+            <Fragment>
+              <p>Destructive Order</p>
+              <img className={classes.imgNote} src={sc} />
+              <span>Avenger Stance</span>
+              <img className={classes.imgResize} src={d4} />
+              <span> * </span>
+              <img className={classes.imgResize} src={d6} />
+              <img className={classes.imgResize} src={k} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p />
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "-2",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgNote} src={ss} />
+              <p>TJ</p>
+            </Fragment>
+          ]
+        }
+      ],
+      // special stance start here
+      specialAttacks: [
+        {
+          id: 116,
+          command: "B+K ~ AVN",
+          move: [
+            <Fragment>
+              <p>Avenger</p>
               <img className={classes.imgResize} src={b} />
               <img className={classes.imgResize} src={plus} />
               <img className={classes.imgResize} src={k} />
@@ -3180,7 +3101,287 @@ class Groh extends Component {
           ],
           impact: [
             <Fragment>
-              <p>38F</p>
+              <p>N/A</p>
+            </Fragment>
+          ],
+          onBlock: "N/A",
+          onHit: "N/A",
+          counterHit: "N/A",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 117,
+          command: "AVN A",
+          move: [
+            <Fragment>
+              <p>Endless Quest</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={a} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 118,
+          command: "AVN A(Lethal Hit)",
+          move: [
+            <Fragment>
+              <p>Endless Quest(Lethal Hit)</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={a} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+              <img className={classes.imgNote} src={lh} />
+              <p>Lethal Hit after guard break</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 119,
+          command: "AVN [A]",
+          move: [
+            <Fragment>
+              <p>Endless Quest</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={a_h} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>33F</p>
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+            </Fragment>
+          ],
+          onBlock: "-10",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 120,
+          command: "AVN [A](Lethal Hit)",
+          move: [
+            <Fragment>
+              <p>Endless Quest(Lethal Hit)</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={a_h} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>34F</p>
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+              <img className={classes.imgResize} src={l} />
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+              <img className={classes.imgNote} src={lh} />
+              <p>Lethal Hit after guard break</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 121,
+          command: "AVN B ~ AVN",
+          move: [
+            <Fragment>
+              <p>Nameless Blade ~ Avenger</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={b} />
+              <span> ~ Avenger</span>
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>12F</p>
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "-13",
+          onHit: "+3",
+          counterHit: "+3",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 122,
+          command: "AVN BB",
+          move: [
+            <Fragment>
+              <p>Nameless Blade</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={b} />
+              <img className={classes.imgResize} src={b} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>12F</p>
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "-6",
+          onHit: "+6",
+          counterHit: "+6",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+              <p>Force crouch on block</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 123,
+          command: "AVN K ~ AVN",
+          move: [
+            <Fragment>
+              <p>Corbenic's Veil ~ Avenger</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={k} />
+              <span> ~ Avenger</span>
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>12F</p>
+              <img className={classes.imgResize} src={l} />
+            </Fragment>
+          ],
+          onBlock: "-11",
+          onHit: "+4",
+          counterHit: "+4",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 124,
+          command: "AVN A+B",
+          move: [
+            <Fragment>
+              <p>Arondight's Roar</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={a} />
+              <img className={classes.imgResize} src={plus} />
+              <img className={classes.imgResize} src={b} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              <img className={classes.imgResize} src={m} />
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+              <img className={classes.imgNote} src={at} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 125,
+          command: "AVN K ~ AVN",
+          move: [
+            <Fragment>
+              <p>Corbenic's Veil ~ Avenger</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={k} />
+              <span> ~ Avenger</span>
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>12F</p>
+              <img className={classes.imgResize} src={l} />
+            </Fragment>
+          ],
+          onBlock: "-11",
+          onHit: "+4",
+          counterHit: "+4",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+            </Fragment>
+          ]
+        },
+        {
+          id: 126,
+          command: "AVN B+K",
+          move: [
+            <Fragment>
+              <p>Sir Galahad's Bravery</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={b} />
+              <img className={classes.imgResize} src={plus} />
+              <img className={classes.imgResize} src={k} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
+              <img className={classes.imgResize} src={m} />
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
@@ -3189,116 +3390,68 @@ class Groh extends Component {
           counterHit: "KND",
           note: [
             <Fragment>
-              <img className={classes.imgNote} src={sc} />
+              <img className={classes.imgNote} src={ss} />
               <img className={classes.imgNote} src={ba} />
+              <p>Force crouch on block</p>
             </Fragment>
           ]
         },
         {
-          id: 147,
-          command: "SC 44(B+K)",
+          id: 127,
+          command: "AVN B+K(Lethal Hit)",
           move: [
             <Fragment>
-              <p>Shattering Talon Rush</p>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgResize} src={d4_h} />
-              <img className={classes.imgResize} src={b_h} />
-              <img className={classes.imgResize} src={plus} />
-              <img className={classes.imgResize} src={k_h} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>F</p>
-              <img className={classes.imgResize} src={m} />
-            </Fragment>
-          ],
-          onBlock: "UA",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={sc} />
-              <img className={classes.imgNote} src={ua} />
-            </Fragment>
-          ]
-        }
-      ],
-      // special stance start here
-      specialAttacks: [
-        {
-          id: 148,
-          command: "LS A",
-          move: [
-            <Fragment>
-              <p>Violet Squall</p>
-              <span>LS</span>
-              <img className={classes.imgResize} src={a} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              <img className={classes.imgResize} src={h} />
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={ss} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 149,
-          command: "LS B",
-          move: [
-            <Fragment>
-              <p>Lightning Fang</p>
-              <span>LS</span>
+              <p>Sir Galahad's Bravery(Lethal Hit)</p>
+              <span>Avenger</span>
               <img className={classes.imgResize} src={b} />
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              <img className={classes.imgResize} src={l} />
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "-8",
-          counterHit: "-8",
-          note: [
-            <Fragment>
-              <img className={classes.imgNote} src={ss} />
-            </Fragment>
-          ]
-        },
-        {
-          id: 150,
-          command: "LS K",
-          move: [
-            <Fragment>
-              <p>Spinning Storm Kick</p>
-              <span>LS</span>
+              <img className={classes.imgResize} src={plus} />
               <img className={classes.imgResize} src={k} />
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>36F</p>
+              <p>28F</p>
+              <img className={classes.imgResize} src={m} />
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "+6",
+          onBlock: "+8",
           onHit: "LNC",
           counterHit: "LNC",
           note: [
             <Fragment>
               <img className={classes.imgNote} src={ss} />
               <img className={classes.imgNote} src={ba} />
+              <p>Force crouch on block</p>
+              <img className={classes.imgNote} src={lh} />
+              <p>Lethal Hit on GI</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 128,
+          command: "AVN 2*8",
+          move: [
+            <Fragment>
+              <p>Avenger Side Step</p>
+              <span>Avenger</span>
+              <img className={classes.imgResize} src={d2} />
+              <span> * </span>
+              <img className={classes.imgResize} src={d8} />
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p />
+            </Fragment>
+          ],
+          onBlock: "N/A",
+          onHit: "N/A",
+          counterHit: "N/A",
+          note: [
+            <Fragment>
+              <img className={classes.imgNote} src={ss} />
+              <p>Side Step</p>
             </Fragment>
           ]
         }
@@ -3510,7 +3663,7 @@ class Groh extends Component {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>
-                Special Stance(Lingering Step)
+                Special Stance(Avenger Stance)
               </h4>
               <div
                 className={`${classes.toggleStyle} ${
