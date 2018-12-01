@@ -145,7 +145,6 @@ class Sophitia extends Component {
   render() {
     const { classes } = this.props;
 
-    console.log(a);
     
     const sophitiaFrameData = {
       // verticalAttacks start here
