@@ -191,40 +191,40 @@ class Ivy extends Component {
     const kSM = <img className={classes.imgResizeSM} src={n_k} />;
     const gSM = <img className={classes.imgResizeSM} src={n_g} />;
 
-    // Tempting Tezhas	20	18		-16	-4	KND
-    // :6::(A):	:H:
-    // Tempting Tezhas (CH)	20	41		-16	KND	KND
-    // :6::(A):	:H:	Shifts to attack upon hit
-    // Raven Gash	18	18		-6	+12	+12
-    // :3::A:	:M:
-    // Dancing Tezhas	22	16		-12	0	0
-    // :3::(A):	:M:
-    // Ancient Worshipper	16	10		-10	-2	-2
-    // :2::A:	:SL:	~FC
-    // Ancient Wheel	26	12		-18	-4	-4
-    // :1::A:	:L:	~FC
-    // Ancient Wheel	26	27		-14	-2	-2
-    // :1::A::A:	:L::L:	NCC / ~FC
-    // Dancing Insanity	20	20		0	+8	+8
-    // :4::A:	:H::H:
-    // Dancing Insanity ~ Serpent Embrace	20	20		-4	+4	+4
-    // :4::(A):	:H::H:	:SS:
-    // Serpent's Venom	54	100		KND	KND	KND
-    // :2::1::4::A:	:H:	:UA: / Cancel with :G:
-    // Ancient Worshipper	16	10		-10	-2	-2
-    // FC :A:	:SL:	~FC
-    // Menace Slice	20	30		-4	+8	KND
-    // WR :A:	:H:
-    // Deceitful Raven	22	14		-16	-2	-2
-    // WR :(A):	:H::H:
-    // Rising Raven	28	20,22,24		-12	-4	-4
-    // :7:*:8:*:9::A:	:M:
-    // Scars of Memory	12	19		-8	KND	KND
-    // BT :A:	:H:
-    // Screams of Paranoia	22	8		-14	-6	+4
-    // BT :2::A:	:L:	:GI:[:L:]
-    // Screams of Paranoia	22	32		-14	KND	KND
-    // BT :2::A::B:	:L::M:	NCC / Combos on :GI:
+    // SE = Serpent's Embrace
+    // SL = Spiral Lust
+    // SS = Summon Suffering
+    // CS = Calamity Symphony
+
+
+
+  
+
+  
+   
+   
+
+ 
+    // Ivy Masquerade	18	18		-20	+6	KND
+    // FC :3::B:	:L:	~FC / :LH: (Triggers upon running counter while moving back)
+    // Ivy Masquerade ~ Spiral Lust	-	18		-	-	-
+    // FC :3::(B):	:L:	:SS: / :LH: (Triggers upon running counter while moving back)
+    // Pride	18	26		-12	KND	KND
+    // FC :1::B:	:M:
+    // Cagemaster	20	16		-14	KND	KND
+    // WR :B:	:M:
+    // Cagemaster	20	27		-12	-6	-6
+    // WR :B::B:	:M::H::H:	:AT: Shifts to attack throw upon hit
+    // Akasha's Cage	42	28		-10	KND	KND
+    // :7:*:8:*:9::B:	:M::M::H::H:	:AT: Shifts to attack throw upon hit
+    // Akasha's Cage	42	44		-16	KND	KND
+    // :7:*:8:*:9::B::B:	:M::M::H::H:	:AT: Shifts to attack throw upon hit
+    // Akasha's Cage	42	55		-12	-6	-6
+    // :7:*:8:*:9::B::B::B:	:M::M::H::H:	:AT: Shifts to attack throw upon hit
+    // Reverse Immortal	18	16		-6	+4	+4
+    // BT :B:	:M:
+    // Deep Immortal	18	18		-8	+2	+2
+    // BT :2::B:	:M:
 
     const ivyFrameData = {
       // verticalAttacks start here
@@ -368,10 +368,10 @@ class Ivy extends Component {
         },
         {
           id: 7,
-          command: "6AA",
+          command: "6[A]",
           move: [
             <Fragment>
-              <p>Roaring Stream</p>
+              <p>Tempting Tezhas</p>
               {d6}
               {a}
               {a}
@@ -379,57 +379,21 @@ class Ivy extends Component {
           ],
           impact: [
             <Fragment>
-              <p>22F</p>
-              {a}
-              {l}
+              <p>20F</p>
+              {h}
             </Fragment>
           ],
-          onBlock: "-10",
-          onHit: "-2",
-          counterHit: "-2",
-          note: [
-            <Fragment>
-              {gi}
-              <p>GI Low / TC </p>
-            </Fragment>
-          ]
+          onBlock: "-16",
+          onHit: "-4",
+          counterHit: "KND",
+          note: [<Fragment />]
         },
         {
           id: 8,
-          command: "6AA6 ~ AS",
-          move: [
-            <Fragment>
-              <p>Roaring Stream ~ Angel Step</p>
-              {d6}
-              {a}
-              {a}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {a}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "0",
-          counterHit: "0",
-          note: [
-            <Fragment>
-              {ss}
-              {gi}
-              <p>GI Low / TC </p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 9,
           command: "3A",
           move: [
             <Fragment>
-              <p>Angel Punisher</p>
+              <p>Raven Gash</p>
               {d3}
               {a}
             </Fragment>
@@ -440,249 +404,39 @@ class Ivy extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "-2",
-          counterHit: "-2",
-          note: [
+          onBlock: "-12",
+          onHit: "0",
+          counterHit: "0",
+          note: [<Fragment />]
+        },
+        {
+          id: 9,
+          command: "3[A]",
+          move: [
             <Fragment>
-              <p>TC</p>
+              <p>Raven Gash(Hold)</p>
+              {d3}
+              {a_h}
             </Fragment>
-          ]
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-6",
+          onHit: "+12",
+          counterHit: "+12",
+          note: [<Fragment />]
         },
         {
           id: 10,
           command: "2A",
           move: [
             <Fragment>
-              <p>Under Slide Blade</p>
+              <p>Ancient Worshipper</p>
               {d2}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {sl}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+6",
-          counterHit: "+6",
-          note: "TC / ~FC"
-        },
-        {
-          id: 11,
-          command: "1A",
-          move: [
-            <Fragment>
-              <p>Iron Butterfly</p>
-              {d1}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "-6",
-          counterHit: "-6",
-          note: "TC"
-        },
-        {
-          id: 12,
-          command: "1A",
-          move: [
-            <Fragment>
-              <p>Iron Butterfly</p>
-              {d1}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "KND",
-          counterHit: "KND",
-          note: "TC"
-        },
-        {
-          id: 13,
-          command: "4A",
-          move: [
-            <Fragment>
-              <p>Cutlass Europa</p>
-              {d4}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {a}
-            </Fragment>
-          ],
-          onBlock: "-10",
-          onHit: "+4",
-          counterHit: "+4",
-          note: "TC"
-        },
-        {
-          id: 14,
-          command: "4AA",
-          move: [
-            <Fragment>
-              <p>Cutlass Europa</p>
-              {d4}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {a}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "KND",
-          counterHit: "KND",
-          note: "TC"
-        },
-        {
-          id: 15,
-          command: "4AAA",
-          move: [
-            <Fragment>
-              <p>Cutlass Europa</p>
-              {d4}
-              {a}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {a}
-              {l}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "KND",
-          counterHit: "KND",
-          note: "TC"
-        },
-        {
-          id: 16,
-          command: "4[A]",
-          move: [
-            <Fragment>
-              <p>Cutlass Europa</p>
-              {d4}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>38F</p>
-              {a}
-            </Fragment>
-          ],
-          onBlock: "-2",
-          onHit: "STN",
-          counterHit: "STN",
-          note: "TC"
-        },
-
-        {
-          id: 17,
-          command: "4[A]AAA",
-          move: [
-            <Fragment>
-              <p>Cutlass Europa</p>
-              {d4}
-              {a_h}
-              {a}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>38F</p>
-              {a}
-              {l}
-              {m}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "KND",
-          counterHit: "KND",
-          note: "TC"
-        },
-        {
-          id: 18,
-          command: "4AB",
-          move: [
-            <Fragment>
-              <p>Cutlass Seraphim</p>
-              {d4}
-              {a}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {a}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 19,
-          command: "FC A",
-          move: [
-            <Fragment>
-              <p>Under Slide Blade</p>
-              <span>FC</span>
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {sl}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+6",
-          counterHit: "+6",
-          note: "TC / ~FC"
-        },
-        {
-          id: 20,
-          command: "WR A",
-          move: [
-            <Fragment>
-              <p>Full Turn Blade</p>
-              <span>WR</span>
               {a}
             </Fragment>
           ],
@@ -693,37 +447,199 @@ class Ivy extends Component {
             </Fragment>
           ],
           onBlock: "-10",
-          onHit: "+4",
-          counterHit: "+4",
-          note: "TC"
+          onHit: "-2",
+          counterHit: "-2",
+          note: "TC / ~FC"
         },
         {
-          id: 21,
-          command: "7A",
+          id: 11,
+          command: "1A",
           move: [
             <Fragment>
-              <p>Jumping Mirage Satellite</p>
-              {d7}
+              <p>Ancient Wheel</p>
+              {d1}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>24F</p>
+              <p>26F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-18",
+          onHit: "-4",
+          counterHit: "-4",
+          note: "FC"
+        },
+        {
+          id: 12,
+          command: "1AA",
+          move: [
+            <Fragment>
+              <p>Ancient Wheel</p>
+              {d1}
+              {a}
               {a}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
-          note: "TJ"
+          impact: [
+            <Fragment>
+              <p>26F</p>
+              {l}
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "-2",
+          counterHit: "-2",
+          note: "TC"
         },
         {
-          id: 22,
-          command: "8*9A",
+          id: 13,
+          command: "4A",
           move: [
             <Fragment>
-              <p>Jumping Mirage Satellite</p>
+              <p>Dancing Insanity</p>
+              {d4}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {h}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "0",
+          onHit: "+8",
+          counterHit: "+8",
+          note: ""
+        },
+        {
+          id: 14,
+          command: "4[A]",
+          move: [
+            <Fragment>
+              <p>Dancing Insanity ~ Serpent Embrace</p>
+              {d4}
+              {a_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {h}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "+4",
+          counterHit: "+4",
+          note: [<Fragment>{ss}</Fragment>]
+        },
+        {
+          id: 15,
+          command: "214A",
+          move: [
+            <Fragment>
+              <p>Serpent's Venom</p>
+              {d2}
+              {d1}
+              {d4}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>54F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "UA",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ua}
+              <p>Cancel with G</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 16,
+          command: "FC A",
+          move: [
+            <Fragment>
+              <p>Ancient Worshipper</p>
+              <span>FC</span>
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {sl}
+            </Fragment>
+          ],
+          onBlock: "-10",
+          onHit: "-2",
+          counterHit: "-2",
+          note: "TC / ~FC"
+        },
+        {
+          id: 17,
+          command: "WR A",
+          move: [
+            <Fragment>
+              <p>Menace Slice</p>
+              <span>WR</span>
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "+8",
+          counterHit: "KND",
+          note: ""
+        },
+        {
+          id: 18,
+          command: "WR [A]",
+          move: [
+            <Fragment>
+              <p>Deceitful Raven</p>
+              <span>WR</span>
+              {a_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              {h}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "-2",
+          counterHit: "-2",
+          note: ""
+        },
+
+        {
+          id: 19,
+          command: "7*8*9A",
+          move: [
+            <Fragment>
+              <p>Rising Raven</p>
+              {d7}
+              <span> * </span>
               {d8}
               <span> * </span>
               {d9}
@@ -732,42 +648,42 @@ class Ivy extends Component {
           ],
           impact: [
             <Fragment>
-              <p>24F</p>
-              {a}
+              <p>28F</p>
+              {m}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "KND",
-          counterHit: "KND",
-          note: "TJ"
+          onBlock: "-12",
+          onHit: "-4",
+          counterHit: "-4",
+          note: ""
         },
         {
-          id: 23,
+          id: 20,
           command: "BT A",
           move: [
             <Fragment>
-              <p>Turning Slide Blade</p>
+              <p>Scars of Memory</p>
               <span>BT</span>
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>14F</p>
+              <p>12F</p>
               {a}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "+8",
-          counterHit: "+8",
-          note: "TJ"
+          onBlock: "-8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: ""
         },
         {
-          id: 24,
+          id: 21,
           command: "BT 2A",
           move: [
             <Fragment>
-              <p>Under Slide Blade</p>
+              <p>Screams of Paranoia</p>
               <span>BT</span>
               {d2}
               {a}
@@ -775,14 +691,48 @@ class Ivy extends Component {
           ],
           impact: [
             <Fragment>
-              <p>12F</p>
-              {sl}
+              <p>22F</p>
+              {l}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "+6",
-          counterHit: "+6",
-          note: "TC / ~FC"
+          onBlock: "-14",
+          onHit: "-6",
+          counterHit: "+4",
+          note: [
+            <Fragment>
+              {gi}
+              <p>GI Low</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 22,
+          command: "BT 2A",
+          move: [
+            <Fragment>
+              <p>Screams of Paranoia</p>
+              <span>BT</span>
+              {d2}
+              {a}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              {l}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {gi}
+              <p>GI Low</p>
+            </Fragment>
+          ]
         }
       ],
 
@@ -790,180 +740,234 @@ class Ivy extends Component {
 
       horizontalAttacks: [
         {
-          id: 25,
+          id: 23,
           command: "B",
           move: [
             <Fragment>
-              <p>Divine Mist</p>
+              <p>Ode to Undine</p>
               {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>14F</p>
+              <p>16F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-6",
-          onHit: "0",
-          counterHit: "0",
+          onBlock: "-10",
+          onHit: "-4",
+          counterHit: "-4",
           note: ""
         },
         {
-          id: 26,
+          id: 24,
           command: "BB",
           move: [
             <Fragment>
-              <p>Divine Mist</p>
+              <p>Ode to Undine</p>
               {b}
               {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>14F</p>
+              <p>16F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-10",
+          onHit: "-4",
+          counterHit: "-4",
+          note: ""
+        },
+        {
+          id: 25,
+          command: "BBB",
+          move: [
+            <Fragment>
+              <p>Ode to Undine</p>
+              {b}
+              {b}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {m}
               {m}
               {m}
             </Fragment>
           ],
           onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
+          onHit: "RE",
+          counterHit: "RE",
+          note: ""
+        },
+        {
+          id: 26,
+          command: "[B]",
+          move: [
+            <Fragment>
+              <p>Poisoned Destiny</p>
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "-10",
+          counterHit: "-10",
           note: ""
         },
         {
           id: 27,
-          command: "BBB",
+          command: "bA",
           move: [
             <Fragment>
-              <p>Divine Mist</p>
-              {b}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 28,
-          command: "BK",
-          move: [
-            <Fragment>
-              <p>Angel's Flow</p>
-              {b}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {a}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+2",
-          counterHit: "+2",
-          note: ""
-        },
-        {
-          id: 29,
-          command: "6B",
-          move: [
-            <Fragment>
-              <p>Ascetic's Force</p>
-              {d6}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-10",
-          onHit: "-2",
-          counterHit: "+4",
-          note: [
-            <Fragment>
-              {gi}
-              <p>GI non-thrust Mid verticals[8-14] / TC[8~?]</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 30,
-          command: "6BA",
-          move: [
-            <Fragment>
-              <p>Ascetic's Force</p>
-              {d6}
-              {b}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "+10",
-          counterHit: "+10",
-          note: [
-            <Fragment>
-              {gi}
-              <p>GI non-thrust Mid verticals[8-14] / TC[8~?]</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 31,
-          command: "6bA",
-          move: [
-            <Fragment>
-              <p>Ascetic's Blade</p>
-              {d6}
+              <p>Raven's Egg</p>
               {bSM}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>44F</p>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment />]
+        },
+        {
+          id: 28,
+          command: "b[A]",
+          move: [
+            <Fragment>
+              <p>Eclipse Raven</p>
+              {bSM}
+              {a_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              {h}
               {m}
             </Fragment>
           ],
-          onBlock: "-12",
-          onHit: "STN",
-          counterHit: "STN",
+          onBlock: "-10",
+          onHit: "+6",
+          counterHit: "+6",
+          note: [<Fragment />]
+        },
+        {
+          id: 29,
+          command: "b6",
+          move: [
+            <Fragment>
+              <p>Darkside</p>
+              {bSM}
+              {d6}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "+4",
+          counterHit: "+4",
+          note: ""
+        },
+        {
+          id: 30,
+          command: "6B",
+          move: [
+            <Fragment>
+              <p>Warning Mood</p>
+              {d6}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "0",
+          counterHit: "0",
+          note: ""
+        },
+        {
+          id: 31,
+          command: "6BA",
+          move: [
+            <Fragment>
+              <p>Warning Mood</p>
+              {d6}
+              {b}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "0",
+          counterHit: "0",
+          note: ""
+        },
+        {
+          id: 32,
+          command: "6B[A] ~ SE",
+          move: [
+            <Fragment>
+              <p>Warning Mood ~ Serpent's Embrace</p>
+              {d6}
+              {b}
+              {a_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "+4",
+          onHit: "+8",
+          counterHit: "+8",
           note: [
             <Fragment>
-              {gi}
-              <p>GI non-thrust Mid verticals[8-14] / TC[8~?]</p>
+              {ss}
+              <p>To Serpent's Emrace</p>
             </Fragment>
           ]
         },
         {
-          id: 32,
+          id: 33,
           command: "6BB",
           move: [
             <Fragment>
-              <p>Press the Hilt</p>
+              <p>Warning Immortal</p>
               {d6}
               {b}
               {b}
@@ -971,27 +975,136 @@ class Ivy extends Component {
           ],
           impact: [
             <Fragment>
-              <p>20F</p>
+              <p>18F</p>
               {m}
               {m}
             </Fragment>
           ],
           onBlock: "-8",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [
-            <Fragment>
-              {gi}
-              <p>GI non-thrust Mid verticals[8-14] / TC[8~?]</p>
-            </Fragment>
-          ]
+          onHit: "+6",
+          counterHit: "+6",
+          note: ""
         },
         {
-          id: 33,
+          id: 34,
+          command: "6b8",
+          move: [
+            <Fragment>
+              <p>Ivy Lick</p>
+              {d6}
+              {bSM}
+              {d8}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>12F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "-10",
+          counterHit: "-10",
+          note: ""
+        },
+        {
+          id: 35,
+          command: "6b8(Mid air)",
+          move: [
+            <Fragment>
+              <p>Ivy Lick(Against Mid Air)</p>
+              {d6}
+              {bSM}
+              {d8}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>12F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{at}</Fragment>]
+        },
+        {
+          id: 36,
+          command: "6b8K",
+          move: [
+            <Fragment>
+              <p>Silhouette</p>
+              {d6}
+              {bSM}
+              {d8}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>12F</p>
+              {h}
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "+2",
+          counterHit: "+2",
+          note: [<Fragment />]
+        },
+        {
+          id: 37,
+          command: "6[B]",
+          move: [
+            <Fragment>
+              <p>Ivy Lash	</p>
+              {d6}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "-2",
+          counterHit: "-2",
+          note: ""
+        },
+        {
+          id: 38,
+          command: "6[B]2*8",
+          move: [
+            <Fragment>
+              <p>Biting Ivy Inner</p>
+              {d6}
+              {b_h}
+              {d2}
+              <span> * </span>
+              {d8}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "-6",
+          counterHit: "-6",
+          note: [<Fragment />]
+        },
+        {
+          id: 39,
           command: "3B",
           move: [
             <Fragment>
-              <p>Paladin Purifier</p>
+              <p>Aqua Clipper</p>
               {d3}
               {b}
             </Fragment>
@@ -1003,160 +1116,191 @@ class Ivy extends Component {
             </Fragment>
           ],
           onBlock: "-16",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: "TC[8-14]"
+          onHit: "KND",
+          counterHit: "KND",
+          note: 
+          [
+            <Fragment>
+              {lh}
+              <p>Triggers on hitting opponent's back</p>
+            </Fragment>
+          ]
         },
         {
-          id: 34,
+          id: 40,
           command: "2B",
           move: [
             <Fragment>
-              <p>Guardian Strike</p>
+              <p>Dominance</p>
               {d2}
               {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
+              <p>20F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-10",
-          onHit: "0",
-          counterHit: "0",
+          onBlock: "-6",
+          onHit: "+2",
+          counterHit: "+2",
           note: ""
         },
         {
-          id: 35,
-          command: "2BB",
+          id: 41,
+          command: "1B",
           move: [
             <Fragment>
-              <p>Guardian Strike</p>
-              {d2}
-              {b}
+              <p>Poison Leaf</p>
+              {d1}
               {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
+              <p>28F</p>
+              {l}
             </Fragment>
           ],
-          onBlock: "-20",
+          onBlock: "-6",
+          onHit: "+2",
+          counterHit: "+2",
+          note: ""
+        },
+        {
+          id: 42,
+          command: "1[B]",
+          move: [
+            <Fragment>
+              <p>Poison Ivy</p>
+              {d1}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
+              {l}
+              {sm}
+              {sm}
+            </Fragment>
+          ],
+          onBlock: "-2",
           onHit: "KND",
           counterHit: "KND",
           note: ""
         },
         {
-          id: 36,
-          command: "2BK",
+          id: 43,
+          command: "4B",
           move: [
             <Fragment>
-              <p>Guardian Spear Kick</p>
-              {d2}
+              <p>Rushing Raven</p>
+              {d4}
               {b}
-              {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
-              {m}
-              {a}
+              <p>22F</p>
+              {h}
             </Fragment>
           ],
-          onBlock: "-12",
-          onHit: "+10",
-          counterHit: "+10",
-          note: [<Fragment />]
+          onBlock: "-14",
+          onHit: "-6",
+          counterHit: "-6",
+          note: "Knockdown at close range"
         },
         {
-          id: 37,
-          command: "2BK(Lethal Hit)",
+          id: 44,
+          command: "4b8",
           move: [
             <Fragment>
-              <p>Guardian Spear Kick(Lethal Hit)</p>
-              {d2}
-              {b}
-              {k}
+              <p>Dashing Wings</p>
+              {d4}
+              {bSM}
+              {d8}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
-              {m}
-              {a}
+              <p>20F</p>
+              {h}
+              {h}
+              {h}
+              {h}
+              {sm}
+              {sm}
+              {sm}
+              {sm}
             </Fragment>
           ],
-          onBlock: "-12",
-          onHit: "LNC",
-          counterHit: "LNC",
+          onBlock: "+2",
+          onHit: "KND",
+          counterHit: "KND",
+          note:""
+        },
+        {
+          id: 45,
+          command: "214B",
+          move: [
+            <Fragment>
+              <p>Venom Lash</p>
+              {d2}
+              {d1}
+              {d4}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "-10",
+          counterHit: "-10",
+          note: ""
+        },
+        {
+          id: 46,
+          command: "214[B] ~ SE",
+          move: [
+            <Fragment>
+              <p>Venom Lash ~ Serpent's Embrace</p>
+              {d2}
+              {d1}
+              {d4}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "0",
+          counterHit: "0",
           note: [
             <Fragment>
-              {lh}
-              <p>Lethal Hit on behind opponent</p>
+              {ss}
+              <p>To Serpent's Embrace</p>
             </Fragment>
           ]
         },
         {
-          id: 38,
-          command: "1B",
+          id: 47,
+          command: "FC B",
           move: [
             <Fragment>
-              <p>Nasty Impale</p>
-              {d1}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "-4",
-          counterHit: "KND",
-          note: [<Fragment />]
-        },
-        {
-          id: 39,
-          command: "1BBBB",
-          move: [
-            <Fragment>
-              <p>Nasty Impale</p>
-              {d1}
-              {b}
-              {b}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {l}
-              {l}
-              {l}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "-4",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 40,
-          command: "4B",
-          move: [
-            <Fragment>
-              <p>Sword Shower</p>
-              {d4}
+              <p>Aqua Worshipper</p>
+              <span>FC</span>
               {b}
             </Fragment>
           ],
@@ -1166,116 +1310,20 @@ class Ivy extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-2",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [
-            <Fragment>
-              <p>Force crouch on block</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 41,
-          command: "FC B",
-          move: [
-            <Fragment>
-              <p>Guardian Strike</p>
-              <span>FC</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
           onBlock: "-10",
           onHit: "0",
           counterHit: "0",
-          note: ""
-        },
-        {
-          id: 42,
-          command: "FC BB",
-          move: [
-            <Fragment>
-              <p>Guardian Strike</p>
-              <span>FC</span>
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 43,
-          command: "FC BK",
-          move: [
-            <Fragment>
-              <p>Guardian Spear Kick</p>
-              <span>FC</span>
-              {b}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {a}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "+10",
-          counterHit: "+10",
-          note: [<Fragment />]
-        },
-        {
-          id: 44,
-          command: "FC BK(Lethal Hit)",
-          move: [
-            <Fragment>
-              <p>Guardian Spear Kick(Lethal Hit)</p>
-              <span>FC</span>
-              {b}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {a}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "LNC",
-          counterHit: "LNC",
           note: [
             <Fragment>
-              {lh}
-              <p>Lethal Hit on behind opponent</p>
+              <p>~FC</p>
             </Fragment>
           ]
-        },
-        {
-          id: 45,
+        }, {
+          id: 48,
           command: "FC 3B",
           move: [
             <Fragment>
-              <p>Under Splash</p>
+              <p>Ivy Masquerade</p>
               <span>FC</span>
               {d3}
               {b}
@@ -1283,35 +1331,131 @@ class Ivy extends Component {
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
-              {m}
+              <p>18F</p>
+              {l}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
-          note: ""
-        },
-        {
+          onBlock: "-20",
+          onHit: "+6",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {lh}
+              <p>Leathal Hit against moving back opponent</p>
+            </Fragment>
+          ]
+        }, {
           id: 46,
-          command: "WR B",
+          command: "214[B] ~ SE",
           move: [
             <Fragment>
-              <p>Exile</p>
-              <span>WR</span>
-              {b}
+              <p>Venom Lash ~ Serpent's Embrace</p>
+              {d2}
+              {d1}
+              {d4}
+              {b_h}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>14F</p>
+              <p>20F</p>
+              {m}
               {m}
             </Fragment>
           ],
-          onBlock: "-6",
-          onHit: "+4",
-          counterHit: "+4",
-          note: ""
+          onBlock: "-14",
+          onHit: "0",
+          counterHit: "0",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Serpent's Embrace</p>
+            </Fragment>
+          ]
+        }, {
+          id: 46,
+          command: "214[B] ~ SE",
+          move: [
+            <Fragment>
+              <p>Venom Lash ~ Serpent's Embrace</p>
+              {d2}
+              {d1}
+              {d4}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "0",
+          counterHit: "0",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Serpent's Embrace</p>
+            </Fragment>
+          ]
+        }, {
+          id: 46,
+          command: "214[B] ~ SE",
+          move: [
+            <Fragment>
+              <p>Venom Lash ~ Serpent's Embrace</p>
+              {d2}
+              {d1}
+              {d4}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "0",
+          counterHit: "0",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Serpent's Embrace</p>
+            </Fragment>
+          ]
+        }, {
+          id: 46,
+          command: "214[B] ~ SE",
+          move: [
+            <Fragment>
+              <p>Venom Lash ~ Serpent's Embrace</p>
+              {d2}
+              {d1}
+              {d4}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "0",
+          counterHit: "0",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Serpent's Embrace</p>
+            </Fragment>
+          ]
         },
         {
           id: 47,
@@ -1735,11 +1879,7 @@ class Ivy extends Component {
               {b}
             </Fragment>
           ],
-          impact: [
-            <Fragment>
-              {gi}
-            </Fragment>
-          ],
+          impact: [<Fragment>{gi}</Fragment>],
           onBlock: "N/A",
           onHit: "N/A",
           counterHit: "N/A",
@@ -1800,11 +1940,7 @@ class Ivy extends Component {
           onBlock: "UA",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {ua}
-            </Fragment>
-          ]
+          note: [<Fragment>{ua}</Fragment>]
         },
         {
           id: 68,
@@ -2931,11 +3067,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "+6",
           counterHit: "+6",
-          note: [
-            <Fragment>
-              {th}
-            </Fragment>
-          ]
+          note: [<Fragment>{th}</Fragment>]
         },
         {
           id: 108,
@@ -2958,11 +3090,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {th}
-            </Fragment>
-          ]
+          note: [<Fragment>{th}</Fragment>]
         },
         {
           id: 109,
@@ -2985,11 +3113,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {th}
-            </Fragment>
-          ]
+          note: [<Fragment>{th}</Fragment>]
         },
         {
           id: 110,
@@ -3015,11 +3139,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {th}
-            </Fragment>
-          ]
+          note: [<Fragment>{th}</Fragment>]
         },
         {
           id: 111,
@@ -3039,11 +3159,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {th}
-            </Fragment>
-          ]
+          note: [<Fragment>{th}</Fragment>]
         },
         {
           id: 112,
@@ -3063,11 +3179,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {th}
-            </Fragment>
-          ]
+          note: [<Fragment>{th}</Fragment>]
         },
         {
           id: 113,
@@ -3087,11 +3199,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {th}
-            </Fragment>
-          ]
+          note: [<Fragment>{th}</Fragment>]
         },
         {
           id: 114,
@@ -3114,11 +3222,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {th}
-            </Fragment>
-          ]
+          note: [<Fragment>{th}</Fragment>]
         },
         {
           id: 115,
@@ -3172,11 +3276,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "N/A",
           counterHit: "N/A",
-          note: [
-            <Fragment>
-              {re}
-            </Fragment>
-          ]
+          note: [<Fragment>{re}</Fragment>]
         },
         {
           id: 117,
@@ -3544,11 +3644,7 @@ class Ivy extends Component {
           onBlock: "-8",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {sc}
-            </Fragment>
-          ]
+          note: [<Fragment>{sc}</Fragment>]
         },
         {
           id: 130,
@@ -3932,11 +4028,7 @@ class Ivy extends Component {
           onBlock: "-18",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-            </Fragment>
-          ]
+          note: [<Fragment>{ss}</Fragment>]
         },
         {
           id: 143,
@@ -3959,11 +4051,7 @@ class Ivy extends Component {
           onBlock: "-16",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-            </Fragment>
-          ]
+          note: [<Fragment>{ss}</Fragment>]
         },
         {
           id: 144,
@@ -3984,11 +4072,7 @@ class Ivy extends Component {
           onBlock: "-20",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-            </Fragment>
-          ]
+          note: [<Fragment>{ss}</Fragment>]
         },
         {
           id: 145,
@@ -4064,11 +4148,7 @@ class Ivy extends Component {
           onBlock: "-6",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-            </Fragment>
-          ]
+          note: [<Fragment>{ss}</Fragment>]
         },
         {
           id: 148,
@@ -4117,11 +4197,7 @@ class Ivy extends Component {
           onBlock: "N/A",
           onHit: "N/A",
           counterHit: "N/A",
-          note: [
-            <Fragment>
-              {ss}
-            </Fragment>
-          ]
+          note: [<Fragment>{ss}</Fragment>]
         }
       ],
       twinAngelStep: [
