@@ -2913,6 +2913,7 @@ class Mina extends Component {
             <Fragment>
               <p>Furious Swing ~ Stone Shock</p>
               <img className={classes.imgResize} src={d4} />
+              <img className={classes.imgResize} src={d6} />
               <img className={classes.imgResize} src={a} />
               <img className={classes.imgResize} src={plus} />
               <img className={classes.imgResize} src={g} />
@@ -2942,6 +2943,7 @@ class Mina extends Component {
             <Fragment>
               <p>Furious Swing ~ Stone Shock</p>
               <img className={classes.imgResize} src={d4} />
+              <img className={classes.imgResize} src={d6} />
               <img className={classes.imgResize} src={a} />
               <img className={classes.imgResize} src={plus} />
               <img className={classes.imgResize} src={g} />
