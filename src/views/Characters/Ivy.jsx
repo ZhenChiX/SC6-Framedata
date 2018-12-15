@@ -60,7 +60,6 @@ import n_ss from "../../assets/img/ss.png";
 import n_th from "../../assets/img/th.png";
 import n_ua from "../../assets/img/ua.png";
 
-//
 const styles = {
   cardCategoryWhite: {
     "&,& a,& a:hover,& a:focus": {
@@ -118,6 +117,7 @@ const tableHeadDetail = [
   "NOTE"
 ];
 const tableHeadSimple = ["M", "I", "OB", "OH", "CH", "NOTE"];
+
 class Ivy extends Component {
   constructor(props) {
     super(props);
@@ -195,7 +195,6 @@ class Ivy extends Component {
     // SL = Spiral Lust
     // SS = Summon Suffering
     // CS = Calamity Symphony
-
 
     const ivyFrameData = {
       // verticalAttacks start here

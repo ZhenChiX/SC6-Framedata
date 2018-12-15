@@ -3456,7 +3456,6 @@ class Groh extends Component {
         }
       ]
     };
-    console.log(grohFrameData.verticalAttacks.length);
 
     return (
       <GridContainer>

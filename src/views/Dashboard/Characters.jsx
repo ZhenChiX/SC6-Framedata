@@ -25,6 +25,7 @@ import Accessibility from "@material-ui/icons/Accessibility";
 import BugReport from "@material-ui/icons/BugReport";
 import Code from "@material-ui/icons/Code";
 import Cloud from "@material-ui/icons/Cloud";
+import KeyboardReturn from "@material-ui/icons/KeyboardReturn";
 // core components
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -37,8 +38,9 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardIcon from "components/Card/CardIcon.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
-
-import { bugs, website, server } from "variables/general.jsx";
+import Header from "../../components/Header/Header.jsx";
+import dashboardRoutes from "../../routes/dashboard.jsx";
+import Button from "components/CustomButtons/Button.jsx";
 
 import App from "./Characters.jsx";
 import dashboardStyle from "assets/jss/material-dashboard-react/views/dashboardStyle.jsx";
@@ -75,6 +77,7 @@ class Characters extends React.Component {
   }
   onClickHidden = () => {
     this.setState({ isHidden: !this.state.isHidden });
+    console.log("click");
   };
 
   state = {
@@ -87,6 +90,7 @@ class Characters extends React.Component {
   handleChangeIndex = index => {
     this.setState({ value: index });
   };
+
   render() {
     const { classes } = this.props;
     return (
@@ -212,35 +216,46 @@ class Characters extends React.Component {
               </GridItem>
             </GridContainer>
           ) : null}
-          ;
-          <Fragment>
-            <Switch>
-              <Route path="/astaroth" component={Astaroth} />
-              <Route path="/azwel" component={Azwel} />
-              <Route path="/cerventes" component={Cerventes} />
-              <Route path="/chai" component={Chai} />
-              <Route path="/geralt" component={Geralt} />
 
-              <Route path="/groh" component={Groh} />
-              <Route path="/inferno" component={Inferno} />
-              <Route path="/ivy" component={Ivy} />
-              <Route path="/kilik" component={Kilik} />
-              <Route path="/maxi" component={Maxi} />
-              <Route path="/mina" component={Mina} />
-              <Route path="/mitsurugi" component={Mitsurugi} />
-              <Route path="/nightmare" component={Nightmare} />
-              <Route path="/raphael" component={Raphael} />
-              <Route path="/siegfried" component={Siegfreid} />
-              <Route path="/sophitia" component={Sophitia} />
-              <Route path="/taki" component={Taki} />
-              <Route path="/talim" component={Talim} />
-              <Route path="/tira" component={Tira} />
-              <Route path="/type2B" component={Type2B} />
-              <Route path="/voldo" component={Voldo} />
-              <Route path="/yoshimitsu" component={Yoshimitsu} />
-              <Route path="/zasalamel" component={Zasalamel} />
-            </Switch>
-            {/* <Route path="/astaroth" component={Astaroth} /> */}
+          <Fragment>
+            {this.state.isHidden ? null : (
+              <Fragment>
+                <Button
+                  className={classes.cardTitleWhite}
+                  color="transparent"
+                  id="returnMe"
+                  onClick={this.onClickHidden}
+                >
+                  <KeyboardReturn />
+                  Return
+                </Button>
+                <Switch>
+                  <Route path="/astaroth" component={Astaroth} />
+                  <Route path="/azwel" component={Azwel} />
+                  <Route path="/cerventes" component={Cerventes} />
+                  <Route path="/chai" component={Chai} />
+                  <Route path="/geralt" component={Geralt} />
+                  <Route path="/groh" component={Groh} />
+                  <Route path="/inferno" component={Inferno} />
+                  <Route path="/ivy" component={Ivy} />
+                  <Route path="/kilik" component={Kilik} />
+                  <Route path="/maxi" component={Maxi} />
+                  <Route path="/mina" component={Mina} />
+                  <Route path="/mitsurugi" component={Mitsurugi} />
+                  <Route path="/nightmare" component={Nightmare} />
+                  <Route path="/raphael" component={Raphael} />
+                  <Route path="/siegfried" component={Siegfreid} />
+                  <Route path="/sophitia" component={Sophitia} />
+                  <Route path="/taki" component={Taki} />
+                  <Route path="/talim" component={Talim} />
+                  <Route path="/tira" component={Tira} />
+                  <Route path="/type2B" component={Type2B} />
+                  <Route path="/voldo" component={Voldo} />
+                  <Route path="/yoshimitsu" component={Yoshimitsu} />
+                  <Route path="/zasalamel" component={Zasalamel} />
+                </Switch>
+              </Fragment>
+            )}
           </Fragment>
         </Fragment>
       </Router>

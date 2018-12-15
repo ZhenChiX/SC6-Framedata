@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 // @material-ui/core components
@@ -14,15 +14,22 @@ import HeaderLinks from "./HeaderLinks.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 
 import headerStyle from "assets/jss/material-dashboard-react/components/headerStyle.jsx";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
+import App from "../../layouts/Dashboard/Dashboard.jsx";
 
 function Header({ ...props }) {
   function makeBrand() {
     var name;
     props.routes.map((prop, key) => {
       if (prop.path === props.location.pathname) {
-        // name = "MAKE IT WORK";
+        // name = props.location.pathname;
         name = prop.navbarName;
-
+       
       }
       return null;
     });
@@ -37,14 +44,22 @@ function Header({ ...props }) {
       <Toolbar className={classes.container}>
         <div className={classes.flex}>
           {/* Here we create navbar brand, based on route name */}
-          <Button 
-        
-          color="transparent" href="#" className={classes.title}>
+          <Button color="transparent" href="#" className={classes.title}>
             {makeBrand()}
+            {/* BACK */}
           </Button>
+          {/* <Link
+            color="transparent"
+            to="/"
+            className={classes.title}
+          >
+            Back to Characters select
+          </Link>
+          <Route path="/" component={App} /> */}
         </div>
+
         <Hidden smDown implementation="css">
-          <HeaderLinks />
+          {/* <HeaderLinks /> */}
         </Hidden>
         <Hidden mdUp implementation="css">
           <IconButton
