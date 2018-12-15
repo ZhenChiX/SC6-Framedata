@@ -88,8 +88,6 @@ const dashboardRoutes = [
   //   component: UpgradeToPro
   // },
   { redirect: true, path: "/", to: "characters", navbarName: "Redirect" }
-
-
 ];
 
 export default dashboardRoutes;
