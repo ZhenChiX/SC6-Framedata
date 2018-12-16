@@ -190,16 +190,6 @@ class Astaroth extends Component {
 
     const astarothFrameData = {
       // verticalAttacks start here
-      // Woebringer	50	40		-12			
-      // :B+G:	:M:	:RE:
-      // Woebringer	70	50					
-      // :(B+G):	:M:	:BA::RE:
-      // Ax of Woe		54		-6	KND	KND	6%
-      // :RE::A:	:H:	:LH: as initiator 2nd round opponent :RE::K:
-      // Rending Torment		63			KND	KND	33%
-      // :RE::B:	:M:	Will always :GC: on 2nd round as initiator / :LH: as initiator 2nd round opponent :RE::A:
-      // Eviscerate		36		14	14	14	12%
-      // :RE::K:	:M:	:LH:[STN] as initiator 2nd round opponent :RE::B:
 
       verticalAttacks: [
         {
@@ -3488,11 +3478,11 @@ class Astaroth extends Component {
       // reversal edge start here
       reversalEdge: [
         {
-          id: 127,
+          id: 135,
           command: "B+G",
           move: [
             <Fragment>
-              <p>Existence</p>
+              <p>Woebringer</p>
               {b}
               {plus}
               {g}
@@ -3500,44 +3490,22 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>46F</p>
+              <p>50F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-8",
+          onBlock: "-12",
           onHit: "N/A",
           counterHit: "N/A",
           note: [<Fragment>{re}</Fragment>]
         },
+
         {
-          id: 128,
-          command: "B+G6",
-          move: [
-            <Fragment>
-              <p>Darkside</p>
-              {b}
-              {plus}
-              {g}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>52F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-7",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment>{re}</Fragment>]
-        },
-        {
-          id: 129,
+          id: 136,
           command: "[B+G]",
           move: [
             <Fragment>
-              <p>Existence</p>
+              <p>Woebringer</p>
               {b_h}
               {plus}
               {g_h}
@@ -3545,7 +3513,7 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>66F</p>
+              <p>70F</p>
               {m}
             </Fragment>
           ],
@@ -3560,11 +3528,11 @@ class Astaroth extends Component {
           ]
         },
         {
-          id: 130,
+          id: 137,
           command: "RE A",
           move: [
             <Fragment>
-              <p>Screeching Spirit</p>
+              <p>Ax of Woe</p>
               {re}
               {a}
             </Fragment>
@@ -3575,7 +3543,7 @@ class Astaroth extends Component {
               {h}
             </Fragment>
           ],
-          onBlock: "-2",
+          onBlock: "-6",
           onHit: "STN",
           counterHit: "STN",
           note: [
@@ -3587,47 +3555,12 @@ class Astaroth extends Component {
         },
 
         {
-          id: 131,
-          command: "RE [A] ~ SE",
+          id: 138,
+          command: "RE B",
           move: [
             <Fragment>
-              <p>Screeching Spirit ~ Serpent's Embrace</p>
+              <p>Rending Torment</p>
               {re}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>N/A</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "?F",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Lethal hit STN on 2nd phrase</p>
-              {ss}
-              <p>Into Serpent's Embrace</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 132,
-          command: "RE BBBBBBBB",
-          move: [
-            <Fragment>
-              <p>Fires of Insanity</p>
-              {re}
-              {b}
-              {b}
-              {b}
-              {b}
-              {b}
-              {b}
-              {b}
               {b}
             </Fragment>
           ],
@@ -3635,16 +3568,9 @@ class Astaroth extends Component {
             <Fragment>
               <p>N/A</p>
               {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
             </Fragment>
           ],
-          onBlock: "?F",
+          onBlock: "",
           onHit: "KND",
           counterHit: "KND",
           note: [
@@ -3656,11 +3582,11 @@ class Astaroth extends Component {
         },
 
         {
-          id: 133,
+          id: 139,
           command: "RE K",
           move: [
             <Fragment>
-              <p>Queen of Blades</p>
+              <p>Eviscerate</p>
               {re}
               {k}
             </Fragment>
@@ -3671,9 +3597,9 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "?",
-          onHit: "?",
-          counterHit: "?",
+          onBlock: "",
+          onHit: "",
+          counterHit: "",
           note: [
             <Fragment>
               {lh}
@@ -3683,7 +3609,7 @@ class Astaroth extends Component {
         },
 
         {
-          id: 134,
+          id: 140,
           command: "RE 6",
           move: [
             <Fragment>
@@ -3709,7 +3635,7 @@ class Astaroth extends Component {
           ]
         },
         {
-          id: 135,
+          id: 141,
           command: "RE 2*8",
           move: [
             <Fragment>
@@ -3737,7 +3663,7 @@ class Astaroth extends Component {
           ]
         },
         {
-          id: 136,
+          id: 142,
           command: "RE 4",
           move: [
             <Fragment>
@@ -3767,11 +3693,11 @@ class Astaroth extends Component {
       // gauge attacks start here
       gaugeAttacks: [
         {
-          id: 137,
+          id: 143,
           command: "A+B+K",
           move: [
             <Fragment>
-              <p>Guilty Throne</p>
+              <p>Final Anguish</p>
               {a}
               {plus}
               {b}
@@ -3781,69 +3707,25 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>34F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
+              <p>24F</p>
+              {h}
             </Fragment>
           ],
-          onBlock: "-20",
+          onBlock: "KND",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
               {sg}
               {ce}
-              {gi}
-              {at}
+              {th}
+              <p>Unbreakable</p>
             </Fragment>
           ]
         },
+
         {
-          id: 138,
-          command: "SE A+B+K",
-          move: [
-            <Fragment>
-              <p>Serpent's Embrace ~ Guilty Throne</p>
-              <span>Serpent's Embrace</span>
-              {a}
-              {plus}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sg}
-              {ce}
-              {at}
-            </Fragment>
-          ]
-        },
-        {
-          id: 139,
+          id: 144,
           command: "4A+B+K",
           move: [
             <Fragment>
@@ -3873,26 +3755,49 @@ class Astaroth extends Component {
           ]
         },
         {
-          id: 140,
-          command: "SC 6AA",
+          id: 145,
+          command: "SC 1AA",
           move: [
             <Fragment>
-              <p>Deadly Catalysm</p>
+              <p>Bringer of Ruin</p>
               {sc}
-              {d6}
+              {d1}
               {a}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
-              {h}
-              {m}
-              {h}
+              <p>36F</p>
+              {l}
+              {l}
             </Fragment>
           ],
-          onBlock: "+4",
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+        {
+          id: 146,
+          command: "SC 1AB",
+          move: [
+            <Fragment>
+              <p>Ruinous Discus Breaker</p>
+              {sc}
+              {d1}
+              {a}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>36F</p>
+              {l}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
           onHit: "KND",
           counterHit: "KND",
           note: [
@@ -3904,206 +3809,282 @@ class Astaroth extends Component {
         },
 
         {
-          id: 141,
-          command: "SC 4A",
-          move: [
-            <Fragment>
-              <p>Deadly Firestorm</p>
-              {sc}
-              {d4}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "+8",
-          onHit: "+10",
-          counterHit: "+10",
-          note: [
-            <Fragment>
-              {sc}
-              {ba}
-            </Fragment>
-          ]
-        },
-        {
-          id: 142,
-          command: "SC 4[A] ~ SE",
-          move: [
-            <Fragment>
-              <p>Deadly Firestorm ~ Serpent's Embrace</p>
-              {sc}
-              {d4}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "+2",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [
-            <Fragment>
-              {sc}
-              {ba}
-              {ss}
-              <p>To Serpent's Embrace</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 143,
-          command: "SC 6BB",
-          move: [
-            <Fragment>
-              <p>Death Glance</p>
-              {sc}
-              {d6}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+1",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sc}
-              {ba}
-              {at}
-            </Fragment>
-          ]
-        },
-        {
-          id: 144,
-          command: "SC 66KK",
-          move: [
-            <Fragment>
-              <p>Unseen Connection</p>
-              {sc}
-              {d6_h}
-              {k}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-2",
-          onHit: "+6",
-          counterHit: "+6",
-          note: [<Fragment>{sc}</Fragment>]
-        },
-        {
-          id: 145,
-          command: "SC 66K[K] ~ SE",
-          move: [
-            <Fragment>
-              <p>Unseen Connection ~ Serpent's Embrace</p>
-              {sc}
-              {d6_h}
-              {k}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "0",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [
-            <Fragment>
-              {sc}
-              {ss}
-              <p>To Serpent's Embrace</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 146,
-          command: "SC 22*88A+B B",
-          move: [
-            <Fragment>
-              <p>Decaying Land</p>
-              {sc}
-              {d2}
-              <span> * </span>
-              {d8}
-              {a}
-              {plus}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>26F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "0",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sc}
-              {gi}
-              <p>GI Mid horizontals</p>
-            </Fragment>
-          ]
-        },
-        {
           id: 147,
-          command: "SC SE AA",
+          command: "SC 4AA",
           move: [
             <Fragment>
-              <p>Deadly Screaming Mandrake</p>
+              <p>Decimation</p>
               {sc}
-              <span>Serpent's Embrace</span>
+              {d4}
               {a}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>18F</p>
+              <p>14F</p>
               {h}
-              {m}
               {h}
             </Fragment>
           ],
           onBlock: "+4",
+          onHit: "+14",
+          counterHit: "+14",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+        {
+          id: 148,
+          command: "SC 236A",
+          move: [
+            <Fragment>
+              <p>Cerberus Surge</p>
+              {sc}
+              {d2}
+              {d3}
+              {d6}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+        {
+          id: 149,
+          command: "SC BB",
+          move: [
+            <Fragment>
+              <p>UNstoppable Great Divide</p>
+              {sc}
+              {b}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+        {
+          id: 150,
+          command: "SC B[B]",
+          move: [
+            <Fragment>
+              <p>Savage Great Divide</p>
+              {sc}
+              {b}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "LNC",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {sc}
+              {ua}
+            </Fragment>
+          ]
+        },
+        {
+          id: 151,
+          command: "SC bK A+G",
+          move: [
+            <Fragment>
+              <p>Apocalypse Pound</p>
+              {sc}
+              {bSM}
+              {k}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {th}
+            </Fragment>
+          ]
+        },
+        {
+          id: 152,
+          command: "SC bK 4A+G",
+          move: [
+            <Fragment>
+              <p>Apocalypse Drop</p>
+              {sc}
+              {bSM}
+              {k}
+              {d4}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {th}
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 153,
+          command: "SC 6B",
+          move: [
+            <Fragment>
+              <p>Ruin Slam</p>
+              {sc}
+              {d6}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "+2",
+          counterHit: "KND",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+
+        {
+          id: 154,
+          command: "SC 6BA",
+          move: [
+            <Fragment>
+              <p>Blood Tide Rush</p>
+              {sc}
+              {d6}
+              {b}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+
+        {
+          id: 155,
+          command: "SC 6BB",
+          move: [
+            <Fragment>
+              <p>Cyclopean Swipe</p>
+              {sc}
+              {d6}
+              {b}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {ba}
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 156,
+          command: "SC 4BB",
+          move: [
+            <Fragment>
+              <p>Annihilation Gorefang</p>
+              {sc}
+              {d4}
+              {b}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+10",
           onHit: "KND",
           counterHit: "KND",
           note: [
@@ -4114,23 +4095,22 @@ class Astaroth extends Component {
           ]
         },
         {
-          id: 148,
-          command: "SC SE 6AA",
+          id: 157,
+          command: "SC 4B[B]",
           move: [
             <Fragment>
-              <p>Mourning Spirit</p>
+              <p>Annihilation Gorefang</p>
               {sc}
-              <span>Seprent's Embrace</span>
-              {d6}
-              {a}
-              {a}
+              {d4}
+              {b}
+              {b_h}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
+              <p>16F</p>
+              {m}
+              {m}
             </Fragment>
           ],
           onBlock: "KND",
@@ -4142,152 +4122,226 @@ class Astaroth extends Component {
               {ua}
             </Fragment>
           ]
-        }
-      ],
-      // special stance start here
-      serpentEmbrace: [
+        },
+
         {
-          id: 149,
-          command: "SE AA",
+          id: 158,
+          command: "SC 4KA",
           move: [
             <Fragment>
-              <p>Violent Spirits</p>
-              <span>Serpent's Embrace</span>
-              {a}
+              <p>Victorious Charge</p>
+              {sc}
+              {d4}
+              {k}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p>18F</p>
-              {h}
               {m}
               {h}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "+6",
-          counterHit: "+6",
-          note: [<Fragment>{ss}</Fragment>]
-        },
-        {
-          id: 150,
-          command: "SE 6AA",
-          move: [
-            <Fragment>
-              <p>Wind Embrace</p>
-              <span>Serpent's Embrace</span>
-              {d6}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "+8",
+          onBlock: "",
           onHit: "KND",
           counterHit: "KND",
-          note: [<Fragment>{ss}</Fragment>]
+          note: [<Fragment>{sc}</Fragment>]
         },
         {
-          id: 151,
-          command: "SE 4A",
+          id: 159,
+          command: "SC 4K[A]",
           move: [
             <Fragment>
-              <p>Lamenting Tail</p>
-              <span>Serpent's Embrace</span>
+              <p>Ruthless Assault</p>
+              {sc}
               {d4}
+              {k}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>24F</p>
+              <p>18F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+
+        {
+          id: 160,
+          command: "SC 4B+K",
+          move: [
+            <Fragment>
+              <p>Malicious Torment</p>
+              {sc}
+              {d4}
+              {b}
+              {plus}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>40F</p>
+              {l}
+              {l}
               {l}
             </Fragment>
           ],
-          onBlock: "-26",
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+
+        {
+          id: 161,
+          command: "SC 22*88B",
+          move: [
+            <Fragment>
+              <p>Apocalypse Cannon</p>
+              {sc}
+              {d2_h}
+              <span> * </span>
+              {d8_h}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>30F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {sc}
+              {ba}
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 162,
+          command: "SC 33*66*99KK",
+          move: [
+            <Fragment>
+              <p>Apocalypse Rush</p>
+              {sc}
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {k}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
-              {ss}
-              {at}
+              {sc}
+              <p>TC</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 163,
+          command: "SC 33*66*99A+G",
+          move: [
+            <Fragment>
+              <p>Vicious Fury</p>
+              {sc}
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>46F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {th}
             </Fragment>
           ]
         },
         {
-          id: 152,
-          command: "SE BBB",
+          id: 164,
+          command: "SC 11*44*77A+G",
           move: [
             <Fragment>
-              <p>Mistress' Justice</p>
-              <span>Serpent's Embrace</span>
-              {b}
-              {b}
-              {b}
+              <p>Cursed Altar</p>
+              {sc}
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {a}
+              {plus}
+              {g}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>22F</p>
-              {m}
-              {m}
-              {m}
+              <p>46F</p>
+              {h}
             </Fragment>
           ],
-          onBlock: "-16",
+          onBlock: "KND",
           onHit: "KND",
           counterHit: "KND",
-          note: [<Fragment>{ss}</Fragment>]
+          note: [
+            <Fragment>
+              {sc}
+              {th}
+            </Fragment>
+          ]
         },
+
         {
-          id: 153,
-          command: "SE B:B:B:B:B",
+          id: 165,
+          command: "SC 2A+G",
           move: [
             <Fragment>
-              <p>Howling Spirits</p>
-              <span>Serpent's Embrace</span>
-              {b}
-              <span>:</span>
-              {b}
-              <span>:</span>
-              {b}
-              <span>:</span>
-              {b}
-              <span>:</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{ss}</Fragment>]
-        },
-        {
-          id: 154,
-          command: "SE 6B",
-          move: [
-            <Fragment>
-              <p>Ivy Sting</p>
-              <span>Serpent's Embrace</span>
-              {d6}
-              {b}
+              <p>Apocalypse Pound</p>
+              {sc}
+              {d2}
+              {a}
+              {plus}
+              {g}
             </Fragment>
           ],
           impact: [
@@ -4296,302 +4350,151 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{ss}</Fragment>]
-        },
-        {
-          id: 155,
-          command: "SE 4B",
-          move: [
-            <Fragment>
-              <p>Landing Embrace</p>
-              <span>Serpent's Embrace</span>
-              {d4}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>38F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+12",
+          onBlock: "KND",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
-              {ss}
-              {ba}
-            </Fragment>
-          ]
-        },
-        {
-          id: 156,
-          command: "SE K",
-          move: [
-            <Fragment>
-              <p>Charging Serpent</p>
-              <span>Serpent's Embrace</span>
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "KND",
-          note: [<Fragment>{ss}</Fragment>]
-        },
-        {
-          id: 157,
-          command: "SE [K]",
-          move: [
-            <Fragment>
-              <p>Charging Serpent</p>
-              <span>Serpent's Embrace ~ Serpent's Embrace</span>
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "0",
-          onHit: "+8",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Serpent's Embrace</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 158,
-          command: "SE 4B+K*B+K*6B+K",
-          move: [
-            <Fragment>
-              <p>Stinging Souls</p>
-              <span>Serpent's Embrace</span>
-              {d4}
-              {b}
-              {plus}
-              {k}
-              <span> * </span>
-              {b}
-              {plus}
-              {k}
-              <span> * </span>
-              {d6}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>49F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-              {ba}
-            </Fragment>
-          ]
-        },
-        {
-          id: 159,
-          command: "SE 8B+K",
-          move: [
-            <Fragment>
-              <p>Redemption</p>
-              <span>Serpent's Embrace</span>
-              {d8}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "-10",
-          counterHit: "-10",
-          note: [
-            <Fragment>
-              {ss}
-              {at}
-              <p>Shifts to attack throw against Mid-air opponent</p>
+              {sc}
+              {th}
+              <p>TC</p>
             </Fragment>
           ]
         },
 
         {
-          id: 160,
-          command: "SE 8B+K K",
+          id: 166,
+          command: "SC 1A+G A+G",
           move: [
             <Fragment>
-              <p>Blind Obsession</p>
-              <span>Serpent's Embrace</span>
-              {d8}
-              {b}
-              {plus}
-              {k}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {h}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "+2",
-          counterHit: "+2",
-          note: [<Fragment>{ss}</Fragment>]
-        },
-        {
-          id: 161,
-          command: "SE A+B",
-          move: [
-            <Fragment>
-              <p>Released Souls</p>
-              <span>Serpent's Embrace</span>
+              <p>Apocalypse Drop</p>
+              {sc}
+              {d1}
               {a}
               {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>74F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "UA",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-              {ua}
-            </Fragment>
-          ]
-        }
-      ],
-      spiralLust: [
-        {
-          id: 162,
-          command: "3A+B",
-          move: [
-            <Fragment>
-              <p>Spiral Lust</p>
-              {d3}
+              {g}
               {a}
               {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>?F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "UA",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-              {ua}
-            </Fragment>
-          ]
-        },
-        {
-          id: 163,
-          command: "SL B",
-          move: [
-            <Fragment>
-              <p>Exile</p>
-              <span>Spiral Lust</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>?F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{ss}</Fragment>]
-        },
-        {
-          id: 163,
-          command: "SL B(Delay)",
-          move: [
-            <Fragment>
-              <p>Exile (Delay)</p>
-              <span>Spiral Lust</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>?F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+2",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{ss}</Fragment>]
-        },
-        {
-          id: 164,
-          command: "SL G",
-          move: [
-            <Fragment>
-              <p>Spiral Lust ~ Serpent's Embrace</p>
-              <span>Spiral Lust</span>
               {g}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>N/A</p>
+              <p>14F</p>
+              {m}
             </Fragment>
           ],
-          onBlock: "N/A",
-          onHit: "N/A",
-          counterHit: "N/A",
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
           note: [
             <Fragment>
-              {ss}
-              <p>To Serpent's Embrace</p>
+              {sc}
+              {th}
+              <p>TC</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 167,
+          command: "SC 236A+G A+G",
+          move: [
+            <Fragment>
+              <p>Apocalypse Destroyer</p>
+              {sc}
+              {d2}
+              {d3}
+              {d6}
+              {a}
+              {plus}
+              {g}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {th}
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 168,
+          command: "SC 214A+G",
+          move: [
+            <Fragment>
+              <p>Ride of the Wicked</p>
+              {sc}
+              {d2}
+              {d1}
+              {d4}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "LNC",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {sc}
+              {th}
+            </Fragment>
+          ]
+        },
+        {
+          id: 169,
+          command: "SC 214A+G 2*8A",
+          move: [
+            <Fragment>
+              <p>Wicked Twister of Carnage</p>
+              {sc}
+              {d2}
+              {d1}
+              {d4}
+              {a}
+              {plus}
+              {g}
+              {d2}
+              <span> * </span>
+              {d8}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {th}
+              {ua}
             </Fragment>
           ]
         }
@@ -4785,110 +4688,6 @@ class Astaroth extends Component {
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
                   tableData={astarothFrameData.dualButtonAttacks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Special Stance(Sperent's Embrace)
-              </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={astarothFrameData.serpentEmbrace.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={astarothFrameData.serpentEmbrace.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Special Stance(Spiral Lust)
-              </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={astarothFrameData.spiralLust.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={astarothFrameData.spiralLust.map(data => [
                     data.move,
                     data.impact,
                     data.onBlock,
