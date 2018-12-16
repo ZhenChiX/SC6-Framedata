@@ -189,27 +189,18 @@ class Astaroth extends Component {
     const gSM = <img className={classes.imgResizeSM} src={n_g} />;
 
     const astarothFrameData = {
-  
- 
- 
-   
-      // Bear Fang	16	20		-8	6	6
-      // :4::B:	:M:
-      // Bear Fang	42	30		6	KND	KND
-      // :4::(B):	:M:	:BA:
-      // Gorefang	42	52		0	6	6
-      // :4::(B)::B:	:M::M:	:BA: NC
-      // Gorefang	42	57		10	KND	KND
-      // :4::(B)::(B):	:M::M:	:BA:
-      // Hades	20	24		-10	6	6
-      // FC :B:	:M:
-      // WR :B:	:M:
-      // WR :(B):	:M:	:BA:
-      // :9::B:	:M:
-      // Reverse Dark Split	22	22
-      // BT :B:	:M:
-
       // verticalAttacks start here
+      // Woebringer	50	40		-12			
+      // :B+G:	:M:	:RE:
+      // Woebringer	70	50					
+      // :(B+G):	:M:	:BA::RE:
+      // Ax of Woe		54		-6	KND	KND	6%
+      // :RE::A:	:H:	:LH: as initiator 2nd round opponent :RE::K:
+      // Rending Torment		63			KND	KND	33%
+      // :RE::B:	:M:	Will always :GC: on 2nd round as initiator / :LH: as initiator 2nd round opponent :RE::A:
+      // Eviscerate		36		14	14	14	12%
+      // :RE::K:	:M:	:LH:[STN] as initiator 2nd round opponent :RE::B:
+
       verticalAttacks: [
         {
           id: 1,
@@ -1051,10 +1042,7 @@ class Astaroth extends Component {
           onBlock: "+2",
           onHit: "+10",
           counterHit: "+10",
-          note: [
-            <Fragment>
-            </Fragment>
-          ]
+          note: [<Fragment />]
         },
         {
           id: 37,
@@ -1160,11 +1148,7 @@ class Astaroth extends Component {
           onBlock: "LNC",
           onHit: "LNC",
           counterHit: "LNC",
-          note: [
-            <Fragment>
-              {ua}
-            </Fragment>
-          ]
+          note: [<Fragment>{ua}</Fragment>]
         },
         {
           id: 42,
@@ -1248,11 +1232,7 @@ class Astaroth extends Component {
           onBlock: "+6",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {ba}
-            </Fragment>
-          ]
+          note: [<Fragment>{ba}</Fragment>]
         },
         {
           id: 46,
@@ -1275,11 +1255,7 @@ class Astaroth extends Component {
           onBlock: "0",
           onHit: "+6",
           counterHit: "+6",
-          note: [
-            <Fragment>
-              {ba}
-            </Fragment>
-          ]
+          note: [<Fragment>{ba}</Fragment>]
         },
         {
           id: 47,
@@ -1302,13 +1278,9 @@ class Astaroth extends Component {
           onBlock: "10",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {ba}
-            </Fragment>
-          ]
+          note: [<Fragment>{ba}</Fragment>]
         },
-        
+
         {
           id: 48,
           command: "FC B",
@@ -1328,12 +1300,9 @@ class Astaroth extends Component {
           onBlock: "-10",
           onHit: "6",
           counterHit: "6",
-          note: [
-            <Fragment>
-            </Fragment>
-          ]
+          note: [<Fragment />]
         },
-        
+
         {
           id: 49,
           command: "WR B",
@@ -1427,7 +1396,7 @@ class Astaroth extends Component {
           note: ""
         },
         {
-          id: 55,
+          id: 53,
           command: "BT 2B",
           move: [
             <Fragment>
@@ -1452,199 +1421,100 @@ class Astaroth extends Component {
       // Kicks start here
       kicks: [
         {
-          id: 56,
+          id: 54,
           command: "K",
           move: [
             <Fragment>
-              <p>Night Swallow</p>
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "0",
-          counterHit: "0",
-          note: ""
-        },
-        {
-          id: 57,
-          command: "6K",
-          move: [
-            <Fragment>
-              <p>Starving Spirit</p>
-              {d6}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
-          note: ""
-        },
-        {
-          id: 58,
-          command: "6KB",
-          move: [
-            <Fragment>
-              <p>Starving Spirit</p>
-              {d6}
-              {k}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "+4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 59,
-          command: "6K[B]",
-          move: [
-            <Fragment>
-              <p>Blade Sharpener</p>
-              {d6}
-              {k}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "UA",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <p>Cancel with G ~ FC</p>
-              <p>Becomes Mid at distance</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 60,
-          command: "3K",
-          move: [
-            <Fragment>
-              <p>Rage Kick</p>
-              {d3}
+              <p>Moloch's Vise</p>
               {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p>14F</p>
-              {m}
+              {h}
             </Fragment>
           ],
-          onBlock: "-6",
+          onBlock: "-8",
           onHit: "+4",
           counterHit: "+4",
           note: ""
         },
-
         {
-          id: 61,
-          command: "3[K]",
+          id: 55,
+          command: "[K]",
           move: [
             <Fragment>
-              <p>Rage Kick</p>
-              {d3}
+              <p>Moloch's Vise</p>
               {k_h}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>34F</p>
-              {m}
+              <p>28F</p>
+              {h}
             </Fragment>
           ],
-          onBlock: "+2",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers against male opponents</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 62,
-          command: "1K",
-          move: [
-            <Fragment>
-              <p>Queen's Pleasure</p>
-              {d1}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "-2",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 63,
-          command: "1K",
-          move: [
-            <Fragment>
-              <p>Ivy Sweep(Against downed opponent)</p>
-              {d1}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {l}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "KND",
+          onBlock: "0",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
               {at}
-              <p>Against downed opponent</p>
+              {lh}
+              <p>Lethal Hit on full Soul Gauge opponent</p>
             </Fragment>
           ]
         },
         {
-          id: 64,
+          id: 56,
+          command: "6K",
+          move: [
+            <Fragment>
+              <p>Hades Knee</p>
+              {d6}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-12",
+          onHit: "+4",
+          counterHit: "KND",
+          note: ""
+        },
+        {
+          id: 57,
+          command: "3K",
+          move: [
+            <Fragment>
+              <p>Moloch's Revenge</p>
+              {d3}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "-4",
+          counterHit: "-4",
+          note: ""
+        },
+        {
+          id: 58,
           command: "2K",
           move: [
             <Fragment>
-              <p>Charmer Silhouette</p>
+              <p>Bull Low Kick</p>
               {d2}
               {k}
             </Fragment>
@@ -1658,14 +1528,59 @@ class Astaroth extends Component {
           onBlock: "-14",
           onHit: "-4",
           counterHit: "-4",
-          note: " ~ FC"
+          note: ""
+        },
+
+        {
+          id: 59,
+          command: "1K",
+          move: [
+            <Fragment>
+              <p>Reverse Tamer</p>
+              {d1}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>26F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-18",
+          onHit: "0",
+          counterHit: "KND",
+          note: ""
         },
         {
-          id: 65,
+          id: 60,
+          command: "1K",
+          move: [
+            <Fragment>
+              <p>Reverse Tamer</p>
+              {d1}
+              {k}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>26F</p>
+              {l}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "0",
+          onHit: "KND",
+          counterHit: "KND",
+          note: ""
+        },
+        {
+          id: 61,
           command: "4K",
           move: [
             <Fragment>
-              <p>Evil Sparrow</p>
+              <p>Dark Tamer</p>
               {d4}
               {k}
             </Fragment>
@@ -1676,18 +1591,64 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-6",
-          onHit: "+8",
-          counterHit: "+8",
+          onBlock: "-12",
+          onHit: "-2",
+          counterHit: "-2",
           note: ""
         },
         {
-          id: 66,
+          id: 62,
+          command: "4KA",
+          move: [
+            <Fragment>
+              <p>Dark Tamer</p>
+              {d4}
+              {k}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-1",
+          onHit: "KND",
+          counterHit: "KND",
+          note: ""
+        },
+        {
+          id: 63,
+          command: "4K[A]",
+          move: [
+            <Fragment>
+              <p>Coercion</p>
+              {d4}
+              {k}
+              {a_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "+6",
+          counterHit: "KND",
+          note: ""
+        },
+        {
+          id: 64,
           command: "FC K",
           move: [
             <Fragment>
-              <p>Charmer Silhouette</p>
-              <span>FC</span>
+              <p>Bull Low Kick</p>
+              {d2}
               {k}
             </Fragment>
           ],
@@ -1700,14 +1661,14 @@ class Astaroth extends Component {
           onBlock: "-14",
           onHit: "-4",
           counterHit: "-4",
-          note: " ~FC "
+          note: ""
         },
         {
-          id: 67,
+          id: 65,
           command: "FC 3K",
           move: [
             <Fragment>
-              <p>Nail Cross</p>
+              <p>Bull Rush??</p>
               <span>FC</span>
               {d3}
               {k}
@@ -1722,14 +1683,14 @@ class Astaroth extends Component {
           onBlock: "-12",
           onHit: "-4",
           counterHit: "-4",
-          note: " ~FC "
+          note: ""
         },
         {
-          id: 68,
+          id: 66,
           command: "WR K",
           move: [
             <Fragment>
-              <p>Rising Cross</p>
+              <p>???</p>
               <span>WR</span>
               {k}
             </Fragment>
@@ -1746,11 +1707,11 @@ class Astaroth extends Component {
           note: ""
         },
         {
-          id: 69,
+          id: 67,
           command: "7*8*9K",
           move: [
             <Fragment>
-              <p>Rising Mind Shatter</p>
+              <p>???</p>
               {d7}
               <span> * </span>
               {d8}
@@ -1772,11 +1733,11 @@ class Astaroth extends Component {
         },
 
         {
-          id: 70,
+          id: 68,
           command: "BT K",
           move: [
             <Fragment>
-              <p>Reverse Night Shallow</p>
+              <p>???</p>
               <span>BT</span>
               {k}
             </Fragment>
@@ -1794,11 +1755,11 @@ class Astaroth extends Component {
         },
 
         {
-          id: 71,
+          id: 69,
           command: "BT 2K",
           move: [
             <Fragment>
-              <p>Deep Silhousette</p>
+              <p>???</p>
               <span>BT</span>
               {d2}
               {k}
@@ -1820,11 +1781,11 @@ class Astaroth extends Component {
       // dual button attackts start here
       dualButtonAttacks: [
         {
-          id: 72,
+          id: 70,
           command: "A+B",
           move: [
             <Fragment>
-              <p>Revelation</p>
+              <p>Eternal Damnation</p>
               {a}
               {plus}
               {b}
@@ -1832,11 +1793,11 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>44F</p>
+              <p>38F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "+10",
+          onBlock: "+6",
           onHit: "KND",
           counterHit: "KND",
           note: [
@@ -1848,11 +1809,11 @@ class Astaroth extends Component {
           ]
         },
         {
-          id: 73,
+          id: 71,
           command: "6A+B",
           move: [
             <Fragment>
-              <p>God Whisper</p>
+              <p>Minotaur Crush</p>
               {d6}
               {a}
               {plus}
@@ -1861,74 +1822,21 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>22F</p>
+              <p>18F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-16",
+          onBlock: "-18",
           onHit: "0",
-          counterHit: "0",
+          counterHit: "+8",
           note: [<Fragment />]
         },
         {
-          id: 74,
-          command: "6A+BA",
-          move: [
-            <Fragment>
-              <p>God Whisper</p>
-              {d6}
-              {a}
-              {plus}
-              {b}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-              {sl}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment />]
-        },
-        {
-          id: 75,
-          command: "3A+B ~ SL",
-          move: [
-            <Fragment>
-              <p>Suppressed Exile ~ Spiral Lust</p>
-              {d8}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>N/A</p>
-            </Fragment>
-          ],
-          onBlock: "N/A",
-          onHit: "N/A",
-          counterHit: "N/A",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Spiral Lust</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 76,
+          id: 72,
           command: "2A+B",
           move: [
             <Fragment>
-              <p>Metal Fencer</p>
+              <p>Titan Axe</p>
               {d2}
               {a}
               {plus}
@@ -1937,190 +1845,85 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>34F</p>
+              <p>28F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "-8",
+          counterHit: "-8",
+          note: [
+            <Fragment>
+              <p>Knock down on further range</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 73,
+          command: "4A+B",
+          move: [
+            <Fragment>
+              <p>Breath of Hades</p>
+              {d4}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
               {m}
             </Fragment>
           ],
           onBlock: "-18",
           onHit: "KND",
           counterHit: "KND",
-          note: []
+          note: [<Fragment />]
         },
         {
-          id: 77,
-          command: "2A+BB",
+          id: 74,
+          command: "4[A+B]",
           move: [
             <Fragment>
-              <p>Metal Fencer</p>
-              {d2}
-              {a}
-              {plus}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>34F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-22",
-          onHit: "KND",
-          counterHit: "KND",
-          note: []
-        },
-        {
-          id: 78,
-          command: "1A+B",
-          move: [
-            <Fragment>
-              <p>Razor's Bite</p>
-              {d1}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>30F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: []
-        },
-        {
-          id: 79,
-          command: "4A+B",
-          move: [
-            <Fragment>
-              <p>Spiral Punishment</p>
+              <p>Breath of Hades(Hold)</p>
               {d4}
-              {a}
+              {a_h}
               {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+4",
-          counterHit: "+4",
-          note: []
-        },
-        {
-          id: 80,
-          command: "4A+BB",
-          move: [
-            <Fragment>
-              <p>Spiral Punishment</p>
-              {d4}
-              {a}
-              {plus}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {gi}
-              <p>GI Mid horizontals except kicks</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 81,
-          command: "8A+B",
-          move: [
-            <Fragment>
-              <p>Creeping Ivy</p>
-              {d8}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-34",
-          onHit: "KND",
-          counterHit: "KND",
-          note: []
-        },
-        {
-          id: 82,
-          command: "8A+BB",
-          move: [
-            <Fragment>
-              <p>Creeping Ivy</p>
-              {d8}
-              {a}
-              {plus}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "KND",
-          counterHit: "KND",
-          note: []
-        },
-        {
-          id: 83,
-          command: "8A+B[B]",
-          move: [
-            <Fragment>
-              <p>Hailstorm</p>
-              {d8}
-              {a}
-              {plus}
-              {b}
               {b_h}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>22F</p>
+              <p>56F</p>
               {m}
-              {m}
-              {m}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ua}
+              {at}
+            </Fragment>
+          ]
+        },
+        {
+          id: 75,
+          command: "8A+B",
+          move: [
+            <Fragment>
+              <p>Flip Titan</p>
+              {d8}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
               {m}
             </Fragment>
           ],
@@ -2130,11 +1933,11 @@ class Astaroth extends Component {
           note: []
         },
         {
-          id: 84,
+          id: 76,
           command: "B+K",
           move: [
             <Fragment>
-              <p>Banshee</p>
+              <p>Guard Breaker</p>
               {b}
               {plus}
               {k}
@@ -2142,26 +1945,26 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>26F</p>
-              {m}
+              <p>22F</p>
+              {h}
             </Fragment>
           ],
-          onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
+          onBlock: "-4",
+          onHit: "+14",
+          counterHit: "+14",
           note: [
             <Fragment>
-              {lh}
-              <p>Triggers upon whiff punish ~ BT</p>
+              {at}
+              <p>+18 on hit and CH against BT opponent</p>
             </Fragment>
           ]
         },
         {
-          id: 85,
+          id: 77,
           command: "6B+K",
           move: [
             <Fragment>
-              <p>Embrace of Guilt</p>
+              <p>Body Splash</p>
               {d6}
               {b}
               {plus}
@@ -2170,21 +1973,25 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>28F</p>
+              <p>18F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment>{at}</Fragment>]
+          onBlock: "-14",
+          onHit: "+8",
+          counterHit: "+8",
+          note: [
+            <Fragment>
+              <p>TC</p>
+            </Fragment>
+          ]
         },
         {
-          id: 86,
+          id: 78,
           command: "6[B+K]",
           move: [
             <Fragment>
-              <p>Embrace of Guilt(Hold)</p>
+              <p>Body Splash(Hold)</p>
               {d6}
               {b_h}
               {plus}
@@ -2193,24 +2000,26 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>28F</p>
+              <p>30F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "+10",
-          counterHit: "+10",
-          note: [<Fragment>{at}</Fragment>]
+          onBlock: "-12",
+          onHit: "+12",
+          counterHit: "+12",
+          note: [
+            <Fragment>
+              <p>TC</p>
+            </Fragment>
+          ]
         },
         {
-          id: 87,
-          command: "2*3B+K",
+          id: 79,
+          command: "2B+K",
           move: [
             <Fragment>
-              <p>Fear's Void</p>
+              <p>Hades Crush</p>
               {d2}
-              <span> * </span>
-              {d3}
               {b}
               {plus}
               {k}
@@ -2218,27 +2027,76 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>30F</p>
+              <p>36F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-8",
+          onBlock: "-2",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers upon hitting crouching opponents</p>
-              <p>Can be cancel with G</p>
-            </Fragment>
-          ]
+          note: []
         },
         {
-          id: 88,
+          id: 80,
+          command: "2B+K A+G",
+          move: [
+            <Fragment>
+              <p>Hymm to Destruction</p>
+              {d2}
+              {b}
+              {plus}
+              {k}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>36F</p>
+              {m}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-26",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 81,
+          command: "2B+K 4A+G",
+          move: [
+            <Fragment>
+              <p>Hymm to Annihilation</p>
+              {d2}
+              {b}
+              {plus}
+              {k}
+              {d4}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>36F</p>
+              {m}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-26",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 82,
           command: "4B+K",
           move: [
             <Fragment>
-              <p>Heel Explosion</p>
+              <p>Ax Lower Cannon</p>
               {d4}
               {b}
               {plus}
@@ -2247,85 +2105,50 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>74F</p>
-              {m}
+              <p>40F</p>
+              {l}
+              {l}
+              {l}
             </Fragment>
           ],
-          onBlock: "UA",
+          onBlock: "0",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {ua}
-              <p>Cancel with G / ~ FC </p>
-            </Fragment>
-          ]
+          note: []
         },
         {
-          id: 89,
-          command: "8*9B+K",
+          id: 83,
+          command: "4B+KB",
           move: [
             <Fragment>
-              <p>Stinging Souls</p>
-              {d8}
-              <span> * </span>
+              <p>Ax Lower Cannon</p>
+              {d4}
+              {b}
+              {plus}
+              {k}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>40F</p>
+              {l}
+              {l}
+              {l}
+            </Fragment>
+          ],
+          onBlock: "0",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [<Fragment>{at}</Fragment>]
+        },
+        {
+          id: 84,
+          command: "9B+K",
+          move: [
+            <Fragment>
+              <p>Flying Divide</p>
               {d9}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{ba}</Fragment>]
-        },
-        {
-          id: 90,
-          command: "FC 2*3B+K",
-          move: [
-            <Fragment>
-              <p>Fear's Void</p>
-              <span>FC</span>
-              {d2}
-              <span> * </span>
-              {d3}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>30F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers upon hitting crouching opponents</p>
-              <p>Can be cancel with G</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 91,
-          command: "WR B+K",
-          move: [
-            <Fragment>
-              <p>Asylum</p>
-              <span>WR</span>
               {b}
               {plus}
               {k}
@@ -2335,25 +2158,73 @@ class Astaroth extends Component {
             <Fragment>
               <p>42F</p>
               {m}
+            </Fragment>
+          ],
+          onBlock: "0",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment />]
+        },
+        {
+          id: 85,
+          command: "9[B+K]",
+          move: [
+            <Fragment>
+              <p>Flying Divide(Hold)</p>
+              {d9}
+              {b_h}
+              {plus}
+              {k_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>52F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-18",
-          onHit: "-10",
-          counterHit: "-10",
+          onBlock: "+14",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{ba}</Fragment>]
+        },
+        {
+          id: 86,
+          command: "236B+K",
+          move: [
+            <Fragment>
+              <p>Demented Moon</p>
+              {d2}
+              {d3}
+              {d4}
+              {b}
+              {plus}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>84F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "LNC",
+          onHit: "LNC",
+          counterHit: "LNC",
           note: [
             <Fragment>
-              {gi}
-              <p>GI High/Mid/Low</p>
+              {ua}
+              <p>Cancel with G </p>
             </Fragment>
           ]
         },
+
         {
-          id: 92,
+          id: 87,
           command: "BT B+K",
           move: [
             <Fragment>
-              <p>Viper Tail</p>
+              <p>Side Divide</p>
               <span>BT</span>
               {b}
               {plus}
@@ -2362,114 +2233,30 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>26F</p>
-              {sm}
+              <p>14F</p>
+              {m}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: "~BT"
+          onBlock: "0",
+          onHit: "+10",
+          counterHit: "STN",
+          note: ""
         }
       ],
 
       // 8way-run attacks start here
       eightwayrunAttack: [
         {
-          id: 93,
+          id: 88,
           command: "33*66*99A",
           move: [
             <Fragment>
-              <p>Damned Mark</p>
+              <p>Tornado Spike</p>
               {d3_h}
               <span> * </span>
               {d6_h}
               <span> * </span>
               {d9_h}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
-          note: ""
-        },
-        {
-          id: 94,
-          command: "33*66*99[A]",
-          move: [
-            <Fragment>
-              <p>Damned Mark(Hold)</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "-4",
-          counterHit: "-4",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers upon 2nd hit CH</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 95,
-          command: "22*88A",
-          move: [
-            <Fragment>
-              <p>Wolf Lash</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>26F</p>
-              {a}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "0",
-          counterHit: "0",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers upon whiff punish</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 96,
-          command: "11*44*77A",
-          move: [
-            <Fragment>
-              <p>Cursed Soul</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
               {a}
             </Fragment>
           ],
@@ -2479,172 +2266,50 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
+          onBlock: "-18",
+          onHit: "-4",
+          counterHit: "KND",
           note: ""
         },
         {
-          id: 97,
-          command: "11*44*77[A]",
+          id: 89,
+          command: "33*66*99AB",
           move: [
             <Fragment>
-              <p>Insanity Light</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 98,
-          command: "11*44*77[A]6",
-          move: [
-            <Fragment>
-              <p>Insanity Feast</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {a_h}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 99,
-          command: "33*66*99B",
-          move: [
-            <Fragment>
-              <p>Elder Gnome</p>
+              <p>Tornado Spike</p>
               {d3_h}
               <span> * </span>
               {d6_h}
               <span> * </span>
               {d9_h}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "+4",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 100,
-          command: "33*66*99BB",
-          move: [
-            <Fragment>
-              <p>Elder Gnome</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "+14",
-          counterHit: "+14",
-          note: ""
-        },
-
-        {
-          id: 101,
-          command: "22*88B",
-          move: [
-            <Fragment>
-              <p>Nocturnal Sylph</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "-2",
-          counterHit: "-2",
-          note: ""
-        },
-        {
-          id: 102,
-          command: "22*88BA",
-          move: [
-            <Fragment>
-              <p>Nocturnal Sylph</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {b}
               {a}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
+              <p>24F</p>
               {m}
-              {h}
+              {m}
             </Fragment>
           ],
-          onBlock: "+4",
+          onBlock: "-4",
           onHit: "KND",
           counterHit: "KND",
-          note: ""
+          note: [<Fragment />]
         },
         {
-          id: 103,
-          command: "22*88[B] ~ SE",
+          id: 90,
+          command: "33*66*99A[B]",
           move: [
             <Fragment>
-              <p>Drowning Madness ~ Serpent's Embrace</p>
-              {d2_h}
+              <p>Tornado Spike</p>
+              {d3_h}
               <span> * </span>
-              {d8_h}
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {a}
               {b_h}
             </Fragment>
           ],
@@ -2652,30 +2317,25 @@ class Astaroth extends Component {
             <Fragment>
               <p>24F</p>
               {m}
+              {m}
             </Fragment>
           ],
-          onBlock: "-4",
+          onBlock: "KND",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Serpent's Embrace</p>
-            </Fragment>
-          ]
+          note: [<Fragment>{ua}</Fragment>]
         },
         {
-          id: 104,
-          command: "11*44*77B",
+          id: 91,
+          command: "22*88A",
           move: [
             <Fragment>
-              <p>Cursed Heavens</p>
-              {d1_h}
+              <p>Poseiden Crest</p>
+              {d2}
               <span> * </span>
-              {d4_h}
+              {d8}
               <span> * </span>
-              {d7_h}
-              {b}
+              {a}
             </Fragment>
           ],
           impact: [
@@ -2684,68 +2344,103 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
+          onBlock: "-10",
+          onHit: "0",
+          counterHit: "0",
+          note: ""
+        },
+        {
+          id: 92,
+          command: "22*88AA",
+          move: [
+            <Fragment>
+              <p>Poseiden Crest</p>
+              {d2}
+              <span> * </span>
+              {d8}
+              <span> * </span>
+              {a}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
           onBlock: "-12",
-          onHit: "KND",
+          onHit: "+2",
+          counterHit: "+2",
+          note: ""
+        },
+        {
+          id: 93,
+          command: "11*44*77A",
+          move: [
+            <Fragment>
+              <p>Hades Divide</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>26F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-12",
+          onHit: "+6",
           counterHit: "KND",
-          note: [<Fragment />]
-        },
-        {
-          id: 105,
-          command: "66K",
-          move: [
-            <Fragment>
-              <p>Wondergale</p>
-              {d6_h}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment />]
-        },
-        {
-          id: 106,
-          command: "66[K] ~ SE",
-          move: [
-            <Fragment>
-              <p>Wondergale ~ Serpent's Embrace</p>
-              {d6_h}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "+4",
-          counterHit: "+4",
           note: [
             <Fragment>
-              {ss}
-              <p>To Serpent's Embrace</p>
+              <p>Knock down on tip range</p>
             </Fragment>
           ]
         },
         {
-          id: 107,
-          command: "33*99K",
+          id: 94,
+          command: "11*44*77[A]",
           move: [
             <Fragment>
-              <p>Mind Shatter</p>
+              <p>Hades Divide</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {a_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>44F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{ba}</Fragment>]
+        },
+        {
+          id: 95,
+          command: "33*66*99Bb",
+          move: [
+            <Fragment>
+              <p>Ax Crash</p>
               {d3_h}
               <span> * </span>
+              {d6_h}
+              <span> * </span>
               {d9_h}
-              {k}
+              {b}
             </Fragment>
           ],
           impact: [
@@ -2754,46 +2449,92 @@ class Astaroth extends Component {
               {h}
             </Fragment>
           ],
-          onBlock: "-6",
+          onBlock: "-14",
+          onHit: "0",
+          counterHit: "KND",
+          note: ""
+        },
+
+        {
+          id: 96,
+          command: "22*88B",
+          move: [
+            <Fragment>
+              <p>Hades Cannon</p>
+              {d2_h}
+              <span> * </span>
+              {d8_h}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>30F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-10",
           onHit: "KND",
           counterHit: "KND",
           note: ""
         },
+
         {
-          id: 108,
-          command: "22*88K",
+          id: 97,
+          command: "11*77B",
           move: [
             <Fragment>
-              <p>Royal Huntress</p>
-              {d2_h}
+              <p>Azazel Tackle</p>
+              {d1_h}
               <span> * </span>
-              {d8_h}
+              {d7_h}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>30F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment />]
+        },
+        {
+          id: 98,
+          command: "11*77BK",
+          move: [
+            <Fragment>
+              <p>Azazel Tackle</p>
+              {d1_h}
+              <span> * </span>
+              {d7_h}
+              {b}
               {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>24F</p>
-              {l}
+              <p>30F</p>
+              {m}
+              {m}
             </Fragment>
           ],
-          onBlock: "-18",
+          onBlock: "-4",
           onHit: "KND",
           counterHit: "KND",
-          note: "TC / ~ FC"
+          note: [<Fragment />]
         },
         {
-          id: 109,
-          command: "11*44*77K",
+          id: 99,
+          command: "44B",
           move: [
             <Fragment>
-              <p>Diving Raven</p>
-              {d1_h}
-              <span> * </span>
+              <p>Canyon Creation</p>
               {d4_h}
-              <span> * </span>
-              {d7_h}
-              {k}
+              {b}
             </Fragment>
           ],
           impact: [
@@ -2802,56 +2543,105 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-18",
+          onBlock: "-6",
           onHit: "KND",
           counterHit: "KND",
-          note: ""
+          note: [<Fragment />]
         },
         {
-          id: 110,
-          command: "33*66*99A+B",
+          id: 100,
+          command: "44[B]",
           move: [
             <Fragment>
-              <p>Freeze Gaze</p>
+              <p>Canyon Creation</p>
+              {d4_h}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>60F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{ua}</Fragment>]
+        },
+        {
+          id: 101,
+          command: "33*66*99K",
+          move: [
+            <Fragment>
+              <p>Bullrush</p>
               {d3_h}
               <span> * </span>
               {d6_h}
               <span> * </span>
               {d9_h}
-              {a}
-              {plus}
-              {b}
+              {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p>18F</p>
               {m}
-              {m}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment />]
+          onBlock: "-6",
+          onHit: "+12",
+          counterHit: "KND",
+          note: "TC[6 ~ ]"
         },
         {
-          id: 111,
-          command: "22*88A+B",
+          id: 102,
+          command: "33*66*99[K]",
           move: [
             <Fragment>
-              <p>Arid Land</p>
-              {d2_h}
+              <p>Bullrush(Hold)</p>
+              {d3_h}
               <span> * </span>
-              {d8_h}
-              {a}
-              {plus}
-              {b}
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {k_h}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>26F</p>
+              <p>48F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {lh}
+              <p>Lethal Hit at range / TC </p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 103,
+          command: "33*66*99[K]K",
+          move: [
+            <Fragment>
+              <p>Bone Grinder</p>
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {k_h}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>48F</p>
               {m}
               {m}
             </Fragment>
@@ -2861,30 +2651,26 @@ class Astaroth extends Component {
           counterHit: "KND",
           note: [
             <Fragment>
-              {gi}
-              <p>GI Mid horizontals and thrusting verticals</p>
+              {lh}
+              <p>TC</p>
             </Fragment>
           ]
         },
         {
-          id: 112,
-          command: "11*44*77A+B",
+          id: 104,
+          command: "22*88K",
           move: [
             <Fragment>
-              <p>Crucifixion</p>
-              {d1_h}
+              <p>Stamp of Hades</p>
+              {d2_h}
               <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {a}
-              {plus}
-              {b}
+              {d8_h}
+              {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>?F</p>
+              <p>34F</p>
               {m}
             </Fragment>
           ],
@@ -2894,96 +2680,137 @@ class Astaroth extends Component {
           note: ""
         },
         {
-          id: 113,
-          command: "11*44*77[A+B]",
+          id: 105,
+          command: "22*88[K]",
           move: [
             <Fragment>
-              <p>Crucifixion</p>
+              <p>Stamp of Hades</p>
+              {d2_h}
+              <span> * </span>
+              {d8_h}
+              {k_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>58F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{ba}</Fragment>]
+        },
+        {
+          id: 106,
+          command: "11*44*77K",
+          move: [
+            <Fragment>
+              <p>Lower Command Kick</p>
               {d1_h}
               <span> * </span>
               {d4_h}
               <span> * </span>
               {d7_h}
-              {a_h}
-              {plus}
-              {b_h}
+              {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>?F</p>
+              <p>32F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "UA",
+          onBlock: "-2",
           onHit: "KND",
           counterHit: "KND",
-          note: [<Fragment>{ua}</Fragment>]
+          note: [<Fragment />]
         },
         {
-          id: 114,
-          command: "33*66*99B+K",
+          id: 107,
+          command: "33*66*99A+B",
           move: [
             <Fragment>
-              <p>Raging Gnome</p>
+              <p>Atlas Punishment</p>
               {d3_h}
               <span> * </span>
               {d6_h}
               <span> * </span>
               {d9_h}
-              {b}
+              {a}
               {plus}
-              {k}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>34F</p>
-              {m}
-              {m}
+              <p>44F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-4",
+          onBlock: "-8",
           onHit: "KND",
           counterHit: "KND",
           note: ""
         },
         {
-          id: 115,
-          command: "11*44*77B+K ~ SL",
+          id: 108,
+          command: "22A+B",
           move: [
             <Fragment>
-              <p>Exile ~ Spiral Lust</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {b}
+              <p>Titan Axe</p>
+              {d2_h}
+              {a}
               {plus}
-              {k}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>40F</p>
+              <p>28F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-22",
-          onHit: "KND",
-          counterHit: "KND",
+          onBlock: "-20",
+          onHit: "-8",
+          counterHit: "-8",
           note: [
             <Fragment>
-              {ss}
-              <p>To Spiral Lust</p>
+              <p>Knock down at tip range</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 109,
+          command: "88A+B",
+          move: [
+            <Fragment>
+              <p>Flip Titan Axe</p>
+              {d8_h}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "-8",
+          counterHit: "-8",
+          note: [
+            <Fragment>
+              <p>Knock down at tip range</p>
             </Fragment>
           ]
         },
 
         {
-          id: 116,
+          id: 110,
           command: "Run K",
           move: [
             <Fragment>
@@ -2994,29 +2821,25 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>20F</p>
+              <p>26F</p>
               {l}
             </Fragment>
           ],
           onBlock: "-22",
           onHit: "KND",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              <p>TC / TJ </p>
-            </Fragment>
-          ]
+          note: [<Fragment />]
         }
       ],
 
       //throws start here
       throws: [
         {
-          id: 117,
+          id: 111,
           command: "A+G",
           move: [
             <Fragment>
-              <p>Dominion Throw</p>
+              <p>Hades Destoryer</p>
               {a}
               {plus}
               {g}
@@ -3035,11 +2858,34 @@ class Astaroth extends Component {
         },
 
         {
-          id: 118,
+          id: 112,
+          command: "6A+G",
+          move: [
+            <Fragment>
+              <p>Colossus</p>
+              {d6}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 113,
           command: "4A+G",
           move: [
             <Fragment>
-              <p>Primal Dominance</p>
+              <p>Festival of Havoc</p>
               {d4}
               {a}
               {plus}
@@ -3057,13 +2903,12 @@ class Astaroth extends Component {
           counterHit: "KND",
           note: [<Fragment>{th}</Fragment>]
         },
-
         {
-          id: 119,
+          id: 114,
           command: "Right Throw",
           move: [
             <Fragment>
-              <p>Sunset Cradle</p>
+              <p>On Silent Wings</p>
               <p>Right Side Throw</p>
             </Fragment>
           ],
@@ -3079,11 +2924,11 @@ class Astaroth extends Component {
           note: [<Fragment>{th}</Fragment>]
         },
         {
-          id: 120,
+          id: 115,
           command: "Left Throw",
           move: [
             <Fragment>
-              <p>Heartless Guide</p>
+              <p>Beat Down</p>
               <p>Left Side Throw</p>
             </Fragment>
           ],
@@ -3099,11 +2944,11 @@ class Astaroth extends Component {
           note: [<Fragment>{th}</Fragment>]
         },
         {
-          id: 121,
+          id: 116,
           command: "Back Throw",
           move: [
             <Fragment>
-              <p>Sweet Domiance</p>
+              <p>Death Crush</p>
               <p>Back Throw</p>
             </Fragment>
           ],
@@ -3119,14 +2964,12 @@ class Astaroth extends Component {
           note: [<Fragment>{th}</Fragment>]
         },
         {
-          id: 122,
-          command: "2*3A+G",
+          id: 117,
+          command: "8A+G",
           move: [
             <Fragment>
-              <p>Vile Condemnation</p>
-              {d2}
-              <span> * </span>
-              {d3}
+              <p>Maelstorm Divide</p>
+              {d8}
               {a}
               {plus}
               {g}
@@ -3135,79 +2978,53 @@ class Astaroth extends Component {
           impact: [
             <Fragment>
               <p>28F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 123,
-          command: "FC 2*3A+G",
-          move: [
-            <Fragment>
-              <p>Vile Condemnation</p>
-              <span>FC</span>
-              {d2}
-              <span> * </span>
-              {d3}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 123,
-          command: "376231A+G",
-          move: [
-            <Fragment>
-              <p>Summon Suffering </p>
-              {d3}
-              {d7}
-              {d6}
-              {d2}
-              {d3}
-              {d1}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
+              {m}
             </Fragment>
           ],
           onBlock: "KND",
           onHit: "KND",
           counterHit: "KND",
-          note: [<Fragment>{th}</Fragment>]
+          note: [
+            <Fragment>
+              {th}
+              <p>TJ</p>
+            </Fragment>
+          ]
         },
         {
-          id: 124,
-          command: "376231A+G JF",
+          id: 118,
+          command: "2A+G",
           move: [
             <Fragment>
-              <p>Summon Suffering(Just Frame)</p>
-              {d3}
-              {d7}
-              {d6}
+              <p>Bludgeoning Crush</p>
               {d2}
-              {d3}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>14F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {th}
+              <p>TC</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 119,
+          command: "1A+G",
+          move: [
+            <Fragment>
+              <p>Drop of Lava</p>
               {d1}
               {a}
               {plus}
@@ -3216,7 +3033,34 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>20F</p>
+              <p>14F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {th}
+              <p>TC</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 120,
+          command: "A+G(Air)",
+          move: [
+            <Fragment>
+              <p>Wrath of the Accursed</p>
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
               {h}
             </Fragment>
           ],
@@ -3226,22 +3070,138 @@ class Astaroth extends Component {
           note: [
             <Fragment>
               {th}
-              <p>Does more damage</p>
+              <p>Unbreakable against midair opponent </p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 121,
+          command: "4A+G(Air)",
+          move: [
+            <Fragment>
+              <p>Wrath of the Damned</p>
+              {d4}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {th}
+              {lh}
+              <p>Unbreakable against midair opponent </p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 122,
+          command: "236A+G",
+          move: [
+            <Fragment>
+              <p>Titan Bomb</p>
+              {d2}
+              {d3}
+              {d6}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {th}
+              <p>can be held</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 123,
+          command: "236A+G JF",
+          move: [
+            <Fragment>
+              <p>Titan Bomb(Just Frame)</p>
+              {d2}
+              {d3}
+              {d6}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {th}
+              <p>Does more damages on fast input / can be held</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 124,
+          command: "214A+G",
+          move: [
+            <Fragment>
+              <p>Flight of the WIcked</p>
+              {d2}
+              {d1}
+              {d4}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "LNC",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {th}
+              <p>can be held</p>
             </Fragment>
           ]
         },
         {
           id: 125,
-          command: "374691A+G",
+          command: "214A+G JF",
           move: [
             <Fragment>
-              <p>Calamity Symphony</p>
-              {d3}
-              {d7}
-              {d4}
-              {d6}
-              {d9}
+              <p>Flight of the WIcked(Just Frame)</p>
+              {d2}
               {d1}
+              {d4}
               {a}
               {plus}
               {g}
@@ -3249,7 +3209,41 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "LNC",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {th}
+              <p>Does more damages on fast input / can be held</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 126,
+          command: "214A+G 2*8A",
+          move: [
+            <Fragment>
+              <p>Wicked Twister</p>
+              {d2}
+              {d1}
+              {d4}
+              {a}
+              {plus}
+              {g}
+              {d2}
+              <span> * </span>
+              {d8}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
               {h}
             </Fragment>
           ],
@@ -3259,17 +3253,13 @@ class Astaroth extends Component {
           note: [<Fragment>{th}</Fragment>]
         },
         {
-          id: 126,
-          command: "374691A+G JF",
+          id: 127,
+          command: "28A+G",
           move: [
             <Fragment>
-              <p>Calamity Symphony(Just Frame)</p>
-              {d3}
-              {d7}
-              {d4}
-              {d6}
-              {d9}
-              {d1}
+              <p>Obsidian Drop</p>
+              {d2}
+              {d8}
               {a}
               {plus}
               {g}
@@ -3277,7 +3267,7 @@ class Astaroth extends Component {
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
+              <p>18F</p>
               {h}
             </Fragment>
           ],
@@ -3287,9 +3277,211 @@ class Astaroth extends Component {
           note: [
             <Fragment>
               {th}
-              <p>Does more damage</p>
+              <p>Hits midair opponent / Unbreakable</p>
             </Fragment>
           ]
+        },
+        {
+          id: 128,
+          command: "28A+G JF",
+          move: [
+            <Fragment>
+              <p>Obsidian Drop(Just Frame)</p>
+              {d2}
+              {d8}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {th}
+              <p>
+                Fast input does more damages / Hits midair opponent /
+                Unbreakable
+              </p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 129,
+          command: "3A+G",
+          move: [
+            <Fragment>
+              <p>Brutal Grasp</p>
+              {d3}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>10F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "+10",
+          onHit: "+10",
+          counterHit: "+10",
+          note: [
+            <Fragment>
+              {th}
+              <p>Hits head toward downed opponent / Unbreakable</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 130,
+          command: "33*66*99A+G",
+          move: [
+            <Fragment>
+              <p>Vicious Madness</p>
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>46F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {th}
+              <p>Revenge property</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 131,
+          command: "33*66*99A+G2",
+          move: [
+            <Fragment>
+              <p>Underworld PUll</p>
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>45F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 132,
+          command: "11*44*77A+G",
+          move: [
+            <Fragment>
+              <p>Cursed Earth</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>46F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 133,
+          command: "11*44*77A+G[B]",
+          move: [
+            <Fragment>
+              <p>Cursed Earth</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {a}
+              {plus}
+              {g}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>46F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 134,
+          command: "11*44*77A+G2",
+          move: [
+            <Fragment>
+              <p>Uproot</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {a}
+              {plus}
+              {g}
+              {d2}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>46F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "KND",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{th}</Fragment>]
         }
       ],
 

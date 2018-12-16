@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import ReactDOM from "react";
 import PropTypes from "prop-types";
 import {
   BrowserRouter as Router,
@@ -76,8 +77,8 @@ class Characters extends React.Component {
     };
   }
   onClickHidden = () => {
+    window.scrollTo(0, 0);
     this.setState({ isHidden: !this.state.isHidden });
-    console.log("click");
   };
 
   state = {
@@ -98,7 +99,7 @@ class Characters extends React.Component {
         <Fragment>
           {this.state.isHidden ? (
             <GridContainer onClick={this.onClickHidden}>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
+              <GridItem  xs={12} sm={6} md={4} lg={3}>
                 <Link to="/astaroth">
                   <Card title="Astaroth" className="character astaroth" />
                 </Link>
@@ -127,11 +128,6 @@ class Characters extends React.Component {
               <GridItem xs={12} sm={6} md={4} lg={3}>
                 <Link to="/groh">
                   <Card title="Grøh" className="character groh" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/inferno">
-                  <Card title="Inferno" className="character inferno" />
                 </Link>
               </GridItem>
               <GridItem xs={12} sm={6} md={4} lg={3}>
@@ -231,28 +227,27 @@ class Characters extends React.Component {
                 </Button>
                 <Switch>
                   <Route path="/astaroth" component={Astaroth} />
-                  <Route path="/azwel" component={Azwel} />
-                  <Route path="/cerventes" component={Cerventes} />
-                  <Route path="/chai" component={Chai} />
+                  {/* <Route path="/azwel" component={Azwel} /> */}
+                  {/* <Route path="/cerventes" component={Cerventes} /> */}
+                  {/* <Route path="/chai" component={Chai} /> */}
                   <Route path="/geralt" component={Geralt} />
                   <Route path="/groh" component={Groh} />
-                  <Route path="/inferno" component={Inferno} />
                   <Route path="/ivy" component={Ivy} />
-                  <Route path="/kilik" component={Kilik} />
+                  {/* <Route path="/kilik" component={Kilik} /> */}
                   <Route path="/maxi" component={Maxi} />
                   <Route path="/mina" component={Mina} />
-                  <Route path="/mitsurugi" component={Mitsurugi} />
-                  <Route path="/nightmare" component={Nightmare} />
-                  <Route path="/raphael" component={Raphael} />
-                  <Route path="/siegfried" component={Siegfreid} />
+                  {/* <Route path="/mitsurugi" component={Mitsurugi} /> */}
+                  {/* <Route path="/nightmare" component={Nightmare} /> */}
+                  {/* <Route path="/raphael" component={Raphael} /> */}
+                  {/* <Route path="/siegfried" component={Siegfreid} /> */}
                   <Route path="/sophitia" component={Sophitia} />
-                  <Route path="/taki" component={Taki} />
-                  <Route path="/talim" component={Talim} />
-                  <Route path="/tira" component={Tira} />
-                  <Route path="/type2B" component={Type2B} />
-                  <Route path="/voldo" component={Voldo} />
-                  <Route path="/yoshimitsu" component={Yoshimitsu} />
-                  <Route path="/zasalamel" component={Zasalamel} />
+                  {/* <Route path="/taki" component={Taki} /> */}
+                  {/* <Route path="/talim" component={Talim} /> */}
+                  {/* <Route path="/tira" component={Tira} /> */}
+                  {/* <Route path="/type2B" component={Type2B} /> */}
+                  {/* <Route path="/voldo" component={Voldo} /> */}
+                  {/* <Route path="/yoshimitsu" component={Yoshimitsu} /> */}
+                  {/* <Route path="/zasalamel" component={Zasalamel} /> */}
                 </Switch>
               </Fragment>
             )}

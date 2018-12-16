@@ -25,11 +25,16 @@
 #returnMe {
     position: fixed;
     top: 2vh;
-    z-index: 1888;
+    z-index: 1111;
     right: 20vw;
     margin: auto;
     color: white;
-    font-size:1em;
+    font-size: 1em;
+}
+
+#returnMe:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition-delay: ease 500ms;
 }
 
 * {
@@ -131,6 +136,11 @@ h3 {
     min-height: 11vh;
 }
 
+/* .overlay {
+    background-color: rgba(192, 192, 192, 0.5)!important;
+    z-index: 9999;
+} */
+
 .character:hover {
     cursor: pointer;
     opacity: 0.9;
@@ -142,15 +152,19 @@ h3 {
 }
 
 .azwel {
-    background-image: url("../img/btn_azwel.png") !important;
+
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_azwel.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .cervantes {
-    background-image: url("../img/btn_cervantes.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_cervantes.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .chai {
-    background-image: url("../img/btn_chai.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_chai.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .geralt {
@@ -170,7 +184,8 @@ h3 {
 }
 
 .kilik {
-    background-image: url("../img/btn_kilik.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_kilik.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .maxi {
@@ -182,19 +197,23 @@ h3 {
 }
 
 .mitsurugi {
-    background-image: url("../img/btn_mitsurugi.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_mitsurugi.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .nightmare {
-    background-image: url("../img/btn_nightmare.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_nightmare.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .raphael {
-    background-image: url("../img/btn_raphael.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_raphael.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .siegfried {
-    background-image: url("../img/btn_siegfried.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_siegfried.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .sophitia {
@@ -202,27 +221,33 @@ h3 {
 }
 
 .taki {
-    background-image: url("../img/btn_taki.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_taki.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .talim {
-    background-image: url("../img/btn_talim.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_talim.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .tira {
-    background-image: url("../img/btn_tira.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_tira.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .voldo {
-    background-image: url("../img/btn_voldo.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_voldo.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .yoshimitsu {
-    background-image: url("../img/btn_yoshimitsu.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_yoshimitsu.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .zasalamel {
-    background-image: url("../img/btn_zasalamel.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_zasalamel.png"),no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 .type2b {
