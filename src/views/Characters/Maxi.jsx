@@ -194,46 +194,21 @@ class Maxi extends Component {
     const maxiFrameData = {
       // verticalAttacks start here
 
-      // PLACEHOLDER ~ Behind Lower	20	14		+4	+12	+12	1.67%
-      // :3::A:	:M:	:SS: / :LH: (Triggers on run counter against opp. with red guard gauge)
-      // PLACEHOLDER ~ Behind Lower (Lethal Hit)	20	14	n/a	n/a			n/a
-      // :3::A:	:M:	:SS:
-      // PLACEHOLDER	12	12		-6	+6	+6	1.67%
-      // :2::A:	:SL:	TC[8~] / ~FC
-      // PLACEHOLDER	28	20		-14	0	0	1.67%
-      // :1::A:	:L:	TC[16~] / Opp. FrC (block)
-      // PLACEHOLDER ~ Left Outer	28	20,30		+4	KND	KND	1.67,9.17%
-      // :1::A::B:	:L::M:	:SS: / TJ[4-30]
-      // PLACEHOLDER ~ Behind Lower	24	18		-4	+6	+6	1.67%
-      // :4::A:	:H:	:SS:
-      // PLACEHOLDER	24	18,14		-14	-4	-4	1.67,1.67%
-      // :4::A::A:	:H::M:	NC
-      // PLACEHOLDER ~ Behind Lower	24	18,14,14		+8	+17?	+17?	1.67,1.67,1.67%
-      // :4::A::A::A:	:H::M::M:	:SS: / TC[3~]
-      // PLACEHOLDER	24	18,14,14,25		-16	STN	STN	1.67,1.67,1.67,5%
-      // :4::A::A::A::B:	:H::M::M::M:	TC[3-21]
-      // PLACEHOLDER ~ Right Outer	24	18		-4	+6	+6	1.67%
-      // :4::(A):	:H:	:SS:
-      // PLACEHOLDER ~ Left Outer	18	42		-13	KND	KND	9.17%
-      // :4::A::B:	:H:	:SS:
-      // PLACEHOLDER ~ Left Inner	18	42,10,20,20,20,20,20,20,20,20,20		-8	KND	KND	9.17,2.08%
-      // :4::A::B::4:	:H::M:×10	:SS:
-      // PLACEHOLDER	12	12		-6	+6	+6	1.67%
-      // FC :2::A:	:SL:	TC[1-9,13~]
-      // PLACEHOLDER	28	8		-4	+6	+6	1.67%
-      // FC :3::A:	:L:
-      // PLACEHOLDER	28	8,8		0	+8	+8	1.67,1.67%
-      // FC :3::A::A:	:L::L:	TC[1~]
-      // PLACEHOLDER ~ Right Outer	28	8,8,8		0	+8	+8	1.67,1.67,1.67%
-      // FC :3::A::A::A:	:L::L::L:	:SS: / TC[1-36]
-      // PLACEHOLDER ~ Left Inner	18	20		-4	+4	+4	1.67%
-      // WR :A:	:M:	:SS:
-      // PLACEHOLDER ~ Right Cross	40	24		-6	+2	+2	1.67%
-      // :7:*:8:*:9::A:	:L:	:SS: / TJ[4-31]
-      // PLACEHOLDER	14	14		-8	+2	+2	1.67%
-      // BT :A:	:H:
-      // PLACEHOLDER	14	14		-6	+6	+6	1.67%
-      // BT :2::A:	:SL:	TC[10~]
+      // PLACEHOLDER ~ Behind Lower	14	14					1.67%
+      // RO :A:	:H:	:SS:
+      // PLACEHOLDER	14	14,26		-12	+6	+6	1.67,1.67%
+      // RO :A::K:	:H::M:
+      // PLACEHOLDER	18	46		+10	LNC	LNC	9.17%
+      // RO :A::(K):	:M:
+      // PLACEHOLDER ~ Right Cross	18	20					2.92%
+      // RO :B:	:M:	:SS:
+      // PLACEHOLDER ~ Right Cross	18	20,16				STN	2.92,2.92%
+      // RO :B::B:	:M::M:	:SS: / TC[5-16]
+      // PLACEHOLDER	18	20,16,24		-2	KND	KND	2.92,2.92,4.17%
+      // RO :B::B::K:	:M::M::H:	TJ[12-30]
+      // PLACEHOLDER	24	40		+4	KND	KND	9.17%
+      // RO :K:	:H:	TJ[23-44]
+
       verticalAttacks: [
         {
           id: 1,
@@ -318,235 +293,406 @@ class Maxi extends Component {
             </Fragment>
           ]
         },
+
         {
-          id: 9,
-          command: "3[A]",
-          move: [
-            <Fragment>
-              <p>Raven Gash(Hold)</p>
-              {d3}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+12",
-          counterHit: "+12",
-          note: [<Fragment />]
-        },
-        {
-          id: 10,
+          id: 4,
           command: "2A",
           move: [
             <Fragment>
-              <p>Ancient Worshipper</p>
+              <p>Tongue</p>
               {d2}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
+              <p>12F</p>
               {sl}
             </Fragment>
           ],
-          onBlock: "-10",
-          onHit: "-2",
-          counterHit: "-2",
+          onBlock: "-6",
+          onHit: "+6",
+          counterHit: "+6",
           note: "TC / ~FC"
         },
         {
-          id: 11,
-          command: "1A",
+          id: 5,
+          command: "1AB ~ LO",
           move: [
             <Fragment>
-              <p>Ancient Wheel</p>
+              <p>Scythe Fang ~ Left Outer</p>
               {d1}
               {a}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>26F</p>
+              <p>28F</p>
               {l}
+              {m}
             </Fragment>
           ],
-          onBlock: "-18",
-          onHit: "-4",
-          counterHit: "-4",
-          note: "FC"
-        },
-        {
-          id: 12,
-          command: "1AA",
-          move: [
-            <Fragment>
-              <p>Ancient Wheel</p>
-              {d1}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>26F</p>
-              {l}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "-2",
-          counterHit: "-2",
-          note: "TC"
-        },
-        {
-          id: 13,
-          command: "4A",
-          move: [
-            <Fragment>
-              <p>Dancing Insanity</p>
-              {d4}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "0",
-          onHit: "+8",
-          counterHit: "+8",
-          note: ""
-        },
-        {
-          id: 14,
-          command: "4[A]",
-          move: [
-            <Fragment>
-              <p>Dancing Insanity ~ Serpent Embrace</p>
-              {d4}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment>{ss}</Fragment>]
-        },
-        {
-          id: 15,
-          command: "214A",
-          move: [
-            <Fragment>
-              <p>Serpent's Venom</p>
-              {d2}
-              {d1}
-              {d4}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>54F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "UA",
+          onBlock: "+4",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
-              {ua}
-              <p>Cancel with G</p>
+              {ss}
+              <p>To Left Outer</p>
+              <p>TJ</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 6,
+          command: "4A ~ BL",
+          move: [
+            <Fragment>
+              <p>Serpent's Bane ~ Behind Lower</p>
+              {d4}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "+6",
+          counterHit: "+6",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Behind Lower</p>
             </Fragment>
           ]
         },
         {
-          id: 16,
+          id: 7,
+          command: "4[A] ~ RO",
+          move: [
+            <Fragment>
+              <p>Serpent's Bane ~ Right Outer</p>
+              {d4}
+              {a_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "+6",
+          counterHit: "+6",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 8,
+          command: "4AA",
+          move: [
+            <Fragment>
+              <p>Serpent's Bane</p>
+              {d4}
+              {a}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {h}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "-4",
+          counterHit: "-4",
+          note: [
+            <Fragment>
+              <p>NC</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 9,
+          command: "4AAA ~ BL",
+          move: [
+            <Fragment>
+              <p>Serpent's Bane ~ Behind Lower</p>
+              {d4}
+              {a}
+              {a}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {h}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "-4",
+          counterHit: "-4",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Behind Lower</p>
+              <p>NC</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 10,
+          command: "4AAAB",
+          move: [
+            <Fragment>
+              <p>Serpent's Bane</p>
+              {d4}
+              {a}
+              {a}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {h}
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "STN",
+          counterHit: "STN",
+          note: [
+            <Fragment>
+              <p>NC</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 11,
+          command: "4AB ~ LO",
+          move: [
+            <Fragment>
+              <p>Nunchaku Slap to Steel Dragon ~ Left Outer</p>
+              {d4}
+              {a}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {h}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-13",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Left Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 12,
+          command: "4Ab4 ~ LO",
+          move: [
+            <Fragment>
+              <p>Nunchaku Slap to Steel Dragon ~ Left Outer</p>
+              {d4}
+              {a}
+              {bSM}
+              {d4}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {h}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Left Outer</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 13,
           command: "FC A",
           move: [
             <Fragment>
-              <p>Ancient Worshipper</p>
+              <p>Tongue</p>
               <span>FC</span>
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
+              <p>12F</p>
               {sl}
             </Fragment>
           ],
-          onBlock: "-10",
-          onHit: "-2",
-          counterHit: "-2",
+          onBlock: "-6",
+          onHit: "+6",
+          counterHit: "+6",
           note: "TC / ~FC"
         },
         {
-          id: 17,
-          command: "WR A",
+          id: 14,
+          command: "FC 3A ~ RO",
           move: [
             <Fragment>
-              <p>Menace Slice</p>
+              <p>Rope Dancer ~ Right Outer</p>
+              <span>FC</span>
+              {d3}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "+2",
+          counterHit: "+2",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 15,
+          command: "FC 3AA ~ RO",
+          move: [
+            <Fragment>
+              <p>Rope Dancer ~ Right Outer</p>
+              <span>FC</span>
+              {d3}
+              {a}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
+              {l}
+              {l}
+            </Fragment>
+          ],
+          onBlock: "0",
+          onHit: "+8",
+          counterHit: "+8",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 16,
+          command: "FC 3AAA ~ RO",
+          move: [
+            <Fragment>
+              <p>Rope Dancer ~ Right Outer</p>
+              <span>FC</span>
+              {d3}
+              {a}
+              {a}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
+              {l}
+              {l}
+              {l}
+            </Fragment>
+          ],
+          onBlock: "0",
+          onHit: "+8",
+          counterHit: "+8",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 17,
+          command: "WR A ~ LI",
+          move: [
+            <Fragment>
+              <p>Water Cutter ~ Left Inner</p>
               <span>WR</span>
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>20F</p>
-              {h}
+              <p>18F</p>
+              {m}
             </Fragment>
           ],
           onBlock: "-4",
-          onHit: "+8",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 18,
-          command: "WR [A]",
-          move: [
+          onHit: "+4",
+          counterHit: "+4",
+          note: [
             <Fragment>
-              <p>Deceitful Raven</p>
-              <span>WR</span>
-              {a_h}
+              {ss}
+              <p>To Left Inner</p>
             </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "-2",
-          counterHit: "-2",
-          note: ""
+          ]
         },
 
         {
-          id: 19,
-          command: "7*8*9A",
+          id: 18,
+          command: "7*8*9A ~ RC",
           move: [
             <Fragment>
-              <p>Rising Raven</p>
+              <p>Falling Snake Scythe ~ Right Cross</p>
               {d7}
               <span> * </span>
               {d8}
@@ -557,91 +703,63 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>28F</p>
-              {m}
+              <p>40F</p>
+              {l}
             </Fragment>
           ],
-          onBlock: "-12",
-          onHit: "-4",
-          counterHit: "-4",
+          onBlock: "-6",
+          onHit: "+2",
+          counterHit: "+2",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Cross</p>
+              <p>TJ</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 19,
+          command: "BT A",
+          move: [
+            <Fragment>
+              <p>Reverse Snake</p>
+              <span>BT</span>
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>14F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "+2",
+          counterHit: "+2",
           note: ""
         },
         {
           id: 20,
-          command: "BT A",
+          command: "BT 2A",
           move: [
             <Fragment>
-              <p>Scars of Memory</p>
+              <p>Reverse Tongue</p>
               <span>BT</span>
+              {d2}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p>12F</p>
-              {a}
+              {sl}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "KND",
-          counterHit: "KND",
+          onBlock: "-6",
+          onHit: "+6",
+          counterHit: "+6",
           note: ""
-        },
-        {
-          id: 21,
-          command: "BT 2A",
-          move: [
-            <Fragment>
-              <p>Screams of Paranoia</p>
-              <span>BT</span>
-              {d2}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "-6",
-          counterHit: "+4",
-          note: [
-            <Fragment>
-              {gi}
-              <p>GI Low</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 22,
-          command: "BT 2A",
-          move: [
-            <Fragment>
-              <p>Screams of Paranoia</p>
-              <span>BT</span>
-              {d2}
-              {a}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {l}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {gi}
-              <p>GI Low</p>
-            </Fragment>
-          ]
         }
       ],
 
@@ -649,11 +767,11 @@ class Maxi extends Component {
 
       horizontalAttacks: [
         {
-          id: 23,
-          command: "B",
+          id: 21,
+          command: "B ~ RO",
           move: [
             <Fragment>
-              <p>Ode to Undine</p>
+              <p>Snake Bite ~ Right Outer</p>
               {b}
             </Fragment>
           ],
@@ -663,129 +781,126 @@ class Maxi extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-10",
-          onHit: "-4",
-          counterHit: "-4",
-          note: ""
+          onBlock: "+6",
+          onHit: "+14",
+          counterHit: "+14",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
         },
         {
-          id: 24,
-          command: "BB",
+          id: 22,
+          command: "6B",
           move: [
             <Fragment>
-              <p>Ode to Undine</p>
+              <p>Dragon Backfist</p>
+              {d6}
               {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-10",
-          onHit: "-4",
-          counterHit: "-4",
-          note: ""
-        },
-        {
-          id: 25,
-          command: "BBB",
-          move: [
-            <Fragment>
-              <p>Ode to Undine</p>
-              {b}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "RE",
-          counterHit: "RE",
-          note: ""
-        },
-        {
-          id: 26,
-          command: "[B]",
-          move: [
-            <Fragment>
-              <p>Poisoned Destiny</p>
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "-10",
-          counterHit: "-10",
-          note: ""
-        },
-        {
-          id: 27,
-          command: "bA",
-          move: [
-            <Fragment>
-              <p>Raven's Egg</p>
-              {bSM}
-              {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p>18F</p>
-              {h}
+              {m}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment />]
+          onBlock: "-16",
+          onHit: "-6",
+          counterHit: "-6",
+          note: ""
         },
         {
-          id: 28,
-          command: "b[A]",
+          id: 23,
+          command: "6BB ~ RO",
           move: [
             <Fragment>
-              <p>Eclipse Raven</p>
-              {bSM}
-              {a_h}
+              <p>Dragon Backfist ~ Right Outer</p>
+              {d6}
+              {b}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>22F</p>
-              {h}
+              <p>18F</p>
+              {m}
               {m}
             </Fragment>
           ],
-          onBlock: "-10",
-          onHit: "+6",
-          counterHit: "+6",
-          note: [<Fragment />]
+          onBlock: "-4",
+          onHit: "+4",
+          counterHit: "+4",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
         },
         {
-          id: 29,
-          command: "b6",
+          id: 24,
+          command: "6BBB ",
           move: [
             <Fragment>
-              <p>Darkside</p>
-              {bSM}
+              <p>Dragon Backfist</p>
               {d6}
+              {b}
+              {b}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {m}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-28",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment />]
+        },
+
+        {
+          id: 25,
+          command: "3B ~ RO",
+          move: [
+            <Fragment>
+              <p>Illusion Serpent ~ Right Outer</p>
+              {d3}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-19",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+              <p>TC[11~19]</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 26,
+          command: "2B",
+          move: [
+            <Fragment>
+              <p>Falling Fang</p>
+              {d2}
+              {b}
             </Fragment>
           ],
           impact: [
@@ -795,566 +910,157 @@ class Maxi extends Component {
             </Fragment>
           ],
           onBlock: "-8",
-          onHit: "+4",
-          counterHit: "+4",
-          note: ""
+          onHit: "+2",
+          counterHit: "+2",
+          note: "TC[10~ ]"
         },
         {
-          id: 30,
-          command: "6B",
+          id: 27,
+          command: "1B ~ RO",
           move: [
             <Fragment>
-              <p>Warning Mood</p>
-              {d6}
+              <p>Kunchaku Lick ~ Right Outer</p>
+              {d1}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "+4",
+          counterHit: "+4",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+              <p>TC[16~19]</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 28,
+          command: "4B ~ LO",
+          move: [
+            <Fragment>
+              <p>Snake Kiss ~ Left Outer</p>
+              {d4}
               {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p>18F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+8",
+          onHit: "+18",
+          counterHit: "+18",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Left Outer</p>
+              <p>TC[10~13]</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 29,
+          command: "236B ~ LI",
+          move: [
+            <Fragment>
+              <p>Mantis Lunge ~ Left Inner</p>
+              {d2}
+              {d3}
+              {d6}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "+6",
+          counterHit: "+6",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Left Inner</p>
+              <p>TJ[12~ ]</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 30,
+          command: "FC B",
+          move: [
+            <Fragment>
+              <p>Crouching Inner Upper</p>
+              <span>FC</span>
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>14F</p>
               {m}
             </Fragment>
           ],
           onBlock: "-8",
-          onHit: "0",
-          counterHit: "0",
-          note: ""
+          onHit: "+2",
+          counterHit: "+2",
+          note: [
+            <Fragment>
+              <p>TC</p>
+            </Fragment>
+          ]
         },
+
         {
           id: 31,
-          command: "6BA",
+          command: "WR B ~ LI",
           move: [
             <Fragment>
-              <p>Warning Mood</p>
-              {d6}
+              <p>Rolling Biting Upper ~ Left Inner</p>
+              <span>WR</span>
               {b}
-              {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>18F</p>
+              <p>12F</p>
               {m}
-              {h}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "0",
-          counterHit: "0",
-          note: ""
-        },
-        {
-          id: 32,
-          command: "6B[A] ~ SE",
-          move: [
-            <Fragment>
-              <p>Warning Mood ~ Serpent's Embrace</p>
-              {d6}
-              {b}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "+4",
+          onBlock: "0",
           onHit: "+8",
           counterHit: "+8",
           note: [
             <Fragment>
               {ss}
-              <p>To Serpent's Emrace</p>
+              <p>To Left Inner</p>
+              <p>TC</p>
             </Fragment>
           ]
         },
+
         {
-          id: 33,
-          command: "6BB",
+          id: 32,
+          command: "7*8*9B ~ LO",
           move: [
             <Fragment>
-              <p>Warning Immortal</p>
-              {d6}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "+6",
-          counterHit: "+6",
-          note: ""
-        },
-        {
-          id: 34,
-          command: "6b8",
-          move: [
-            <Fragment>
-              <p>Ivy Lick</p>
-              {d6}
-              {bSM}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "-10",
-          counterHit: "-10",
-          note: ""
-        },
-        {
-          id: 35,
-          command: "6b8(Mid air)",
-          move: [
-            <Fragment>
-              <p>Ivy Lick(Against Mid Air)</p>
-              {d6}
-              {bSM}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 36,
-          command: "6b8K",
-          move: [
-            <Fragment>
-              <p>Silhouette</p>
-              {d6}
-              {bSM}
-              {d8}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {h}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "+2",
-          counterHit: "+2",
-          note: [<Fragment />]
-        },
-        {
-          id: 37,
-          command: "6[B]",
-          move: [
-            <Fragment>
-              <p>Ivy Lash </p>
-              {d6}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "-2",
-          counterHit: "-2",
-          note: ""
-        },
-        {
-          id: 38,
-          command: "6[B]2*8",
-          move: [
-            <Fragment>
-              <p>Biting Ivy Inner</p>
-              {d6}
-              {b_h}
-              {d2}
-              <span> * </span>
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "-6",
-          counterHit: "-6",
-          note: [<Fragment />]
-        },
-        {
-          id: 39,
-          command: "3B",
-          move: [
-            <Fragment>
-              <p>Aqua Clipper</p>
-              {d3}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers on hitting opponent's back</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 40,
-          command: "2B",
-          move: [
-            <Fragment>
-              <p>Dominance</p>
-              {d2}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+2",
-          counterHit: "+2",
-          note: ""
-        },
-        {
-          id: 41,
-          command: "1B",
-          move: [
-            <Fragment>
-              <p>Poison Leaf</p>
-              {d1}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+2",
-          counterHit: "+2",
-          note: ""
-        },
-        {
-          id: 42,
-          command: "1[B]",
-          move: [
-            <Fragment>
-              <p>Poison Ivy</p>
-              {d1}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-              {sm}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "-2",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 43,
-          command: "4B",
-          move: [
-            <Fragment>
-              <p>Rushing Raven</p>
-              {d4}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "-6",
-          counterHit: "-6",
-          note: "Knockdown at close range"
-        },
-        {
-          id: 44,
-          command: "4b8",
-          move: [
-            <Fragment>
-              <p>Dashing Wings</p>
-              {d4}
-              {bSM}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-              {h}
-              {h}
-              {sm}
-              {sm}
-              {sm}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "+2",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 45,
-          command: "214B",
-          move: [
-            <Fragment>
-              <p>Venom Lash</p>
-              {d2}
-              {d1}
-              {d4}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "-10",
-          counterHit: "-10",
-          note: ""
-        },
-        {
-          id: 46,
-          command: "214[B] ~ SE",
-          move: [
-            <Fragment>
-              <p>Venom Lash ~ Serpent's Embrace</p>
-              {d2}
-              {d1}
-              {d4}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "0",
-          counterHit: "0",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Serpent's Embrace</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 47,
-          command: "FC B",
-          move: [
-            <Fragment>
-              <p>Aqua Worshipper</p>
-              <span>FC</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-10",
-          onHit: "0",
-          counterHit: "0",
-          note: [
-            <Fragment>
-              <p>~FC</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 48,
-          command: "FC 3B",
-          move: [
-            <Fragment>
-              <p>Ivy Masquerade</p>
-              <span>FC</span>
-              {d3}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "+6",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Leathal Hit against moving back opponent</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 49,
-          command: "FC 3[B] ~ SL",
-          move: [
-            <Fragment>
-              <p>Ivy Masquerade ~ Spiral Lust</p>
-              <span>FC</span>
-              {d3}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>n/a</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "+6",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-              {lh}
-              <p>Leathal Hit against moving back opponent</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 50,
-          command: "FC 1B",
-          move: [
-            <Fragment>
-              <p>Pride</p>
-              <span>FC</span>
-              {d1}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 51,
-          command: "WR B",
-          move: [
-            <Fragment>
-              <p>Cagemaster</p>
-              <span>WR</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 52,
-          command: "WR BB",
-          move: [
-            <Fragment>
-              <p>Cagemaster</p>
-              <span>WR</span>
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {m}
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "-6",
-          counterHit: "-6",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 53,
-          command: "7*8*9B",
-          move: [
-            <Fragment>
-              <p>Akasha's Cage</p>
+              <p>Cobra Fang ~ Left Outer</p>
               {d7}
               <span> * </span>
               {d8}
@@ -1365,52 +1071,28 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>42F</p>
+              <p>30F</p>
               {m}
-              {m}
-              {h}
-              {h}
             </Fragment>
           ],
-          onBlock: "-10",
+          onBlock: "+2",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
-              {at}
+              {ss}
+              <p>To Left Outer</p>
               <p>TJ</p>
             </Fragment>
           ]
         },
         {
-          id: 54,
+          id: 33,
           command: "BT B",
           move: [
             <Fragment>
-              <p>Reverse Immortal</p>
+              <p>Reverse Snake Bite</p>
               <span>BT</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+4",
-          counterHit: "+4",
-          note: ""
-        },
-        {
-          id: 55,
-          command: "BT 2B",
-          move: [
-            <Fragment>
-              <p>Deep Immortal</p>
-              <span>BT</span>
-              {d2}
               {b}
             </Fragment>
           ],
@@ -1424,16 +1106,38 @@ class Maxi extends Component {
           onHit: "+2",
           counterHit: "+2",
           note: ""
+        },
+        {
+          id: 34,
+          command: "BT 2B",
+          move: [
+            <Fragment>
+              <p>Reverse Biting Upper</p>
+              <span>BT</span>
+              {d2}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "+2",
+          counterHit: "+2",
+          note: "TC[11~ ]"
         }
       ],
       // Kicks start here
       kicks: [
         {
-          id: 56,
+          id: 35,
           command: "K",
           move: [
             <Fragment>
-              <p>Night Swallow</p>
+              <p>Fang Scratch</p>
               {k}
             </Fragment>
           ],
@@ -1443,89 +1147,39 @@ class Maxi extends Component {
               {h}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "0",
-          counterHit: "0",
-          note: ""
-        },
-        {
-          id: 57,
-          command: "6K",
-          move: [
-            <Fragment>
-              <p>Starving Spirit</p>
-              {d6}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
+          onBlock: "-6",
           onHit: "+2",
           counterHit: "+2",
           note: ""
         },
         {
-          id: 58,
-          command: "6KB",
+          id: 36,
+          command: "6K",
           move: [
             <Fragment>
-              <p>Starving Spirit</p>
+              <p>Left Roundhouse</p>
               {d6}
               {k}
-              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
-              {m}
+              <p>20F</p>
               {h}
             </Fragment>
           ],
-          onBlock: "+4",
+          onBlock: "-8",
           onHit: "KND",
           counterHit: "KND",
           note: ""
         },
+
         {
-          id: 59,
-          command: "6K[B]",
-          move: [
-            <Fragment>
-              <p>Blade Sharpener</p>
-              {d6}
-              {k}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "UA",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <p>Cancel with G ~ FC</p>
-              <p>Becomes Mid at distance</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 60,
+          id: 37,
           command: "3K",
           move: [
             <Fragment>
-              <p>Rage Kick</p>
+              <p>Snap Kick</p>
               {d3}
               {k}
             </Fragment>
@@ -1541,87 +1195,12 @@ class Maxi extends Component {
           counterHit: "+4",
           note: ""
         },
-
         {
-          id: 61,
-          command: "3[K]",
-          move: [
-            <Fragment>
-              <p>Rage Kick</p>
-              {d3}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>34F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+2",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers against male opponents</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 62,
-          command: "1K",
-          move: [
-            <Fragment>
-              <p>Queen's Pleasure</p>
-              {d1}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "-2",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 63,
-          command: "1K",
-          move: [
-            <Fragment>
-              <p>Ivy Sweep(Against downed opponent)</p>
-              {d1}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {l}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {at}
-              <p>Against downed opponent</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 64,
+          id: 38,
           command: "2K",
           move: [
             <Fragment>
-              <p>Charmer Silhouette</p>
+              <p>QUick Slice</p>
               {d2}
               {k}
             </Fragment>
@@ -1635,104 +1214,142 @@ class Maxi extends Component {
           onBlock: "-14",
           onHit: "-4",
           counterHit: "-4",
-          note: " ~ FC"
+          note: " TC[11~ ]"
+        },
+
+        {
+          id: 39,
+          command: "1K",
+          move: [
+            <Fragment>
+              <p>Circling Dragon</p>
+              {d1}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "-4",
+          counterHit: "-4",
+          note: ""
         },
         {
-          id: 65,
+          id: 40,
+          command: "1KA ~ LO",
+          move: [
+            <Fragment>
+              <p>Circling Dragon ~ Left Outer</p>
+              {d1}
+              {k}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {l}
+              {h}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+4",
+          onHit: "+14",
+          counterHit: "+14",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Left Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 41,
+          command: "1KB ~ RO",
+          move: [
+            <Fragment>
+              <p>Illusion Kick ~ Right Outer</p>
+              {d1}
+              {k}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {l}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-12",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 42,
+          command: "1KK",
+          move: [
+            <Fragment>
+              <p>Illusion Low Kicks</p>
+              {d1}
+              {k}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {l}
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-12",
+          onHit: "+2",
+          counterHit: "+2",
+          note: [<Fragment>{ss}</Fragment>]
+        },
+
+        {
+          id: 43,
           command: "4K",
           move: [
             <Fragment>
-              <p>Evil Sparrow</p>
+              <p>Right Roundhouse</p>
               {d4}
               {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>18F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+8",
-          counterHit: "+8",
-          note: ""
-        },
-        {
-          id: 66,
-          command: "FC K",
-          move: [
-            <Fragment>
-              <p>Charmer Silhouette</p>
-              <span>FC</span>
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "-4",
-          counterHit: "-4",
-          note: " ~FC "
-        },
-        {
-          id: 67,
-          command: "FC 3K",
-          move: [
-            <Fragment>
-              <p>Nail Cross</p>
-              <span>FC</span>
-              {d3}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "-4",
-          counterHit: "-4",
-          note: " ~FC "
-        },
-        {
-          id: 68,
-          command: "WR K",
-          move: [
-            <Fragment>
-              <p>Rising Cross</p>
-              <span>WR</span>
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
+              <p>20F</p>
               {m}
             </Fragment>
           ],
           onBlock: "-8",
-          onHit: "+4",
-          counterHit: "+4",
+          onHit: "KND",
+          counterHit: "KND",
           note: ""
         },
+
         {
-          id: 69,
-          command: "7*8*9K",
+          id: 44,
+          command: "236K",
           move: [
             <Fragment>
-              <p>Rising Mind Shatter</p>
-              {d7}
-              <span> * </span>
-              {d8}
-              <span> * </span>
-              {d9}
+              <p>Hurricane</p>
+              {d2}
+              {d3}
+              {d6}
               {k}
             </Fragment>
           ],
@@ -1740,20 +1357,117 @@ class Maxi extends Component {
             <Fragment>
               <p>26F</p>
               {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
             </Fragment>
           ],
-          onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
+          onBlock: "-14",
+          onHit: "STN",
+          counterHit: "STN",
+          note: "Can cancel with G / TC [4~ ]"
+        },
+        {
+          id: 45,
+          command: "FC K",
+          move: [
+            <Fragment>
+              <p>Quick Slice</p>
+              <span>FC</span>
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "-4",
+          counterHit: "-4",
+          note: "TC / ~FC "
+        },
+
+        {
+          id: 46,
+          command: "WR K",
+          move: [
+            <Fragment>
+              <p>Dragon Scream</p>
+              <span>WR</span>
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-12",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: "TJ"
+        },
+        {
+          id: 47,
+          command: "WR KK",
+          move: [
+            <Fragment>
+              <p>Dragon Scream</p>
+              <span>WR</span>
+              {k}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "0",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: "TJ"
+        },
+        {
+          id: 48,
+          command: "7*8*9K",
+          move: [
+            <Fragment>
+              <p>Reverse Roundhouse</p>
+              {d7}
+              <span> * </span>
+              {d8}
+              <span> * </span>
+              {d9}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>42F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "LNC",
+          counterHit: "LNC",
           note: "TJ"
         },
 
         {
-          id: 70,
+          id: 49,
           command: "BT K",
           move: [
             <Fragment>
-              <p>Reverse Night Shallow</p>
+              <p>Reverse Fang Scratch</p>
               <span>BT</span>
               {k}
             </Fragment>
@@ -1764,18 +1478,18 @@ class Maxi extends Component {
               {h}
             </Fragment>
           ],
-          onBlock: "-6",
-          onHit: "+4",
-          counterHit: "+4",
+          onBlock: "-8",
+          onHit: "+2",
+          counterHit: "+2",
           note: ""
         },
 
         {
-          id: 71,
+          id: 50,
           command: "BT 2K",
           move: [
             <Fragment>
-              <p>Deep Silhousette</p>
+              <p>Reverse Illusion Kick</p>
               <span>BT</span>
               {d2}
               {k}
@@ -1788,20 +1502,20 @@ class Maxi extends Component {
             </Fragment>
           ],
           onBlock: "-14",
-          onHit: "-4",
-          counterHit: "-4",
-          note: "~ FC"
+          onHit: "-2",
+          counterHit: "-2",
+          note: "TC[14~ ]"
         }
       ],
 
       // dual button attackts start here
       dualButtonAttacks: [
         {
-          id: 72,
+          id: 51,
           command: "A+B",
           move: [
             <Fragment>
-              <p>Revelation</p>
+              <p>Vagabond</p>
               {a}
               {plus}
               {b}
@@ -1809,11 +1523,11 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>44F</p>
+              <p>36F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "+10",
+          onBlock: "0",
           onHit: "KND",
           counterHit: "KND",
           note: [
@@ -1825,11 +1539,11 @@ class Maxi extends Component {
           ]
         },
         {
-          id: 73,
+          id: 52,
           command: "6A+B",
           move: [
             <Fragment>
-              <p>God Whisper</p>
+              <p>Dragon's Brand</p>
               {d6}
               {a}
               {plus}
@@ -1838,123 +1552,26 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>22F</p>
+              <p>16F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-16",
-          onHit: "0",
-          counterHit: "0",
-          note: [<Fragment />]
-        },
-        {
-          id: 74,
-          command: "6A+BA",
-          move: [
-            <Fragment>
-              <p>God Whisper</p>
-              {d6}
-              {a}
-              {plus}
-              {b}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-              {sl}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment />]
-        },
-        {
-          id: 75,
-          command: "3A+B ~ SL",
-          move: [
-            <Fragment>
-              <p>Suppressed Exile ~ Spiral Lust</p>
-              {d8}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>N/A</p>
-            </Fragment>
-          ],
-          onBlock: "N/A",
-          onHit: "N/A",
-          counterHit: "N/A",
+          onBlock: "-10",
+          onHit: "STN",
+          counterHit: "STN",
           note: [
             <Fragment>
-              {ss}
-              <p>To Spiral Lust</p>
+              <p>TC[4~16]</p>
             </Fragment>
           ]
         },
         {
-          id: 76,
+          id: 53,
           command: "2A+B",
           move: [
             <Fragment>
-              <p>Metal Fencer</p>
+              <p>Guillotine Dance</p>
               {d2}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>34F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-18",
-          onHit: "KND",
-          counterHit: "KND",
-          note: []
-        },
-        {
-          id: 77,
-          command: "2A+BB",
-          move: [
-            <Fragment>
-              <p>Metal Fencer</p>
-              {d2}
-              {a}
-              {plus}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>34F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-22",
-          onHit: "KND",
-          counterHit: "KND",
-          note: []
-        },
-        {
-          id: 78,
-          command: "1A+B",
-          move: [
-            <Fragment>
-              <p>Razor's Bite</p>
-              {d1}
               {a}
               {plus}
               {b}
@@ -1964,61 +1581,7 @@ class Maxi extends Component {
             <Fragment>
               <p>30F</p>
               {l}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: []
-        },
-        {
-          id: 79,
-          command: "4A+B",
-          move: [
-            <Fragment>
-              <p>Spiral Punishment</p>
-              {d4}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+4",
-          counterHit: "+4",
-          note: []
-        },
-        {
-          id: 80,
-          command: "4A+BB",
-          move: [
-            <Fragment>
-              <p>Spiral Punishment</p>
-              {d4}
-              {a}
-              {plus}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
+              {h}
             </Fragment>
           ],
           onBlock: "-24",
@@ -2026,18 +1589,17 @@ class Maxi extends Component {
           counterHit: "KND",
           note: [
             <Fragment>
-              {gi}
-              <p>GI Mid horizontals except kicks</p>
+              <p>Only -15 if blocks the high / TC</p>
             </Fragment>
           ]
         },
         {
-          id: 81,
-          command: "8A+B",
+          id: 54,
+          command: "4A+B",
           move: [
             <Fragment>
-              <p>Creeping Ivy</p>
-              {d8}
+              <p>Rage of Pleasure</p>
+              {d4}
               {a}
               {plus}
               {b}
@@ -2045,56 +1607,144 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>22F</p>
+              <p>32F</p>
+              {m}
               {m}
             </Fragment>
           ],
-          onBlock: "-34",
+          onBlock: "-16",
           onHit: "KND",
           counterHit: "KND",
-          note: []
+          note: [
+            <Fragment>
+              <p>TC[9~19,30~ ]</p>
+            </Fragment>
+          ]
         },
         {
-          id: 82,
-          command: "8A+BB",
+          id: 55,
+          command: "4[A+B]",
           move: [
             <Fragment>
-              <p>Creeping Ivy</p>
-              {d8}
-              {a}
+              <p>Rage of Pleasure(Hold)</p>
+              {d4}
+              {a_h}
               {plus}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "KND",
-          counterHit: "KND",
-          note: []
-        },
-        {
-          id: 83,
-          command: "8A+B[B]",
-          move: [
-            <Fragment>
-              <p>Hailstorm</p>
-              {d8}
-              {a}
-              {plus}
-              {b}
               {b_h}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>22F</p>
+              <p>62F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ba}
+              <p>TC[17~35,46~ ]</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 56,
+          command: "8A+B",
+          move: [
+            <Fragment>
+              <p>Falling Sky</p>
+              {d8}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>42F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <p>TJ[12~47]</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 57,
+          command: "B+K",
+          move: [
+            <Fragment>
+              <p>Fury</p>
+              {b}
+              {plus}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-10",
+          onHit: "-2",
+          counterHit: "-2",
+          note: []
+        },
+        {
+          id: 58,
+          command: "B+K B",
+          move: [
+            <Fragment>
+              <p>Fury</p>
+              {b}
+              {plus}
+              {k}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "-6",
+          counterHit: "-6",
+          note: []
+        },
+        {
+          id: 59,
+          command: "B+K B:B",
+          move: [
+            <Fragment>
+              <p>Fury</p>
+              {b}
+              {plus}
+              {k}
+              {b}
+              <span>:</span>
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
               {m}
               {m}
               {m}
@@ -2102,16 +1752,93 @@ class Maxi extends Component {
             </Fragment>
           ],
           onBlock: "-20",
-          onHit: "KND",
-          counterHit: "KND",
+          onHit: "-10",
+          counterHit: "-10",
           note: []
         },
         {
-          id: 84,
-          command: "B+K",
+          id: 60,
+          command: "B+K B:B:B",
           move: [
             <Fragment>
-              <p>Banshee</p>
+              <p>Fury</p>
+              {b}
+              {plus}
+              {k}
+              {b}
+              <span>:</span>
+              {b}
+              <span>:</span>
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-18",
+          onHit: "-8",
+          counterHit: "-8",
+          note: []
+        },
+        {
+          id: 61,
+          command: "B+K B:B:B:A ~ RO",
+          move: [
+            <Fragment>
+              <p>Fury ~ Right Outer</p>
+              {b}
+              {plus}
+              {k}
+              {b}
+              <span>:</span>
+              {b}
+              <span>:</span>
+              {b}
+              <span>:</span>
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-22",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 62,
+          command: "6B+K",
+          move: [
+            <Fragment>
+              <p>Serpent's Pleasure</p>
+              {d6}
               {b}
               {plus}
               {k}
@@ -2119,75 +1846,56 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>26F</p>
+              <p>18F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              <p>-4 on block after held</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 63,
+          command: "6b+kG ~ RC",
+          move: [
+            <Fragment>
+              <p>Serpent's Pleasure ~ Right Cross</p>
+              {d6}
+              {bSM}
+              {plus}
+              {kSM}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
               {m}
             </Fragment>
           ],
           onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
+          onHit: "+6",
+          counterHit: "+6",
           note: [
             <Fragment>
-              {lh}
-              <p>Triggers upon whiff punish ~ BT</p>
+              {ss}
+              <p>To Right Cross</p>
             </Fragment>
           ]
         },
         {
-          id: 85,
-          command: "6B+K",
+          id: 64,
+          command: "2B+K",
           move: [
             <Fragment>
-              <p>Embrace of Guilt</p>
-              {d6}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 86,
-          command: "6[B+K]",
-          move: [
-            <Fragment>
-              <p>Embrace of Guilt(Hold)</p>
-              {d6}
-              {b_h}
-              {plus}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "+10",
-          counterHit: "+10",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 87,
-          command: "2*3B+K",
-          move: [
-            <Fragment>
-              <p>Fear's Void</p>
+              <p>Tiger Slaughter</p>
               {d2}
-              <span> * </span>
-              {d3}
               {b}
               {plus}
               {k}
@@ -2195,27 +1903,46 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>30F</p>
-              {m}
+              <p>22F</p>
+              {l}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "KND",
+          onBlock: "-18",
+          onHit: "-8",
           counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers upon hitting crouching opponents</p>
-              <p>Can be cancel with G</p>
-            </Fragment>
-          ]
+          note: []
         },
         {
-          id: 88,
+          id: 65,
+          command: "2B+KK",
+          move: [
+            <Fragment>
+              <p>Tiger Slaughter</p>
+              {d2}
+              {b}
+              {plus}
+              {k}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              {l}
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-18",
+          onHit: "-8",
+          counterHit: "KND",
+          note: []
+        },
+        {
+          id: 66,
           command: "4B+K",
           move: [
             <Fragment>
-              <p>Heel Explosion</p>
+              <p>Twisted Loop</p>
               {d4}
               {b}
               {plus}
@@ -2224,84 +1951,55 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>74F</p>
+              <p>64F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "UA",
+          onBlock: "KND",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
               {ua}
-              <p>Cancel with G / ~ FC </p>
+              <p>Cancel with G</p>
             </Fragment>
           ]
         },
         {
-          id: 89,
-          command: "8*9B+K",
+          id: 67,
+          command: "FC 3A+B ~ BL",
           move: [
             <Fragment>
-              <p>Stinging Souls</p>
-              {d8}
-              <span> * </span>
-              {d9}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{ba}</Fragment>]
-        },
-        {
-          id: 90,
-          command: "FC 2*3B+K",
-          move: [
-            <Fragment>
-              <p>Fear's Void</p>
+              <p>Dragon's Sky ~ Behind Lower</p>
               <span>FC</span>
-              {d2}
-              <span> * </span>
               {d3}
-              {b}
+              {a}
               {plus}
-              {k}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>30F</p>
-              {m}
+              <p>16F</p>
+              {h}
             </Fragment>
           ],
-          onBlock: "-8",
+          onBlock: "-6",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
-              {lh}
-              <p>Triggers upon hitting crouching opponents</p>
-              <p>Can be cancel with G</p>
+              {ss}
+              <p>To Behind Lower / TC</p>
             </Fragment>
           ]
         },
         {
-          id: 91,
-          command: "WR B+K",
+          id: 68,
+          command: "WR B+K ~ BL",
           move: [
             <Fragment>
-              <p>Asylum</p>
+              <p>Canyon Carve ~ Behind Lower</p>
               <span>WR</span>
               {b}
               {plus}
@@ -2310,27 +2008,55 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>42F</p>
-              {m}
+              <p>26F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-18",
-          onHit: "-10",
-          counterHit: "-10",
+          onBlock: "0",
+          onHit: "+6",
+          counterHit: "+6",
           note: [
             <Fragment>
-              {gi}
-              <p>GI High/Mid/Low</p>
+              {ss}
+              <p>To Behind Lower / TC</p>
             </Fragment>
           ]
         },
         {
-          id: 92,
+          id: 69,
+          command: "WR b+kG ~ RO",
+          move: [
+            <Fragment>
+              <p>Canyon Carve ~ Right Outer</p>
+              <span>WR</span>
+              {bSM}
+              {plus}
+              {kSM}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p />
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "",
+          counterHit: "",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 70,
           command: "BT B+K",
           move: [
             <Fragment>
-              <p>Viper Tail</p>
+              <p>Reverse Blow</p>
               <span>BT</span>
               {b}
               {plus}
@@ -2339,25 +2065,25 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>26F</p>
-              {sm}
+              <p>16F</p>
+              {m}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: "~BT"
+          onBlock: "0",
+          onHit: "STN",
+          counterHit: "STN",
+          note: [<Fragment>{ba}</Fragment>]
         }
       ],
 
       // 8way-run attacks start here
       eightwayrunAttack: [
         {
-          id: 93,
+          id: 71,
           command: "33*66*99A",
           move: [
             <Fragment>
-              <p>Damned Mark</p>
+              <p>Striking Snake</p>
               {d3_h}
               <span> * </span>
               {d6_h}
@@ -2369,491 +2095,447 @@ class Maxi extends Component {
           impact: [
             <Fragment>
               <p>20F</p>
-              {m}
+              {h}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
+          onBlock: "-6",
+          onHit: "+10",
+          counterHit: "+10",
           note: ""
         },
         {
-          id: 94,
-          command: "33*66*99[A]",
+          id: 72,
+          command: "22A ~ LI",
           move: [
             <Fragment>
-              <p>Damned Mark(Hold)</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {a_h}
+              <p>Northern Lights ~ Left Inner</p>
+              {d2_h}
+              {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>20F</p>
-              {m}
+              <p>24F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-12",
-          onHit: "-4",
-          counterHit: "-4",
+          onBlock: "-4",
+          onHit: "+8",
+          counterHit: "STN",
           note: [
             <Fragment>
-              {lh}
-              <p>Triggers upon 2nd hit CH</p>
+              {ss}
+              <p>To Left Inner</p>
             </Fragment>
           ]
         },
         {
-          id: 95,
-          command: "22*88A",
+          id: 73,
+          command: "88A",
           move: [
             <Fragment>
-              <p>Wolf Lash</p>
-              {d2_h}
-              <span> * </span>
+              <p>Northern Lights(Reverse)</p>
               {d8_h}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>26F</p>
+              <p>24F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "+4",
+          counterHit: "STN",
+          note: [<Fragment />]
+        },
+        {
+          id: 74,
+          command: "11*44*77A",
+          move: [
+            <Fragment>
+              <p>Propeller Nunchaku</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
               {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "-4",
+          counterHit: "-4",
+          note: "TC[6~14]"
+        },
+        {
+          id: 75,
+          command: "11*44*77AB ~ RO",
+          move: [
+            <Fragment>
+              <p>Propeller Nunchaku ~ Right Outer</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {a}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {h}
+              {m}
+              {sm}
+              {sm}
+            </Fragment>
+          ],
+          onBlock: "+4",
+          onHit: "+12",
+          counterHit: "+12",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 76,
+          command: "66B ~ LO",
+          move: [
+            <Fragment>
+              <p>Steel Dragon ~ Left Outer</p>
+              {d6_h}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-12",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Left Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 77,
+          command: "66B4 ~ LI",
+          move: [
+            <Fragment>
+              <p>Branding Nunchaku ~ Left Inner</p>
+              {d6_h}
+              {bSM}
+              {d4}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Left Inner</p>
+              <p>Cancel with G</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 78,
+          command: "33*99B ~ BL",
+          move: [
+            <Fragment>
+              <p>Return of Fear ~ Behind Lower</p>
+              {d3_h}
+              <span> * </span>
+              {d9_h}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-2",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Behind Lower</p>
+              <p>TC[12~22]</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 79,
+          command: "33*99bA ~ RC",
+          move: [
+            <Fragment>
+              <p>Cobra's Temple ~ Right Cross</p>
+              {d3_h}
+              <span> * </span>
+              {d9_h}
+              {bSM}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>?F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "+6",
+          onHit: "+12",
+          counterHit: "+12",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Cross</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 80,
+          command: "22*88B",
+          move: [
+            <Fragment>
+              <p>Mark of the Beast</p>
+              {d2_h}
+              <span> * </span>
+              {d8_h}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>32F</p>
+              {m}
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "STN",
+          counterHit: "STN",
+          note: ""
+        },
+        {
+          id: 81,
+          command: "11*44*77B ~ RC",
+          move: [
+            <Fragment>
+              <p>Reverse Snake Cross ~ Right Cross</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {m}
             </Fragment>
           ],
           onBlock: "-12",
           onHit: "0",
-          counterHit: "0",
+          counterHit: "STN",
           note: [
             <Fragment>
+              {ss}
+              <p>To Right Cross</p>
               {lh}
-              <p>Triggers upon whiff punish</p>
+              <p>Lethal Hit on High Crush</p>
             </Fragment>
           ]
         },
         {
-          id: 96,
-          command: "11*44*77A",
+          id: 82,
+          command: "33*66*99K",
           move: [
             <Fragment>
-              <p>Cursed Soul</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
-          note: ""
-        },
-        {
-          id: 97,
-          command: "11*44*77[A]",
-          move: [
-            <Fragment>
-              <p>Insanity Light</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 98,
-          command: "11*44*77[A]6",
-          move: [
-            <Fragment>
-              <p>Insanity Feast</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {a_h}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 99,
-          command: "33*66*99B",
-          move: [
-            <Fragment>
-              <p>Elder Gnome</p>
+              <p>Rolling Sobat</p>
               {d3_h}
               <span> * </span>
               {d6_h}
               <span> * </span>
               {d9_h}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "+4",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 100,
-          command: "33*66*99BB",
-          move: [
-            <Fragment>
-              <p>Elder Gnome</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "+14",
-          counterHit: "+14",
-          note: ""
-        },
-
-        {
-          id: 101,
-          command: "22*88B",
-          move: [
-            <Fragment>
-              <p>Nocturnal Sylph</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "-2",
-          counterHit: "-2",
-          note: ""
-        },
-        {
-          id: 102,
-          command: "22*88BA",
-          move: [
-            <Fragment>
-              <p>Nocturnal Sylph</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {b}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "+4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 103,
-          command: "22*88[B] ~ SE",
-          move: [
-            <Fragment>
-              <p>Drowning Madness ~ Serpent's Embrace</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Serpent's Embrace</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 104,
-          command: "11*44*77B",
-          move: [
-            <Fragment>
-              <p>Cursed Heavens</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment />]
-        },
-        {
-          id: 105,
-          command: "66K",
-          move: [
-            <Fragment>
-              <p>Wondergale</p>
-              {d6_h}
               {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment />]
-        },
-        {
-          id: 106,
-          command: "66[K] ~ SE",
-          move: [
-            <Fragment>
-              <p>Wondergale ~ Serpent's Embrace</p>
-              {d6_h}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Serpent's Embrace</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 107,
-          command: "33*99K",
-          move: [
-            <Fragment>
-              <p>Mind Shatter</p>
-              {d3_h}
-              <span> * </span>
-              {d9_h}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 108,
-          command: "22*88K",
-          move: [
-            <Fragment>
-              <p>Royal Huntress</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-18",
-          onHit: "KND",
-          counterHit: "KND",
-          note: "TC / ~ FC"
-        },
-        {
-          id: 109,
-          command: "11*44*77K",
-          move: [
-            <Fragment>
-              <p>Diving Raven</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-18",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 110,
-          command: "33*66*99A+B",
-          move: [
-            <Fragment>
-              <p>Freeze Gaze</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment />]
-        },
-        {
-          id: 111,
-          command: "22*88A+B",
-          move: [
-            <Fragment>
-              <p>Arid Land</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {a}
-              {plus}
-              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p>26F</p>
-              {m}
-              {m}
+              {h}
             </Fragment>
           ],
-          onBlock: "-10",
+          onBlock: "-2",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
-              {gi}
-              <p>GI Mid horizontals and thrusting verticals</p>
+              <p>TJ</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 83,
+          command: "22*88K",
+          move: [
+            <Fragment>
+              <p>Dragon Star</p>
+              {d2_h}
+              <span> * </span>
+              {d8_h}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>32F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "-10",
+          counterHit: "LNC",
+          note: "TC"
+        },
+        {
+          id: 84,
+          command: "22*88KK",
+          move: [
+            <Fragment>
+              <p>Dragon Star</p>
+              {d2_h}
+              <span> * </span>
+              {d8_h}
+              {k}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>32F</p>
+              {l}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-12",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: "TC"
+        },
+        {
+          id: 85,
+          command: "22*88KK:K",
+          move: [
+            <Fragment>
+              <p>Dragon Star</p>
+              {d2_h}
+              <span> * </span>
+              {d8_h}
+              {k}
+              {k}
+              <span>:</span>
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>32F</p>
+              {l}
+              {m}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "+6",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ba}
+              <p>TJ</p>
             </Fragment>
           ]
         },
         {
-          id: 112,
-          command: "11*44*77A+B",
+          id: 86,
+          command: "11*44*77K",
           move: [
             <Fragment>
-              <p>Crucifixion</p>
+              <p>Falling Hydra</p>
               {d1_h}
               <span> * </span>
               {d4_h}
               <span> * </span>
               {d7_h}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>38F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+2",
+          onHit: "STN",
+          counterHit: "STN",
+          note: "TC/TJ"
+        },
+        {
+          id: 87,
+          command: "33*66*99A+B ~ RO",
+          move: [
+            <Fragment>
+              <p>Seismic Whale ~ Right Outer</p>
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
               {a}
               {plus}
               {b}
@@ -2861,26 +2543,32 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>?F</p>
+              <p>24F</p>
+              {m}
               {m}
             </Fragment>
           ],
-          onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
+          onBlock: "-2",
+          onHit: "+6",
+          counterHit: "+6",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
         },
         {
-          id: 113,
-          command: "11*44*77[A+B]",
+          id: 88,
+          command: "33*66*99[A+B] ~ BL",
           move: [
             <Fragment>
-              <p>Crucifixion</p>
-              {d1_h}
+              <p>Seismic Whale ~ Behind Lower</p>
+              {d3_h}
               <span> * </span>
-              {d4_h}
+              {d6_h}
               <span> * </span>
-              {d7_h}
+              {d9_h}
               {a_h}
               {plus}
               {b_h}
@@ -2888,21 +2576,63 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>?F</p>
+              <p>24F</p>
+              {m}
               {m}
             </Fragment>
           ],
-          onBlock: "UA",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{ua}</Fragment>]
+          onBlock: "-2",
+          onHit: "+6",
+          counterHit: "+6",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Behind Lower</p>
+            </Fragment>
+          ]
         },
         {
-          id: 114,
+          id: 89,
+          command: "33*66*99A+BB ~ Left Outer",
+          move: [
+            <Fragment>
+              <p>Fish in a Barrel ~ Left Outer</p>
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {a}
+              {plus}
+              {b}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+6",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {ba}
+              {ss}
+              <p>To Left Outer</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 90,
           command: "33*66*99B+K",
           move: [
             <Fragment>
-              <p>Raging Gnome</p>
+              <p>Dragon Cannon</p>
               {d3_h}
               <span> * </span>
               {d6_h}
@@ -2915,52 +2645,18 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>34F</p>
-              {m}
-              {m}
+              <p>24F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 115,
-          command: "11*44*77B+K ~ SL",
-          move: [
-            <Fragment>
-              <p>Exile ~ Spiral Lust</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>40F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-22",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Spiral Lust</p>
-            </Fragment>
-          ]
+          onBlock: "-12",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: "TC/TJ"
         },
 
         {
-          id: 116,
+          id: 91,
           command: "Run K",
           move: [
             <Fragment>
@@ -2989,11 +2685,11 @@ class Maxi extends Component {
       //throws start here
       throws: [
         {
-          id: 117,
+          id: 92,
           command: "A+G",
           move: [
             <Fragment>
-              <p>Dominion Throw</p>
+              <p>Falling Heaven Dragon</p>
               {a}
               {plus}
               {g}
@@ -3012,11 +2708,11 @@ class Maxi extends Component {
         },
 
         {
-          id: 118,
+          id: 93,
           command: "4A+G",
           move: [
             <Fragment>
-              <p>Primal Dominance</p>
+              <p>Lynching</p>
               {d4}
               {a}
               {plus}
@@ -3036,11 +2732,11 @@ class Maxi extends Component {
         },
 
         {
-          id: 119,
-          command: "Right Throw",
+          id: 94,
+          command: "Right Throw ~ BL",
           move: [
             <Fragment>
-              <p>Sunset Cradle</p>
+              <p>Leaving the Dragon Nest ~ Behind Lower</p>
               <p>Right Side Throw</p>
             </Fragment>
           ],
@@ -3053,14 +2749,20 @@ class Maxi extends Component {
           onBlock: "KND",
           onHit: "KND",
           counterHit: "KND",
-          note: [<Fragment>{th}</Fragment>]
+          note: [
+            <Fragment>
+              {th}
+              {ss}
+              <p>To Behind Lower</p>
+            </Fragment>
+          ]
         },
         {
-          id: 120,
+          id: 95,
           command: "Left Throw",
           move: [
             <Fragment>
-              <p>Heartless Guide</p>
+              <p>Dragon Destoryer</p>
               <p>Left Side Throw</p>
             </Fragment>
           ],
@@ -3076,11 +2778,11 @@ class Maxi extends Component {
           note: [<Fragment>{th}</Fragment>]
         },
         {
-          id: 121,
+          id: 96,
           command: "Back Throw",
           move: [
             <Fragment>
-              <p>Sweet Domiance</p>
+              <p>Parting the Waves</p>
               <p>Back Throw</p>
             </Fragment>
           ],
@@ -3094,190 +2796,17 @@ class Maxi extends Component {
           onHit: "KND",
           counterHit: "KND",
           note: [<Fragment>{th}</Fragment>]
-        },
-        {
-          id: 122,
-          command: "2*3A+G",
-          move: [
-            <Fragment>
-              <p>Vile Condemnation</p>
-              {d2}
-              <span> * </span>
-              {d3}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 123,
-          command: "FC 2*3A+G",
-          move: [
-            <Fragment>
-              <p>Vile Condemnation</p>
-              <span>FC</span>
-              {d2}
-              <span> * </span>
-              {d3}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 123,
-          command: "376231A+G",
-          move: [
-            <Fragment>
-              <p>Summon Suffering </p>
-              {d3}
-              {d7}
-              {d6}
-              {d2}
-              {d3}
-              {d1}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{th}</Fragment>]
-        },
-        {
-          id: 124,
-          command: "376231A+G JF",
-          move: [
-            <Fragment>
-              <p>Summon Suffering(Just Frame)</p>
-              {d3}
-              {d7}
-              {d6}
-              {d2}
-              {d3}
-              {d1}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {th}
-              <p>Does more damage</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 125,
-          command: "374691A+G",
-          move: [
-            <Fragment>
-              <p>Calamity Symphony</p>
-              {d3}
-              {d7}
-              {d4}
-              {d6}
-              {d9}
-              {d1}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{th}</Fragment>]
-        },
-        {
-          id: 126,
-          command: "374691A+G JF",
-          move: [
-            <Fragment>
-              <p>Calamity Symphony(Just Frame)</p>
-              {d3}
-              {d7}
-              {d4}
-              {d6}
-              {d9}
-              {d1}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {th}
-              <p>Does more damage</p>
-            </Fragment>
-          ]
         }
       ],
 
       // reversal edge start here
       reversalEdge: [
         {
-          id: 127,
+          id: 97,
           command: "B+G",
           move: [
             <Fragment>
-              <p>Existence</p>
+              <p>Snapping Leviathan</p>
               {b}
               {plus}
               {g}
@@ -3285,44 +2814,22 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>46F</p>
+              <p />
               {m}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "N/A",
-          counterHit: "N/A",
+          onBlock: "-4",
+          onHit: "",
+          counterHit: "",
           note: [<Fragment>{re}</Fragment>]
         },
+
         {
-          id: 128,
-          command: "B+G6",
-          move: [
-            <Fragment>
-              <p>Darkside</p>
-              {b}
-              {plus}
-              {g}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>52F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-7",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment>{re}</Fragment>]
-        },
-        {
-          id: 129,
+          id: 98,
           command: "[B+G]",
           move: [
             <Fragment>
-              <p>Existence</p>
+              <p>Snapping Leviathan</p>
               {b_h}
               {plus}
               {g_h}
@@ -3330,7 +2837,7 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>66F</p>
+              <p />
               {m}
             </Fragment>
           ],
@@ -3345,11 +2852,11 @@ class Maxi extends Component {
           ]
         },
         {
-          id: 130,
-          command: "RE A",
+          id: 99,
+          command: "RE A ~ BL",
           move: [
             <Fragment>
-              <p>Screeching Spirit</p>
+              <p>Crashing Wave ~ Behind Lower</p>
               {re}
               {a}
             </Fragment>
@@ -3360,11 +2867,13 @@ class Maxi extends Component {
               {h}
             </Fragment>
           ],
-          onBlock: "-2",
-          onHit: "STN",
-          counterHit: "STN",
+          onBlock: "-10",
+          onHit: "+8",
+          counterHit: "+8",
           note: [
             <Fragment>
+              {ss}
+              <p>To Behind Lower</p>
               {lh}
               <p>Lethal hit on 2nd phrase</p>
             </Fragment>
@@ -3372,11 +2881,11 @@ class Maxi extends Component {
         },
 
         {
-          id: 131,
-          command: "RE [A] ~ SE",
+          id: 100,
+          command: "RE [A] ~ RO",
           move: [
             <Fragment>
-              <p>Screeching Spirit ~ Serpent's Embrace</p>
+              <p>Crashing Wave ~ Right Outer</p>
               {re}
               {a_h}
             </Fragment>
@@ -3387,32 +2896,53 @@ class Maxi extends Component {
               {h}
             </Fragment>
           ],
-          onBlock: "?F",
-          onHit: "STN",
-          counterHit: "STN",
+          onBlock: "+2",
+          onHit: "+18",
+          counterHit: "+18",
           note: [
             <Fragment>
-              {lh}
-              <p>Lethal hit STN on 2nd phrase</p>
               {ss}
-              <p>Into Serpent's Embrace</p>
+              <p>To Right Outer</p>
+              {lh}
+              <p>Lethal hit on 2nd phrase</p>
             </Fragment>
           ]
         },
         {
-          id: 132,
-          command: "RE BBBBBBBB",
+          id: 101,
+          command: "RE AA",
           move: [
             <Fragment>
-              <p>Fires of Insanity</p>
+              <p>Crashing Wave</p>
               {re}
-              {b}
-              {b}
-              {b}
-              {b}
-              {b}
-              {b}
-              {b}
+              {a}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>N/A</p>
+              {h}
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {lh}
+              <p>Lethal hit on 2nd phrase</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 102,
+          command: "RE B ~ LI",
+          move: [
+            <Fragment>
+              <p>Wave Breaker ~ Left Inner</p>
+              {re}
               {b}
             </Fragment>
           ],
@@ -3420,16 +2950,38 @@ class Maxi extends Component {
             <Fragment>
               <p>N/A</p>
               {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
             </Fragment>
           ],
           onBlock: "?F",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Left Inner</p>
+              {lh}
+              <p>Lethal hit on 2nd phrase</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 103,
+          command: "RE K",
+          move: [
+            <Fragment>
+              <p>Incense Burner</p>
+              {re}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>N/A</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-6",
           onHit: "KND",
           counterHit: "KND",
           note: [
@@ -3441,38 +2993,11 @@ class Maxi extends Component {
         },
 
         {
-          id: 133,
-          command: "RE K",
+          id: 104,
+          command: "RE 6 ~ LO",
           move: [
             <Fragment>
-              <p>Queen of Blades</p>
-              {re}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>N/A</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "?",
-          onHit: "?",
-          counterHit: "?",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Lethal hit on 2nd phrase</p>
-            </Fragment>
-          ]
-        },
-
-        {
-          id: 134,
-          command: "RE 6",
-          move: [
-            <Fragment>
-              <p>Foward Step</p>
+              <p>Foward Step ~ Left Outer</p>
               {re}
               {d6}
             </Fragment>
@@ -3487,6 +3012,8 @@ class Maxi extends Component {
           counterHit: "N/A",
           note: [
             <Fragment>
+              {ss}
+              <p>To Left Outer</p>
               <p>Beats</p>
               {re}
               {a}
@@ -3494,14 +3021,40 @@ class Maxi extends Component {
           ]
         },
         {
-          id: 135,
-          command: "RE 2*8",
+          id: 105,
+          command: "RE 2 ~ RO",
           move: [
             <Fragment>
-              <p>Side Step</p>
+              <p>Side Step ~ Right Outer</p>
               {re}
               {d2}
-              <span> * </span>
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>N/A</p>
+            </Fragment>
+          ],
+          onBlock: "N/A",
+          onHit: "N/A",
+          counterHit: "N/A",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Right Outer</p>
+              <p>Beats</p>
+              {re}
+              {b}
+            </Fragment>
+          ]
+        },
+        {
+          id: 106,
+          command: "RE 8 ~ WL",
+          move: [
+            <Fragment>
+              <p>Side Step ~ Weaving Light</p>
+              {re}
               {d8}
             </Fragment>
           ],
@@ -3515,6 +3068,8 @@ class Maxi extends Component {
           counterHit: "N/A",
           note: [
             <Fragment>
+              {ss}
+              <p>To Weaving Light</p>
               <p>Beats</p>
               {re}
               {b}
@@ -3522,11 +3077,11 @@ class Maxi extends Component {
           ]
         },
         {
-          id: 136,
-          command: "RE 4",
+          id: 107,
+          command: "RE 4 ~ RC",
           move: [
             <Fragment>
-              <p>Back Step</p>
+              <p>Back Step ~ Right Cross</p>
               {re}
               {d4}
             </Fragment>
@@ -3541,6 +3096,8 @@ class Maxi extends Component {
           counterHit: "N/A",
           note: [
             <Fragment>
+              {ss}
+              <p>To Right Cross</p>
               <p>Beats</p>
               {re}
               {k}
@@ -3552,11 +3109,11 @@ class Maxi extends Component {
       // gauge attacks start here
       gaugeAttacks: [
         {
-          id: 137,
+          id: 108,
           command: "A+B+K",
           move: [
             <Fragment>
-              <p>Guilty Throne</p>
+              <p>Raging Dragon Zodiac</p>
               {a}
               {plus}
               {b}
@@ -3566,36 +3123,60 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>34F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
+              <p>16F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-20",
+          onBlock: "-16",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
               {sg}
               {ce}
-              {gi}
               {at}
             </Fragment>
           ]
         },
         {
-          id: 138,
-          command: "SE A+B+K",
+          id: 109,
+          command: "[A+B+K] ~ RO",
           move: [
             <Fragment>
-              <p>Serpent's Embrace ~ Guilty Throne</p>
-              <span>Serpent's Embrace</span>
+              <p>Raging Dragon Zodiac ~ Right Outer</p>
+              {a_h}
+              {plus}
+              {b_h}
+              {plus}
+              {k_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sg}
+              {ce}
+              {at}
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 110,
+          command: "WL A+B+K",
+          move: [
+            <Fragment>
+              <p>Raging Dragon Zodiac: Reprisal</p>
+              <span>WL</span>
               {a}
               {plus}
               {b}
@@ -3605,18 +3186,11 @@ class Maxi extends Component {
           ],
           impact: [
             <Fragment>
-              <p>12F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
+              <p>16F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-20",
+          onBlock: "0",
           onHit: "KND",
           counterHit: "KND",
           note: [
@@ -3624,11 +3198,12 @@ class Maxi extends Component {
               {sg}
               {ce}
               {at}
+              {ba}
             </Fragment>
           ]
         },
         {
-          id: 139,
+          id: 111,
           command: "4A+B+K",
           move: [
             <Fragment>
@@ -3658,201 +3233,283 @@ class Maxi extends Component {
           ]
         },
         {
-          id: 140,
-          command: "SC 6AA",
+          id: 112,
+          command: "SC 4AAAB ~ LI",
           move: [
             <Fragment>
-              <p>Deadly Catalysm</p>
+              <p>Dragon's Roar ~ Left Inner</p>
               {sc}
-              {d6}
+              {d4}
               {a}
               {a}
+              {a}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
+              <p>24F</p>
               {h}
               {m}
-              {h}
+              {m}
+              {m}
             </Fragment>
           ],
-          onBlock: "+4",
-          onHit: "KND",
-          counterHit: "KND",
+          onBlock: "+10",
+          onHit: "STN",
+          counterHit: "STN",
           note: [
             <Fragment>
               {sc}
               {ba}
+              {ss}
+              <p>To Left Inner</p>
             </Fragment>
           ]
         },
 
         {
-          id: 141,
-          command: "SC 4A",
+          id: 113,
+          command: "SC 236A ~ BL",
           move: [
             <Fragment>
-              <p>Deadly Firestorm</p>
+              <p>Setting Sun ~ Behind Lower</p>
               {sc}
-              {d4}
+              {d2}
+              {d3}
+              {d6}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
+              <p>28F</p>
+              {l}
+              {l}
+              {l}
+              {l}
+              {l}
             </Fragment>
           ],
-          onBlock: "+8",
+          onBlock: "0",
           onHit: "+10",
           counterHit: "+10",
           note: [
             <Fragment>
               {sc}
               {ba}
-            </Fragment>
-          ]
-        },
-        {
-          id: 142,
-          command: "SC 4[A] ~ SE",
-          move: [
-            <Fragment>
-              <p>Deadly Firestorm ~ Serpent's Embrace</p>
-              {sc}
-              {d4}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "+2",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [
-            <Fragment>
-              {sc}
-              {ba}
               {ss}
-              <p>To Serpent's Embrace</p>
+              <p>To Behind Lower</p>
             </Fragment>
           ]
         },
+
         {
-          id: 143,
-          command: "SC 6BB",
+          id: 114,
+          command: "SC 6A+B ~ LI",
           move: [
             <Fragment>
-              <p>Death Glance</p>
+              <p>Hydra's Brand ~ Left Inner</p>
               {sc}
               {d6}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+1",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sc}
-              {ba}
-              {at}
-            </Fragment>
-          ]
-        },
-        {
-          id: 144,
-          command: "SC 66KK",
-          move: [
-            <Fragment>
-              <p>Unseen Connection</p>
-              {sc}
-              {d6_h}
-              {k}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-2",
-          onHit: "+6",
-          counterHit: "+6",
-          note: [<Fragment>{sc}</Fragment>]
-        },
-        {
-          id: 145,
-          command: "SC 66K[K] ~ SE",
-          move: [
-            <Fragment>
-              <p>Unseen Connection ~ Serpent's Embrace</p>
-              {sc}
-              {d6_h}
-              {k}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "0",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [
-            <Fragment>
-              {sc}
-              {ss}
-              <p>To Serpent's Embrace</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 146,
-          command: "SC 22*88A+B B",
-          move: [
-            <Fragment>
-              <p>Decaying Land</p>
-              {sc}
-              {d2}
-              <span> * </span>
-              {d8}
               {a}
               {plus}
               {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+10",
+          onHit: "STN",
+          counterHit: "STN",
+          note: [
+            <Fragment>
+              {sc}
+              {ba}
+              {ss}
+              <p>To Left Inner / TC[4~15]</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 115,
+          command: "SC RO A A+B ~ BL",
+          move: [
+            <Fragment>
+              <p>Crashing Waves ~ Behind Lower</p>
+              {sc}
+              <span>Right Outer</span>
+              {a}
+              {a}
+              {plus}
               {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>26F</p>
+              <p>14F</p>
+              {h}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {ss}
+              <p>To Behind Lower / TC[4~15]</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 116,
+          command: "SC RO BB A+B ~ LO",
+          move: [
+            <Fragment>
+              <p>Dragon's Shadow ~ Left Outer</p>
+              {sc}
+              <span>Right Outer</span>
+              {b}
+              {b}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
               {m}
               {m}
               {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {ss}
+              <p>To Left Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 117,
+          command: "SC RO A+B ~ RO",
+          move: [
+            <Fragment>
+              <p>Ocean Splitter ~ Right Outer</p>
+              {sc}
+              <span>Right Outer</span>
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
               {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "STN",
+          counterHit: "STN",
+          note: [
+            <Fragment>
+              {sc}
+              {ss}
+              <p>To Right Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 118,
+          command: "SC LO B A+B ~ LO",
+          move: [
+            <Fragment>
+              <p>Light Dragon ~ Left Outer</p>
+              {sc}
+              <span>Left Outer</span>
+              {b}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {ss}
+              <p>To Left Outer</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 119,
+          command: "SC RC AB ~ LI",
+          move: [
+            <Fragment>
+              <p>Hydra's Cross ~ Left Inner</p>
+              {sc}
+              <span>Right Cross</span>
+              {a}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>24F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+10",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {sc}
+              {ba}
+              {ss}
+              <p>To Left Inner</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 120,
+          command: "SC RC A+B",
+          move: [
+            <Fragment>
+              <p>Swooping Swallow</p>
+              {sc}
+              <span>Right Cross</span>
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
               {m}
               {m}
             </Fragment>
@@ -3863,97 +3520,68 @@ class Maxi extends Component {
           note: [
             <Fragment>
               {sc}
-              {gi}
-              <p>GI Mid horizontals</p>
+              <p>TJ</p>
             </Fragment>
           ]
         },
         {
-          id: 147,
-          command: "SC SE AA",
+          id: 121,
+          command: "SC BL KK",
           move: [
             <Fragment>
-              <p>Deadly Screaming Mandrake</p>
+              <p>Hydra's Frenzy</p>
               {sc}
-              <span>Serpent's Embrace</span>
-              {a}
-              {a}
+              <span>Behind Lower</span>
+              {k}
+              {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>18F</p>
-              {h}
-              {m}
+              <p>24F</p>
+              {l}
               {h}
             </Fragment>
           ],
-          onBlock: "+4",
+          onBlock: "+6",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
               {sc}
               {ba}
-            </Fragment>
-          ]
-        },
-        {
-          id: 148,
-          command: "SC SE 6AA",
-          move: [
-            <Fragment>
-              <p>Mourning Spirit</p>
-              {sc}
-              <span>Seprent's Embrace</span>
-              {d6}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sc}
-              {ua}
+              <p>TJ[12~34]</p>
             </Fragment>
           ]
         }
       ],
       // special stance start here
-      serpentEmbrace: [
+      rightOuter: [
         {
-          id: 149,
-          command: "SE AA",
+          id: 122,
+          command: "RO A ~ BL",
           move: [
             <Fragment>
-              <p>Violent Spirits</p>
-              <span>Serpent's Embrace</span>
-              {a}
+              <p>Dragon Bite ~ Behind Lower</p>
+              <span>Right Outer</span>
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>18F</p>
-              {h}
-              {m}
+              <p>14F</p>
               {h}
             </Fragment>
           ],
-          onBlock: "-4",
-          onHit: "+6",
-          counterHit: "+6",
-          note: [<Fragment>{ss}</Fragment>]
+          onBlock: "",
+          onHit: "",
+          counterHit: "",
+          note: [
+            <Fragment>
+              {ss}
+              <p>To Behind Lower</p>
+            </Fragment>
+          ]
         },
         {
           id: 150,
@@ -4587,7 +4215,7 @@ class Maxi extends Component {
           <Card>
             <CardHeader color="primary">
               <h4 className={classes.cardTitleWhite}>
-                Special Stance(Sperent's Embrace)
+                Special Stance(Right Outer)
               </h4>
               <div
                 className={`${classes.toggleStyle} ${
@@ -4608,7 +4236,7 @@ class Maxi extends Component {
                 <Table
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.serpentEmbrace.map(data => [
+                  tableData={maxiFrameData.rightOuter.map(data => [
                     data.command,
                     data.impact,
                     data.onBlock,
@@ -4621,7 +4249,7 @@ class Maxi extends Component {
                 <Table
                   tableHeaderColor="primary"
                   tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.serpentEmbrace.map(data => [
+                  tableData={maxiFrameData.rightOuter.map(data => [
                     data.move,
                     data.impact,
                     data.onBlock,
