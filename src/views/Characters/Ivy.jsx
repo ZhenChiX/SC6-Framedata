@@ -676,7 +676,7 @@ class Ivy extends Component {
         },
         {
           id: 22,
-          command: "BT 2A",
+          command: "BT 2AB",
           move: [
             <Fragment>
               <p>Screams of Paranoia</p>
