@@ -23,19 +23,19 @@ import {
 import App from "../../layouts/Dashboard/Dashboard.jsx";
 
 function Header({ ...props }) {
-  function makeBrand() {
-    var name;
-    props.routes.map((prop, key) => {
-      if (prop.path === props.location.pathname) {
-        // name = props.location.pathname;
-        name = prop.navbarName;
-        console.log(props);
+  // function makeBrand() {
+  //   var name;
+  //   props.routes.map((prop, key) => {
+  //     if (prop.path === props.location.pathname) {
+  //       // name = props.location.pathname;
+  //       name = prop.navbarName;
+  //       console.log(props);
        
-      }
-      return null;
-    });
-    return name;
-  }
+  //     }
+  //     return null;
+  //   });
+  //   return name;
+  // }
   const { classes, color } = props;
   const appBarClasses = classNames({
     [" " + classes[color]]: color
@@ -45,18 +45,9 @@ function Header({ ...props }) {
       <Toolbar className={classes.container}>
         <div className={classes.flex}>
           {/* Here we create navbar brand, based on route name */}
-          <Button color="transparent" href="#" className={classes.title}>
-            {/* {makeBrand()} */}
-            {/* BACK */}
-          </Button>
-          {/* <Link
-            color="transparent"
-            to="/"
-            className={classes.title}
-          >
-            Back to Characters select
-          </Link>
-          <Route path="/" component={App} /> */}
+          {/* <Button color="transparent" href="#" className={classes.title}>
+            {makeBrand()}
+          </Button> */}
         </div>
 
         <Hidden smDown implementation="css">
