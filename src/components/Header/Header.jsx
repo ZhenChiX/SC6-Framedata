@@ -29,6 +29,7 @@ function Header({ ...props }) {
       if (prop.path === props.location.pathname) {
         // name = props.location.pathname;
         name = prop.navbarName;
+        console.log(props);
        
       }
       return null;
@@ -45,7 +46,7 @@ function Header({ ...props }) {
         <div className={classes.flex}>
           {/* Here we create navbar brand, based on route name */}
           <Button color="transparent" href="#" className={classes.title}>
-            {makeBrand()}
+            {/* {makeBrand()} */}
             {/* BACK */}
           </Button>
           {/* <Link

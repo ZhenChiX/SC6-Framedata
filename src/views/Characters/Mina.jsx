@@ -3959,6 +3959,8 @@ class Mina extends Component {
     };
 
     return (
+      <Fragment>
+            <h3 className="characters_name">{this.props.location.pathname.replace(/\//g, '').toUpperCase()}</h3>
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <Card>
@@ -4410,6 +4412,7 @@ class Mina extends Component {
           </Card>
         </GridItem>
       </GridContainer>
+      </Fragment>
     );
   }
 }
