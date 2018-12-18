@@ -14,11 +14,10 @@
 
  */
 
-/* .headOne {
-    position: -webkit-sticky;
-    position: sticky !important;
-    top: 10vh;
-} */
+@font-face {
+    font-family: shrikhand;
+    src: url("../font/Shrikhand-Regular.ttf");
+}
 
 /* modify img */
 
@@ -26,15 +25,28 @@
     position: fixed;
     top: 2vh;
     z-index: 1111;
-    right: 20vw;
+    right: 15vw;
     margin: auto;
     color: white;
-    font-size: 1em;
+    font-size: 0.8em;
+    font-family: shrikhand;
 }
 
 #returnMe:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transition-delay: ease 500ms;
+}
+
+/* Modify name posistion */
+
+.characters_name {
+    font-family: shrikhand;
+    position: fixed;
+    top: 2vh;
+    z-index: 1111;
+    margin: auto;
+    color: white;
+    /* font-size: 1em; */
 }
 
 * {
@@ -152,18 +164,17 @@ h3 {
 }
 
 .azwel {
-
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_azwel.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_azwel.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .cervantes {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_cervantes.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_cervantes.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .chai {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_chai.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_chai.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
@@ -184,7 +195,7 @@ h3 {
 }
 
 .kilik {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_kilik.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_kilik.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
@@ -197,22 +208,22 @@ h3 {
 }
 
 .mitsurugi {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_mitsurugi.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_mitsurugi.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .nightmare {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_nightmare.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_nightmare.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .raphael {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_raphael.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_raphael.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .siegfried {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_siegfried.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_siegfried.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
@@ -221,32 +232,32 @@ h3 {
 }
 
 .taki {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_taki.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_taki.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .talim {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_talim.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_talim.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .tira {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_tira.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_tira.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .voldo {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_voldo.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_voldo.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .yoshimitsu {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_yoshimitsu.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_yoshimitsu.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 
 .zasalamel {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_zasalamel.png"),no-repeat!important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_zasalamel.png"), no-repeat!important;
     background-size: 100% 100%!important;
 }
 

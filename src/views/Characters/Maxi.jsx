@@ -2,6 +2,7 @@ import React, { Fragment, Component } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
+// import Grid from '@material-ui/core/Grid';
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import Table from "components/Table/Table.jsx";
@@ -10,6 +11,8 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Hidden from "@material-ui/core/Hidden";
 
+//icon
+import Info from "@material-ui/icons/Info";
 //toggle switch
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -104,8 +107,14 @@ const styles = {
     verticalAlign: "middle"
   },
   toggleStyle: {
-    justify: "flex-end"
+    justify: "flex-end",
+    display: "grid",
+    gridTemplateColumns: "9fr 1fr"
   }
+  // info: {
+  //   justify: "flex-end",
+  //   alignItems: "flex-end"
+  // }
 };
 
 const tableHeadDetail = [
@@ -121,6 +130,7 @@ const tableHeadSimple = ["M", "I", "OB", "OH", "CH", "NOTE"];
 class Maxi extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       display: false,
       checked: true,
@@ -4466,715 +4476,817 @@ class Maxi extends Component {
         }
       ]
     };
-
     return (
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Horizontal Attacks</h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.verticalAttacks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.verticalAttacks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+      <Fragment>
+        <h3 className="characters_name">{this.props.location.pathname.replace(/\//g, '').toUpperCase()}</h3>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Horizontal Attacks</h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Vertical Attacks</h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.horizontalAttacks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.horizontalAttacks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Kick Attacks </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.kicks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.kicks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Dual Button Attacks </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.dualButtonAttacks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.dualButtonAttacks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.verticalAttacks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.verticalAttacks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Special Stance(Right Outer)
-              </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.rightOuter.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.rightOuter.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Vertical Attacks</h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Special Stance(Left Outer)
-              </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.leftOuter.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.leftOuter.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Special Stance(Left Inner)
-              </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.leftInner.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.leftInner.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Special Stance(Right Cross)
-              </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.rightCross.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.rightCross.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Special Stance(Behind Lower)
-              </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.behindLower.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.behindLower.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>
-                Special Stance(Wavering Light)
-              </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.waveringLight.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.waveringLight.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.horizontalAttacks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.horizontalAttacks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Kick Attacks </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>8-Way Run Moves </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.eightwayrunAttack.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.eightwayrunAttack.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.kicks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.kicks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Dual Button Attacks </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Throws </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.throws.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.throws.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.dualButtonAttacks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.dualButtonAttacks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Reversal Edge Attacks </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.reversalEdge.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.reversalEdge.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>
+                  Special Stance(Right Outer)
+                </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Gauge Attacks </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.gaugeAttacks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={maxiFrameData.gaugeAttacks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-      </GridContainer>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.rightOuter.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.rightOuter.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>
+                  Special Stance(Left Outer)
+                </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.leftOuter.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.leftOuter.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>
+                  Special Stance(Left Inner)
+                </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.leftInner.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.leftInner.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>
+                  Special Stance(Right Cross)
+                </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.rightCross.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.rightCross.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>
+                  Special Stance(Behind Lower)
+                </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.behindLower.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.behindLower.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>
+                  Special Stance(Wavering Light)
+                </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.waveringLight.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.waveringLight.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>8-Way Run Moves </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.eightwayrunAttack.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.eightwayrunAttack.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Throws </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.throws.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.throws.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>
+                  Reversal Edge Attacks{" "}
+                </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.reversalEdge.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.reversalEdge.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Gauge Attacks </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <Info
+                    title="More Info"
+                    className={`${classes.cardTitleWhite}`}
+                  />
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.gaugeAttacks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={maxiFrameData.gaugeAttacks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
+      </Fragment>
     );
   }
 }

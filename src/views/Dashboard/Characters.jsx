@@ -98,121 +98,125 @@ class Characters extends React.Component {
       <Router>
         <Fragment>
           {this.state.isHidden ? (
-            <GridContainer onClick={this.onClickHidden}>
-              <GridItem  xs={12} sm={6} md={4} lg={3}>
-                <Link to="/astaroth">
-                  <Card title="Astaroth" className="character astaroth" />
-                </Link>
-              </GridItem>
+            <Fragment>
+              <h3 className="characters_name">
+                {this.props.location.pathname.replace(/\//g, "").toUpperCase()}
+              </h3>
+              <GridContainer onClick={this.onClickHidden}>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/astaroth">
+                    <Card title="Astaroth" className="character astaroth" />
+                  </Link>
+                </GridItem>
 
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/azwel">
-                  <Card title="Azwel" className="character azwel" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/Cerventes">
-                  <Card title="Cervantes" className="character cervantes" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/chai">
-                  <Card title="Chai XiangHua" className="character chai" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/geralt">
-                  <Card title="Geralt" className="character geralt" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/groh">
-                  <Card title="Grøh" className="character groh" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/ivy">
-                  <Card title="Ivy" className="character ivy" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/kilik">
-                  <Card title="Kilik" className="character kilik" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/maxi">
-                  <Card title="Maxi" className="character maxi" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/mina">
-                  <Card title="Mina" className="character mina" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/mitsurugi">
-                  <Card title="Mitsurugi" className="character mitsurugi" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/nightmare">
-                  <Card title="Nightmare" className="character nightmare" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/raphael">
-                  <Card title="Raphael" className="character raphael" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/siegfried">
-                  <Card title="Siegfried" className="character siegfried" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/sophitia">
-                  <Card title="Sophitia" className="character sophitia" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/taki">
-                  <Card title="Taki" className="character taki" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/talim">
-                  <Card title="Talim" className="character talim" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/tira">
-                  <Card title="Tira" className="character tira" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/voldo">
-                  <Card title="Voldo" className="character voldo" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/yoshimitsu">
-                  <Card title="Yoshimitsu" className="character yoshimitsu" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/zasalamel">
-                  <Card title="Zasalamel" className="character zasalamel" />
-                </Link>
-              </GridItem>
-              <GridItem xs={12} sm={6} md={4} lg={3}>
-                <Link to="/type2b">
-                  <Card title="2B" className="character type2b" />
-                </Link>
-              </GridItem>
-            </GridContainer>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/azwel">
+                    <Card title="Azwel" className="character azwel" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/Cerventes">
+                    <Card title="Cervantes" className="character cervantes" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/chai">
+                    <Card title="Chai XiangHua" className="character chai" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/geralt">
+                    <Card title="Geralt" className="character geralt" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/groh">
+                    <Card title="Grøh" className="character groh" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/ivy">
+                    <Card title="Ivy" className="character ivy" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/kilik">
+                    <Card title="Kilik" className="character kilik" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/maxi">
+                    <Card title="Maxi" className="character maxi" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/mina">
+                    <Card title="Mina" className="character mina" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/mitsurugi">
+                    <Card title="Mitsurugi" className="character mitsurugi" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/nightmare">
+                    <Card title="Nightmare" className="character nightmare" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/raphael">
+                    <Card title="Raphael" className="character raphael" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/siegfried">
+                    <Card title="Siegfried" className="character siegfried" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/sophitia">
+                    <Card title="Sophitia" className="character sophitia" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/taki">
+                    <Card title="Taki" className="character taki" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/talim">
+                    <Card title="Talim" className="character talim" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/tira">
+                    <Card title="Tira" className="character tira" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/voldo">
+                    <Card title="Voldo" className="character voldo" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/yoshimitsu">
+                    <Card title="Yoshimitsu" className="character yoshimitsu" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/zasalamel">
+                    <Card title="Zasalamel" className="character zasalamel" />
+                  </Link>
+                </GridItem>
+                <GridItem xs={12} sm={6} md={4} lg={3}>
+                  <Link to="/type2b">
+                    <Card title="2B" className="character type2b" />
+                  </Link>
+                </GridItem>
+              </GridContainer>
+            </Fragment>
           ) : null}
-
           <Fragment>
             {this.state.isHidden ? null : (
               <Fragment>
@@ -223,7 +227,7 @@ class Characters extends React.Component {
                   onClick={this.onClickHidden}
                 >
                   <KeyboardReturn />
-                  Return
+                  Back
                 </Button>
                 <Switch>
                   <Route path="/astaroth" component={Astaroth} />
