@@ -2483,7 +2483,7 @@ class Ivy extends Component {
           impact: [
             <Fragment>
               <p>26F</p>
-              {a}
+              {h}
             </Fragment>
           ],
           onBlock: "-12",
