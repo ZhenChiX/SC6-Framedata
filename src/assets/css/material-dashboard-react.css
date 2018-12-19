@@ -262,7 +262,8 @@ h3 {
 }
 
 .type2b {
-    background-image: url("../img/btn_2b.png") !important;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_2b.png"), no-repeat!important;
+    background-size: 100% 100%!important;
 }
 
 h4 {
@@ -374,6 +375,8 @@ footer ul li a:hover {
 }
 
 @media (max-width: 991px) {
+    * {
+    }
     body, html {
         position: relative;
         overflow-x: hidden;

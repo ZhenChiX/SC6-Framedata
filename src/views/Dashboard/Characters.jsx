@@ -56,8 +56,8 @@ class Characters extends React.Component {
     };
   }
   onClickHidden = () => {
-    window.scrollTo(0, 0);
     this.setState({ isHidden: !this.state.isHidden });
+    document.querySelector(".App-mainPanel-2").scrollTo(0, 0);
   };
 
   state = {
@@ -70,7 +70,9 @@ class Characters extends React.Component {
   handleChangeIndex = index => {
     this.setState({ value: index });
   };
-
+  componentDidUpdate = () => {
+    window.scrollTo(0, 0);
+  };
   render() {
     const { classes } = this.props;
     return (

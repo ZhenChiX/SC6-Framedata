@@ -92,17 +92,17 @@ const styles = {
   imgResize: {
     height: "1.4em",
     width: "1.4em",
-    verticalAlign: "middle"
+    verticalAlign: "bottom"
   },
 
   imgResizeSM: {
     height: "1em",
     width: "1em",
-    verticalAlign: "middle"
+    verticalAlign: "bottom"
   },
   imgNote: {
     height: "1.4em",
-    verticalAlign: "middle"
+    verticalAlign: "bottom"
   }
 };
 

@@ -51,18 +51,25 @@ class App extends React.Component {
   componentDidMount() {
     if (navigator.platform.indexOf("Win") > -1) {
       const ps = new PerfectScrollbar(this.refs.mainPanel);
+      window.scrollTo(0, 0);
     }
     window.addEventListener("resize", this.resizeFunction);
+    window.scrollTo(0, 0);
   }
   componentDidUpdate(e) {
+    window.scrollTo(0, 0);
+
     if (e.history.location.pathname !== e.location.pathname) {
       this.refs.mainPanel.scrollTop = 0;
+
       if (this.state.mobileOpen) {
         this.setState({ mobileOpen: false });
       }
     }
   }
   componentWillUnmount() {
+    window.scrollTo(0, 0);
+
     window.removeEventListener("resize", this.resizeFunction);
   }
   render() {
@@ -78,7 +85,7 @@ class App extends React.Component {
           open={this.state.mobileOpen}
           color="blue"
           {...rest}
-          />
+        />
         <div className={classes.mainPanel} ref="mainPanel">
           <Header
             routes={dashboardRoutes}
