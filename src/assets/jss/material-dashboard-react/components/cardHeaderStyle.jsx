@@ -25,8 +25,8 @@ const cardHeaderStyle = {
     },
     "&$warningCardHeader,&$successCardHeader,&$dangerCardHeader,&$infoCardHeader,&$primaryCardHeader,&$roseCardHeader": {
       "&:not($cardHeaderIcon)": {
-        borderRadius: "3px",
-        marginTop: "-20px",
+        borderRadius: "4px",
+        marginTop: "-10px",
         padding: "15px"
       }
     },

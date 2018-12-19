@@ -1,6 +1,6 @@
 {
   "projects": {
-    "soulcalibur6-framedata": "soulcalibur6-framedata",
-    "default": "SC6FD"
+    "framedata": "framedata-1d7fc",
+    "default": "framedata-1d7fc"
   }
 }
