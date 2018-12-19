@@ -57,7 +57,7 @@ class Characters extends React.Component {
   }
   onClickHidden = () => {
     this.setState({ isHidden: !this.state.isHidden });
-    document.querySelector(".App-mainPanel-2").scrollTo(0, 0);
+    document.querySelector('#backtoTop').scrollTo(0, 0);
   };
 
   state = {

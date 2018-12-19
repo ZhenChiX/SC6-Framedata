@@ -46,7 +46,6 @@
     z-index: 1111;
     margin: auto;
     color: white;
-    /* font-size: 1em; */
 }
 
 * {
@@ -145,13 +144,8 @@ h3 {
 .character {
     background-size: 100% 100% !important;
     background-repeat: no-repeat !important;
-    min-height: 12vh;
+    min-height: 100px;
 }
-
-/* .overlay {
-    background-color: rgba(192, 192, 192, 0.5)!important;
-    z-index: 9999;
-} */
 
 .character:hover {
     cursor: pointer;
@@ -375,7 +369,14 @@ footer ul li a:hover {
 }
 
 @media (max-width: 991px) {
-    * {
+    .character {
+        min-height: 85px;
+    }
+    .characters_name {
+        top: 2vh;
+    }
+    h3 {
+        font-size: 1.5em
     }
     body, html {
         position: relative;

@@ -11,7 +11,7 @@ import {
 
 const headerStyle = theme => ({
   appBar: {
-    backgroundColor: "rgba(0, 0, 0, 0.8);",
+    backgroundColor: "rgba(0, 0, 0, 0.9);",
     boxShadow: "none",
     borderBottom: "0",
     marginBottom: "0",
@@ -25,11 +25,17 @@ const headerStyle = theme => ({
     padding: "10px 0",
     transition: "all 150ms ease 0s",
     minHeight: "50px",
-    display: "block"
+    display: "block",
+    "@media(max-width: 991px)": {
+      minHeight:"30px"
+    }
   },
   container: {
     ...container,
-    minHeight: "50px"
+    minHeight: "50px",
+    "@media(max-width: 991px)": {
+      minHeight: "30px"
+    }
   },
   flex: {
     flex: 1
