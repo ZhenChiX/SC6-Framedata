@@ -3,8 +3,6 @@ import Dashboard from "@material-ui/icons/Dashboard";
 import Gamepad from "@material-ui/icons/Gamepad";
 // core components/views
 import Characters from "views/Dashboard/Characters.jsx";
-// import UserProfile from "views/UserProfile/UserProfile.jsx";
-// import TableList from "views/Characters/TableList.jsx";
 import Terminology from "views/Terminology/Terminology.jsx";
 const dashboardRoutes = [
   {

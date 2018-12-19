@@ -91,17 +91,19 @@ const styles = {
   imgResize: {
     height: "1.4em",
     width: "1.4em",
-    verticalAlign: "middle"
+    verticalAlign: "bottom"
   },
 
   imgResizeSM: {
     height: "1em",
     width: "1em",
-    verticalAlign: "middle"
+    verticalAlign: "bottom",
+    border: "1px solid black",
+    borderRadius: "3px"
   },
   imgNote: {
     height: "1.4em",
-    verticalAlign: "middle"
+    verticalAlign: "bottom"
   },
   toggleStyle: {
     justify: "flex-end"

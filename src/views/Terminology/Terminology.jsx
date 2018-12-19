@@ -103,7 +103,9 @@ const style = {
   imgResizeSM: {
     height: "1em",
     width: "1em",
-    verticalAlign: "middle"
+    verticalAlign: "middle",
+    border: "1px solid black",
+    borderRadius: "3px"
   },
   imgNote: {
     height: "1.4em",

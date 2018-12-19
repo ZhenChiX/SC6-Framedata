@@ -57,6 +57,7 @@ class App extends React.Component {
   componentDidUpdate(e) {
     if (e.history.location.pathname !== e.location.pathname) {
       this.refs.mainPanel.scrollTop = 0;
+
       if (this.state.mobileOpen) {
         this.setState({ mobileOpen: false });
       }
@@ -78,8 +79,8 @@ class App extends React.Component {
           open={this.state.mobileOpen}
           color="blue"
           {...rest}
-          />
-        <div className={classes.mainPanel} ref="mainPanel">
+        />
+        <div id="backtoTop" className={classes.mainPanel} ref="mainPanel">
           <Header
             routes={dashboardRoutes}
             handleDrawerToggle={this.handleDrawerToggle}
