@@ -2,13 +2,15 @@ import React, { Fragment } from "react";
 import ReactDOM from "react";
 import PropTypes from "prop-types";
 import {
-  BrowserRouter as Router,
+  Router,
   Route,
   Link,
   Redirect,
   Switch,
   NavLink
 } from "react-router-dom";
+import { createBrowserHistory } from "history";
+
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 // @material-ui/core
@@ -48,6 +50,8 @@ import Voldo from "../Characters/Voldo.jsx";
 import Yoshimitsu from "../Characters/Yoshimitsu.jsx";
 import Zasalamel from "../Characters/Zasalamel.jsx";
 
+const hist = createBrowserHistory();
+
 class Characters extends React.Component {
   constructor(props) {
     super(props);
@@ -56,8 +60,15 @@ class Characters extends React.Component {
     };
   }
   onClickHidden = () => {
+    this.props.history.push(this.props.location.pathname);
     this.setState({ isHidden: !this.state.isHidden });
-    document.querySelector('#backtoTop').scrollTo(0, 0);
+    document.querySelector("#backtoTop").scrollTo(0, 0);
+  };
+
+  componentDidMount = () => {
+    window.onpopstate = this.setState({ isHidden: true });
+    window.onpopstate = this.onClickHidden;
+    // ghetto spaghetti code but it works
   };
 
   state = {
@@ -76,17 +87,21 @@ class Characters extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <Router>
+      <Router history={hist}>
         <Fragment>
           {this.state.isHidden ? (
             <Fragment>
               <h3 className="characters_name">
                 {this.props.location.pathname.replace(/\//g, "").toUpperCase()}
               </h3>
-              <GridContainer onClick={this.onClickHidden}>
+              <GridContainer>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/astaroth">
-                    <Card title="Astaroth" className="character astaroth" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="Astaroth"
+                      className="character astaroth"
+                    />
                   </Link>
                 </GridItem>
 
@@ -107,17 +122,29 @@ class Characters extends React.Component {
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/geralt">
-                    <Card title="Geralt" className="character geralt" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="Geralt"
+                      className="character geralt"
+                    />
                   </Link>
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/groh">
-                    <Card title="Grøh" className="character groh" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="Grøh"
+                      className="character groh"
+                    />
                   </Link>
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/ivy">
-                    <Card title="Ivy" className="character ivy" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="Ivy"
+                      className="character ivy"
+                    />
                   </Link>
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
@@ -127,12 +154,20 @@ class Characters extends React.Component {
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/maxi">
-                    <Card title="Maxi" className="character maxi" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="Maxi"
+                      className="character maxi"
+                    />
                   </Link>
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/mina">
-                    <Card title="Mina" className="character mina" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="Mina"
+                      className="character mina"
+                    />
                   </Link>
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
@@ -157,7 +192,11 @@ class Characters extends React.Component {
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/sophitia">
-                    <Card title="Sophitia" className="character sophitia" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="Sophitia"
+                      className="character sophitia"
+                    />
                   </Link>
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
@@ -192,7 +231,11 @@ class Characters extends React.Component {
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/type2b">
-                    <Card title="2B" className="character type2b" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="2B"
+                      className="character type2b"
+                    />
                   </Link>
                 </GridItem>
               </GridContainer>
@@ -229,7 +272,7 @@ class Characters extends React.Component {
                   {/* <Route path="/taki" component={Taki} /> */}
                   {/* <Route path="/talim" component={Talim} /> */}
                   {/* <Route path="/tira" component={Tira} /> */}
-                  {/* <Route path="/type2B" component={Type2B} /> */}
+                  <Route path="/type2B" component={Type2B} />
                   {/* <Route path="/voldo" component={Voldo} /> */}
                   {/* <Route path="/yoshimitsu" component={Yoshimitsu} /> */}
                   {/* <Route path="/zasalamel" component={Zasalamel} /> */}

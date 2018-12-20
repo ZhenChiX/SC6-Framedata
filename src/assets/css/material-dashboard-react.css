@@ -48,6 +48,11 @@
     color: white;
 }
 
+/* .showMeSticky {
+    position: sticky;
+    top: 20vh;
+} */
+
 * {
     margin: 0;
     padding: 0;
@@ -256,8 +261,8 @@ h3 {
 }
 
 .type2b {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_2b.png"), no-repeat!important;
-    background-size: 100% 100%!important;
+    background-image: url("../img/btn_2b.png") !important;
+
 }
 
 h4 {
@@ -373,7 +378,7 @@ footer ul li a:hover {
         min-height: 85px;
     }
     .characters_name {
-        top: 2vh;
+        top: 0.75em;
     }
     h3 {
         font-size: 1.5em

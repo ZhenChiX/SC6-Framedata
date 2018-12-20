@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131185485-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131185485-1");
+    </script>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -13,7 +27,11 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="g76x76" href="%PUBLIC_URL%/apple-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="g76x76"
+      href="%PUBLIC_URL%/apple-icon.png"
+    />
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css"
@@ -51,7 +69,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-
-  
   </body>
 </html>

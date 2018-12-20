@@ -112,11 +112,10 @@ const styles = {
     justify: "flex-end",
     display: "grid",
     gridTemplateColumns: "9fr 1fr"
+  },
+  infoIcon: {
+    justifySelf: "center",
   }
-  // info: {
-  //   justify: "flex-end",
-  //   alignItems: "flex-end"
-  // }
 };
 
 const tableHeadDetail = [
@@ -4480,7 +4479,9 @@ class Maxi extends Component {
     };
     return (
       <Fragment>
-        <h3 className="characters_name">{this.props.location.pathname.replace(/\//g, '').toUpperCase()}</h3>
+        <h3 className="characters_name">
+          {this.props.location.pathname.replace(/\//g, "").toUpperCase()}
+        </h3>
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <Card>
@@ -4503,7 +4504,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -4560,7 +4561,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -4616,7 +4617,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -4672,7 +4673,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -4731,7 +4732,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -4790,7 +4791,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -4848,7 +4849,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -4906,7 +4907,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -4964,7 +4965,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -5022,7 +5023,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -5079,7 +5080,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -5136,7 +5137,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -5195,7 +5196,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>
@@ -5252,7 +5253,7 @@ class Maxi extends Component {
                   </div>
                   <Info
                     title="More Info"
-                    className={`${classes.cardTitleWhite}`}
+                    className={`${classes.cardTitleWhite} ${classes.infoIcon}`}
                   />
                 </div>
               </CardHeader>

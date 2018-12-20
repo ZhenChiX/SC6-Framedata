@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
@@ -120,188 +120,194 @@ const style = {
 
 function Terminology(props) {
   const { classes } = props;
+  const { location } = props;
   return (
-    <Card>
-      <CardHeader color="primary">
-        <h4 className={classes.cardTitleWhite}>Terminology</h4>
-        <p className={classes.cardCategoryWhite}>
-          Welcome back to the stage of history
-        </p>
-      </CardHeader>
-      <CardBody>
-        <img className={classes.img} src={notation} />
+    <Fragment>
+      <h3 className="characters_name">
+        {location.pathname.replace(/\//g, "").toUpperCase()}
+      </h3>
+      <Card>
+        <CardHeader color="primary">
+          {/* <h4 className={classes.cardTitleWhite}>Welcome back to the stage of histroy</h4> */}
+          <p className={classes.cardCategoryWhite}>
+            Welcome back to the stage of history
+          </p>
+        </CardHeader>
+        <CardBody>
+          <img className={classes.img} src={notation} />
 
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={h} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={h} />
+            </div>
+            <Quote text="High Attack." />
           </div>
-          <Quote text="High Attack." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={m} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={m} />
+            </div>
+            <Quote text="Middle Attack." />
           </div>
-          <Quote text="Middle Attack." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={l} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={l} />
+            </div>
+            <Quote text="Low Attack." />
           </div>
-          <Quote text="Low Attack." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={sm} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={sm} />
+            </div>
+            <Quote text="Special Middle Attack." />
           </div>
-          <Quote text="Special Middle Attack." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={sl} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={sl} />
+            </div>
+            <Quote text="Special Low Attack." />
           </div>
-          <Quote text="Special Low Attack." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={th} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={th} />
+            </div>
+            <Quote text="Throw." />
           </div>
-          <Quote text="Throw." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={at} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={at} />
+            </div>
+            <Quote text="Attack Throw." />
           </div>
-          <Quote text="Attack Throw." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={ua} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={ua} />
+            </div>
+            <Quote text="Unblockable Attack." />
           </div>
-          <Quote text="Unblockable Attack." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={ba} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={ba} />
+            </div>
+            <Quote text="Brave Attack." />
           </div>
-          <Quote text="Brave Attack." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={gi} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={gi} />
+            </div>
+            <Quote text="Guard Impact." />
           </div>
-          <Quote text="Guard Impact." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={ce} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={ce} />
+            </div>
+            <Quote text="Critical Edge." />
           </div>
-          <Quote text="Critical Edge." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={lh} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={lh} />
+            </div>
+            <Quote text="Lethal Hit." />
           </div>
-          <Quote text="Lethal Hit." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={sc} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={sc} />
+            </div>
+            <Quote text="Soul Charge." />
           </div>
-          <Quote text="Soul Charge." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={sg} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={sg} />
+            </div>
+            <Quote text="Soul Gauge." />
           </div>
-          <Quote text="Soul Gauge." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={re} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={re} />
+            </div>
+            <Quote text="Reversal Edge." />
           </div>
-          <Quote text="Reversal Edge." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgNote} src={ss} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgNote} src={ss} />
+            </div>
+            <Quote text="Special Stance." />
           </div>
-          <Quote text="Special Stance." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={a} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={a} />
+            </div>
+            <Quote text="Press the horizontal attack button." />
           </div>
-          <Quote text="Press the horizontal attack button." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={a_h} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={a_h} />
+            </div>
+            <Quote text="Hold the horizontal attack button." />
           </div>
-          <Quote text="Hold the horizontal attack button." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={b} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={b} />
+            </div>
+            <Quote text="Press the vertical attack button." />
           </div>
-          <Quote text="Press the vertical attack button." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={b_h} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={b_h} />
+            </div>
+            <Quote text="Hold the vertical attack button." />
           </div>
-          <Quote text="Hold the vertical attack button." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={k} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={k} />
+            </div>
+            <Quote text="Press the kick button." />
           </div>
-          <Quote text="Press the kick button." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={k_h} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={k_h} />
+            </div>
+            <Quote text="Hold the kick button." />
           </div>
-          <Quote text="Hold the kick button." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={g} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={g} />
+            </div>
+            <Quote text="Press the guard button." />
           </div>
-          <Quote text="Press the guard button." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={g_h} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={g_h} />
+            </div>
+            <Quote text="Hold the guard button." />
           </div>
-          <Quote text="Hold the guard button." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={d4} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={d4} />
+            </div>
+            <Quote text="Input a direction." />
           </div>
-          <Quote text="Input a direction." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={d4_h} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={d4_h} />
+            </div>
+            <Quote text="Hold a direction." />
           </div>
-          <Quote text="Hold a direction." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResizeSM} src={a} />
-            <img className={classes.imgResize} src={b} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResizeSM} src={a} />
+              <img className={classes.imgResize} src={b} />
+            </div>
+            <Quote text="Slide from one input to the next." />
           </div>
-          <Quote text="Slide from one input to the next." />
-        </div>
-        <div className={classes.typo}>
-          <div className={classes.note}>
-            <img className={classes.imgResize} src={d5} />
+          <div className={classes.typo}>
+            <div className={classes.note}>
+              <img className={classes.imgResize} src={d5} />
+            </div>
+            <Quote text="Neutral." />
           </div>
-          <Quote text="Neutral." />
-        </div>
-      </CardBody>
-    </Card>
+        </CardBody>
+      </Card>
+    </Fragment>
   );
 }
 
