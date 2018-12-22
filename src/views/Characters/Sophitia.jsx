@@ -2,6 +2,8 @@ import React, { Fragment, Component } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
+import Popup from "../Popup/Popup.jsx";
+import Modal from "@material-ui/core/Modal";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import Table from "components/Table/Table.jsx";
@@ -9,7 +11,8 @@ import Card from "components/Card/Card.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Hidden from "@material-ui/core/Hidden";
-
+//icon
+import Info from "@material-ui/icons/Info";
 //toggle switch
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -107,7 +110,17 @@ const styles = {
     verticalAlign: "bottom"
   },
   toggleStyle: {
-    justify: "flex-end"
+    justify: "flex-end",
+    display: "grid",
+    gridTemplateColumns: "9fr 1fr"
+  },
+  infoIcon: {
+    margin: "auto"
+  },
+
+  modal: {
+    top: "25vh",
+    left: "10%"
   }
 };
 
@@ -141,7 +154,15 @@ class Sophitia extends Component {
       display: !this.state.display
     });
   };
+  //Handle Modal
 
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
   render() {
     const { classes } = this.props;
 
@@ -4281,6 +4302,20 @@ class Sophitia extends Component {
         <h3 className="characters_name">
           {this.props.location.pathname.replace(/\//g, "").toUpperCase()}
         </h3>
+        <Modal
+          style={styles.modal}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+          open={this.state.open}
+          onClose={this.handleClose}
+        >
+          <Popup
+            text={[
+              "Angel Step = AS",
+              "Twin Angel Step = TAS",
+            ]}
+          />
+        </Modal>
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <Card>
@@ -4291,13 +4326,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4341,13 +4386,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4390,13 +4445,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4439,13 +4504,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4491,13 +4566,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4543,13 +4628,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4593,13 +4688,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4643,13 +4748,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4695,13 +4810,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4745,13 +4870,23 @@ class Sophitia extends Component {
                     classes.cardCategoryWhite
                   }`}
                 >
-                  <span>Simple</span>
-                  <Switch
-                    checked={this.state.checked}
-                    onClick={this.toggleTableData}
-                    color="primary"
-                  />
-                  <span>Detail</span>
+                  <div>
+                    <span>Simple</span>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>

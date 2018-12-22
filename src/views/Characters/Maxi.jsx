@@ -4,7 +4,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 // core components
 import Popup from "../Popup/Popup.jsx";
 import Modal from "@material-ui/core/Modal";
-// import Grid from '@material-ui/core/Grid';
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import Table from "components/Table/Table.jsx";
@@ -4898,7 +4897,6 @@ class Maxi extends Component {
                 >
                   <div>
                     <span>Simple</span>
-
                     <Switch
                       checked={this.state.checked}
                       onClick={this.toggleTableData}

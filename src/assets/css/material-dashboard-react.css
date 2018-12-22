@@ -49,7 +49,9 @@
 }
 
 .infoIcon {
-    /* margin: auto; */
+    margin:0 auto;
+    width:24px;
+    height:24px;
 }
 
 .infoIcon:hover {
