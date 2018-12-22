@@ -48,10 +48,13 @@
     color: white;
 }
 
-/* .showMeSticky {
-    position: sticky;
-    top: 20vh;
-} */
+.infoIcon {
+    /* margin: auto; */
+}
+
+.infoIcon:hover {
+    cursor: pointer;
+}
 
 * {
     margin: 0;
@@ -262,7 +265,6 @@ h3 {
 
 .type2b {
     background-image: url("../img/btn_2b.png") !important;
-
 }
 
 h4 {
