@@ -2,6 +2,8 @@ import React, { Fragment, Component } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
+import Popup from "../Popup/Popup.jsx";
+import Modal from "@material-ui/core/Modal";
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import Table from "components/Table/Table.jsx";
@@ -10,6 +12,8 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Hidden from "@material-ui/core/Hidden";
 
+//icon
+import Info from "@material-ui/icons/Info";
 //toggle switch
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
@@ -106,7 +110,17 @@ const styles = {
     verticalAlign: "bottom"
   },
   toggleStyle: {
-    justify: "flex-end"
+    justify: "flex-end",
+    display: "grid",
+    gridTemplateColumns: "9fr 1fr"
+  },
+  infoIcon: {
+    justifySelf: "center"
+  },
+
+  modal: {
+    top: "25vh",
+    left: "10%"
   }
 };
 
@@ -139,6 +153,15 @@ class Geralt extends Component {
       tableHeadData: tableHeadData,
       display: !this.state.display
     });
+  };
+  //Handle Modal
+
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
   };
 
   render() {
@@ -3576,406 +3599,507 @@ class Geralt extends Component {
 
     return (
       <Fragment>
-            <h3 className="characters_name">{this.props.location.pathname.replace(/\//g, '').toUpperCase()}</h3>
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Horizontal Attacks</h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.verticalAttacks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.verticalAttacks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+        <h3 className="characters_name">
+          {this.props.location.pathname.replace(/\//g, "").toUpperCase()}
+        </h3>
+        <Modal
+          style={styles.modal}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+          open={this.state.open}
+          onClose={this.handleClose}
+        >
+          <Popup text={["QR = Quen Rush"]} />
+        </Modal>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Horizontal Attacks</h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Vertical Attacks</h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.horizontalAttacks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.horizontalAttacks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Kick Attacks </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.kicks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.kicks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Dual Button Attacks </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.dualButtonAttacks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.dualButtonAttacks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.verticalAttacks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.verticalAttacks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>8-Way Run Moves </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.eightwayrunAttack.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.eightwayrunAttack.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Vertical Attacks</h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Throws </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.throws.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.throws.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.horizontalAttacks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.horizontalAttacks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Kick Attacks </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Reversal Edge Attacks </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.reversalEdge.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.reversalEdge.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.kicks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.kicks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Dual Button Attacks </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
 
-        <GridItem xs={12} sm={12} md={12}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Gauge Attacks </h4>
-              <div
-                className={`${classes.toggleStyle} ${
-                  classes.cardCategoryWhite
-                }`}
-              >
-                <span>Simple</span>
-                <Switch
-                  checked={this.state.checked}
-                  onClick={this.toggleTableData}
-                  color="primary"
-                />
-                <span>Detail</span>
-              </div>
-            </CardHeader>
-            <CardBody>
-              {this.state.display ? (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.gaugeAttacks.map(data => [
-                    data.command,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              ) : (
-                <Table
-                  tableHeaderColor="primary"
-                  tableHead={this.state.tableHeadData}
-                  tableData={geraltFrameData.gaugeAttacks.map(data => [
-                    data.move,
-                    data.impact,
-                    data.onBlock,
-                    data.onHit,
-                    data.counterHit,
-                    data.note
-                  ])}
-                />
-              )}
-            </CardBody>
-          </Card>
-        </GridItem>
-      </GridContainer>
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.dualButtonAttacks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.dualButtonAttacks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>8-Way Run Moves </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.eightwayrunAttack.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.eightwayrunAttack.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Throws </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.throws.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.throws.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>
+                  Reversal Edge Attacks{" "}
+                </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.reversalEdge.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.reversalEdge.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+
+          <GridItem xs={12} sm={12} md={12}>
+            <Card>
+              <CardHeader color="primary">
+                <h4 className={classes.cardTitleWhite}>Gauge Attacks </h4>
+                <div
+                  className={`${classes.toggleStyle} ${
+                    classes.cardCategoryWhite
+                  }`}
+                >
+                  <div>
+                    <span>Simple</span>
+
+                    <Switch
+                      checked={this.state.checked}
+                      onClick={this.toggleTableData}
+                      color="primary"
+                    />
+                    <span>Detail</span>
+                  </div>
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardBody>
+                {this.state.display ? (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.gaugeAttacks.map(data => [
+                      data.command,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                ) : (
+                  <Table
+                    tableHeaderColor="primary"
+                    tableHead={this.state.tableHeadData}
+                    tableData={geraltFrameData.gaugeAttacks.map(data => [
+                      data.move,
+                      data.impact,
+                      data.onBlock,
+                      data.onHit,
+                      data.counterHit,
+                      data.note
+                    ])}
+                  />
+                )}
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
       </Fragment>
     );
   }
