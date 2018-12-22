@@ -1,6 +1,6 @@
 ## SoulCalibur VI FrameData
 
-`Work in progres`
+`Work in progress`
 
 
 `Add v1.10 2B's Data`
