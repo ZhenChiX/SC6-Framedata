@@ -21,20 +21,20 @@ const headerStyle = theme => ({
     zIndex: "1029",
     color: "#FFFFFF",
     border: "0",
-    borderRadius: "3px",
+    borderRadius: "0px",
     padding: "10px 0",
     transition: "all 150ms ease 0s",
-    minHeight: "50px",
+    minheight: "50px",
     display: "block",
     "@media(max-width: 991px)": {
-      minHeight:"30px"
+      minheight:"30px"
     }
   },
   container: {
     ...container,
     minHeight: "50px",
     "@media(max-width: 991px)": {
-      minHeight: "30px"
+      minheight: "30px"
     }
   },
   flex: {

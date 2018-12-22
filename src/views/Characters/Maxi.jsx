@@ -2,6 +2,8 @@ import React, { Fragment, Component } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
+import Popup from "../Popup/Popup.jsx";
+import Modal from "@material-ui/core/Modal";
 // import Grid from '@material-ui/core/Grid';
 import GridItem from "components/Grid/GridItem.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
@@ -112,11 +114,15 @@ const styles = {
     justify: "flex-end",
     display: "grid",
     gridTemplateColumns: "9fr 1fr"
+  },
+  infoIcon: {
+    justifySelf: "center"
+  },
+
+  modal: {
+    top: "25vh",
+    left: "10%"
   }
-  // info: {
-  //   justify: "flex-end",
-  //   alignItems: "flex-end"
-  // }
 };
 
 const tableHeadDetail = [
@@ -152,6 +158,15 @@ class Maxi extends Component {
     });
   };
 
+  //Handle Modal
+
+  handleOpen = () => {
+    this.setState({ open: true });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
   render() {
     const { classes } = this.props;
 
@@ -4480,7 +4495,28 @@ class Maxi extends Component {
     };
     return (
       <Fragment>
-        <h3 className="characters_name">{this.props.location.pathname.replace(/\//g, '').toUpperCase()}</h3>
+        <h3 className="characters_name">
+          {this.props.location.pathname.replace(/\//g, "").toUpperCase()}
+        </h3>
+        <Modal
+          style={styles.modal}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+          open={this.state.open}
+          onClose={this.handleClose}
+        >
+          <Popup
+            text={[
+              "Left Outer(巨門) = LO",
+              "Left Inner(祿存) = LI",
+              "Right Cross(文曲) = RC",
+              "Right Outer(天樞) = RO",
+              "Behind Lower(玉衡) = BL",
+              "Wavering Light(破軍) = WL",
+              "Seven Stars Rebirth(七星轉生) =7SR"
+            ]}
+          />
+        </Modal>
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <Card>
@@ -4501,10 +4537,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4558,10 +4598,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4614,10 +4658,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4670,10 +4718,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4729,10 +4781,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4788,10 +4844,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4846,10 +4906,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4904,10 +4968,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -4962,10 +5030,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -5020,10 +5092,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -5077,10 +5153,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -5134,10 +5214,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -5193,10 +5277,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>
@@ -5250,10 +5338,14 @@ class Maxi extends Component {
                     />
                     <span>Detail</span>
                   </div>
-                  <Info
-                    title="More Info"
-                    className={`${classes.cardTitleWhite}`}
-                  />
+                  <div title="More Info" className="infoIcon">
+                    <Info
+                      onClick={this.handleOpen}
+                      className={`${classes.cardTitleWhite} ${
+                        classes.infoIcon
+                      }`}
+                    />
+                  </div>
                 </div>
               </CardHeader>
               <CardBody>

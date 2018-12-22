@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -13,41 +13,47 @@ import tableStyle from "assets/jss/material-dashboard-react/components/tableStyl
 function CustomTable({ ...props }) {
   const { classes, tableHead, tableData, tableHeaderColor } = props;
   return (
-    <div className={classes.tableResponsive}>
-      <Table className={classes.table}>
-        {tableHead !== undefined ? (
-          <TableHead className={classes[tableHeaderColor + "TableHeader"]}>
-            <TableRow>
-              {tableHead.map((prop, key) => {
-                return (
-                  <TableCell
-                    className={classes.tableCell + " " + classes.tableHeadCell}
-                    key={key}
-                  >
-                    {prop}
-                  </TableCell>
-                );
-              })}
-            </TableRow>
-          </TableHead>
-        ) : null}
-        <TableBody>
-          {tableData.map((prop, key) => {
-            return (
-              <TableRow key={key}>
-                {prop.map((prop, key) => {
+    <Fragment>
+      <div className={classes.tableResponsive}>
+        <Table className={classes.table}>
+          {tableHead !== undefined ? (
+            <TableHead
+              className={`${classes[tableHeaderColor + "TableHeader"]} `}
+            >
+              <TableRow>
+                {tableHead.map((prop, key) => {
                   return (
-                    <TableCell className={classes.tableCell} key={key}>
+                    <TableCell
+                      className={
+                        classes.tableCell + " " + classes.tableHeadCell
+                      }
+                      key={key}
+                    >
                       {prop}
                     </TableCell>
                   );
                 })}
               </TableRow>
-            );
-          })}
-        </TableBody>
-      </Table>
-    </div>
+            </TableHead>
+          ) : null}
+          <TableBody>
+            {tableData.map((prop, key) => {
+              return (
+                <TableRow key={key}>
+                  {prop.map((prop, key) => {
+                    return (
+                      <TableCell className={classes.tableCell} key={key}>
+                        {prop}
+                      </TableCell>
+                    );
+                  })}
+                </TableRow>
+              );
+            })}
+          </TableBody>
+        </Table>
+      </div>
+    </Fragment>
   );
 }
 
