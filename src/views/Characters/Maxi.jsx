@@ -2,6 +2,8 @@ import React, { Fragment, Component } from "react";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // core components
+import ReactPlayer from "react-player";
+import Lightbox from "react-images";
 import Popup from "../Popup/Popup.jsx";
 import Modal from "@material-ui/core/Modal";
 import GridItem from "components/Grid/GridItem.jsx";
@@ -12,6 +14,8 @@ import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Hidden from "@material-ui/core/Hidden";
 
+
+
 //icon
 import Info from "@material-ui/icons/Info";
 //toggle switch
@@ -19,6 +23,10 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Switch from "@material-ui/core/Switch";
 import Grid from "@material-ui/core/Grid";
+
+//Video Source
+import ssr1 from "../../assets/media/ssr1.mp4"
+import ssr2 from "../../assets/media/ssr2.mp4"
 // notation img
 import n_a from "../../assets/img/a.png";
 import n_a_h from "../../assets/img/a-hold.png";
@@ -63,6 +71,7 @@ import n_sg from "../../assets/img/sg.png";
 import n_ss from "../../assets/img/ss.png";
 import n_th from "../../assets/img/th.png";
 import n_ua from "../../assets/img/ua.png";
+import { Divider } from "@material-ui/core";
 
 const styles = {
   cardCategoryWhite: {
@@ -119,8 +128,9 @@ const styles = {
   },
 
   modal: {
-    top: "25vh",
-    left: "10%"
+    top: "15vh",
+    left: "10%",
+    overflow:"auto"
   }
 };
 
@@ -144,7 +154,6 @@ class Maxi extends Component {
       tableHeadData: tableHeadDetail
     };
   }
-
   toggleTableData = () => {
     const tableHeadData =
       this.state.tableHeadData === tableHeadDetail
@@ -166,6 +175,8 @@ class Maxi extends Component {
   handleClose = () => {
     this.setState({ open: false });
   };
+  //Image Gallery
+
   render() {
     const { classes } = this.props;
 
@@ -4503,19 +4514,34 @@ class Maxi extends Component {
           aria-describedby="simple-modal-description"
           open={this.state.open}
           onClose={this.handleClose}
+      
         >
-          <Popup
-            text={[
-              "Left Outer(巨門) = LO",
-              "Left Inner(祿存) = LI",
-              "Right Cross(文曲) = RC",
-              "Right Outer(天樞) = RO",
-              "Behind Lower(玉衡) = BL",
-              "Wavering Light(破軍) = WL",
-              "Seven Stars Rebirth(七星轉生) =7SR"
-            ]}
-          />
+          <Fragment>
+            <Popup
+              text={[
+                "Left Outer(巨門) = LO",
+                "Left Inner(祿存) = LI",
+                "Right Cross(文曲) = RC",
+                "Right Outer(天樞) = RO",
+                "Behind Lower(玉衡) = BL",
+                "Wavering Light(破軍) = WL",
+                "Seven Stars Rebirth(七星轉生) =7SR",
+                <Divider />,
+                <h5>7SR Showcase</h5>,
+                <ReactPlayer
+                  url={ssr1}
+                  width="100%"
+                  height="100%"
+                  controls="true"
+                />,
+                <video width="100%" height="100%" controls>
+                 <source src={ssr2} type="video/mp4"/>
+                </video>
+              ]}
+            />
+          </Fragment>
         </Modal>
+
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
             <Card>

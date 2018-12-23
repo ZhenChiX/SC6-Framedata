@@ -3,7 +3,6 @@
   "version": "0.5.0",
   "description": "SoulCaliburVI-Framedata",
   "private": false,
- 
   "dependencies": {
     "@material-ui/core": "3.1.0",
     "@material-ui/icons": "3.0.1",
@@ -19,13 +18,15 @@
     "react-chartist": "0.13.1",
     "react-dom": "16.5.2",
     "react-google-maps": "9.4.5",
+    "react-image-gallery": "^0.8.12",
+    "react-images": "^0.5.19",
+    "react-player": "^1.8.0",
     "react-router-dom": "4.3.1",
     "react-scripts": "^2.1.1",
     "react-sticky": "^6.0.3",
     "react-swipeable-views": "0.12.17"
   },
   "scripts": {
-   
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
