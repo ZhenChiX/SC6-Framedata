@@ -2,6 +2,7 @@
 
 `Work in progress`
 
+`Add PWA(Progressive Web App) Feature`
 
 `Add v1.10 2B's Data`
 
