@@ -1,6 +1,7 @@
 ## SoulCalibur VI FrameData
-
+[SoulCalibur VI FrameData](https://www.guardimpact.net) -- A simple tool for better understand and improve your game plan 
 ### Work in progress
+#### Dec.24.2018
 
 - [ ] Add PWA(Progressive Web App) Feature
 
