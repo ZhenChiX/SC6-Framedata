@@ -2506,8 +2506,8 @@ class Type2B extends Component {
               {sl}
             </Fragment>
           ],
-          onBlock: "-10",
-          onHit: "",
+          onBlock: "-8",
+          onHit: "+10",
           counterHit: "",
           note: [
             <Fragment>
@@ -5690,8 +5690,8 @@ class Type2B extends Component {
               {sl}
             </Fragment>
           ],
-          onBlock: "-10",
-          onHit: "",
+          onBlock: "-8",
+          onHit: "+10",
           counterHit: "",
           note: [
             <Fragment>

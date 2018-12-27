@@ -6,7 +6,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardBody from "components/Card/CardBody.jsx";
 import Card from "components/Card/Card.jsx";
-import { CardContent } from "@material-ui/core";
+import { CardContent, Divider } from "@material-ui/core";
 import GridItem from "components/Grid/GridItem.jsx";
 
 function Popup(props) {
@@ -14,8 +14,7 @@ function Popup(props) {
   //   console.log(props);
   return (
     <Fragment>
-      <GridItem xs={10} sm={6} md={5} lg={4}>
-        {/* <GridItem> */}
+      <GridItem xs={11} sm={6} md={5} lg={4}>
         <Card>
           <CardContent>
             {text.map((data, key) => {

@@ -12,7 +12,7 @@ const dashboardRoutes = [
     icon: Dashboard,
     component: Characters
   },
- 
+
   {
     path: "/terminology",
     sidebarName: "Terminology",
@@ -20,8 +20,8 @@ const dashboardRoutes = [
     icon: Gamepad,
     component: Terminology
   },
- 
-  { redirect: true, path: "/", to: "characters", navbarName: "Redirect" }
+
+  { redirect: true, path: "/", to: "/characters", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;
