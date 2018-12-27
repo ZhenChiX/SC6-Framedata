@@ -56,7 +56,8 @@ class Characters extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHidden: true
+      isHidden: true,
+      display: false
     };
   }
   onClickHidden = () => {
@@ -68,6 +69,11 @@ class Characters extends React.Component {
   componentDidMount = () => {
     window.onpopstate = this.setState({ isHidden: true });
     window.onpopstate = this.onClickHidden;
+    // window.onpopstate = function(e) {
+    //   this.history.go(1);
+    // };
+    window.onpopstate = () => window.history.go(1);
+
     // ghetto spaghetti code but it works
   };
 
@@ -90,7 +96,7 @@ class Characters extends React.Component {
       <Router history={hist}>
         <Fragment>
           {this.state.isHidden ? (
-            <Fragment>
+            <Fragment display={this.state.display}>
               <h3 className="characters_name">
                 {this.props.location.pathname.replace(/\//g, "").toUpperCase()}
               </h3>
