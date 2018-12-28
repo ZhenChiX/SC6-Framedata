@@ -2590,17 +2590,42 @@ class Zasalamel extends Component {
               <p>Cancel with G</p>
             </Fragment>
           ]
+        },
+        {
+          id: 94,
+          command: "Run K",
+          move: [
+            <Fragment>
+              <p>Urshanabi's Crossing</p>
+              <span>Run</span>
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-22",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              <p>TC / TJ </p>
+            </Fragment>
+          ]
         }
       ],
 
       //throws start here
       throws: [
         {
-          id: 128,
+          id: 95,
           command: "A+G",
           move: [
             <Fragment>
-              <p>Suppression: Slash Kick</p>
+              <p>Ereshkigal the Ruthless</p>
               {a}
               {plus}
               {g}
@@ -2619,11 +2644,11 @@ class Zasalamel extends Component {
         },
 
         {
-          id: 129,
+          id: 96,
           command: "4A+G",
           move: [
             <Fragment>
-              <p>Suppression: Impaling Slash</p>
+              <p>Kingu the Sly Lord</p>
               {d4}
               {a}
               {plus}
@@ -2643,11 +2668,11 @@ class Zasalamel extends Component {
         },
 
         {
-          id: 130,
-          command: "Right Throw ~ BL",
+          id: 97,
+          command: "Right Throw",
           move: [
             <Fragment>
-              <p>Suppression: Support Thrust</p>
+              <p>Apsu the Origin</p>
               <p>Right Side Throw</p>
             </Fragment>
           ],
@@ -2663,11 +2688,11 @@ class Zasalamel extends Component {
           note: [<Fragment>{th}</Fragment>]
         },
         {
-          id: 131,
+          id: 98,
           command: "Left Throw",
           move: [
             <Fragment>
-              <p>Suppresion: Reversed Projectile Blade</p>
+              <p>Ea of the Abys</p>
               <p>Left Side Throw</p>
             </Fragment>
           ],
@@ -2683,11 +2708,11 @@ class Zasalamel extends Component {
           note: [<Fragment>{th}</Fragment>]
         },
         {
-          id: 132,
+          id: 99,
           command: "Back Throw",
           move: [
             <Fragment>
-              <p>Suppression: Multistrike Protocol</p>
+              <p>Marduk the Tempest</p>
               <p>Back Throw</p>
             </Fragment>
           ],
@@ -2700,97 +2725,147 @@ class Zasalamel extends Component {
           onBlock: "KND",
           onHit: "KND",
           counterHit: "KND",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 100,
+          command: "6A+G",
+          move: [
+            <Fragment>
+              <p>Nergal's Bloodthirst</p>
+              {d6}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "+6",
+          counterHit: "+6",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 101,
+          command: "6A+G A*2A",
+          move: [
+            <Fragment>
+              <p>Judgement of Nergal</p>
+              {d6}
+              {a}
+              {plus}
+              {g}
+              {a}
+              <span> * </span>
+              {d2}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "+4",
+          counterHit: "+4",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 102,
+          command: "6A+G B",
+          move: [
+            <Fragment>
+              <p>Roar of Nergal</p>
+              {d6}
+              {a}
+              {plus}
+              {g}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 103,
+          command: "6A+G K",
+          move: [
+            <Fragment>
+              <p>Uridmmu's Howl</p>
+              {d6}
+              {a}
+              {plus}
+              {g}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "+4",
+          counterHit: "+4",
+          note: [<Fragment>{th}</Fragment>]
+        },
+        {
+          id: 104,
+          command: "SC A+G",
+          move: [
+            <Fragment>
+              <p>Fatal Gravity</p>
+              {sc}
+              {a}
+              {plus}
+              {g}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
           note: [
             <Fragment>
+              {sc}
               {th}
-              <p>Deal 80 Damages when press A/B/K at exact timing</p>
             </Fragment>
           ]
-        },
-        {
-          id: 133,
-          command: "33*66*99A+G",
-          move: [
-            <Fragment>
-              <p>Supperssion: Unarmed Leg Throw</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{th}</Fragment>]
-        },
-        {
-          id: 134,
-          command: "AGS ~ A+G",
-          move: [
-            <Fragment>
-              <p>Supperssion: Composite Kick</p>
-              <span>Aggression Shift</span>
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{th}</Fragment>]
-        },
-        {
-          id: 135,
-          command: "AGS ~ 4A+G",
-          move: [
-            <Fragment>
-              <p>Supperssion: Composite Slash</p>
-              <span>Aggression Shift</span>
-              {d4}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{th}</Fragment>]
         }
       ],
 
       // reversal edge start here
       reversalEdge: [
         {
-          id: 136,
+          id: 105,
           command: "B+G",
           move: [
             <Fragment>
-              <p>Soul Stance: Aggresive Defense</p>
+              <p>Ereshkigal's Embrace</p>
               {b}
               {plus}
               {g}
@@ -2800,20 +2875,21 @@ class Zasalamel extends Component {
             <Fragment>
               <p />
               {m}
+              {m}
             </Fragment>
           ],
-          onBlock: "-10",
+          onBlock: "+2",
           onHit: "",
           counterHit: "",
           note: [<Fragment>{re}</Fragment>]
         },
 
         {
-          id: 137,
+          id: 106,
           command: "[B+G]",
           move: [
             <Fragment>
-              <p>Soul Stance: Aggressive Defense</p>
+              <p>Ereshkigal's Embrace(Hold)</p>
               {b_h}
               {plus}
               {g_h}
@@ -2822,6 +2898,7 @@ class Zasalamel extends Component {
           impact: [
             <Fragment>
               <p />
+              {m}
               {m}
             </Fragment>
           ],
@@ -2835,131 +2912,14 @@ class Zasalamel extends Component {
             </Fragment>
           ]
         },
+
         {
-          id: 138,
-          command: "RE A6 ~ AGS",
+          id: 107,
+          command: "RE A",
           move: [
             <Fragment>
-              <p>Inverted Support ~ Aggression Shift</p>
+              <p>Namtar's Execution Spike</p>
               {re}
-              {a}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-              {lh}
-              <p>Lethal hit on 2nd phrase</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 139,
-          command: "RE A6 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Inverted Support ~ Aggression Shift</p>
-              {re}
-              {a}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-              {lh}
-              <p>Lethal hit on 2nd phrase</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 140,
-          command: "RE A4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Inverted Support ~ Back Step ~ Aggression Shift</p>
-              {re}
-              {a}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Back Step to Aggression Shift</p>
-              {lh}
-              <p>Lethal hit on 2nd phrase</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 141,
-          command: "RE A8 ~ AL",
-          move: [
-            <Fragment>
-              <p>Inverted Support ~ Aerial Leap</p>
-              {re}
-              {a}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-              {lh}
-              <p>Lethal hit on 2nd phrase</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 142,
-          command: "RE AAA",
-          move: [
-            <Fragment>
-              <p>Inverted Support</p>
-              {re}
-              {a}
-              {a}
               {a}
             </Fragment>
           ],
@@ -2968,9 +2928,6 @@ class Zasalamel extends Component {
               <p />
               {h}
               {h}
-              {h}
-              {m}
-              {m}
             </Fragment>
           ],
           onBlock: "",
@@ -2985,43 +2942,11 @@ class Zasalamel extends Component {
         },
 
         {
-          id: 143,
-          command: "RE AB",
-          move: [
-            <Fragment>
-              <p>Inverted Assault Volley</p>
-              {re}
-              {a}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Lethal hit on 2nd phrase</p>
-            </Fragment>
-          ]
-        },
-
-        {
-          id: 144,
+          id: 108,
           command: "RE B",
           move: [
             <Fragment>
-              <p>Inverted Skewer Sequence</p>
+              <p>Ugallu's Threat</p>
               {re}
               {b}
             </Fragment>
@@ -3030,12 +2955,11 @@ class Zasalamel extends Component {
             <Fragment>
               <p />
               {m}
-              {m}
             </Fragment>
           ],
           onBlock: "",
-          onHit: "",
-          counterHit: "",
+          onHit: "+10",
+          counterHit: "+10",
           note: [
             <Fragment>
               {lh}
@@ -3044,20 +2968,21 @@ class Zasalamel extends Component {
           ]
         },
         {
-          id: 145,
-          command: "RE [B]",
+          id: 109,
+          command: "RE BB ~ TS",
           move: [
             <Fragment>
-              <p>Inverted Skewer Augmented</p>
+              <p>Ugallu's Ingress</p>
               {re}
-              {b_h}
+              {b}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p />
               {m}
-              {m}
+              {sm}
             </Fragment>
           ],
           onBlock: "",
@@ -3065,6 +2990,8 @@ class Zasalamel extends Component {
           counterHit: "",
           note: [
             <Fragment>
+              {ss}
+              <p>Curses spender</p>
               {lh}
               <p>Lethal hit on 2nd phrase</p>
             </Fragment>
@@ -3072,11 +2999,11 @@ class Zasalamel extends Component {
         },
 
         {
-          id: 146,
+          id: 110,
           command: "RE K ~ AL",
           move: [
             <Fragment>
-              <p>Inveted Orbit Strike ~ Aerial Leap</p>
+              <p>Feral Hound Uridimmu</p>
               {re}
               {k}
             </Fragment>
@@ -3088,20 +3015,19 @@ class Zasalamel extends Component {
             </Fragment>
           ],
           onBlock: "",
-          onHit: "",
-          counterHit: "",
+          onHit: "+12",
+          counterHit: "+12",
           note: [
             <Fragment>
-              {ss}
-              <p>To Aerical Leap</p>
               {lh}
-              <p>{th}Lethal hit on 2nd phrase</p>
+              <p>Lethal hit on 2nd phrase</p>
+              <p>Curses opponent upon hit or guard</p>
             </Fragment>
           ]
         },
 
         {
-          id: 147,
+          id: 111,
           command: "RE 6",
           move: [
             <Fragment>
@@ -3127,7 +3053,7 @@ class Zasalamel extends Component {
           ]
         },
         {
-          id: 148,
+          id: 112,
           command: "RE 2*8",
           move: [
             <Fragment>
@@ -3155,7 +3081,7 @@ class Zasalamel extends Component {
           ]
         },
         {
-          id: 149,
+          id: 113,
           command: "RE 4",
           move: [
             <Fragment>
@@ -3181,7 +3107,7 @@ class Zasalamel extends Component {
           ]
         },
         {
-          id: 150,
+          id: 114,
           command: "RE G",
           move: [
             <Fragment>
@@ -3205,11 +3131,11 @@ class Zasalamel extends Component {
       // gauge attacks start here
       gaugeAttacks: [
         {
-          id: 151,
+          id: 115,
           command: "A+B+K",
           move: [
             <Fragment>
-              <p>Suppression: Extermination Gambit</p>
+              <p>The Voice from the Abyss</p>
               {a}
               {plus}
               {b}
@@ -3219,121 +3145,27 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
+              <p>34F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-16",
+          onBlock: "+8",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
               {sg}
               {ce}
-              {at}
+              {gi}
+              {ba}
+              <p>GI High/Mid/Low attacks</p>
+              <p>Curses opponent upon hit or guard</p>
             </Fragment>
           ]
         },
+
         {
-          id: 152,
-          command: "AL ~ A+B+K",
-          move: [
-            <Fragment>
-              <p>Suppression: Extermination Gambit</p>
-              <span>Aerial Leap</span>
-              {a}
-              {plus}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sg}
-              {ce}
-              {at}
-            </Fragment>
-          ]
-        },
-        {
-          id: 153,
-          command: "AL ~ AAA+B+K",
-          move: [
-            <Fragment>
-              <p>Suppression: Extermination Gambit</p>
-              <span>Aerial Leap</span>
-              {a}
-              {a}
-              {a}
-              {plus}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {h}
-              {h}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sg}
-              {ce}
-              {at}
-            </Fragment>
-          ]
-        },
-        {
-          id: 154,
-          command: "6A+B+K",
-          move: [
-            <Fragment>
-              <p>Limiter Release: Self-Destruct</p>
-              {d6}
-              {a}
-              {plus}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>36F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-32",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sg}
-              {ce}
-              {at}
-              <p>Can be used at low health / Costs health</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 155,
+          id: 116,
           command: "4A+B+K",
           move: [
             <Fragment>
@@ -3362,851 +3194,160 @@ class Zasalamel extends Component {
             </Fragment>
           ]
         },
+
         {
-          id: 156,
-          command: "SC AAAA",
+          id: 117,
+          command: "SC 3AKB",
           move: [
             <Fragment>
-              <p>Slash Squence: Charged Blade</p>
+              <p>Ode to Humbaba</p>
               {sc}
+              {d3}
               {a}
-              {a}
-              {a}
-              {a}
+              {k}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>12F</p>
-              {h}
-              {h}
-              {h}
-              {h}
-              {h}
+              <p>16F</p>
+              {m}
               {h}
               {m}
             </Fragment>
           ],
-          onBlock: "+4",
+          onBlock: "-12",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+
+        {
+          id: 118,
+          command: "SC 1AB",
+          move: [
+            <Fragment>
+              <p>Ceremonial Sacrifice</p>
+              {sc}
+              {d1}
+              {a}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {l}
+              {h}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-2",
+          onHit: "+4",
+          counterHit: "+4",
+          note: [<Fragment>{sc}</Fragment>]
+        },
+        {
+          id: 119,
+          command: "SC A+B",
+          move: [
+            <Fragment>
+              <p>Void Nova</p>
+              {sc}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>36F</p>
+              {sm}
+              {sm}
+              {sm}
+              {sm}
+              {sm}
+              {sm}
+            </Fragment>
+          ],
+          onBlock: "+6",
+          onHit: "+10",
+          counterHit: "+10",
+          note: [
+            <Fragment>
+              {sc}
+              {ba}
+              {lh}
+              <p>Triggers against GI</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 120,
+          command: "SC 2A+B",
+          move: [
+            <Fragment>
+              <p>Temple of Eternity</p>
+              {sc}
+              {d2}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>30F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+2",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
               {sc}
               {ba}
+              {at}
             </Fragment>
           ]
         },
 
         {
-          id: 157,
-          command: "SC 3AKK ~ AL",
+          id: 121,
+          command: "SC 22*88BBB",
           move: [
             <Fragment>
-              <p>Revolving Strike(First Class) ~ Aerial Leap</p>
-              {sc}
-              {d3}
-              {a}
-              {k}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {h}
-              {h}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-37",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              {sc}
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 157,
-          command: "SC BBBB ~ AL",
-          move: [
-            <Fragment>
-              <p>Severing Sequence(First Class) ~ Aerial Leap</p>
-              {sc}
-              {b}
-              {b}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-41",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              {sc}
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-
-        {
-          id: 158,
-          command: "SC 4BBB",
-          move: [
-            <Fragment>
-              <p>Assault Pattern: Charged Gatling</p>
-              {sc}
-              {d4}
-              {b}
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {m}
-              {m}
-              {m}
-              {sm}
-              {sm}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "+4",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [<Fragment>{sc}</Fragment>]
-        },
-        {
-          id: 159,
-          command: "SC 22*88AAA",
-          move: [
-            <Fragment>
-              <p>Mobilize: Spear Spin(First Class)</p>
+              <p>Ishtar's Return</p>
               {sc}
               {d2_h}
               <span> * </span>
               {d8_h}
-              {a}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{sc}</Fragment>]
-        },
-        {
-          id: 160,
-          command: "SC 33*66*99BB",
-          move: [
-            <Fragment>
-              <p>Mobilize: Piercing Assualt(First Class)</p>
-              {sc}
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
+              {b}
               {b}
               {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
+              <p>22F</p>
               {m}
               {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{sc}</Fragment>]
-        },
-
-        {
-          id: 161,
-          command: "SC AGS A",
-          move: [
-            <Fragment>
-              <p>Shifted Slice: Charged Blade</p>
-              {sc}
-              <span>Aggression Shift</span>
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-3",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sc}
-              <p>TC</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 162,
-          command: "SC AGS A6 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Shifted Slice: Charged Blade ~ Aggression Shift</p>
-              {sc}
-              <span>Aggression Shift</span>
-              {a}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "0",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sc}
-              {ss}
-              <p>To Aggression Shift</p>
-              <p>TC</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 163,
-          command: "SC AGS A4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Shifted Slice: Charged Blade ~ Back Step ~ Aggression Shift</p>
-              {sc}
-              <span>Aggression Shift</span>
-              {a}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sc}
-              {ss}
-              <p>Back Step to Aggression Shift</p>
-              <p>TC</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 164,
-          command: "SC AGS A8 ~ AL",
-          move: [
-            <Fragment>
-              <p>Shifted Slice: Charged Blade ~ Aerial Leap</p>
-              {sc}
-              <span>Aggression Shift</span>
-              {a}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {sc}
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 165,
-          command: "SC AGS BB ~ AL",
-          move: [
-            <Fragment>
-              <p>Shifted Support Kick ~ Aerial Leap: Charged Spear</p>
-              {sc}
-              <span>Aggression Shift</span>
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-              {sm}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              {sc}
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 166,
-          command: "SC AL AAA",
-          move: [
-            <Fragment>
-              <p>Airborne Slash Pattern: Charged Laser</p>
-              {sc}
-              <span>Aerial Leap</span>
-              {a}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
               {h}
-              {h}
-              {h}
-              {h}
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [<Fragment>{sc}</Fragment>]
-        },
-        {
-          id: 167,
-          command: "SC AL B",
-          move: [
-            <Fragment>
-              <p>Airborne Slash Cleave: Charged Spear</p>
-              {sc}
-              <span>Aerial Leap</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {m}
-              {m}
-              {m}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [<Fragment>{sc}</Fragment>]
-        }
-      ],
-      // special stance start here
-      aggressionShift: [
-        {
-          id: 168,
-          command: "236",
-          move: [
-            <Fragment>
-              <p>Aggression Shift</p>
-              {d2}
-              {d3}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 169,
-          command: "214",
-          move: [
-            <Fragment>
-              <p>Back Step ~ Aggression Shift</p>
-              {d2}
-              {d1}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Back Step to Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 170,
-          command: "AGS A",
-          move: [
-            <Fragment>
-              <p>Shifted Slice</p>
-              <span>Aggression Shift</span>
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "-2",
-          counterHit: "+2",
-          note: [<Fragment />]
-        },
-        {
-          id: 171,
-          command: "AGS A6 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Shifted Slice ~ Aggression Shift</p>
-              <span>Aggression Shift</span>
-              {a}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-3",
-          onHit: "+6",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 171,
-          command: "AGS A4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Shifted Slice ~ Back Step~ Aggression Shift</p>
-              <span>Aggression Shift</span>
-              {a}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Back Step to Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 172,
-          command: "AGS A8 ~ AL",
-          move: [
-            <Fragment>
-              <p>Shifted Slice ~ Aerial Leap</p>
-              <span>Aggression Shift</span>
-              {a}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 173,
-          command: "AGS BA",
-          move: [
-            <Fragment>
-              <p>Shifted Support Assault</p>
-              <span>Aggression Shift</span>
-              {b}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-              {l}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-24",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment />]
-        },
-        {
-          id: 174,
-          command: "AGS BB ~ AL",
-          move: [
-            <Fragment>
-              <p>Shifted Support Kick ~ Aerial Leap</p>
-              <span>Aggression Shift</span>
-              {b}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {l}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "-33",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-
-        {
-          id: 175,
-          command: "AGS [B]",
-          move: [
-            <Fragment>
-              <p>Shifted Support Skewer(Augmented)</p>
-              <span>Aggression Shift</span>
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
             </Fragment>
           ],
           onBlock: "-14",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [<Fragment />]
-        },
-
-        {
-          id: 176,
-          command: "AGS KK",
-          move: [
-            <Fragment>
-              <p>Shifted Strike Squence</p>
-              <span>Aggression Shift</span>
-              {k}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment />]
-        },
-        {
-          id: 176,
-          command: "AGS K6 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Shifted Strike Squence ~ Aggression Shift</p>
-              <span>Aggression Shift</span>
-              {k}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+6",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 177,
-          command: "AGS K4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Shifted Strike Squence ~ Back Step ~ Aggression Shift</p>
-              <span>Aggression Shift</span>
-              {k}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Back Step to Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 178,
-          command: "AGS K8 ~ AL",
-          move: [
-            <Fragment>
-              <p>Shifted Strike Squence ~ Aerial Leap</p>
-              <span>Aggression Shift</span>
-              {k}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 179,
-          command: "AGS A+B",
-          move: [
-            <Fragment>
-              <p>Pod Program R020: Mirage</p>
-              <span>Aggression Shift</span>
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {sm}
-              {sm}
-              {sm}
-              {sm}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "-16",
           onHit: "LNC",
           counterHit: "LNC",
-          note: [
-            <Fragment>
-              <p>Dodges high/Mid/Low</p>
-            </Fragment>
-          ]
+          note: [<Fragment>{sc}</Fragment>]
         },
         {
-          id: 180,
-          command: "AGS [A+B]",
+          id: 122,
+          command: "SC A+G",
           move: [
             <Fragment>
-              <p>Pod Program R020: Mirage(Hold)</p>
-              <span>Aggression Shift</span>
-              {a_h}
-              {plus}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {sm}
-              {sm}
-              {sm}
-              {sm}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              <p>Dodges high/Mid/Low</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 181,
-          command: "AGS B+K",
-          move: [
-            <Fragment>
-              <p>Shifted Crushing Rocket</p>
-              <span>Aggression Shift</span>
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "+10",
-          counterHit: "+10",
-          note: [<Fragment>{at}</Fragment>]
-        },
-        {
-          id: 182,
-          command: "AGS ~ A+G",
-          move: [
-            <Fragment>
-              <p>Supperssion: Composite Kick</p>
-              <span>Aggression Shift</span>
+              <p>Fatal Gravity</p>
+              {sc}
               {a}
               {plus}
               {g}
@@ -4218,627 +3359,13 @@ class Zasalamel extends Component {
               {h}
             </Fragment>
           ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{th}</Fragment>]
-        },
-        {
-          id: 183,
-          command: "AGS ~ 4A+G",
-          move: [
-            <Fragment>
-              <p>Supperssion: Composite Slash</p>
-              <span>Aggression Shift</span>
-              {d4}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "KND",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment>{th}</Fragment>]
-        }
-      ],
-      aerialLeap: [
-        {
-          id: 184,
-          command: "8B+K",
-          move: [
-            <Fragment>
-              <p>Aerial Leap</p>
-              {d8}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
           onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 185,
-          command: "AL AAA",
-          move: [
-            <Fragment>
-              <p>Aerial Slash Pattern</p>
-              <span>Aerial Leap</span>
-              {a}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-              {h}
-              {h}
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [<Fragment />]
-        },
-        {
-          id: 186,
-          command: "AL AAB",
-          move: [
-            <Fragment>
-              <p>Aerial Assault</p>
-              <span>Aerial Leap</span>
-              {a}
-              {a}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-              {h}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment />]
-        },
-        {
-          id: 186,
-          command: "AL AAK",
-          move: [
-            <Fragment>
-              <p>Aerial Unarmed Strike</p>
-              <span>Aerial Leap</span>
-              {a}
-              {a}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-              {h}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-31",
           onHit: "KND",
           counterHit: "KND",
           note: [
             <Fragment>
-              {lh}
-              <p>Triggers on build up at 9 APs</p>
-              <p>+2 Analysis Points</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 187,
-          command: "AL B",
-          move: [
-            <Fragment>
-              <p>Aerial Spear Cleave</p>
-              <span>Aerial Leap</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment />]
-        },
-        {
-          id: 188,
-          command: "AL K",
-          move: [
-            <Fragment>
-              <p>Aerial Support Kick</p>
-              <span>Aerial Leap</span>
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [<Fragment />]
-        },
-        {
-          id: 189,
-          command: "AL A+B",
-          move: [
-            <Fragment>
-              <p>Pod Program A080: Wave</p>
-              <span>Aerial Leap</span>
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {sm}
-              {sl}
-              {sl}
-              {sl}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "+10",
-          counterHit: "",
-          note: [
-            <Fragment>
-              <p>Deals chip damage / TJ</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 190,
-          command: "AL [A+B]",
-          move: [
-            <Fragment>
-              <p>Pod Program A080: Wave(Hold)</p>
-              <span>Aerial Leap</span>
-              {a_h}
-              {plus}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {sm}
-              {sl}
-              {sl}
-              {sl}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers upon when your guard stamina is full</p>
-              <p>Deals chip damage / TJ</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 191,
-          command: "AL B+K ~ AL",
-          move: [
-            <Fragment>
-              <p>Airborne Support Gambit ~ Aerial Leap</p>
-              <span>Aerial Leap</span>
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 192,
-          command: "AL 6 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Airborne Aggression Shift</p>
-              <span>Aerial Leap</span>
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 193,
-          command: "AL 4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Airborne Back Step ~ Aggression Shift</p>
-              <span>Aerial Leap</span>
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Back Step to Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 194,
-          command: "AL 7*8*9",
-          move: [
-            <Fragment>
-              <p>Glide</p>
-              <span>Aerial Leap</span>
-              {d7}
-              <span> * </span>
-              {d8}
-              <span> * </span>
-              {d9}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              <p>Can only use AL A/B/K/A+B</p>
-            </Fragment>
-          ]
-        }
-      ],
-      anglerStance: [
-        {
-          id: 195,
-          command: "B+K",
-          move: [
-            <Fragment>
-              <p>Angler Stance(H/M)</p>
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Stance</p>
-              <p>Dodges High/Mid except Kicks / Can be cancelled with G</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 196,
-          command: "ALS A",
-          move: [
-            <Fragment>
-              <p>Angler: Support Blade</p>
-              <span>Angler Stance </span>
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment />]
-        },
-        {
-          id: 197,
-          command: "ALS [A] ~ ALS",
-          move: [
-            <Fragment>
-              <p>Angler: Support Blade ~ Angler Stance</p>
-              <span>Angler Stance</span>
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Stance</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 197,
-          command: "ALS B",
-          move: [
-            <Fragment>
-              <p>Angler: Support Gatling</p>
-              <span>Angler Stance</span>
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {h}
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-20",
-          onHit: "-14",
-          counterHit: "",
-          note: [<Fragment />]
-        },
-        {
-          id: 198,
-          command: "ALS [B] ~ ALS",
-          move: [
-            <Fragment>
-              <p>Angler: Support Gatling ~ Angler Stance</p>
-              <span>Angler Stance</span>
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {h}
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "0",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Stance</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 199,
-          command: "ALS K",
-          move: [
-            <Fragment>
-              <p>Angler: Support Casting</p>
-              <span>Angler Stance</span>
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              <p>2*8 change attack range</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 200,
-          command: "ALS [K] ~ ALS",
-          move: [
-            <Fragment>
-              <p>Angler: Support Casting</p>
-              <span>Angler Stance</span>
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Stance</p>
-              <p>2*8 change attack range</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 201,
-          command: "ALS 236 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Angler Stance ~ Aggression Shift</p>
-              <span>Angler Stance</span>
-              {d2}
-              {d3}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Stance</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 202,
-          command: "ALS 214 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Angler Stance ~ Back Step ~ Aggression Shift</p>
-              <span>Angler Stance</span>
-              {d2}
-              {d1}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Back Step to Angler Stance</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 203,
-          command: "ALS 7*8*9B+K",
-          move: [
-            <Fragment>
-              <p>Angler Stance ~ Aerial Leap</p>
-              <span>Angler Stance</span>
-              {d7}
-              <span> * </span>
-              {d8}
-              <span> * </span>
-              {d9}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Leap</p>
+              {sc}
+              {th}
             </Fragment>
           ]
         }
@@ -4858,11 +3385,7 @@ class Zasalamel extends Component {
           onClose={this.handleClose}
         >
           <Popup
-            text={[
-              "Aggression Shift = AGS",
-              "Angler Stance = ALS",
-              "Aerial Leap = AL"
-            ]}
+            text={["TimeStop 1 = TS1", "TimeStop 2 = TS2", "TimeStop 3 = TS3"]}
           />
         </Modal>
 
@@ -5110,194 +3633,6 @@ class Zasalamel extends Component {
                         data.note
                       ]
                     )}
-                  />
-                )}
-              </CardBody>
-            </Card>
-          </GridItem>
-
-          <GridItem xs={12} sm={12} md={12}>
-            <Card>
-              <CardHeader color="primary">
-                <h4 className={classes.cardTitleWhite}>
-                  Special Stance(Aggression Shift)
-                </h4>
-                <div
-                  className={`${classes.toggleStyle} ${
-                    classes.cardCategoryWhite
-                  }`}
-                >
-                  <div>
-                    <span>Simple</span>
-
-                    <Switch
-                      checked={this.state.checked}
-                      onClick={this.toggleTableData}
-                      color="primary"
-                    />
-                    <span>Detail</span>
-                  </div>
-                  <div title="More Info" className="infoIcon">
-                    <Info
-                      onClick={this.handleOpen}
-                      className={`${classes.cardTitleWhite} ${
-                        classes.infoIcon
-                      }`}
-                    />
-                  </div>
-                </div>
-              </CardHeader>
-              <CardBody>
-                {this.state.display ? (
-                  <Table
-                    tableHeaderColor="primary"
-                    tableHead={this.state.tableHeadData}
-                    tableData={zasalamelFrameData.aggressionShift.map(data => [
-                      data.command,
-                      data.impact,
-                      data.onBlock,
-                      data.onHit,
-                      data.counterHit,
-                      data.note
-                    ])}
-                  />
-                ) : (
-                  <Table
-                    tableHeaderColor="primary"
-                    tableHead={this.state.tableHeadData}
-                    tableData={zasalamelFrameData.aggressionShift.map(data => [
-                      data.move,
-                      data.impact,
-                      data.onBlock,
-                      data.onHit,
-                      data.counterHit,
-                      data.note
-                    ])}
-                  />
-                )}
-              </CardBody>
-            </Card>
-          </GridItem>
-
-          <GridItem xs={12} sm={12} md={12}>
-            <Card>
-              <CardHeader color="primary">
-                <h4 className={classes.cardTitleWhite}>
-                  Special Stance(Aerial Leap)
-                </h4>
-                <div
-                  className={`${classes.toggleStyle} ${
-                    classes.cardCategoryWhite
-                  }`}
-                >
-                  <div>
-                    <span>Simple</span>
-
-                    <Switch
-                      checked={this.state.checked}
-                      onClick={this.toggleTableData}
-                      color="primary"
-                    />
-                    <span>Detail</span>
-                  </div>
-                  <div title="More Info" className="infoIcon">
-                    <Info
-                      onClick={this.handleOpen}
-                      className={`${classes.cardTitleWhite} ${
-                        classes.infoIcon
-                      }`}
-                    />
-                  </div>
-                </div>
-              </CardHeader>
-              <CardBody>
-                {this.state.display ? (
-                  <Table
-                    tableHeaderColor="primary"
-                    tableHead={this.state.tableHeadData}
-                    tableData={zasalamelFrameData.aerialLeap.map(data => [
-                      data.command,
-                      data.impact,
-                      data.onBlock,
-                      data.onHit,
-                      data.counterHit,
-                      data.note
-                    ])}
-                  />
-                ) : (
-                  <Table
-                    tableHeaderColor="primary"
-                    tableHead={this.state.tableHeadData}
-                    tableData={zasalamelFrameData.aerialLeap.map(data => [
-                      data.move,
-                      data.impact,
-                      data.onBlock,
-                      data.onHit,
-                      data.counterHit,
-                      data.note
-                    ])}
-                  />
-                )}
-              </CardBody>
-            </Card>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={12}>
-            <Card>
-              <CardHeader color="primary">
-                <h4 className={classes.cardTitleWhite}>
-                  Special Stance(Angler Stance)
-                </h4>
-                <div
-                  className={`${classes.toggleStyle} ${
-                    classes.cardCategoryWhite
-                  }`}
-                >
-                  <div>
-                    <span>Simple</span>
-
-                    <Switch
-                      checked={this.state.checked}
-                      onClick={this.toggleTableData}
-                      color="primary"
-                    />
-                    <span>Detail</span>
-                  </div>
-                  <div title="More Info" className="infoIcon">
-                    <Info
-                      onClick={this.handleOpen}
-                      className={`${classes.cardTitleWhite} ${
-                        classes.infoIcon
-                      }`}
-                    />
-                  </div>
-                </div>
-              </CardHeader>
-              <CardBody>
-                {this.state.display ? (
-                  <Table
-                    tableHeaderColor="primary"
-                    tableHead={this.state.tableHeadData}
-                    tableData={zasalamelFrameData.anglerStance.map(data => [
-                      data.command,
-                      data.impact,
-                      data.onBlock,
-                      data.onHit,
-                      data.counterHit,
-                      data.note
-                    ])}
-                  />
-                ) : (
-                  <Table
-                    tableHeaderColor="primary"
-                    tableHead={this.state.tableHeadData}
-                    tableData={zasalamelFrameData.anglerStance.map(data => [
-                      data.move,
-                      data.impact,
-                      data.onBlock,
-                      data.onHit,
-                      data.counterHit,
-                      data.note
-                    ])}
                   />
                 )}
               </CardBody>

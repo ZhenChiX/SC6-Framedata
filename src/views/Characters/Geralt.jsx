@@ -208,7 +208,7 @@ class Geralt extends Component {
               <img className={classes.imgResize} src={h} />
             </Fragment>
           ],
-          onBlock: "-10",
+          onBlock: "-8",
           onHit: "+2",
           counterHit: "+2",
           note: ""
@@ -361,7 +361,7 @@ class Geralt extends Component {
               <img className={classes.imgResize} src={l} />
             </Fragment>
           ],
-          onBlock: "-20",
+          onBlock: "-22",
           onHit: "-10",
           counterHit: "-4",
           note: ""
@@ -384,7 +384,7 @@ class Geralt extends Component {
               <img className={classes.imgResize} src={sm} />
             </Fragment>
           ],
-          onBlock: "-10",
+          onBlock: "-12",
           onHit: "+4",
           counterHit: "+4",
           note: ""
@@ -407,7 +407,7 @@ class Geralt extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-22",
+          onBlock: "-18",
           onHit: "KND",
           counterHit: "KND",
           note: ""
@@ -430,7 +430,7 @@ class Geralt extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-22",
+          onBlock: "-18",
           onHit: "STN",
           counterHit: "STN",
           note: [
@@ -1719,8 +1719,8 @@ class Geralt extends Component {
             </Fragment>
           ],
           onBlock: "-6",
-          onHit: "2",
-          counterHit: "2",
+          onHit: "+2",
+          counterHit: "+2",
           note: "Jails"
         },
         {
@@ -1746,7 +1746,7 @@ class Geralt extends Component {
             </Fragment>
           ],
           onBlock: "-4",
-          onHit: "10",
+          onHit: "+10",
           counterHit: "KND",
           note: ""
         },

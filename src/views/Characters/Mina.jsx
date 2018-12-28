@@ -785,7 +785,7 @@ class Mina extends Component {
         },
         {
           id: 29,
-          command: "B4B",
+          command: "B4B ~ LS",
           move: [
             <Fragment>
               <p>Retreating Divide</p>
@@ -801,8 +801,8 @@ class Mina extends Component {
               <img className={classes.imgResize} src={h} />
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "-2",
+          onBlock: "",
+          onHit: "+8",
           counterHit: "",
           note: [
             <Fragment>
@@ -1048,7 +1048,7 @@ class Mina extends Component {
         },
         {
           id: 40,
-          command: "2BB",
+          command: "2BB ~ LS",
           move: [
             <Fragment>
               <p>Back Step Fang</p>
@@ -1064,8 +1064,8 @@ class Mina extends Component {
               <img className={classes.imgResize} src={h} />
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "-2",
+          onBlock: "",
+          onHit: "+8",
           counterHit: "",
           note: [
             <Fragment>
@@ -1164,8 +1164,8 @@ class Mina extends Component {
               <img className={classes.imgResize} src={h} />
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "-2",
+          onBlock: "",
+          onHit: "+8",
           counterHit: "+4",
           note: [
             <Fragment>
@@ -1741,9 +1741,9 @@ class Mina extends Component {
               <img className={classes.imgResize} src={h} />
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "-4",
-          counterHit: "",
+          onBlock: "-8",
+          onHit: "+2",
+          counterHit: "+2",
           note: ""
         },
         {
@@ -2076,7 +2076,7 @@ class Mina extends Component {
           command: "4B+K",
           move: [
             <Fragment>
-              <p>?????</p>
+              <p>Retreating Sands</p>
               <img className={classes.imgResize} src={d4} />
               <img className={classes.imgResize} src={b} />
               <img className={classes.imgResize} src={plus} />
@@ -2107,7 +2107,7 @@ class Mina extends Component {
           command: "8B+K",
           move: [
             <Fragment>
-              <p>?????</p>
+              <p>Leaping Horse Vault</p>
               <img className={classes.imgResize} src={d8} />
               <img className={classes.imgResize} src={b} />
               <img className={classes.imgResize} src={plus} />
@@ -2130,7 +2130,7 @@ class Mina extends Component {
           command: "8B+KB",
           move: [
             <Fragment>
-              <p>?????</p>
+              <p>Leaping Horse Vault</p>
               <img className={classes.imgResize} src={d8} />
               <img className={classes.imgResize} src={b} />
               <img className={classes.imgResize} src={plus} />
@@ -2155,7 +2155,7 @@ class Mina extends Component {
           command: "8B+KBB",
           move: [
             <Fragment>
-              <p>?????</p>
+              <p>Leaping Horse Vault</p>
               <img className={classes.imgResize} src={d8} />
               <img className={classes.imgResize} src={b} />
               <img className={classes.imgResize} src={plus} />
@@ -2182,7 +2182,7 @@ class Mina extends Component {
           command: "8B+K:B:B",
           move: [
             <Fragment>
-              <p>?????</p>
+              <p>Leaping Horse Vault</p>
               <img className={classes.imgResize} src={d8} />
               <img className={classes.imgResize} src={b} />
               <img className={classes.imgResize} src={plus} />
@@ -2415,7 +2415,7 @@ class Mina extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-18",
+          onBlock: "-16",
           onHit: "LNC",
           counterHit: "LNC",
           note: [
