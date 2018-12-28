@@ -1,6 +1,11 @@
 ## SoulCalibur VI FrameData
 [SoulCalibur VI FrameData](https://www.guardimpact.net) -- A simple tool for better understand and improve your game plan 
 ### Work in progress
+#### Dec.28.2018
+- [X] Add V1.10 Zasalamel's Data
+
+- [X] All current characters are up to date v.1.10
+
 #### Dec.24.2018
 
 
