@@ -56,8 +56,7 @@ class Characters extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHidden: true,
-      display: false
+      isHidden: true
     };
   }
   onClickHidden = () => {
@@ -69,9 +68,6 @@ class Characters extends React.Component {
   componentDidMount = () => {
     window.onpopstate = this.setState({ isHidden: true });
     window.onpopstate = this.onClickHidden;
-    // window.onpopstate = function(e) {
-    //   this.history.go(1);
-    // };
     window.onpopstate = () => window.history.go(1);
 
     // ghetto spaghetti code but it works
@@ -232,7 +228,11 @@ class Characters extends React.Component {
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/zasalamel">
-                    <Card title="Zasalamel" className="character zasalamel" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="Zasalamel"
+                      className="character zasalamel"
+                    />
                   </Link>
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
@@ -281,7 +281,7 @@ class Characters extends React.Component {
                   <Route path="/type2B" component={Type2B} />
                   {/* <Route path="/voldo" component={Voldo} /> */}
                   {/* <Route path="/yoshimitsu" component={Yoshimitsu} /> */}
-                  {/* <Route path="/zasalamel" component={Zasalamel} /> */}
+                  <Route path="/zasalamel" component={Zasalamel} />
                 </Switch>
               </Fragment>
             )}

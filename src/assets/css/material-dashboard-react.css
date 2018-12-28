@@ -261,9 +261,9 @@ h3 {
 }
 
 .zasalamel {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_zasalamel.png"), no-repeat!important;
-    background-size: 100% 100%!important;
+    background-image: url("../img/btn_zasalamel.png") !important;
 }
+
 
 .type2b {
     background-image: url("../img/btn_2b.png") !important;
