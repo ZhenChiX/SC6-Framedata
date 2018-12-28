@@ -920,7 +920,7 @@ handleClose = () => {
           ],
           onBlock: "-4",
           onHit: "0",
-          counterHit: "0",
+          counterHit: "STN",
           note: ""
         },
         {
@@ -943,7 +943,7 @@ handleClose = () => {
           ],
           onBlock: "+4",
           onHit: "+8",
-          counterHit: "+8",
+          counterHit: "STN",
           note: [
             <Fragment>
               {ss}
@@ -1248,7 +1248,7 @@ handleClose = () => {
               {m}
             </Fragment>
           ],
-          onBlock: "-16",
+          onBlock: "-18",
           onHit: "-10",
           counterHit: "-10",
           note: ""
@@ -4183,7 +4183,7 @@ handleClose = () => {
               {m}
             </Fragment>
           ],
-          onBlock: "+12",
+          onBlock: "+10",
           onHit: "KND",
           counterHit: "KND",
           note: [

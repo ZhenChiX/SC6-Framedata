@@ -341,7 +341,7 @@ class Astaroth extends Component {
               {l}
             </Fragment>
           ],
-          onBlock: "-14",
+          onBlock: "-18",
           onHit: "-6",
           counterHit: "KND",
           note: [<Fragment />]
@@ -362,7 +362,7 @@ class Astaroth extends Component {
               {l}
             </Fragment>
           ],
-          onBlock: "-16",
+          onBlock: "-18",
           onHit: "KND",
           counterHit: "KND",
           note: [<Fragment />]
@@ -385,7 +385,7 @@ class Astaroth extends Component {
               {l}
             </Fragment>
           ],
-          onBlock: "-24",
+          onBlock: "-26",
           onHit: "KND",
           counterHit: "KND",
           note: [<Fragment />]
@@ -1095,7 +1095,7 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "+8",
+          onBlock: "+6",
           onHit: "KND",
           counterHit: "KND",
           note: [<Fragment>{ba}</Fragment>]
@@ -1300,7 +1300,7 @@ class Astaroth extends Component {
           command: "WR B",
           move: [
             <Fragment>
-              <p>???</p>
+              <p>Hades Rising</p>
               <span>WR</span>
               {b}
             </Fragment>
@@ -1311,7 +1311,7 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-14",
+          onBlock: "-12",
           onHit: "KND",
           counterHit: "KND",
           note: ""
@@ -1321,7 +1321,7 @@ class Astaroth extends Component {
           command: "WR [B]",
           move: [
             <Fragment>
-              <p>???</p>
+              <p>Hades Rising(Hold)</p>
               <span>WR</span>
               {b_h}
             </Fragment>
@@ -1332,9 +1332,9 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-12",
-          onHit: "-6",
-          counterHit: "-6",
+          onBlock: "+6",
+          onHit: "STN",
+          counterHit: "STN",
           note: [<Fragment>{ba}</Fragment>]
         },
         {
@@ -1342,7 +1342,7 @@ class Astaroth extends Component {
           command: "7*8*9B",
           move: [
             <Fragment>
-              <p>???</p>
+              <p>Greater Divide</p>
               {d7}
               <span> * </span>
               {d8}
@@ -1357,7 +1357,7 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-10",
+          onBlock: "-12",
           onHit: "KND",
           counterHit: "KND",
           note: [
@@ -1660,7 +1660,7 @@ class Astaroth extends Component {
           command: "FC 3K",
           move: [
             <Fragment>
-              <p>Bull Rush??</p>
+              <p>Bull Rage</p>
               <span>FC</span>
               {d3}
               {k}
@@ -1673,8 +1673,8 @@ class Astaroth extends Component {
             </Fragment>
           ],
           onBlock: "-12",
-          onHit: "-4",
-          counterHit: "-4",
+          onHit: "KND",
+          counterHit: "KND",
           note: ""
         },
         {
@@ -1682,7 +1682,7 @@ class Astaroth extends Component {
           command: "WR K",
           move: [
             <Fragment>
-              <p>???</p>
+              <p>Rising Torment</p>
               <span>WR</span>
               {k}
             </Fragment>
@@ -1693,9 +1693,9 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "+4",
-          counterHit: "+4",
+          onBlock: "-14",
+          onHit: "-2",
+          counterHit: "-2",
           note: ""
         },
         {
@@ -1703,7 +1703,7 @@ class Astaroth extends Component {
           command: "7*8*9K",
           move: [
             <Fragment>
-              <p>???</p>
+              <p>Great Kick</p>
               {d7}
               <span> * </span>
               {d8}
@@ -1718,9 +1718,9 @@ class Astaroth extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-6",
-          onHit: "KND",
-          counterHit: "KND",
+          onBlock: "-10",
+          onHit: "+2",
+          counterHit: "+2",
           note: "TJ"
         },
 
@@ -1729,18 +1729,18 @@ class Astaroth extends Component {
           command: "BT K",
           move: [
             <Fragment>
-              <p>???</p>
+              <p>Reverse Bull Kick</p>
               <span>BT</span>
               {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>14F</p>
+              <p>16F</p>
               {h}
             </Fragment>
           ],
-          onBlock: "-6",
+          onBlock: "-10",
           onHit: "+4",
           counterHit: "+4",
           note: ""
@@ -1751,7 +1751,7 @@ class Astaroth extends Component {
           command: "BT 2K",
           move: [
             <Fragment>
-              <p>???</p>
+              <p>Lower Sweep</p>
               <span>BT</span>
               {d2}
               {k}
@@ -1763,9 +1763,9 @@ class Astaroth extends Component {
               {l}
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "-4",
-          counterHit: "-4",
+          onBlock: "",
+          onHit: "-2",
+          counterHit: "-2",
           note: "~ FC"
         }
       ],

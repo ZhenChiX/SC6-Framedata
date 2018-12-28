@@ -735,8 +735,8 @@ class Groh extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-16",
-          onHit: "",
+          onBlock: "-12",
+          onHit: "LNC",
           counterHit: "LNC",
           note: ""
         },
@@ -821,7 +821,7 @@ class Groh extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-7",
+          onBlock: "-8",
           onHit: "+4",
           counterHit: "+4",
           note: ""
@@ -842,7 +842,7 @@ class Groh extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-7",
+          onBlock: "-8",
           onHit: "STN",
           counterHit: "STN",
           note: [
@@ -1674,7 +1674,7 @@ class Groh extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-14",
+          onBlock: "-12",
           onHit: "KND",
           counterHit: "KND",
           note: ""
@@ -1722,7 +1722,7 @@ class Groh extends Component {
               <img className={classes.imgResize} src={h} />
             </Fragment>
           ],
-          onBlock: "-2",
+          onBlock: "+4",
           onHit: "STN",
           counterHit: "STN",
           note: ""
@@ -1840,7 +1840,7 @@ class Groh extends Component {
               <img className={classes.imgResize} src={m} />
             </Fragment>
           ],
-          onBlock: "-10",
+          onBlock: "-8",
           onHit: "KND",
           counterHit: "KND",
           note: [

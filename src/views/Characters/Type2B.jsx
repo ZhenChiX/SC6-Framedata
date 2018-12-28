@@ -2970,7 +2970,7 @@ class Type2B extends Component {
           command: "22*88A",
           move: [
             <Fragment>
-              <p>MObilize: Spear Spin</p>
+              <p>Mobilize: Spear Spin</p>
               {d2_h}
               <span> * </span>
               {d8_h}
@@ -2994,7 +2994,7 @@ class Type2B extends Component {
           command: "22*88AA",
           move: [
             <Fragment>
-              <p>MObilize: Spear Spin</p>
+              <p>Mobilize: Spear Spin</p>
               {d2_h}
               <span> * </span>
               {d8_h}
@@ -3020,7 +3020,7 @@ class Type2B extends Component {
           command: "22*88AB",
           move: [
             <Fragment>
-              <p>MObilize: Spear Sequence</p>
+              <p>Mobilize: Spear Sequence</p>
               {d2_h}
               <span> * </span>
               {d8_h}
