@@ -775,7 +775,7 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p>21F?</p>
+              <p>22F</p>
               {h}
             </Fragment>
           ],
@@ -1291,11 +1291,11 @@ class Zasalamel extends Component {
       // Kicks start here
       kicks: [
         {
-          id: 53,
+          id: 45,
           command: "K",
           move: [
             <Fragment>
-              <p>Android Kick</p>
+              <p>Will of Gilgamesh</p>
               {k}
             </Fragment>
           ],
@@ -1303,225 +1303,91 @@ class Zasalamel extends Component {
             <Fragment>
               <p>12F</p>
               {h}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "0",
-          counterHit: "0",
-          note: ""
-        },
-        {
-          id: 54,
-          command: "[K] ~ ALS",
-          move: [
-            <Fragment>
-              <p>Android Kick ~ Angler Stance</p>
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>12F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "-8",
-          counterHit: "-8",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Stance</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 55,
-          command: "6K",
-          move: [
-            <Fragment>
-              <p>Multistrike</p>
-              {d6}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
             </Fragment>
           ],
           onBlock: "-10",
-          onHit: "+2",
-          counterHit: "+2",
+          onHit: "-2",
+          counterHit: "-2",
           note: ""
         },
         {
-          id: 56,
-          command: "6K6 ~ AGS",
+          id: 46,
+          command: "KK",
           move: [
             <Fragment>
-              <p>Multistrike ~ Aggression Shift</p>
-              {d6}
-              {k}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+2",
-          counterHit: "STN",
-          note: ""
-        },
-        {
-          id: 57,
-          command: "6K4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Multistrike ~ Aggression Shift</p>
-              {d6}
-              {k}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "STN",
-          note: ""
-        },
-        {
-          id: 58,
-          command: "6K8 ~ AL",
-          move: [
-            <Fragment>
-              <p>Multistrike ~ Aerial Leap</p>
-              {d6}
-              {k}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 59,
-          command: "6KB",
-          move: [
-            <Fragment>
-              <p>Multistrike(2)</p>
-              {d6}
-              {k}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-18",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [<Fragment />]
-        },
-        {
-          id: 60,
-          command: "6KK",
-          move: [
-            <Fragment>
-              <p>Multistrike Kick</p>
-              {d6}
+              <p>Will of Gilgamesh</p>
               {k}
               {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
+              <p>12F</p>
               {h}
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "0",
+          counterHit: "0",
+          note: "Force opponent crouch on hit"
+        },
+        {
+          id: 47,
+          command: "k6",
+          move: [
+            <Fragment>
+              <p>Triumph of Gilamesh</p>
+              {kSM}
+              {d6}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>16F</p>
               {h}
             </Fragment>
           ],
-          onBlock: "-6",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [<Fragment />]
-        },
-        {
-          id: 61,
-          command: "6K[K]",
-          move: [
-            <Fragment>
-              <p>Charging Kick</p>
-              {d6}
-              {k}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-              {m}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "+2",
+          onBlock: "-12",
           onHit: "KND",
+          counterHit: "KND",
+          note: ""
+        },
+        {
+          id: 48,
+          command: "6K",
+          move: [
+            <Fragment>
+              <p>Hound of Tiamat</p>
+              {d6}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>12F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-12",
+          onHit: "+4",
           counterHit: "KND",
           note: [
             <Fragment>
-              {gi}
-              <p>GI High/Mid attacks / +2 AP</p>
+              {lh}
+              <p>Trigger upon CH light attacks</p>
+              {ss}
+              <p>Add one Curse on hit</p>
             </Fragment>
           ]
         },
+
         {
-          id: 62,
+          id: 49,
           command: "3K",
           move: [
             <Fragment>
-              <p>Brake Kick</p>
+              <p>Command of Tiamat</p>
               {d3}
               {k}
             </Fragment>
@@ -1529,50 +1395,25 @@ class Zasalamel extends Component {
           impact: [
             <Fragment>
               <p>14F</p>
-              {m}
               {m}
             </Fragment>
           ],
           onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
-          note: ""
-        },
-        {
-          id: 63,
-          command: "3[K]",
-          move: [
-            <Fragment>
-              <p>Brake Kick(2)</p>
-              {d3}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-2",
-          onHit: "+8",
-          counterHit: "STN",
+          onHit: "+4",
+          counterHit: "+4",
           note: [
             <Fragment>
-              <p>
-                Can be held,has two level of Charge / +1AP on level 1 charge /
-                +2 AP on fully charge
-              </p>
+              {ss}
+              <p>Add one Curse on hit</p>
             </Fragment>
           ]
         },
         {
-          id: 64,
+          id: 50,
           command: "2K",
           move: [
             <Fragment>
-              <p>Lower Unarmed Kick</p>
+              <p>Shamhat's Allure</p>
               {d2}
               {k}
             </Fragment>
@@ -1583,117 +1424,67 @@ class Zasalamel extends Component {
               {l}
             </Fragment>
           ],
-          onBlock: "-12",
+          onBlock: "-14",
           onHit: "-4",
           counterHit: "-4",
-          note: " TC[11~ ]"
+          note: " TC / ~FC"
         },
 
         {
-          id: 65,
+          id: 51,
           command: "1K",
           move: [
             <Fragment>
-              <p>Examine</p>
+              <p>Endidu's Frenzy</p>
               {d1}
               {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>20F</p>
+              <p>26F</p>
               {l}
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "-2",
-          counterHit: "-2",
-          note: "+1AP"
-        },
-        {
-          id: 66,
-          command: "1[K] ~ ALS",
-          move: [
-            <Fragment>
-              <p>Examine ~ Angler Stance</p>
-              {d1}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "-6",
-          counterHit: "-6",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Stance</p>
-              <p>+1 Analysis Point</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 67,
-          command: "4K",
-          move: [
-            <Fragment>
-              <p>Core Disruption</p>
-              {d4}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers build-up is at 9 AP</p>
-              <p>+2 Analysis Points</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 68,
-          command: "4[K]",
-          move: [
-            <Fragment>
-              <p>Augumented Seismic Smash</p>
-              {d4}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-6",
-          onHit: "+4",
-          counterHit: "+4",
-          note: [<Fragment />]
+          onBlock: "-16",
+          onHit: "-4",
+          counterHit: "KND",
+          note: "TC / ~FC"
         },
 
         {
-          id: 69,
+          id: 52,
+          command: "4K",
+          move: [
+            <Fragment>
+              <p>Lament for Enkidu</p>
+              {d4}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>14F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "0",
+          counterHit: "0",
+          note: [
+            <Fragment>
+              {lh}
+              <p>Trigger upon CH heavy attacks</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 53,
           command: "FC K",
           move: [
             <Fragment>
-              <p>Lower Unarmed Kick</p>
+              <p>Shamhat's Allure</p>
               <span>FC</span>
               {k}
             </Fragment>
@@ -1709,15 +1500,59 @@ class Zasalamel extends Component {
           counterHit: "-4",
           note: "TC / ~FC "
         },
+        {
+          id: 54,
+          command: "FC 3K",
+          move: [
+            <Fragment>
+              <p>Devotion to Ninsun</p>
+              <span>FC</span>
+              {d3}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>14F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-2",
+          onHit: "+12",
+          counterHit: "+12",
+          note: "TC"
+        },
 
         {
-          id: 70,
+          id: 55,
           command: "WR K",
           move: [
             <Fragment>
-              <p>Rising Brake Kick</p>
+              <p>Enlil's Enmity</p>
               <span>WR</span>
               {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>12F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-10",
+          onHit: "0",
+          counterHit: "0",
+          note: [<Fragment />]
+        },
+        {
+          id: 56,
+          command: "WR KB",
+          move: [
+            <Fragment>
+              <p>Enlil's Enmity</p>
+              <span>WR</span>
+              {k}
+              {b}
             </Fragment>
           ],
           impact: [
@@ -1727,25 +1562,22 @@ class Zasalamel extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-2",
-          onHit: "+8",
-          counterHit: "STN",
+          onBlock: "-14",
+          onHit: "0",
+          counterHit: "0",
           note: [
             <Fragment>
-              <p>
-                Can be held,has two level of Charge / +1AP on level 1 charge /
-                +2 AP on fully charge
-              </p>
+              <p>Jails</p>
             </Fragment>
           ]
         },
 
         {
-          id: 71,
+          id: 57,
           command: "7*8*9K",
           move: [
             <Fragment>
-              <p>Leaping Unarmed Strike</p>
+              <p>Enkidu The Valiant</p>
               {d7}
               <span> * </span>
               {d8}
@@ -1756,74 +1588,70 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p>38F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              <p>+3 Analysis Points</p>
-            </Fragment>
-          ]
-        },
-
-        {
-          id: 72,
-          command: "BT K",
-          move: [
-            <Fragment>
-              <p>Reverse Unarmed Kick</p>
-              <span>BT</span>
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>14F</p>
+              <p>22F</p>
               {h}
             </Fragment>
           ],
-          onBlock: "-8",
-          onHit: "+2",
-          counterHit: "+2",
-          note: ""
+          onBlock: "-10",
+          onHit: "-2/KND",
+          counterHit: "-2/KND",
+          note: [<Fragment />]
         },
 
         {
-          id: 73,
-          command: "BT 2K",
+          id: 58,
+          command: "BT K",
           move: [
             <Fragment>
-              <p>Lower Reverse Illusion Kick</p>
+              <p>Enkidu's Glance</p>
               <span>BT</span>
-              {d2}
               {k}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p>18F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: ""
+        },
+
+        {
+          id: 59,
+          command: "BT 2K",
+          move: [
+            <Fragment>
+              <p>Shamhat's Glare</p>
+              <span>BT</span>
+              {d2}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
               {l}
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "-4",
-          counterHit: "-4",
-          note: "TC[14~ ]"
+          onBlock: "-20",
+          onHit: "KND",
+          counterHit: "KND",
+          note: "TC[19~ ]"
         }
       ],
 
       // dual button attackts start here
       dualButtonAttacks: [
         {
-          id: 74,
+          id: 60,
           command: "A+B",
           move: [
             <Fragment>
-              <p>Pod Program R050:Spear</p>
+              <p>Anshar's Halberd</p>
               {a}
               {plus}
               {b}
@@ -1831,11 +1659,11 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p>38F</p>
-              {sm}
+              <p>36F</p>
+              {h}
             </Fragment>
           ],
-          onBlock: "0",
+          onBlock: "+6",
           onHit: "STN",
           counterHit: "STN",
           note: [
@@ -1843,278 +1671,171 @@ class Zasalamel extends Component {
               {ba}
               {lh}
               <p>Lethal Hit triggers upon GI</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 75,
-          command: "[A+B]",
-          move: [
-            <Fragment>
-              <p>Pod Program R050:Spear(Hold)</p>
-              {a_h}
-              {plus}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "+4",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ba}
-              {lh}
-              <p>Lethal Hit triggers upon GI</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 76,
-          command: "6A+B",
-          move: [
-            <Fragment>
-              <p>Pod Program R010: Laser</p>
-              {d6}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>40F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              <p>TC[29~84]</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 77,
-          command: "6[A+B]",
-          move: [
-            <Fragment>
-              <p>Pod Program R010: Laser(Hold)</p>
-              {d6}
-              {a_h}
-              {plus}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              <p>TC[29~84]</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 78,
-          command: "2A+B",
-          move: [
-            <Fragment>
-              <p>Pod Program R020: Mirage</p>
-              {d2}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {sm}
-              {sm}
-              {sm}
-              {sm}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <p>Dodges high/Mid/Low</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 79,
-          command: "2[A+B]",
-          move: [
-            <Fragment>
-              <p>Pod Program R020: Mirage(Hold)</p>
-              {d2}
-              {a_h}
-              {plus}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {sm}
-              {sm}
-              {sm}
-              {sm}
-              {sm}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <p>Dodges high/Mid/Low</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 80,
-          command: "4A+B",
-          move: [
-            <Fragment>
-              <p>Pod Program R010: Laser(Upward Angle)</p>
-              {d4}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>24F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ba}
-              <p>TC[16~37]</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 81,
-          command: "4[A+B]",
-          move: [
-            <Fragment>
-              <p>Pod Program R010: Laser(Upward Angle)</p>
-              {d4}
-              {a_h}
-              {plus}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ba}
-              <p>TC[16~37]</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 82,
-          command: "8A+B",
-          move: [
-            <Fragment>
-              <p>Pod Programm A080: Wave</p>
-              {d8}
-              {a}
-              {plus}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {sm}
-              {sl}
-              {sl}
-              {sl}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "+10",
-          counterHit: "",
-          note: [
-            <Fragment>
-              <p>Deals chip damage / TJ</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 83,
-          command: "8[A+B]",
-          move: [
-            <Fragment>
-              <p>Pod Programm A080: Wave(Hold)</p>
-              {d8}
-              {a_h}
-              {plus}
-              {b_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {sm}
-              {sl}
-              {sl}
-              {sl}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers upon when your guard stamina is full</p>
-              <p>Deals chip damage / TJ</p>
             </Fragment>
           ]
         },
 
         {
-          id: 84,
+          id: 61,
+          command: "6A+B",
+          move: [
+            <Fragment>
+              <p>Marduk's Thunder</p>
+              {d6}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "-4",
+          counterHit: "+4",
+          note: [<Fragment />]
+        },
+        {
+          id: 62,
+          command: "6A+BB",
+          move: [
+            <Fragment>
+              <p>Marduk's Thunder</p>
+              {d6}
+              {a}
+              {plus}
+              {b}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment />]
+        },
+        {
+          id: 63,
+          command: "6A+B[B]",
+          move: [
+            <Fragment>
+              <p>Marduk's Thunder(Hold)</p>
+              {d6}
+              {a}
+              {plus}
+              {b}
+              {b_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+4",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{ba}</Fragment>]
+        },
+        {
+          id: 64,
+          command: "2A+B",
+          move: [
+            <Fragment>
+              <p>Anu's Justice</p>
+              {d2}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>30F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "+2",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [<Fragment>{ba}</Fragment>]
+        },
+
+        {
+          id: 65,
+          command: "4A+B",
+          move: [
+            <Fragment>
+              <p>Tiamat's Frenzy</p>
+              {d4}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
+              {m}
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-14",
+          onHit: "+2",
+          counterHit: "+2",
+          note: [<Fragment />]
+        },
+
+        {
+          id: 66,
+          command: "8A+B",
+          move: [
+            <Fragment>
+              <p>Offering to Kishar</p>
+              {d8}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>36F</p>
+              {h}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {th}
+              <p>Against midair opponent</p>
+            </Fragment>
+          ]
+        },
+
+        {
+          id: 67,
           command: "B+K",
           move: [
             <Fragment>
-              <p>Angler Stance(H/M)</p>
+              <p>Tiamat's Quaking Blow</p>
               {b}
               {plus}
               {k}
@@ -2125,19 +1846,103 @@ class Zasalamel extends Component {
               <p />
             </Fragment>
           ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
+          onBlock: "+12",
+          onHit: "LNC",
+          counterHit: "LNC",
           note: [
             <Fragment>
+              {ba}
               {ss}
-              <p>To Angler Stance</p>
-              <p>Dodges High/Mid except Kicks / Can be cancelled with G</p>
+              <p>Add two curses on fully charged</p>
             </Fragment>
           ]
         },
         {
-          id: 85,
+          id: 68,
+          command: "B+KK",
+          move: [
+            <Fragment>
+              <p>Tiamat's Quaking Blow</p>
+              {b}
+              {plus}
+              {k}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p />
+            </Fragment>
+          ],
+          onBlock: "+4/+8",
+          onHit: "+8/KND",
+          counterHit: "+8/KND",
+          note: [
+            <Fragment>
+              {ba}
+              {ss}
+              <p>Add two curses on fully charged</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 69,
+          command: "6B+K",
+          move: [
+            <Fragment>
+              <p>Curse of Nergal</p>
+              {d6}
+              {b}
+              {plus}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "+4",
+          counterHit: "+4",
+          note: [
+            <Fragment>
+              <p>TC[12~22]</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 70,
+          command: "6B+KA",
+          move: [
+            <Fragment>
+              <p>Curse of Nergal</p>
+              {d6}
+              {b}
+              {plus}
+              {k}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              {m}
+              {h}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "+12",
+          counterHit: "+12",
+          note: [
+            <Fragment>
+              <p>TC[12~22]</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 71,
           command: "2B+K",
           move: [
             <Fragment>
@@ -2150,92 +1955,24 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Stance</p>
-              <p>Dodges High/Mid except Kicks / Can be cancelled with G</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 86,
-          command: "B+K/2B+K",
-          move: [
-            <Fragment>
-              <p>Counter Bomb</p>
-              {b}
-              {plus}
-              {k}
-              <span> / </span>
-              {d2}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
+              <p>16F</p>
+              {l}
               {m}
             </Fragment>
           ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ba}
-              <p>Successful evades an attack</p>
-            </Fragment>
-          ]
+          onBlock: "-4",
+          onHit: "+10",
+          counterHit: "+10",
+          note: [<Fragment />]
         },
+
         {
-          id: 87,
-          command: "B+K/2B+K : G",
+          id: 72,
+          command: "4B+K",
           move: [
             <Fragment>
-              <p>Counter Bomb ~ Cancel</p>
-              {b}
-              {plus}
-              {k}
-              <span> / </span>
-              {d2}
-              {b}
-              {plus}
-              {k}
-              <span> : </span>
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              <p>Dodges High/Mid/Low </p>
-              <p>After successful dodges press G to cancel</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 88,
-          command: "6B+K",
-          move: [
-            <Fragment>
-              <p>Crushing Kick</p>
-              {d6}
+              <p>Confession to Lahamu</p>
+              {d4}
               {b}
               {plus}
               {k}
@@ -2246,73 +1983,70 @@ class Zasalamel extends Component {
               <p>24F</p>
               {m}
               {m}
-              {m}
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "+6",
-          counterHit: "LNC",
-          note: [
-            <Fragment>
-              <p>TJ[9~26] / TC [26-46]</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 89,
-          command: "4B+K",
-          move: [
-            <Fragment>
-              <p>Hilt Bash</p>
-              {d4}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>36F</p>
-              {m}
-              {h}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "+4",
-          counterHit: "+18/STN",
-          note: [<Fragment />]
-        },
-
-        {
-          id: 90,
-          command: "FC B+K",
-          move: [
-            <Fragment>
-              <p>Floating Assualt</p>
-              <span>FC</span>
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-20",
+          onBlock: "-16",
           onHit: "LNC",
           counterHit: "LNC",
           note: [<Fragment />]
         },
+
         {
-          id: 91,
+          id: 73,
+          command: "8B+K",
+          move: [
+            <Fragment>
+              <p>Confession to Lahamu</p>
+              {d8}
+              {b}
+              {plus}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-22",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              <p>TJ</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 74,
+          command: "WR B+K",
+          move: [
+            <Fragment>
+              <p>Enlil's Admonition</p>
+              <span>WR</span>
+              {b}
+              {plus}
+              {k}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-34",
+          onHit: "-22",
+          counterHit: "-22",
+          note: [<Fragment />]
+        },
+        {
+          id: 75,
           command: "BT B+K",
           move: [
             <Fragment>
-              <p>Acrobatic Counter Assualt</p>
+              <p>Adad's Great Shears</p>
               <span>BT</span>
               {b}
               {plus}
@@ -2321,17 +2055,18 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p>38F</p>
+              <p>16F</p>
+              {m}
               {m}
             </Fragment>
           ],
-          onBlock: "-14",
+          onBlock: "+4/+12",
           onHit: "LNC",
           counterHit: "LNC",
           note: [
             <Fragment>
-              {gi}
-              <p>GI horizontals except kicks</p>
+              {ba}
+              <p>Can be held</p>
             </Fragment>
           ]
         }
@@ -2340,11 +2075,11 @@ class Zasalamel extends Component {
       // 8way-run attacks start here
       eightwayrunAttack: [
         {
-          id: 92,
+          id: 76,
           command: "33*66*99A",
           move: [
             <Fragment>
-              <p>Mobilize: Slash Pattern</p>
+              <p>Judgment of Shamash</p>
               {d3_h}
               <span> * </span>
               {d6_h}
@@ -2356,432 +2091,125 @@ class Zasalamel extends Component {
           impact: [
             <Fragment>
               <p>20F</p>
-              {l}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "-6",
-          counterHit: "-6",
-          note: ""
-        },
-        {
-          id: 93,
-          command: "33*66*99A6 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Mobilize: Slash Pattern ~ Aggression Shift</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {a}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {l}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "0",
-          counterHit: "0",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 94,
-          command: "33*66*99A4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Mobilize: Slash Pattern ~ Back Step ~ Aggression Shift</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {a}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {l}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Back step to Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 95,
-          command: "33*66*99A8 ~ AL",
-          move: [
-            <Fragment>
-              <p>Mobilize: Slash Pattern ~ Aerial Leap</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {a}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {l}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 96,
-          command: "33*66*99aK",
-          move: [
-            <Fragment>
-              <p>Mobilize: Slash Unarmed Kick</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {aSM}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {l}
-              {h}
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-14",
-          onHit: "-4",
-          counterHit: "-4",
-          note: [
-            <Fragment>
-              <p>~ FC</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 97,
-          command: "33*66*99a[K]",
-          move: [
-            <Fragment>
-              <p>Mobilize: Crush Sequence</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {aSM}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {l}
-              {h}
+              {m}
               {m}
             </Fragment>
           ],
-          onBlock: "-20",
-          onHit: "-12",
-          counterHit: "-12",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers if 2nd hit and 3rd hits</p>
-            </Fragment>
-          ]
+          onBlock: "-14",
+          onHit: "+12",
+          counterHit: "+12",
+          note: "Jails"
         },
         {
-          id: 98,
+          id: 77,
+          command: "33*66*99[A]",
+          move: [
+            <Fragment>
+              <p>Judgment of Shamash(Hold)</p>
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {a_h}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-4",
+          onHit: "+12",
+          counterHit: "+12",
+          note: "Jails"
+        },
+
+        {
+          id: 78,
           command: "22*88A",
           move: [
             <Fragment>
-              <p>MObilize: Spear Spin</p>
+              <p>Talon of Zu</p>
               {d2_h}
               <span> * </span>
               {d8_h}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "0",
-          counterHit: "0",
-          note: [<Fragment />]
-        },
-        {
-          id: 99,
-          command: "22*88AA",
-          move: [
-            <Fragment>
-              <p>MObilize: Spear Spin</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {a}
-              {a}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-2",
-          onHit: "+8",
-          counterHit: "+8",
-          note: [<Fragment />]
-        },
-        {
-          id: 100,
-          command: "22*88AB",
-          move: [
-            <Fragment>
-              <p>MObilize: Spear Sequence</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {a}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-10",
-          onHit: "+2",
-          counterHit: "+2",
-          note: [<Fragment />]
-        },
-        {
-          id: 101,
-          command: "11*44*77A",
-          move: [
-            <Fragment>
-              <p>Mobilize: Horizontal Assault</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
               {a}
             </Fragment>
           ],
           impact: [
             <Fragment>
               <p>34F</p>
-              {m}
-              {m}
+              {l}
+              {l}
             </Fragment>
           ],
-          onBlock: "-16",
-          onHit: "STN",
-          counterHit: "STN",
-          note: ""
-        },
-        {
-          id: 102,
-          command: "11*44*77[A]",
-          move: [
-            <Fragment>
-              <p>Mobilize: Augmented Horizontal Assault</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {a_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p />
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-16",
-          onHit: "STN",
-          counterHit: "STN",
-          note: ""
-        },
-        {
-          id: 103,
-          command: "33*66*99B",
-          move: [
-            <Fragment>
-              <p>Mobilize: Piercing Thrust</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {b}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-10",
-          onHit: "0",
-          counterHit: "STN",
+          onBlock: "-8",
+          onHit: "+6",
+          counterHit: "+6",
           note: [<Fragment />]
-        },
-        {
-          id: 104,
-          command: "33*66*99B6 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Mobilize: Piercing Thrust ~ Aggression Shift</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {b}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+2",
-          onHit: "+12",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 105,
-          command: "33*66*99B4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Mobilize: Piercing Thrust ~ Back Step ~ Aggression Shift</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {b}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Back Step to Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 106,
-          command: "33*66*99B8 ~ AL",
-          move: [
-            <Fragment>
-              <p>Mobilize: Piercing Thrust ~ Aerial Leap</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {b}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>16F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
         },
 
         {
-          id: 107,
+          id: 79,
+          command: "11*44*77A",
+          move: [
+            <Fragment>
+              <p>Sickle of Sin</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {a}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>26F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-16",
+          onHit: "+6",
+          counterHit: "+6",
+          note: ""
+        },
+
+        {
+          id: 80,
+          command: "33*66*99B",
+          move: [
+            <Fragment>
+              <p>Ishtar's Mercy</p>
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>18F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-8",
+          onHit: "+10",
+          counterHit: "LNC",
+          note: [<Fragment />]
+        },
+
+        {
+          id: 81,
           command: "22*88B",
           move: [
             <Fragment>
-              <p>Mobilize: Skewer</p>
+              <p>Prayer to Ishtar</p>
               {d2_h}
               <span> * </span>
               {d8_h}
@@ -2794,118 +2222,19 @@ class Zasalamel extends Component {
               {m}
             </Fragment>
           ],
-          onBlock: "-18",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers on opponent whiffed an attack</p>
-            </Fragment>
-          ]
+          onBlock: "-16",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [<Fragment />]
         },
+
         {
-          id: 108,
-          command: "22*88B6 ~ AGS",
+          id: 82,
+          command: "11*77B",
           move: [
             <Fragment>
-              <p>Mobilize: Skewer ~ Aggression Shift</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {b}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-              {lh}
-              <p>Triggers on opponent whiffed an attack</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 109,
-          command: "22*88B4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Mobilize: Skewer ~ Back Step ~ Aggression Shift</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {b}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Back Step to Aggression Shift</p>
-              {lh}
-              <p>Triggers on opponent whiffed an attack</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 110,
-          command: "22*88B8 ~ AL",
-          move: [
-            <Fragment>
-              <p>Mobilize: Skewer ~ Back Step ~ Aerial Leap</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {b}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>Aerial Leap</p>
-              {lh}
-              <p>Triggers on opponent whiffed an attack</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 111,
-          command: "11*44*77B",
-          move: [
-            <Fragment>
-              <p>Mobilize: Rotating Slash Assault</p>
+              <p>Lilitu's Needle</p>
               {d1_h}
-              <span> * </span>
-              {d4_h}
               <span> * </span>
               {d7_h}
               {b}
@@ -2913,139 +2242,69 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p>32F</p>
+              <p>20F</p>
+              {l}
+            </Fragment>
+          ],
+          onBlock: "-20",
+          onHit: "-4",
+          counterHit: "-4",
+          note: [<Fragment />]
+        },
+
+        {
+          id: 83,
+          command: "44B",
+          move: [
+            <Fragment>
+              <p>Ea's Judgment</p>
+              {d4_h}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>28F</p>
               {m}
             </Fragment>
           ],
-          onBlock: "-14",
-          onHit: "STN",
-          counterHit: "STN",
+          onBlock: "-4",
+          onHit: "KND",
+          counterHit: "KND",
           note: [<Fragment />]
         },
         {
-          id: 112,
-          command: "11*44*77B6 ~ AGS",
+          id: 84,
+          command: "44[B]",
           move: [
             <Fragment>
-              <p>Mobilize: Rotating Slash Assault ~ Aggression Shift</p>
-              {d1_h}
-              <span> * </span>
+              <p>Ea's Judgment(Hold)</p>
               {d4_h}
-              <span> * </span>
-              {d7_h}
-              {b}
-              {d6}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>32F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-8",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 113,
-          command: "11*44*77B4 ~ AGS",
-          move: [
-            <Fragment>
-              <p>Mobilize: Rotating Slash Assault ~ Aggression Shift</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {b}
-              {d4}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>32F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aggression Shift</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 114,
-          command: "11*44*77B8 ~ AL",
-          move: [
-            <Fragment>
-              <p>Mobilize: Rotating Slash Assault ~ Aerial Leap</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
-              {b}
-              {d8}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>32F</p>
-              {m}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "STN",
-          counterHit: "STN",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Aerial Leap</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 115,
-          command: "11*44*77[B]",
-          move: [
-            <Fragment>
-              <p>Mobilize: Rotating Slash Assault</p>
-              {d1_h}
-              <span> * </span>
-              {d4_h}
-              <span> * </span>
-              {d7_h}
               {b_h}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p />
+              <p>38F</p>
               {m}
             </Fragment>
           ],
           onBlock: "0",
           onHit: "STN",
           counterHit: "STN",
-          note: [<Fragment>{ba}</Fragment>]
+          note: [
+            <Fragment>
+              {lh}
+              <p>Triggers against guard crush opponent</p>
+            </Fragment>
+          ]
         },
         {
-          id: 116,
+          id: 85,
           command: "33*66*99K",
           move: [
             <Fragment>
-              <p>Mobilize: Disposal Kick</p>
+              <p>Enkidu's Valor</p>
               {d3_h}
               <span> * </span>
               {d6_h}
@@ -3056,59 +2315,49 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p>18F</p>
+              <p>16F</p>
               {h}
             </Fragment>
           ],
           onBlock: "-8",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {lh}
-              <p>Triggers upon interrupted an soul gauge attack</p>
-            </Fragment>
-          ]
+          onHit: "+10",
+          counterHit: "+10",
+          note: [<Fragment />]
         },
         {
-          id: 117,
-          command: "33*66*99[K] ~ ALS",
+          id: 85,
+          command: "33*66*99kB",
           move: [
             <Fragment>
-              <p>Mobilize: Disposal Kick ~ Angler Stance</p>
+              <p>Enkidu's Bravery</p>
               {d3_h}
               <span> * </span>
               {d6_h}
               <span> * </span>
               {d9_h}
-              {k_h}
+              {kSM}
+              {b}
             </Fragment>
           ],
           impact: [
             <Fragment>
-              <p>18F</p>
+              <p>16F</p>
               {h}
+              {m}
             </Fragment>
           ],
           onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              {ss}
-              <p>To Angler Stance</p>
-              {lh}
-              <p>Triggers upon interrupted an soul gauge attack</p>
-            </Fragment>
-          ]
+          onHit: "+4",
+          counterHit: "+4",
+          note: [<Fragment />]
         },
 
         {
-          id: 118,
+          id: 86,
           command: "22*88K",
           move: [
             <Fragment>
-              <p>Mobilize: Spinning Strike</p>
+              <p>The Ark of Utnapishtim</p>
               {d2_h}
               <span> * </span>
               {d8_h}
@@ -3118,23 +2367,20 @@ class Zasalamel extends Component {
           impact: [
             <Fragment>
               <p>22F</p>
-              {l}
-              {h}
-              {h}
               {h}
             </Fragment>
           ],
-          onBlock: "-12",
+          onBlock: "0",
           onHit: "+4",
           counterHit: "+4",
           note: ""
         },
         {
-          id: 119,
+          id: 87,
           command: "22*88KK",
           move: [
             <Fragment>
-              <p>Mobilize: Spinning Strike</p>
+              <p>The Ark of Utnapishtim</p>
               {d2_h}
               <span> * </span>
               {d8_h}
@@ -3145,53 +2391,22 @@ class Zasalamel extends Component {
           impact: [
             <Fragment>
               <p>22F</p>
-              {l}
               {h}
               {h}
-              {h}
-              {m}
             </Fragment>
           ],
-          onBlock: "-14",
+          onBlock: "-2",
           onHit: "KND",
           counterHit: "KND",
-          note: ""
-        },
-        {
-          id: 119,
-          command: "22*88K[K]",
-          move: [
-            <Fragment>
-              <p>Mobilize: Spinning Strike(Hold)</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {k}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>22F</p>
-              {l}
-              {h}
-              {h}
-              {h}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "+6",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: [<Fragment>{ba}</Fragment>]
+          note: " ~ FC"
         },
 
         {
-          id: 120,
+          id: 88,
           command: "11*44*77K",
           move: [
             <Fragment>
-              <p>Mobilize: Cyclone Kick</p>
+              <p>Enkidu's Karma</p>
               {d1_h}
               <span> * </span>
               {d4_h}
@@ -3202,9 +2417,7 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p>20F</p>
-              {h}
-              {h}
+              <p>24F</p>
               {h}
             </Fragment>
           ],
@@ -3213,48 +2426,22 @@ class Zasalamel extends Component {
           counterHit: "KND",
           note: [
             <Fragment>
-              <p>+2 Analysis Points</p>
+              {gi}
+              <p>GI Low attacks</p>
             </Fragment>
           ]
         },
         {
-          id: 121,
-          command: "11*44*77[K]",
+          id: 89,
+          command: "33*66*99 A+B",
           move: [
             <Fragment>
-              <p>Mobilize: Cyclone Kick(Hold)</p>
-              {d1_h}
+              <p>Wrath of Tiamat</p>
+              {d3_h}
               <span> * </span>
-              {d4_h}
+              {d6_h}
               <span> * </span>
-              {d7_h}
-              {k_h}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>28F</p>
-              {h}
-              {h}
-              {h}
-            </Fragment>
-          ],
-          onBlock: "-4",
-          onHit: "KND",
-          counterHit: "KND",
-          note: [
-            <Fragment>
-              <p>+3 Analysis Points</p>
-            </Fragment>
-          ]
-        },
-        {
-          id: 122,
-          command: "8wayrun A+B",
-          move: [
-            <Fragment>
-              <p>Mobilized Pod Program R040: Blade</p>
-              <span>8wayrun</span>
+              {d9_h}
               {a}
               {plus}
               {b}
@@ -3264,23 +2451,85 @@ class Zasalamel extends Component {
             <Fragment>
               <p>22F</p>
               {m}
-              {m}
-              {m}
-              {m}
             </Fragment>
           ],
-          onBlock: "-20",
+          onBlock: "-24",
           onHit: "KND",
           counterHit: "KND",
           note: [<Fragment />]
         },
-
         {
-          id: 123,
+          id: 90,
+          command: "33*66*99 A+BB ~ TS",
+          move: [
+            <Fragment>
+              <p>Tiamat's Ingress</p>
+              {d3_h}
+              <span> * </span>
+              {d6_h}
+              <span> * </span>
+              {d9_h}
+              {a}
+              {plus}
+              {b}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>22F</p>
+              {m}
+              {sm}
+            </Fragment>
+          ],
+          onBlock: "",
+          onHit: "KND",
+          counterHit: "KND",
+          note: [
+            <Fragment>
+              {ss}
+              <p>Curse spender</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 91,
+          command: "11*44*77 A+B",
+          move: [
+            <Fragment>
+              <p>Prayer to Belit-ili</p>
+              {d1_h}
+              <span> * </span>
+              {d4_h}
+              <span> * </span>
+              {d7_h}
+              {a}
+              {plus}
+              {b}
+            </Fragment>
+          ],
+          impact: [
+            <Fragment>
+              <p>20F</p>
+              {m}
+            </Fragment>
+          ],
+          onBlock: "-12",
+          onHit: "LNC",
+          counterHit: "LNC",
+          note: [
+            <Fragment>
+              {lh}
+              <p>Triggers on moving back opponent</p>
+            </Fragment>
+          ]
+        },
+        {
+          id: 92,
           command: "33*66*99B+K",
           move: [
             <Fragment>
-              <p>Mobilize: Projectile Slash Pattern</p>
+              <p>Blessing for Lahamu</p>
               {d3_h}
               <span> * </span>
               {d6_h}
@@ -3293,52 +2542,27 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p>24F</p>
-              {m}
-              {m}
-              {m}
-              {m}
-              {m}
-            </Fragment>
-          ],
-          onBlock: "-12",
-          onHit: "LNC",
-          counterHit: "LNC",
-          note: "TC/TJ"
-        },
-        {
-          id: 124,
-          command: "22*88B+K",
-          move: [
-            <Fragment>
-              <p>Mobilize: Scatter Spear</p>
-              {d2_h}
-              <span> * </span>
-              {d8_h}
-              {b}
-              {plus}
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
               <p>28F</p>
               {m}
-              {m}
-              {m}
             </Fragment>
           ],
-          onBlock: "-4",
+          onBlock: "-10",
           onHit: "LNC",
           counterHit: "LNC",
-          note: ""
+          note: [
+            <Fragment>
+              {lh}
+              <p>Triggers upon post GI</p>
+            </Fragment>
+          ]
         },
+
         {
-          id: 125,
+          id: 93,
           command: "11*44*77B+K",
           move: [
             <Fragment>
-              <p>Mobilize: Scatter Spear</p>
+              <p>Tiamat's Rampage</p>
               {d1_h}
               <span> * </span>
               {d4_h}
@@ -3351,7 +2575,7 @@ class Zasalamel extends Component {
           ],
           impact: [
             <Fragment>
-              <p />
+              <p>54F</p>
               {m}
               {m}
               {m}
@@ -3360,58 +2584,10 @@ class Zasalamel extends Component {
           onBlock: "LNC",
           onHit: "LNC",
           counterHit: "LNC",
-          note: [<Fragment>{ba}</Fragment>]
-        },
-        {
-          id: 126,
-          command: "33*66*99A+G",
-          move: [
-            <Fragment>
-              <p>Supperssion: Unarmed Leg Throw</p>
-              {d3_h}
-              <span> * </span>
-              {d6_h}
-              <span> * </span>
-              {d9_h}
-              {a}
-              {plus}
-              {g}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>18F</p>
-              {h}
-            </Fragment>
-          ],
-          onBlock: "",
-          onHit: "",
-          counterHit: "",
-          note: [<Fragment>{th}</Fragment>]
-        },
-
-        {
-          id: 127,
-          command: "Run K",
-          move: [
-            <Fragment>
-              <p>Sliding Charge</p>
-              <span>Run</span>
-              {k}
-            </Fragment>
-          ],
-          impact: [
-            <Fragment>
-              <p>20F</p>
-              {l}
-            </Fragment>
-          ],
-          onBlock: "-22",
-          onHit: "KND",
-          counterHit: "KND",
           note: [
             <Fragment>
-              <p>TC / TJ </p>
+              {ua}
+              <p>Cancel with G</p>
             </Fragment>
           ]
         }
