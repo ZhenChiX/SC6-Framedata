@@ -3682,8 +3682,6 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
     padding-bottom: 15px;
 }
 
-
-
 .navbar .alert {
     border-radius: 0;
     left: 0;
@@ -3720,6 +3718,9 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 @media (min-width: 991px) {
     .navbar-fixed {
         width: calc(100% - 260px);
+    }
+    .navbar-absolute {
+        padding-top: 0px;
     }
 }
 

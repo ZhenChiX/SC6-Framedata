@@ -18,7 +18,10 @@ const cardHeaderStyle = {
       padding: "0",
       position: "sticky",
       color: "#FFFFFF",
-      top: "75px"
+      top: "75px",
+      "@media(max-width: 991px)": {
+        top: "55px"
+      }
     },
     "&:first-child": {
       borderRadius: "calc(.25rem - 1px) calc(.25rem - 1px) 0 0"
@@ -27,7 +30,7 @@ const cardHeaderStyle = {
       "&:not($cardHeaderIcon)": {
         borderRadius: "4px",
         marginTop: "-10px",
-        padding: "10px"
+        padding: "8px"
       }
     },
     "&$cardHeaderStats svg": {
