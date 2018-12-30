@@ -27,7 +27,9 @@ const headerStyle = theme => ({
     minheight: "50px",
     display: "block",
     "@media(max-width: 991px)": {
-      minheight:"30px"
+      minheight: "30px",
+      padding: "0",
+      paddingTop: "0px"
     }
   },
   container: {

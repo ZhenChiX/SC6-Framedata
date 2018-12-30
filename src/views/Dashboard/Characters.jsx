@@ -10,7 +10,6 @@ import {
   NavLink
 } from "react-router-dom";
 import { createBrowserHistory } from "history";
-
 // react plugin for creating charts
 import ChartistGraph from "react-chartist";
 // @material-ui/core
@@ -114,7 +113,11 @@ class Characters extends React.Component {
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
                   <Link to="/Cerventes">
-                    <Card title="Cervantes" className="character cervantes" />
+                    <Card
+                      onClick={this.onClickHidden}
+                      title="Cervantes"
+                      className="character cervantes"
+                    />
                   </Link>
                 </GridItem>
                 <GridItem xs={12} sm={6} md={4} lg={3}>
@@ -260,28 +263,36 @@ class Characters extends React.Component {
                   Back
                 </Button>
                 <Switch>
-                  <Route path="/astaroth" component={Astaroth} />
+                  <Route path="/astaroth" component={Astaroth} key="astaroth" />
                   {/* <Route path="/azwel" component={Azwel} /> */}
-                  {/* <Route path="/cerventes" component={Cerventes} /> */}
+                  <Route
+                    path="/cerventes"
+                    component={Cerventes}
+                    key="cervantes"
+                  />
                   {/* <Route path="/chai" component={Chai} /> */}
-                  <Route path="/geralt" component={Geralt} />
-                  <Route path="/groh" component={Groh} />
-                  <Route path="/ivy" component={Ivy} />
+                  <Route path="/geralt" component={Geralt} key="geralt" />
+                  <Route path="/groh" component={Groh} key="groh" />
+                  <Route path="/ivy" component={Ivy} key="ivy" />
                   {/* <Route path="/kilik" component={Kilik} /> */}
-                  <Route path="/maxi" component={Maxi} />
-                  <Route path="/mina" component={Mina} />
+                  <Route path="/maxi" component={Maxi} key="maxi" />
+                  <Route path="/mina" component={Mina} key="mina" />
                   {/* <Route path="/mitsurugi" component={Mitsurugi} /> */}
                   {/* <Route path="/nightmare" component={Nightmare} /> */}
                   {/* <Route path="/raphael" component={Raphael} /> */}
                   {/* <Route path="/siegfried" component={Siegfreid} /> */}
-                  <Route path="/sophitia" component={Sophitia} />
+                  <Route path="/sophitia" component={Sophitia} key="sophitia" />
                   {/* <Route path="/taki" component={Taki} /> */}
                   {/* <Route path="/talim" component={Talim} /> */}
                   {/* <Route path="/tira" component={Tira} /> */}
-                  <Route path="/type2B" component={Type2B} />
+                  <Route path="/type2B" component={Type2B} key="type2B" />
                   {/* <Route path="/voldo" component={Voldo} /> */}
                   {/* <Route path="/yoshimitsu" component={Yoshimitsu} /> */}
-                  <Route path="/zasalamel" component={Zasalamel} />
+                  <Route
+                    path="/zasalamel"
+                    component={Zasalamel}
+                    key="zasalamel"
+                  />
                 </Switch>
               </Fragment>
             )}

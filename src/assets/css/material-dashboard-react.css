@@ -49,9 +49,9 @@
 }
 
 .infoIcon {
-    margin:0 auto;
-    width:24px;
-    height:24px;
+    margin: 0 auto;
+    width: 24px;
+    height: 24px;
 }
 
 .infoIcon:hover {
@@ -173,8 +173,7 @@ h3 {
 }
 
 .cervantes {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/btn_cervantes.png"), no-repeat!important;
-    background-size: 100% 100%!important;
+    background-image: url("../img/btn_cervantes.png") !important;
 }
 
 .chai {
@@ -263,7 +262,6 @@ h3 {
 .zasalamel {
     background-image: url("../img/btn_zasalamel.png") !important;
 }
-
 
 .type2b {
     background-image: url("../img/btn_2b.png") !important;
@@ -382,10 +380,13 @@ footer ul li a:hover {
         min-height: 85px;
     }
     .characters_name {
-        top: 0.75em;
+        top: 0.6em;
+    }
+    #returnMe {
+        top: 1vh;
     }
     h3 {
-        font-size: 1.5em
+        font-size: 1.2em
     }
     body, html {
         position: relative;
